@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+@import '_mixin.scss';
+@import '_variables.scss';
+
+.main-kv {
+  overflow: hidden;
+  position: relative;
+  height: 1080px;
+
+  &__slider {
+    height: 100%;
+  }
+
+  &__list {
+    height: 100%;
+  }
+
+  &__item {
+    position: relative;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 120px;
+    color: #fff;
+    line-height: .76;
+    flex: 1;
+  }
+
+  &__description {
+    margin-top: 36px;
+    color: #ECA323;
+    font-family: $font-e;
+    font-size: 18px;
+  }
+
+  &__inbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 0 0 376px;
+    background-color: seagreen;
+  }
+
+  &__thumb {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    overflow: hidden;
+    display: block;
+    width:0;
+    // width: 300px;
+    height: 550px;
+    transform: translateY(-50%);
+    transition: all 1s;
+
+    img {
+      width:0;
+      height:100%;
+    }
+
+    &.active {
+      width: 300px;
+
+      img {width: 300px;}
+    }
+  }
+
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+  }
+
+  &__pagination.swiper-pagination-bullets {
+    position: absolute;
+    bottom: 56px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    text-align: center;
+    line-height: 1;
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background: $dark;
+      border: 1px solid $light;
+      opacity: 1;
+      margin: 0 8px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $light;
+      border: 1px solid $dark;
+    }
+  }
+}
+
+//PC
+@media all and (max-width: $devicePC) {}
+
+//Tablet
+@media all and (max-width: $deviceTablet) {
+  .main-kv {
+    height: 720px;
+
+    // &__thumb {
+    //   display: none;
+    // }
+  }
+}
+
+//Mobile
+@media all and (max-width: $deviceMobile) {
+  .main-kv {
+    height: 640px;
+
+    &__thumb {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+//path 
+$path : '../images/';
+
+//font-family
+$font-k : "Pretendard",
+"Roboto",
+Arial,
+Dotum,
+serif;
+
+$font-e : "Faktum",
+"Pretendard",
+Arial,
+Dotum,
+serif;
+
+$font-p : "PPEditorialNew",
+"Pretendard",
+Arial,
+Dotum,
+serif;
+
+$white : f5f3ec;
+$black : 171010;
+$color-light : #f5f3ec;
+$color-dark : #171010;
+
+$color-primary : #5384ed;
+// $color-grayscale :#999999;
+// $color-grayscale2 :#c2c2c2;
+// $color-grayscale3 :#f8f8f8;
+// $color-grayscale4 :#fcfcfc;
+// $color-secondary-p :#775dff;
+// $color-secondary-y :#fca800;
+// $color-secondary-r :#ff4053;
+// $color-secondary-b :#00007d;
+// $color-secondary-g :#eaeaf6;
+// $color-secondary-l :#f4f4f9;
+
+$sp-both : 48px;
+$sp-both-tablet : 32px;
+$sp-both-tablet-mid : 24px;
+$sp-both-mobile : 16px;
+
+// arte
+$light : var(--color-light);
+$dark : var(--color-dark);
+$spBoth : var(--both-space);
+$headerH : var(--headerH);
+$minWrap : var(--bodyWidth);
+
+// $lypopMaxHeight : #{90vh - 30px};
+// $c-primary : var(--color-primary);
+// $c-primary2 : var(--color-primary2);
+// $c-gray : var(--color-grayscale);
+// $c-gray2 : var(--color-grayscale2);
+// $c-gray3 : var(--color-grayscale3);
+// $c-gray4 : var(--color-grayscale4);
+// $c-secondary-p : var(--color-secondary-p);
+// $c-secondary-y : var(--color-secondary-y);
+// $c-secondary-r : var(--color-secondary-r);
+// $c-secondary-b : var(--color-secondary-b);
+// $c-secondary-g : var(--color-secondary-g);
+// $c-secondary-l : var(--color-secondary-l);
+// $lyMaxHeight  : var(--lypop-maxHeight);
+// $lyHeadHeight : var(--lypop-headerHeight);
+// $lyBtmHeight  : var(--lypop-btmHeight);
+// $lyContH : $lyMaxHeight + ' - ' + $lyHeadHeight + ' - ' + $lyBtmHeight;
+
+
+$devicePC : 1920px;
+$devicePC-mid : 1600px;
+$deviceTablet : 1280px;
+$deviceTablet-no : 1024px;
+$deviceMobile : 768px;
+$mobile : 360px;
