@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>마이페이지 - 나의 정보 | 한경 arte</title>
+  <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+  <!-- font -->
+  <link rel="preload" href="../assets/fonts/Pretendard-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/Pretendard-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/Pretendard-SemiBold.subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/PPEditorialNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/Faktum-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <!--// font -->
+</head>
+
+<body>
+  <!--  마이페이지 lnb , 상단영역은 공통부분이라 제외하고 작업하였습니다.  -->
+  <div id="wrap" class="wrap">
+
+    <!-- Header -->
+    <header class="header" id="header"></header>
+    <!--// Header -->
+    <!-- Container -->
+
+    <!-- Container -->
+    <div class="container" id="container">
+      <!-- START -->
+      <div class="my-container">
+        <div class="my-snb-section">
+          <!--Lnb -->
+          <div class="my-lnb show-pc">왼쪽메뉴</div>
+          <!--// Lnb -->
+        </div>
+        <div class="my-content">
+          <!-- 마이페이지-나의 정보 -->
+          <h2 class="mypage__title01 show-mo">나의 정보</h2>
+          <form action="" name="" metod="">
+            <fieldset class="user">
+              <legend>나의 정보</legend>
+              <div class="user__block">
+                <label for="" class="user__label">닉네임<span class="user__compul"><span>필수</span></span></label>
+                <div class="user__form">
+                  <input id="" type="text" class="in-text" placeholder="닉네임을 입력해주세요.">
+                  <button type="button" class="btn-doublechk">중복확인</button>
+                  <p class="sub-txt">&#8251; 2자~15자, 영문, 한글, 숫자만 가능. <span>(특수문자, 문장기호, 이모티콘 등 사용불가)</span></p>
+                </div>
+              </div>
+              <div class="user__block">
+                <label for="" class="user__label">생년월일</label>
+                <div class="user__form">
+                  <input id="" type="text" class="in-text" placeholder="입력예시)2000-01-01">
+                </div>
+              </div>
+              <div class="user__block">
+                <label for="" class="user__label">관심지역<span class="user__compul"><span>필수</span></span></label>
+                <ul class="user__place">
+                  <li>
+                    <select class="o-select" name="" id="">
+                      <option value="">서울시</option>
+                    </select>
+                  </li>
+                  <li>
+                    <select class="o-select" name="" id="">
+                      <option value="">강남구</option>
+                    </select>
+                  </li>
+                  <li>
+                    <select class="o-select" name="" id="">
+                      <option value="">서울시</option>
+                    </select>
+                  </li>
+                  <li>
+                    <select class="o-select" name="" id="">
+                      <option value="">은평구</option>
+                    </select>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <ul class="sub-txt">
+              <li>&#8251; 아르떼에서는 추후 공연·전시·책에 대한 개인 맞춤형 서비스를 제공할 예정입니다.</li>
+              <li>&#8251; 아래의 관심분야를 선택하시면 추후 더욱 최적화된 맞춤형 큐레이션 서비스를 제공받으실 수 있습니다.</li>
+            </ul>
+          </form>
+          <!--// 나의 정보 -->
+          <!-- 관심 분야 -->
+          <h3 class="mypage__title02">관심분야</h3>
+          <div class="interest">
+            <h4 class="mypage__title03">공연<span>(최대 3개 선택)</span></h4>
+            <ul class="interest__item">
+              <li><input class="chk-inter" type="checkbox" id="chk01"><label for="chk01">클래식</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk02"><label for="chk02">연극</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk03"><label for="chk03">뮤지컬</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk04"><label for="chk04">발레</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk05"><label for="chk05">오페라</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk06"><label for="chk06">재즈</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk07"><label for="chk07">크로스오버</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk08"><label for="chk08">전통</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk09"><label for="chk09">현대무용</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk10"><label for="chk10">한국무용</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk11"><label for="chk11">탈춤</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk12"><label for="chk12">성악</label></li>
+            </ul>
+            <h4 class="mypage__title03">전시<span>(최대 4개 선택)</span></h4>
+            <ul class="interest__item">
+              <li><input class="chk-inter" type="checkbox" id="chk13"><label for="chk13">고미술</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk14"><label for="chk14">근대미술</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk15"><label for="chk15">현대회화</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk16"><label for="chk16">사진</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk17"><label for="chk17">미디어아트</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk18"><label for="chk18">NFT</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk19"><label for="chk19">조형</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk20"><label for="chk20">디자인</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk21"><label for="chk21">설치미술</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk22"><label for="chk22">공예</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk23"><label for="chk23">서예</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk24"><label for="chk24">판화</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk25"><label for="chk25">조각</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk26"><label for="chk26">건축</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk27"><label for="chk27">미술트렌드</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk28"><label for="chk28">업계동향</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk29"><label for="chk29">경매</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk30"><label for="chk30">시장분석</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk31"><label for="chk31">미술대행</label></li>
+            </ul>
+            <h4 class="mypage__title03">도서<span>(최대 3개 선택)</span></h4>
+            <ul class="interest__item">
+              <li><input class="chk-inter" type="checkbox" id="chk32"><label for="chk32">시</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk33"><label for="chk33">소설</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk34"><label for="chk34">에세이</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk35"><label for="chk35">인문</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk36"><label for="chk36">교양</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk37"><label for="chk37">경제</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk38"><label for="chk38">경영</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk39"><label for="chk39">학술</label></li>
+              <li><input class="chk-inter" type="checkbox" id="chk40"><label for="chk40">자기개발</label></li>
+            </ul>
+          </div>
+          <!--// 관심 분야 -->
+          <!-- 페이지 하단 버튼  -->
+          <div class="btn-area">
+            <button type="button" class="btn">저장</button>
+          </div>
+          <!--// 페이지 하단 버튼  -->
+        </div>
+      </div>
+      <!--// END -->
+    </div>
+    <!--// Container -->
+    <!-- Footer -->
+    <footer class="footer" id="footer"></footer>
+    <!--// Footer -->
+  </div>
+
+  <!-- Script -->
+  <script src="../assets/js/libs/jquery.min.js"></script>
+  <script src="../assets/js/libs/swiper.min.js"></script>
+  <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
+  <script src="../assets/js/ui.js"></script>
+  <!--// Script -->
+</body>
+
+</html>
