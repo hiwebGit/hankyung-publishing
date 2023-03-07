@@ -72,7 +72,7 @@
                 <p class="result-text">검색결과 총 204개</p>
                 <!-- sort list : mobile -->
                 <select class="o-select sort-list-mobile">
-                  <option value="">최신순</option>
+                  <option value="" selected>최신순</option>
                   <option value="">조회순</option>
                   <option value="">좋아요순</option>
                   <option value="">댓글순</option>
@@ -96,7 +96,7 @@
                 <div class="sort-section__side">
                   <!-- sort list : pc -->
                   <ul class="sort-list">
-                    <li><button type="button">최신순</button></li>
+                    <li class="is-on"><button type="button">최신순</button></li>
                     <li><button type="button">조회순</button></li>
                     <li><button type="button">좋아요순</button></li>
                     <li><button type="button">댓글순</button></li>
@@ -109,7 +109,7 @@
 
                   <!-- 글쓰기 : pc -->
                   <div class="show-pc">
-                    <a href="#" class="btn-rect size-md c-primary">글쓰기</a>
+                    <a href="#" class="btn-form c-gray">글쓰기</a>
                   </div>
                 </div>
               </div>
@@ -797,10 +797,10 @@
                 </li>
               </ul>
 
-              <div class="list-btm-nav">
+              <div class="btm-box">
                 <!-- 글쓰기 : mobile -->
                 <div class="show-mo">
-                  <a href="#" class="btn-rect size-md c-primary">글쓰기</a>
+                  <a href="#" class="btn-form c-gray">글쓰기</a>
                 </div>
 
                 <!-- Paging -->
@@ -808,7 +808,7 @@
                   <!-- PC -->
                   <a href="#" class="paging__btn paging__btn--first">처음</a>
                   <a href="#" class="paging__btn paging__btn--prev">이전</a>
-                  <div class="paging__num-wrap show-pc">
+                  <div class="paging__num-wrap paging-pc">
                     <a href="#" class="paging__num paging__num--active">1</a>
                     <a href="#" class="paging__num">2</a>
                     <a href="#" class="paging__num">3</a>
@@ -824,7 +824,7 @@
                   <a href="#" class="paging__btn paging__btn--last">마지막</a>
 
                   <!-- Mobile -->
-                  <div class="paging__num-wrap show-mo">
+                  <div class="paging__num-wrap paging-mo">
                     <a href="#" class="paging__more">더보기</a>
                   </div>
                 </div>
@@ -886,7 +886,7 @@
                             <em class="grade__num">8.0</em>
                           </span>
                           <!-- 활성화시 'is-fav' -->
-                          <button type="button" class="btn-fav is-fav btn-fav--wt" aria-label="Like"></button>
+                          <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
                         </div>
                       </div>
                     </div>

@@ -71,11 +71,11 @@
           <!-- hashtags -->
           <div class="hashtag-block">
             <h4 class="hashtag-block__title">금주의 인기 검색어</h4>
-            <span class="hashtag"># 브로드웨이42번가</span>
-            <span class="hashtag"># 태양의 서커스</span>
-            <span class="hashtag"># 마틸다</span>
-            <span class="hashtag"># 온 더 비트</span>
-            <span class="hashtag"># 멕베스 레퀴엠</span>
+            <a href="#" class="hashtag"># 브로드웨이42번가</a>
+            <a href="#" class="hashtag"># 태양의 서커스</a>
+            <a href="#" class="hashtag"># 마틸다</a>
+            <a href="#" class="hashtag"># 온 더 비트</a>
+            <a href="#" class="hashtag"># 멕베스 레퀴엠</a>
           </div>
           <!--// hashtags -->
 
@@ -87,7 +87,7 @@
                   <p class="result-text">검색결과 총 204개</p>
                   <!-- sort list : mobile -->
                   <select class="o-select sort-list-mobile">
-                    <option value="">최신순</option>
+                    <option value="" selected>최신순</option>
                     <option value="">조회순</option>
                     <option value="">좋아요순</option>
                     <option value="">댓글순</option>
@@ -97,7 +97,7 @@
                   <div class="sort-section__side">
                     <!-- sort list : pc -->
                     <ul class="sort-list">
-                      <li><button type="button">최신순</button></li>
+                      <li class="is-on"><button type="button">최신순</button></li>
                       <li><button type="button">조회순</button></li>
                       <li><button type="button">좋아요순</button></li>
                       <li><button type="button">댓글순</button></li>
@@ -105,7 +105,7 @@
                     <!--// sort list : pc -->
                     <button type="button" class="filter-button">상세옵션 <span
                         class="filter-button__text">열기</span></button>
-                    <span class="search-box">
+                    <span class="search-box hide-mo">
                       <input type="text" class="o-input" placeholder="공연명, 출연진 등 태그를 입력해 주세요.">
                       <button type="button" class="o-btn o-btn-search" aria-label="검색"></button>
                     </span>
@@ -138,7 +138,7 @@
                         </a>
 
                         <div class="pdt__inbox">
-                          <a href="#" class="pdt__title">유니버설발레단 〈호두까기인형〉 </a>
+                          <a href="#" class="pdt__title">유니버설발레단 〈호두까기인형〉</a>
                           <ul class="art-info">
                             <li class="ico-event">2022. 03. 16 ~2022. 11. 27</li>
                             <li class="ico-location">잠실종합운동장 내 빅탑</li>
@@ -151,7 +151,7 @@
                               <em class="grade__num">8.0</em>
                             </span>
                             <!-- 활성화시 'is-fav' -->
-                            <button type="button" class="btn-fav is-fav btn-fav--wt" aria-label="Like"></button>
+                            <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
                           </div>
                         </div>
                       </div>
@@ -194,7 +194,7 @@
                     <div class="pdt pdt--pick">
                       <div class="pdt__head">
                         <strong class="pdt__stit">ARTE’s Pick </strong>
-                        <p class="pdt__stit-desc"><span class="hidden-mo">이번 주 놓쳐선 안될 공연 </span>TOP 5</p>
+                        <p class="pdt__stit-desc"><span class="hide-mo">이번 주 놓쳐선 안될 공연 </span>TOP 5</p>
                       </div>
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
@@ -385,7 +385,7 @@
                     <div class="pdt pdt--pick">
                       <div class="pdt__head">
                         <strong class="pdt__stit">ARTE’s Pick </strong>
-                        <p class="pdt__stit-desc"><span class="hidden-mo">이번 주 놓쳐선 안될 공연 </span>TOP 5</p>
+                        <p class="pdt__stit-desc"><span class="hide-mo">이번 주 놓쳐선 안될 공연 </span>TOP 5</p>
                       </div>
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
@@ -735,7 +735,7 @@
                     <div class="pdt pdt--pick">
                       <div class="pdt__head">
                         <strong class="pdt__stit">ARTE’s Pick </strong>
-                        <p class="pdt__stit-desc"><span class="hidden-mo">이번 주 놓쳐선 안될 공연 </span>TOP 5</p>
+                        <p class="pdt__stit-desc"><span class="hide-mo">이번 주 놓쳐선 안될 공연 </span>TOP 5</p>
                       </div>
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
@@ -772,7 +772,7 @@
                   <!-- PC -->
                   <a href="#" class="paging__btn paging__btn--first">처음</a>
                   <a href="#" class="paging__btn paging__btn--prev">이전</a>
-                  <div class="paging__num-wrap show-pc">
+                  <div class="paging__num-wrap paging-pc">
                     <a href="#" class="paging__num paging__num--active">1</a>
                     <a href="#" class="paging__num">2</a>
                     <a href="#" class="paging__num">3</a>
@@ -788,7 +788,7 @@
                   <a href="#" class="paging__btn paging__btn--last">마지막</a>
 
                   <!-- Mobile -->
-                  <div class="paging__num-wrap show-mo">
+                  <div class="paging__num-wrap paging-mo">
                     <a href="#" class="paging__more">더보기</a>
                   </div>
                 </div>

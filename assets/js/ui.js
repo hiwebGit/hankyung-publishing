@@ -1,6 +1,8 @@
 /* UI */ ;
 (function (window, document, $, undefined) {
   var UI = UI || {};
+  var st = null;
+  var winWChk = '';
 
   $.fn.scrollStopped = function (callback) {
     var that = this,
@@ -83,7 +85,7 @@
         if (!$(this.sliderEl).hasClass('swiper-container-initialized')) {
           this.slider = new Swiper(this.sliderEl, this.config);
         } else {
-          // this.slider.update(); 
+          // this.slider.update();
         }
       }
     },
@@ -129,9 +131,9 @@
         el: '.ad-banner__pagination',
       },
       loop: true,
-      // autoplay: {
-      //   delay: 5000,
-      // },
+      autoplay: {
+        delay: 5000,
+      },
     },
     init: function () {
       if ($(this.sliderEl).find('.swiper-slide').length > 0) {
@@ -147,41 +149,38 @@
   UI.artItem = {
     slider: null,
     sliderEl: '.art-vt-slide__content',
-    config: {
-      slidesPerView: 'auto',
-      pagination: {
-        el: '.art-vt-slide__pagination',
-      },
-      loop: false,
-      observer: true,
-      // autoplay: {
-      //   delay: 5000,
-      // },
-    },
-    init: function () {
+    swiper: function () {
       $(this.sliderEl).each(function (idx, el) {
-        if ($(el).find('.swiper-slide').length > 0) {
-          if ($(el).find('.art-vt-grid__item').length > 3) {
+        if (window.innerWidth <= 768) {
+          if ($(el).find('.swiper-slide').length > 1) {
             if (!$(el).hasClass('swiper-container-initialized')) {
-              console.log();
-              // var _pagination = $(el).closest('.art-vt-slide__wrap').find('.art-vt-slide__pagination')[0];
+              var _pagination = $(el).closest('.art-vt-slide__wrap').find('.art-vt-slide__pagination')[0];
               this.slider = new Swiper(el, {
-                slidesPerView: 'auto',
-                // pagination: {
-                //   el: _pagination,
-                // },
+                slidesPerView: '1',
+                pagination: {
+                  el: _pagination,
+                },
                 loop: false,
                 observer: true,
-                // autoplay: {
-                //   delay: 5000,
-                // },
               });
             } else {
               this.slider.update();
             }
           }
+        } else {
+          if ($(el).hasClass('swiper-container-initialized')) {
+            this.slider.destroy();
+          }
         }
       })
+    },
+    init: function () {
+      var _this = this;
+      _this.swiper();
+
+      $(window).on('resize', function () {
+        _this.swiper();
+      });
     },
   }
 
@@ -267,7 +266,7 @@
     var btnLike = '.btn-fav',
       toggleLike = 'is-fav';
 
-    $(btnLike).on('click', function () {
+    $(document).on('click', btnLike, function () {
       if ($(this).hasClass(toggleLike)) {
         $(this).removeClass(toggleLike);
       } else {
@@ -326,7 +325,280 @@
     }
   }
 
+  UI.reviewSticky = {
+    varSet: {
+      replyWrap: '.reply-wrap',
+      replyWriter: '.reply-writer',
+      btn: '.reply-add__btn',
+      hideBtn: '.reply-writer .btn-close',
+      activeClassName: 'is-active',
+      fixedClassName: 'is-fixed',
+      isVisible: false,
+    },
+    init: function () {
+      var _this = this;
+      if ($('.reply-wrap').length > 0) {
+        _this.click();
+        _this.scroll();
+      }
+    },
+    click: function () {
+      var _this = this;
+      $(_this.varSet.btn).on('click', function () {
+        var $group = $(this).closest('.reply-list-wrap').find(_this.varSet.replyWriter);
+        if ($group.hasClass(_this.varSet.activeClassName)) {
+          $group.removeClass(_this.varSet.activeClassName);
+          _this.varSet.isVisible = false;
+        } else {
+          $group.addClass(_this.varSet.activeClassName);
+          _this.varSet.isVisible = true;
+        }
+      });
+
+      $(_this.varSet.hideBtn).on('click', function () {
+        var $group = $(this).closest('.reply-writer');
+        if ($group.hasClass(_this.varSet.activeClassName)) {
+          $group.removeClass(_this.varSet.activeClassName);
+          _this.varSet.isVisible = false;
+        }
+      });
+    },
+    scroll: function () {
+      var _this = this;
+      var _replyWrap = $('.reply-wrap')[0];
+      var _replyWriterArea = $('.reply-writer');
+      var _replyTopPosition = _replyWrap.offsetTop;
+      var _replyBottomPosition = _replyWrap.offsetTop + _replyWrap.offsetHeight;
+
+      $(window).on('scroll', function () {
+        var windowScroll = $(this).height() + $(this).scrollTop();
+        if ((windowScroll > _replyTopPosition) && (windowScroll <= _replyBottomPosition)) {
+          if (_this.varSet.isVisible) {
+            if (!_replyWriterArea.hasClass(_this.varSet.activeClassName)) {
+              _replyWriterArea.addClass(_this.varSet.activeClassName);
+            }
+          }
+        } else {
+          if (_replyWriterArea.hasClass(_this.varSet.activeClassName)) {
+            _replyWriterArea.removeClass(_this.varSet.activeClassName)
+          }
+        }
+      });
+    },
+  }
+
+  UI.visibleTarget = {
+    varSet: {
+      showBtn: '[data-role="visible_btn"]',
+      contWrap: '[data-role="visible_wrap"]',
+      cont: '[data-role="visible_cont"]',
+      hideBtn: '[data-role="hide_btn"]',
+      activeClassName: 'is-active',
+    },
+    init: function () {
+      var _this = this;
+      _this.click();
+    },
+    click: function () {
+      var _this = this;
+      $(_this.varSet.showBtn).on('click', function () {
+        var $group = $(this).closest(_this.varSet.contWrap).find(_this.varSet.cont);
+        if (!$group.hasClass(_this.varSet.activeClassName)) {
+          $group.addClass(_this.varSet.activeClassName);
+        }
+      });
+
+      $(_this.varSet.hideBtn).on('click', function () {
+        var $group = $(this).closest(_this.varSet.cont);
+        if ($group.hasClass(_this.varSet.activeClassName)) {
+          $group.removeClass(_this.varSet.activeClassName);
+        }
+      });
+    }
+  }
+
+  UI.curationSw = {
+    sliderEl: '[data-slider="curation"]',
+    defaultConfig: {
+      observer: true,
+      observeParents: true,
+      initialSlide: 0,
+      on: {
+        init: function () {},
+      },
+    },
+    setSwiper: function () {
+      const that = this;
+      $(this.sliderEl).each(function (idx, swEl) {
+        setConfig = $(swEl).attr('data-swiper') ? JSON.parse(swEl.dataset.swiper) : {};
+        swEl.options = Object.assign({}, that.defaultConfig, setConfig);
+
+        if (typeof swEl.options.pagination !== 'undefined') {
+          swEl.options.pagination.el = $(swEl).closest('.page-kv').find('.swiper-pagination')[0];
+          if ($(swEl).attr('data-curation-type') === 'curation-b-01-02' || $(swEl).attr('data-curation-type') === 'curation-b-21-01') {
+            swEl.options.pagination.formatFractionCurrent = function (number) {
+              return ('0' + number).slice(-2);
+            }
+            swEl.options.pagination.formatFractionTotal = function (number) {
+              return ('0' + number).slice(-2);
+            }
+            swEl.options.pagination.renderFraction = function (currentClass, totalClass) {
+              return '<span class="' + currentClass + '"></span><span class="bar"></span><span class="' +
+                totalClass + '"></span>';
+            }
+          }
+        }
+
+        if (swEl.options.navigation === true) {
+          swEl.options.navigation = {
+            nextEl: $(swEl).closest('.page-kv').find('.swiper-next'),
+            prevEl: $(swEl).closest('.page-kv').find('.swiper-prev'),
+          }
+        }
+
+        if (swEl.options.loop === true) {
+          swEl.options.loopedSlides = $(swEl).find('.swiper-slide').length
+        }
+
+        if (swEl.options.autoplay === true) {
+          swEl.options.autoplay = {
+            delay: 3000,
+            disableOnInteraction: false,
+          }
+        }
+
+        if ($(swEl).attr('data-curation-type') === 'curation-b-01-02') {
+          if (winWChk === 'mo') {
+            swEl.options.slidesPerView = 1
+          } else {
+            swEl.options.slidesPerView = 'auto'
+          }
+        }
+
+        if ($(swEl).attr('data-curation-type') === 'curation-b-21-01') {
+          swEl.options.on.init = function () {
+            $(swEl).find('.swiper-slide').addClass('changed');
+          }
+          swEl.options.on.slideChangeTransitionStart = function () {
+            $(swEl).find('.swiper-slide').addClass('changing');
+            $(swEl).find('.swiper-slide').removeClass('changed');
+          }
+          swEl.options.on.slideChangeTransitionEnd = function () {
+            $(swEl).find('.swiper-slide').removeClass('changing');
+            $(swEl).find('.swiper-slide').addClass('changed');
+          }
+        }
+
+        if (typeof $(swEl).data('ui') === 'undefined') {
+          swInstance = new Swiper(swEl, swEl.options);
+          $(swEl).data('ui', swInstance);
+
+          if (swInstance.params.autoplay.enabled === true) {
+            setTimeout(function () {
+              const controls = swInstance.pagination.$el.closest('.page-kv').find('.swiper-controls');
+
+              if (controls.find('.btn-autoplay').length === 0) {
+                controls.append(
+                  '<button type="button" class="swiper--play btn-autoplay"><span>시작</span></button><button type="button" class="swiper--pause btn-autoplay"><span>멈춤</span></span></button>'
+                );
+              }
+              if (swInstance.autoplay.running) {
+                controls.find('.swiper--play').addClass('disabled').css('display', 'none');
+                controls.find('.swiper--pause').removeClass('disabled').css('display', '');
+              } else {
+                controls.find('.swiper--play').removeClass('disabled').css('display', '');
+                controls.find('.swiper--pause').addClass('disabled').css('display', 'none');
+              }
+
+              controls.find('.swiper--play').off('click').on('click', function () {
+                swInstance.autoplay.start();
+                controls.find('.swiper--play').addClass('disabled').css('display', 'none');
+                controls.find('.swiper--pause').removeClass('disabled').css('display', '');
+              });
+              controls.find('.swiper--pause').off('click').on('click', function () {
+                swInstance.autoplay.stop();
+                controls.find('.swiper--play').removeClass('disabled').css('display', '');
+                controls.find('.swiper--pause').addClass('disabled').css('display', 'none');
+              });
+            }, 300);
+          }
+        }
+      })
+    },
+    init: function () {
+      if ($(this.sliderEl).length > 0) {
+        this.setSwiper();
+      }
+    },
+    resize: function () {
+      if ($(this.sliderEl).length) {
+        const that = this;
+        $(this.sliderEl).each(function (idx, swEl) {
+          if ($(swEl).data('ui') !== 'undefined') { //case: swiper initialized
+            if ($(swEl).data('ui').$el.attr('data-curation-type') === 'curation-b-01-02') {
+              if (typeof $(swEl).data('ui') !== 'undefined') {
+                if ($(swEl).data('ui').$el.attr('data-curation-type') === 'curation-b-01-02') {
+                  that.defaultConfig.initialSlide = winWChk === 'mo' ? $(swEl).data('ui').realIndex + 1 : $(swEl).data('ui').realIndex - 1;
+                  $(swEl).data('ui').destroy();
+                  $(swEl).removeData('ui');
+                  setTimeout(function () {
+                    that.setSwiper();
+                  }, 300)
+                }
+              }
+            }
+          }
+        });
+      }
+    },
+  }
+
+  UI.newsSw = {
+    slider: null,
+    sliderEl: '.top-news-wrapper',
+    config: {
+      slidesPerView: 1,
+      loop: true,
+      pagination: {
+        el: null,
+      }
+    },
+    initClass: 'swiper-container-initialized',
+    init: function () {
+      if ($(this.sliderEl).length) {
+        if ($(this.sliderEl).find('.swiper-slide').length > 0 && winWChk === 'mo') {
+          if (!$(this.sliderEl).hasClass(this.initClass)) {
+            if ($(this.sliderEl).find('.swiper-pagination').length > 0) {
+              this.config.pagination.el = $(this.sliderEl).find('.swiper-pagination')[0];
+            } else {
+              $(this.sliderEl).append('<div class="swiper-pagination"></div>')
+              this.config.pagination.el = $(this.sliderEl).find('.swiper-pagination')[0];
+            }
+            this.slider = new Swiper(this.sliderEl, this.config);
+          }
+        }
+      }
+    },
+    resize: function () {
+      if ($(this.sliderEl).hasClass(this.initClass) && winWChk === 'pc') {
+        $(this.sliderEl).find('.swiper-pagination').remove();
+        this.slider.destroy();
+      }
+      if (!$(this.sliderEl).hasClass(this.initClass) && winWChk === 'mo') {
+        this.init();
+      }
+    }
+  }
+
   UI.init = function () {
+    const winW = window.innerWidth;
+    if (winWChk != 'mo' && winW <= 768) {
+      winWChk = 'mo'
+    }
+
+    if (winWChk != 'pc' && winW >= 769) {
+      winWChk = 'pc'
+    }
     UI.headerPP();
     UI.headerBanner.init();
     UI.mainKeyvisual.init();
@@ -338,7 +610,36 @@
     UI.tab.init();
     UI.toggleSection.init();
     UI.toggleLike();
+    UI.reviewSticky.init();
+    UI.visibleTarget.init();
+    UI.curationSw.init();
+    UI.newsSw.init();
   }
+
+  UI.resize = function () {
+    if (st !== null) {
+      clearTimeout(st);
+    }
+    const winW = window.innerWidth;
+    st = setInterval(function () {
+      const winW = window.innerWidth;
+      if (winWChk != 'mo' && winW <= 768) { //모바일 버전으로 전환할 때 1번만 실행할 코드 추가
+        winWChk = 'mo';
+        UI.curationSw.resize();
+      }
+
+      if (winWChk != 'pc' && winW >= 769) { //PC 버전으로 전환할 때 1번만 실행할 코드 추가
+        winWChk = 'pc';
+        UI.curationSw.resize();
+      }
+      UI.newsSw.resize();
+
+      clearTimeout(st);
+      st = null;
+    }, 150);
+  }
+
+  UI.scroll = function () {}
 
   window.UI = UI;
 
@@ -346,5 +647,16 @@
 
 $(function () {
   UI.init();
+  $(window).on('resize', function () {
+    UI.resize();
+  })
 
+  $(window).on('scroll', function () {
+    UI.scroll();
+  })
+
+  //임시 
+  $(".faq__btn").on("click", function () {
+    $(this).closest('.faq__item').toggleClass("is-on");
+  })
 });

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-  <title>한경 arte</title>
+  <title>FAQ | 한경 ARTE</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
   <!-- vw 작업용-->
@@ -29,41 +29,66 @@
     <!-- Container -->
     <div class="container" id="container">
       <!-- page title -->
-      <div class="headline">
-        <h1 class="headline__title">FAQ</h1>
+      <div class="headline headline--lg">
+        <div class="headline__holder">
+          <h1 class="headline__title"><i>Faq</i></h1>
+          <span class="headline__text">자주 묻는 질문</span>
+        </div>
       </div>
       <!--// page title -->
 
       <!-- START -->
       <div class="content-board">
+        <!-- tab : pc -->
         <div class="tab-block">
-          <div class="tab">
-            <ul class="tab__list">
-              <!-- tab button 활성화 'tab__btn--active' -->
-              <li class="tab__item"><a href="#" class="tab__btn tab__btn--active">전체</a></li>
-              <li class="tab__item"><a href="#" class="tab__btn">음악·무용 분야</a></li>
-              <li class="tab__item"><a href="#" class="tab__btn">뮤지컬·연극 분야</a></li>
-              <li class="tab__item"><a href="#" class="tab__btn">책·영화 분야</a></li>
-              <li class="tab__item"><a href="#" class="tab__btn">예술인DB</a></li>
-              <li class="tab__item"><a href="#" class="tab__btn">Community</a></li>
-              <li class="tab__item"><a href="#" class="tab__btn">마이페이지</a></li>
-              <li class="tab__item"><a href="#" class="tab__btn">가입 및 탈퇴</a></li>
+          <div class="tab tab--auto">
+            <!-- button 활성화 'is-active'-->
+            <ul class="tab__list" data-tab="tab-list">
+              <li class="tab__item"><a href="#" class="tab__btn is-active" data-tab-btn="tab01">전체</a></li>
+              <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab02">음악·무용 분야</a></li>
+              <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab03">뮤지컬·연극 분야</a></li>
+              <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab04">책·영화 분야</a></li>
+              <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab05">예술인DB</a></li>
+              <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab06">Community</a></li>
+              <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab07">마이페이지</a></li>
+              <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab08">가입 및 탈퇴</a></li>
             </ul>
           </div>
         </div>
-        <div class="wrap-search-box">
-          <span class="search-box">
-            <input type="text" class="o-input" placeholder="검색어를 입력하세요">
-            <button type="button" class="o-btn o-btn-search" aria-label="검색"></button>
-          </span>
+        <!--// tab : pc -->
+
+        <!-- sort section -->
+        <div class="sort-section">
+          <div class="sort-section__block">
+            <div class="sort-section__side">
+              <!-- tab : mobile -->
+              <select class="o-select tab-select" data-tab="tab-list">
+                <option data-tab-btn="tab01" selected>전체</option>
+                <option data-tab-btn="tab02">음악·무용 분야</option>
+                <option data-tab-btn="tab03">뮤지컬·연극 분야</option>
+                <option data-tab-btn="tab04">책·영화 분야</option>
+                <option data-tab-btn="tab05">예술인DB</option>
+                <option data-tab-btn="tab06">Community</option>
+                <option data-tab-btn="tab07">마이페이지</option>
+                <option data-tab-btn="tab08">가입 및 탈퇴</option>
+              </select>
+              <!--// tab : mobile -->
+              <span class="search-box">
+                <input type="text" class="o-input" placeholder="검색어를 입력해주세요">
+                <button type="button" class="o-btn o-btn-search" aria-label="검색"></button>
+              </span>
+            </div>
+          </div>
         </div>
+        <!--// sort section -->
+
         <!-- faq -->
         <div class="faq">
-          <ul>
-            <li>
-              <dl>
-                <dt><button type="button">미술 관련 예술인을 검색하려면 어떻게 하나요?</button></dt>
-                <dd>
+          <ul class="faq__list">
+            <li class="faq__item">
+              <dl class="faq__box">
+                <dt class="faq__q"><button type="button" class="faq__btn">미술 관련 예술인을 검색하려면 어떻게 하나요?</button></dt>
+                <dd class="faq__a">
                   가진 심장의 그러므로 기관과 같으며, 있는가?<br>
                   가치를 사랑의 위하여 붙잡아 인생에 따뜻한 부패를 청춘이 황금시대를 그리하였는가? <br>
                   우리는 우리의 수 이상 이상을 것이다. 오아이스도 듣기만 내려온 쓸쓸한 충분히 아니다.<br>
@@ -74,10 +99,10 @@
                 </dd>
               </dl>
             </li>
-            <li>
-              <dl>
-                <dt><button type="button">현대 회화 관련 전시장을 찾으려면 어떻게 해야 하나요?</button></dt>
-                <dd>
+            <li class="faq__item">
+              <dl class="faq__box">
+                <dt class="faq__q"><button type="button" class="faq__btn">현대 회화 관련 전시장을 찾으려면 어떻게 해야 하나요?</button></dt>
+                <dd class="faq__a">
                   가진 심장의 그러므로 기관과 같으며, 있는가?<br>
                   가치를 사랑의 위하여 붙잡아 인생에 따뜻한 부패를 청춘이 황금시대를 그리하였는가? <br>
                   우리는 우리의 수 이상 이상을 것이다. 오아이스도 듣기만 내려온 쓸쓸한 충분히 아니다.<br>
@@ -88,10 +113,10 @@
                 </dd>
               </dl>
             </li>
-            <li>
-              <dl>
-                <dt><button type="button">미술 관련 예술인을 검색하려면 어떻게 하나요?</button></dt>
-                <dd>
+            <li class="faq__item">
+              <dl class="faq__box">
+                <dt class="faq__q"><button type="button" class="faq__btn">미술 관련 예술인을 검색하려면 어떻게 하나요?</button></dt>
+                <dd class="faq__a">
                   가진 심장의 그러므로 기관과 같으며, 있는가?<br>
                   가치를 사랑의 위하여 붙잡아 인생에 따뜻한 부패를 청춘이 황금시대를 그리하였는가? <br>
                   우리는 우리의 수 이상 이상을 것이다. 오아이스도 듣기만 내려온 쓸쓸한 충분히 아니다.<br>
@@ -102,10 +127,10 @@
                 </dd>
               </dl>
             </li>
-            <li>
-              <dl>
-                <dt><button type="button">현대 회화 관련 전시장을 찾으려면 어떻게 해야 하나요?</button></dt>
-                <dd>
+            <li class="faq__item">
+              <dl class="faq__box">
+                <dt class="faq__q"><button type="button" class="faq__btn">현대 회화 관련 전시장을 찾으려면 어떻게 해야 하나요?</button></dt>
+                <dd class="faq__a">
                   가진 심장의 그러므로 기관과 같으며, 있는가?<br>
                   가치를 사랑의 위하여 붙잡아 인생에 따뜻한 부패를 청춘이 황금시대를 그리하였는가? <br>
                   우리는 우리의 수 이상 이상을 것이다. 오아이스도 듣기만 내려온 쓸쓸한 충분히 아니다.<br>
@@ -116,10 +141,10 @@
                 </dd>
               </dl>
             </li>
-            <li>
-              <dl>
-                <dt><button type="button">미술 관련 예술인을 검색하려면 어떻게 하나요?</button></dt>
-                <dd>
+            <li class="faq__item">
+              <dl class="faq__box">
+                <dt class="faq__q"><button type="button" class="faq__btn">미술 관련 예술인을 검색하려면 어떻게 하나요?</button></dt>
+                <dd class="faq__a">
                   가진 심장의 그러므로 기관과 같으며, 있는가?<br>
                   가치를 사랑의 위하여 붙잡아 인생에 따뜻한 부패를 청춘이 황금시대를 그리하였는가? <br>
                   우리는 우리의 수 이상 이상을 것이다. 오아이스도 듣기만 내려온 쓸쓸한 충분히 아니다.<br>
@@ -130,10 +155,10 @@
                 </dd>
               </dl>
             </li>
-            <li>
-              <dl>
-                <dt><button type="button">현대 회화 관련 전시장을 찾으려면 어떻게 해야 하나요?</button></dt>
-                <dd>
+            <li class="faq__item">
+              <dl class="faq__box">
+                <dt class="faq__q"><button type="button" class="faq__btn">현대 회화 관련 전시장을 찾으려면 어떻게 해야 하나요?</button></dt>
+                <dd class="faq__a">
                   가진 심장의 그러므로 기관과 같으며, 있는가?<br>
                   가치를 사랑의 위하여 붙잡아 인생에 따뜻한 부패를 청춘이 황금시대를 그리하였는가? <br>
                   우리는 우리의 수 이상 이상을 것이다. 오아이스도 듣기만 내려온 쓸쓸한 충분히 아니다.<br>
@@ -144,10 +169,10 @@
                 </dd>
               </dl>
             </li>
-            <li>
-              <dl>
-                <dt><button type="button">미술 관련 예술인을 검색하려면 어떻게 하나요?</button></dt>
-                <dd>
+            <li class="faq__item">
+              <dl class="faq__box">
+                <dt class="faq__q"><button type="button" class="faq__btn">미술 관련 예술인을 검색하려면 어떻게 하나요?</button></dt>
+                <dd class="faq__a">
                   가진 심장의 그러므로 기관과 같으며, 있는가?<br>
                   가치를 사랑의 위하여 붙잡아 인생에 따뜻한 부패를 청춘이 황금시대를 그리하였는가? <br>
                   우리는 우리의 수 이상 이상을 것이다. 오아이스도 듣기만 내려온 쓸쓸한 충분히 아니다.<br>
@@ -158,10 +183,10 @@
                 </dd>
               </dl>
             </li>
-            <li>
-              <dl>
-                <dt><button type="button">현대 회화 관련 전시장을 찾으려면 어떻게 해야 하나요?</button></dt>
-                <dd>
+            <li class="faq__item">
+              <dl class="faq__box">
+                <dt class="faq__q"><button type="button" class="faq__btn">현대 회화 관련 전시장을 찾으려면 어떻게 해야 하나요?</button></dt>
+                <dd class="faq__a">
                   가진 심장의 그러므로 기관과 같으며, 있는가?<br>
                   가치를 사랑의 위하여 붙잡아 인생에 따뜻한 부패를 청춘이 황금시대를 그리하였는가? <br>
                   우리는 우리의 수 이상 이상을 것이다. 오아이스도 듣기만 내려온 쓸쓸한 충분히 아니다.<br>
@@ -172,10 +197,10 @@
                 </dd>
               </dl>
             </li>
-            <li>
-              <dl>
-                <dt><button type="button">미술 관련 예술인을 검색하려면 어떻게 하나요?</button></dt>
-                <dd>
+            <li class="faq__item">
+              <dl class="faq__box">
+                <dt class="faq__q"><button type="button" class="faq__btn">미술 관련 예술인을 검색하려면 어떻게 하나요?</button></dt>
+                <dd class="faq__a">
                   가진 심장의 그러므로 기관과 같으며, 있는가?<br>
                   가치를 사랑의 위하여 붙잡아 인생에 따뜻한 부패를 청춘이 황금시대를 그리하였는가? <br>
                   우리는 우리의 수 이상 이상을 것이다. 오아이스도 듣기만 내려온 쓸쓸한 충분히 아니다.<br>
@@ -186,10 +211,10 @@
                 </dd>
               </dl>
             </li>
-            <li>
-              <dl>
-                <dt><button type="button">현대 회화 관련 전시장을 찾으려면 어떻게 해야 하나요?</button></dt>
-                <dd>
+            <li class="faq__item">
+              <dl class="faq__box">
+                <dt class="faq__q"><button type="button" class="faq__btn">현대 회화 관련 전시장을 찾으려면 어떻게 해야 하나요?</button></dt>
+                <dd class="faq__a">
                   가진 심장의 그러므로 기관과 같으며, 있는가?<br>
                   가치를 사랑의 위하여 붙잡아 인생에 따뜻한 부패를 청춘이 황금시대를 그리하였는가? <br>
                   우리는 우리의 수 이상 이상을 것이다. 오아이스도 듣기만 내려온 쓸쓸한 충분히 아니다.<br>
@@ -203,13 +228,14 @@
           </ul>
         </div>
         <!--// faq -->
+
         <div class="faq-bottom">
           <!-- Paging -->
           <div class="paging">
             <!-- PC -->
             <a href="#" class="paging__btn paging__btn--first">처음</a>
             <a href="#" class="paging__btn paging__btn--prev">이전</a>
-            <div class="paging__num-wrap show-pc">
+            <div class="paging__num-wrap paging-pc">
               <a href="#" class="paging__num paging__num--active">1</a>
               <a href="#" class="paging__num">2</a>
               <a href="#" class="paging__num">3</a>
@@ -225,7 +251,7 @@
             <a href="#" class="paging__btn paging__btn--last">마지막</a>
 
             <!-- Mobile -->
-            <div class="paging__num-wrap show-mo">
+            <div class="paging__num-wrap paging-mo">
               <a href="#" class="paging__more">더보기</a>
             </div>
           </div>
@@ -251,13 +277,6 @@
   <script src="../assets/js/ui.js"></script>
   <!--// Script -->
 
-  <script>
-    $(document).ready(function () {
-      $(".faq dt").on("click", function () {
-        $(this).parent().parent().toggleClass("on");
-      })
-    });
-  </script>
 </body>
 
 </html>

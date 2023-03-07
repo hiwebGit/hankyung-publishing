@@ -71,11 +71,11 @@
           <!-- hashtags -->
           <div class="hashtag-block">
             <h4 class="hashtag-block__title">금주의 인기 검색어</h4>
-            <span class="hashtag"># 브로드웨이42번가</span>
-            <span class="hashtag"># 태양의 서커스</span>
-            <span class="hashtag"># 마틸다</span>
-            <span class="hashtag"># 온 더 비트</span>
-            <span class="hashtag"># 멕베스 레퀴엠</span>
+            <a href="#" class="hashtag"># 브로드웨이42번가</a>
+            <a href="#" class="hashtag"># 태양의 서커스</a>
+            <a href="#" class="hashtag"># 마틸다</a>
+            <a href="#" class="hashtag"># 온 더 비트</a>
+            <a href="#" class="hashtag"># 멕베스 레퀴엠</a>
           </div>
           <!--// hashtags -->
 
@@ -236,7 +236,7 @@
                   <p class="result-text">검색결과 총 204개</p>
                   <!-- sort list : mobile -->
                   <select class="o-select sort-list-mobile">
-                    <option value="">최신순</option>
+                    <option value="" selected>최신순</option>
                     <option value="">조회순</option>
                     <option value="">좋아요순</option>
                     <option value="">댓글순</option>
@@ -246,14 +246,15 @@
                   <div class="sort-section__side">
                     <!-- sort list : pc -->
                     <ul class="sort-list">
-                      <li><button type="button">최신순</button></li>
+                      <li class="is-on"><button type="button">최신순</button></li>
                       <li><button type="button">조회순</button></li>
                       <li><button type="button">좋아요순</button></li>
                       <li><button type="button">댓글순</button></li>
                     </ul>
                     <!--// sort list : pc -->
-                    <button type="button" class="filter-button">상세옵션 열기</button>
-                    <span class="search-box">
+                    <button type="button" class="filter-button">상세옵션 <span
+                        class="filter-button__text">열기</span></button>
+                    <span class="search-box hide-mo">
                       <input type="text" class="o-input" placeholder="작품명, 리뷰명, 작성자명 등  태그를 입력해 주세요.">
                       <button type="button" class="o-btn o-btn-search" aria-label="검색"></button>
                     </span>
@@ -980,7 +981,7 @@
                   <!-- PC -->
                   <a href="#" class="paging__btn paging__btn--first">처음</a>
                   <a href="#" class="paging__btn paging__btn--prev">이전</a>
-                  <div class="paging__num-wrap show-pc">
+                  <div class="paging__num-wrap paging-pc">
                     <a href="#" class="paging__num paging__num--active">1</a>
                     <a href="#" class="paging__num">2</a>
                     <a href="#" class="paging__num">3</a>
@@ -996,7 +997,7 @@
                   <a href="#" class="paging__btn paging__btn--last">마지막</a>
 
                   <!-- Mobile -->
-                  <div class="paging__num-wrap show-mo">
+                  <div class="paging__num-wrap paging-mo">
                     <a href="#" class="paging__more">더보기</a>
                   </div>
                 </div>

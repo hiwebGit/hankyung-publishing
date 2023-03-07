@@ -106,7 +106,7 @@
                   <div class="top-news-list__item top-news-list__item--big swiper-slide">
                     <div class="top-news">
                       <!-- 선택시 'is-fav' -->
-                      <button type="button" class="btn-fav btn-fav--wt is-fav" aria-label="Like"></button>
+                      <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
                       <a href="#" class="top-news__block">
                         <span class="thumb-img">
                           <span class="img-holder"><img src="../assets/images/@temp/@temp_news01.jpg" alt=""></span>
@@ -197,11 +197,11 @@
             <!-- hashtags -->
             <div class="hashtag-block">
               <h4 class="hashtag-block__title">금주의 인기 검색어</h4>
-              <span class="hashtag"># 브로드웨이42번가</span>
-              <span class="hashtag"># 태양의 서커스</span>
-              <span class="hashtag"># 마틸다</span>
-              <span class="hashtag"># 온 더 비트</span>
-              <span class="hashtag"># 멕베스 레퀴엠</span>
+              <a href="#" class="hashtag"># 브로드웨이42번가</a>
+              <a href="#" class="hashtag"># 태양의 서커스</a>
+              <a href="#" class="hashtag"># 마틸다</a>
+              <a href="#" class="hashtag"># 온 더 비트</a>
+              <a href="#" class="hashtag"># 멕베스 레퀴엠</a>
             </div>
             <!--// hashtags -->
 
@@ -337,7 +337,7 @@
                     <p class="result-text">총 204개의 연재가 있습니다</p>
                     <!-- sort list : mobile -->
                     <select class="o-select sort-list-mobile">
-                      <option value="">최신순</option>
+                      <option value="" selected>최신순</option>
                       <option value="">조회순</option>
                       <option value="">좋아요순</option>
                       <option value="">댓글순</option>
@@ -347,7 +347,7 @@
                     <div class="sort-section__side">
                       <!-- sort list : pc -->
                       <ul class="sort-list">
-                        <li><button type="button">최신순</button></li>
+                        <li class="is-on"><button type="button">최신순</button></li>
                         <li><button type="button">조회순</button></li>
                         <li><button type="button">좋아요순</button></li>
                         <li><button type="button">댓글순</button></li>
@@ -620,7 +620,7 @@
                     <!-- PC -->
                     <a href="#" class="paging__btn paging__btn--first">처음</a>
                     <a href="#" class="paging__btn paging__btn--prev">이전</a>
-                    <div class="paging__num-wrap show-pc">
+                    <div class="paging__num-wrap paging-pc">
                       <a href="#" class="paging__num paging__num--active">1</a>
                       <a href="#" class="paging__num">2</a>
                       <a href="#" class="paging__num">3</a>
@@ -636,7 +636,7 @@
                     <a href="#" class="paging__btn paging__btn--last">마지막</a>
 
                     <!-- Mobile -->
-                    <div class="paging__num-wrap show-mo">
+                    <div class="paging__num-wrap paging-mo">
                       <a href="#" class="paging__more">더보기</a>
                     </div>
                   </div>
