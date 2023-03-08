@@ -146,6 +146,40 @@
     },
   }
 
+  UI.reviewSwiper = {
+    slider: null,
+    sliderEl: '.review-thum',
+    swiper: function () {
+      $(this.sliderEl).each(function (idx, el) {
+        if (window.innerWidth <= 768) {
+          if ($(el).find('.swiper-slide').length > 2) {
+            if (!$(el).hasClass('swiper-container-initialized')) {
+              this.slider = new Swiper(el, {
+                slidesPerView: 'auto',
+                loop: false,
+                observer: true,
+              });
+            } else {
+              this.slider.update();
+            }
+          }
+        } else {
+          if ($(el).hasClass('swiper-container-initialized')) {
+            this.slider.destroy();
+          }
+        }
+      })
+    },
+    init: function () {
+      var _this = this;
+      _this.swiper();
+
+      $(window).on('resize', function () {
+        _this.swiper();
+      });
+    },
+  }
+
   UI.artItem = {
     slider: null,
     sliderEl: '.art-vt-slide__content',
@@ -325,6 +359,34 @@
     }
   }
 
+  //임시 작업 
+  UI.sortList = {
+    sortPC: '.sort-list',
+    sortMobile: '.sort-list-mobile',
+    activeName: 'is-on',
+    init: function () {
+      var _this = this;
+      _this.click();
+      _this.changeSelect();
+    },
+    click: function () {
+      var _this = this;
+      $(_this.sortPC).find('button').on('click', function () {
+        var $sortItem = $(this).closest('li');
+        var selIdx = $sortItem.index();
+        $sortItem.addClass(_this.activeName).siblings('li').removeClass(_this.activeName);
+        $(_this.sortMobile).find('option').eq(selIdx).attr('selected', 'selected').siblings('option').removeAttr('selected')
+      });
+    },
+    changeSelect: function () {
+      var _this = this;
+      $(_this.sortMobile).on('change', function () {
+        var selIdx = $(this).find("option:selected").index();
+        $(_this.sortPC).find('li').eq(selIdx).addClass(_this.activeName).siblings('li').removeClass(_this.activeName);
+      });
+    }
+  }
+
   UI.reviewSticky = {
     varSet: {
       replyWrap: '.reply-wrap',
@@ -344,16 +406,16 @@
     },
     click: function () {
       var _this = this;
-      $(_this.varSet.btn).on('click', function () {
-        var $group = $(this).closest('.reply-list-wrap').find(_this.varSet.replyWriter);
-        if ($group.hasClass(_this.varSet.activeClassName)) {
-          $group.removeClass(_this.varSet.activeClassName);
-          _this.varSet.isVisible = false;
-        } else {
-          $group.addClass(_this.varSet.activeClassName);
-          _this.varSet.isVisible = true;
-        }
-      });
+      // $(_this.varSet.btn).on('click', function () {
+      //   var $group = $(this).closest('.reply-list-wrap').find(_this.varSet.replyWriter);
+      //   if ($group.hasClass(_this.varSet.activeClassName)) {
+      //     $group.removeClass(_this.varSet.activeClassName);
+      //     _this.varSet.isVisible = false;
+      //   } else {
+      //     $group.addClass(_this.varSet.activeClassName);
+      //     _this.varSet.isVisible = true;
+      //   }
+      // });
 
       $(_this.varSet.hideBtn).on('click', function () {
         var $group = $(this).closest('.reply-writer');
@@ -389,10 +451,10 @@
 
   UI.visibleTarget = {
     varSet: {
-      showBtn: '[data-role="visible_btn"]',
-      contWrap: '[data-role="visible_wrap"]',
-      cont: '[data-role="visible_cont"]',
-      hideBtn: '[data-role="hide_btn"]',
+      showBtn: '[data-role=visible_btn]',
+      contWrap: '[data-role=visible_wrap]',
+      cont: '[data-role=visible_cont]',
+      hideBtn: '[data-role=hide_btn]',
       activeClassName: 'is-active',
     },
     init: function () {
@@ -435,9 +497,14 @@
 
         if (typeof swEl.options.pagination !== 'undefined') {
           swEl.options.pagination.el = $(swEl).closest('.page-kv').find('.swiper-pagination')[0];
-          if ($(swEl).attr('data-curation-type') === 'curation-b-01-02' || $(swEl).attr('data-curation-type') === 'curation-b-21-01') {
+          if (swEl.options.pagination.type === 'fraction') {
             swEl.options.pagination.formatFractionCurrent = function (number) {
-              return ('0' + number).slice(-2);
+              if ($(swEl).attr('data-curation-type') === 'curation-b-01-02' && winWChk === 'mo') {
+                const nowPage = number - 1 !== 0 ? number - 1 : $(swEl).find('.swiper-slide:not(.swiper-slide-duplicate)').length;
+                return ('0' + nowPage).slice(-2);
+              } else {
+                return ('0' + number).slice(-2);
+              }
             }
             swEl.options.pagination.formatFractionTotal = function (number) {
               return ('0' + number).slice(-2);
@@ -590,6 +657,62 @@
     }
   }
 
+  UI.themeSw = {
+    slider: null,
+    sliderEl: '.theme-column',
+    config: {
+      observer: true,
+      observeParents: true,
+      slidesPerView: "auto",
+      slidesPerGroup: 2,
+      centeredSlides: false,
+      slidesPerGroupSkip: 1,
+      pagination: {
+        el: ".theme-column .swiper-dot",
+      },
+      spaceBetween: 24,
+      breakpoints: {
+        1600: {
+          spaceBetween: 19,
+        },
+        1280: {
+          spaceBetween: 12,
+        },
+        769: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          spaceBetween: 0,
+        },
+      },
+    },
+    initClass: 'swiper-container-initialized',
+    init: function () {
+      if ($(this.sliderEl).length) {
+        if ($(this.sliderEl).find('.swiper-slide').length > 0) {
+          if (!$(this.sliderEl).hasClass(this.initClass)) {
+            if ($(this.sliderEl).find('.swiper-dot').length > 0) {
+              this.config.pagination.el = $(this.sliderEl).find('.swiper-dot')[0];
+            } else {
+              $(this.sliderEl).append('<div class="swiper-dot"></div>')
+              this.config.pagination.el = $(this.sliderEl).find('.swiper-dot')[0];
+            }
+            this.slider = new Swiper(this.sliderEl, this.config);
+          }
+        }
+      }
+    },
+    resize: function () {
+      if ($(this.sliderEl).hasClass(this.initClass) && winWChk === 'pc') {
+        $(this.sliderEl).find('.swiper-dot').remove();
+        this.slider.destroy();
+        this.init();
+      }
+      if (!$(this.sliderEl).hasClass(this.initClass) && winWChk === 'mo') {
+        this.init();
+      }
+    }
+  }
+
   UI.init = function () {
     const winW = window.innerWidth;
     if (winWChk != 'mo' && winW <= 768) {
@@ -614,6 +737,9 @@
     UI.visibleTarget.init();
     UI.curationSw.init();
     UI.newsSw.init();
+    UI.themeSw.init()
+    UI.reviewSwiper.init();
+    UI.sortList.init();
   }
 
   UI.resize = function () {
@@ -633,6 +759,7 @@
         UI.curationSw.resize();
       }
       UI.newsSw.resize();
+      UI.themeSw.resize();
 
       clearTimeout(st);
       st = null;
@@ -653,6 +780,35 @@ $(function () {
 
   $(window).on('scroll', function () {
     UI.scroll();
+
+    // 상품 상세 스크롤 스크립트(s)
+    // e.preventDefault();
+    // e.stopPropagation();
+    var device = $(window).innerWidth();
+    var thisScroll = $(this).scrollTop();
+    var _this = $(".offer__box-r");
+    var numh = $(".offer-info").outerHeight();
+    var start = $(".offer-review.side").length;
+    var num1 = Number(numh / 2);
+    if (device > 768 && start) {
+      if (thisScroll > 0) {
+        _this.css({
+          'transform': 'translateY(-' + num1 + 'px)'
+        });
+        $(".kv-offer").css({
+          'margin-bottom': -num1
+        });
+      } else {
+        _this.css({
+          'transform': 'translateY(' + 0 + 'px)'
+        });
+        $(".kv-offer").css({
+          'margin-bottom': 0
+        });
+      }
+    }
+    // 상품 상세 스크롤 스크립트(e)
+
   })
 
   //임시 

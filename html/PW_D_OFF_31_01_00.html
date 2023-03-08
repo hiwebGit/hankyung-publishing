@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>통합 검색 결과 - 공연·전시·책 | 한경 ARTE</title>
+  <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+  <!-- font -->
+  <link rel="preload" href="../assets/fonts/Pretendard-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/Pretendard-Medium.subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/Pretendard-SemiBold.subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/PPEditorialNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/Faktum-Medium.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body>
+  <!-- dark mode 'wrap--dark' 추가 -->
+  <div id="wrap" class="wrap">
+
+    <!-- Header -->
+    <header class="header" id="header"></header>
+    <!--// Header -->
+
+    <!-- Container -->
+    <div class="container" id="container">
+      <!-- START -->
+      <div class="content">
+
+        <!-- concert-detail -->
+        <div class="detail-center">
+          <!-- concert-rating -->
+          <ul class="rating-wrap">
+            <li>
+              <div class="rating-box">
+                <span class="rating-title">총 평점</span>
+                <div class="star-box mo">
+                  <!-- [D] 0.5단위일 경우 p5 클래스 추가 / 1단위일 경우 p10 클래스 추가 -->
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p5"></i></span>
+                </div>
+                <div class="rating-score">
+                  <span class="rating-score__current">8.0</span>
+                  <span class="rating-score__total">/10</span>
+                </div>
+              </div>
+              <div class="rating-box">
+                <div class="star-box pc">
+                  <!-- [D] 0.5단위일 경우 p5 클래스 추가 / 1단위일 경우 p10 클래스 추가 -->
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p5"></i></span>
+                </div>
+                <span class="rating-text">총 68명</span>
+              </div>
+            </li>
+            <li class="member">
+              <div class="rating-box">
+                <span class="rating-title">전문가<span class="pc"> 평점</span></span>
+                <div class="star-box pc">
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p00"></i></span>
+                </div>
+                <div class="rating-score pc">
+                  <span class="rating-score__current">8.0</span>
+                  <span class="rating-score__total">/10</span>
+                </div>
+                <span class="grade mo">
+                  <span class="star"><i class="star__point p7"></i></span>
+                  <em class="grade__num">7.0</em>
+                </span>
+                <span class="rating-text">총 68명</span>
+              </div>
+              <div class="rating-box">
+                <span class="rating-title">회원<span class="pc"> 평점</span></span>
+                <div class="star-box pc">
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p00"></i></span>
+                </div>
+                <div class="rating-score pc">
+                  <span class="rating-score__current">8.0</span>
+                  <span class="rating-score__total">/10</span>
+                </div>
+                <span class="grade mo">
+                  <span class="star"><i class="star__point p7"></i></span>
+                  <em class="grade__num">7.0</em>
+                </span>
+                <span class="rating-text">총 68명</span>
+              </div>
+            </li>
+            <li class="raito">
+              <p class="rating-title">평점 비율</p>
+              <ul class="graph">
+                <li>
+                  <div class="total-bar">
+                    <!-- 평점 비율 height 적용-->
+                    <span class="ing-bar" style="height: 50%;"></span>
+                  </div>
+                  <span class="age">10대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 20%;"></span>
+                  </div>
+                  <span class="age">20대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 30%;"></span>
+                  </div>
+                  <span class="age">30대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 80%;"></span>
+                  </div>
+                  <span class="age">40대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 100%;"></span>
+                  </div>
+                  <span class="age">50대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 10%;"></span>
+                  </div>
+                  <span class="age">60대 이상</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!--// concert-rating -->
+
+          <!-- 한줄평 쓰기 -->
+          <div class="concert-review">
+            <div class="concert-review__head">
+              <p class="rating-total">총 345개</p>
+              <button type="button" class="btn-rect size-sm bg-primary">한줄평 쓰기<i class="ico ico-arrow"></i></button>
+            </div>
+
+            <div class="swiper review-thum">
+              <ul class="review-thum__wrap swiper-wrapper">
+                <li class="swiper-slide">
+                  <img src="../assets/images/@temp/@c11_review_thum01.png" alt="">
+                </li>
+                <li class="swiper-slide">
+                  <img src="../assets/images/@temp/@c11_review_thum01.png" alt="">
+                </li>
+                <li class="swiper-slide">
+                  <img src="../assets/images/@temp/@c11_review_thum01.png" alt="">
+                </li>
+                <li class="swiper-slide">
+                  <img src="../assets/images/@temp/@c11_review_thum01.png" alt="">
+                </li>
+                <li class="swiper-slide">
+                  <!-- [D] 작성된 리뷰가 없을 경우 -->
+                  <div class="review-thum_msg">
+                    <span class="review-thum_text">작성된 사진 리뷰가<br>없습니다.</span>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <img src="../assets/images/@temp/@c11_review_thum01.png" alt="">
+                  <a href="#" class="all-review">전체보기</a>
+                </li>
+              </ul>
+            </div>
+
+            <!--List -->
+            <div class="concert-review-wrap">
+              <ul class="concert-review-list">
+                <li class="concert-review__item">
+                  <div class="one-line">
+                    <div>
+                      <!-- 아코디언 버튼 클릭시 is-active 추가 -->
+                      <span class="one-line__detail is-active">
+                        대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
+                        드라큘라 역할의 테이님도 정말 멋지셨습니다.
+                        역시 믿고 듣는 보이스 입니다 !!
+                        그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
+                        모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
+                        대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
+                        드라큘라 역할의 테이님도 정말 멋지셨습니다.
+                      </span>
+                    </div>
+                    <div class="one-line__info">
+                      <div class="one-line-by">
+                        <span class="byname">내 귀에 캔디</span>
+                        <span class="tag tag--line">회원</span>
+                        <span class="grade">
+                          <span class="star"><i class="star__point p9"></i></span>
+                          <em class="grade__num">4.0</em>
+                        </span>
+                      </div>
+                      <div class="one-line-sub">
+                        <div class="one-line-sub__box l">
+                          <span class="text-date">2022.11.24</span>
+                          <div class="access-nums">
+                            <button type="button" class="btn-fav btn-fav--num" aria-label="Like"><span class="num">120k</span></button>
+                          </div>
+                        </div>
+                        <div class="one-line-sub__box r">
+                          <!-- 클릭시 active 클래스가 붙는다. -->
+                          <button type="button" class="btn no-line ss h-add-btn"><span class="arrow-txt">한줄평
+                              닫기</span>
+                            <i class="ico ico-above"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+                <li class="concert-review__item">
+                  <div class="one-line">
+                    <div>
+                      <!-- 아코디언 버튼 클릭시 is-active 추가 -->
+                      <span class="one-line__detail">
+                        대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
+                        드라큘라 역할의 테이님도 정말 멋지셨습니다.
+                        역시 믿고 듣는 보이스 입니다 !!
+                        그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
+                        모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
+                        대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
+                        드라큘라 역할의 테이님도 정말 멋지셨습니다.
+                        역시 믿고 듣는 보이스 입니다 !!
+                        그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
+                        모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
+                      </span>
+                    </div>
+                    <div class="one-line__info">
+                      <div class="one-line-by">
+                        <span class="byname">내 귀에 캔디</span>
+                        <span class="tag tag--line">회원</span>
+                        <span class="grade">
+                          <span class="star"><i class="star__point p9"></i></span>
+                          <em class="grade__num">4.0</em>
+                        </span>
+                      </div>
+                      <div class="one-line-sub">
+                        <div class="one-line-sub__box l">
+                          <span class="text-date">2022.11.24</span>
+                          <div class="access-nums">
+                            <button type="button" class="btn-fav btn-fav--num" aria-label="Like"><span class="num">120k</span></button>
+                          </div>
+                        </div>
+                        <div class="one-line-sub__box r">
+                          <!-- 클릭시 active 클래스가 붙는다. -->
+                          <button type="button" class="btn no-line ss h-add-btn is-active"><span class="arrow-txt">한줄평
+                              열기</span>
+                            <i class="ico ico-above"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+
+              </ul>
+              <!-- Paging -->
+              <div class="paging">
+                <!-- PC -->
+                <a href="#" class="paging__btn paging__btn--first">처음</a>
+                <a href="#" class="paging__btn paging__btn--prev">이전</a>
+                <div class="paging__num-wrap show-pc">
+                  <a href="#" class="paging__num paging__num--active">1</a>
+                  <a href="#" class="paging__num">2</a>
+                  <a href="#" class="paging__num">3</a>
+                  <a href="#" class="paging__num">4</a>
+                  <a href="#" class="paging__num">5</a>
+                  <a href="#" class="paging__num">6</a>
+                  <a href="#" class="paging__num">7</a>
+                  <a href="#" class="paging__num">8</a>
+                  <a href="#" class="paging__num">9</a>
+                  <a href="#" class="paging__num">10</a>
+                </div>
+                <a href="#" class="paging__btn paging__btn--next">다음</a>
+                <a href="#" class="paging__btn paging__btn--last">마지막</a>
+
+                <!-- Mobile -->
+                <div class="paging__num-wrap show-mo">
+                  <a href="#" class="paging__more">더보기</a>
+                </div>
+              </div>
+              <!-- Paging -->
+            </div>
+            <!--//List -->
+
+            <div class="editor-paging">
+              <div class="reply-paging__left">
+                <a href="#" class="paging__list">
+                  <span class="paging__list__text">LIST</span>
+                </a>
+              </div>
+              <div class="reply-paging__right">
+                <a href="#" class="btn-arrow__left">PREV</a>
+                <a href="#" class="btn-arrow__next">NEXT</a>
+              </div>
+            </div>
+          </div>
+          <!--// 한줄평 쓰기 -->
+        </div>
+
+        <!-- concert-loca -->
+        <div iv class="concert-loca">
+          <strong class="concert-loca__title mo">예술의 전당 CJ 토월극장</strong>
+          <div class="concert-loca__map">
+            <img src="../assets/images/@temp/@c11_map_01.png" alt="">
+          </div>
+          <div class="concert-loca__info">
+            <div class="concert-loca__info-inner">
+              <strong class="concert-loca__info-title">예술의 전당 CJ 토월극장</strong>
+              <ul class="concert-loca__info-title-list">
+                <li>
+                  <span>주소</span>
+                  <p>서울틀별시 서초구 남부순환로 2406 (서초동)​</p>
+                </li>
+                <li>
+                  <span>홈페이지</span>
+                  <p>www.sac.or.kr​</p>
+                </li>
+                <li>
+                  <span>시설특성</span>
+                  <p>국립</p>
+                </li>
+                <li>
+                  <span>공연장수</span>
+                  <p>2</p>
+                </li>
+                <li>
+                  <span>객석수</span>
+                  <p>1000</p>
+                </li>
+                <li>
+                  <span>개관연도</span>
+                  <p>2002</p>
+                </li>
+              </ul>
+              <div class="concert-loca__info-bottom">
+                <div class="concert-loca__info-bottom-left">
+                  <ul class="concert-loca__kopis">
+                    <li>KOPIS (공연예술통합전산망)</li>
+                    <li><a href="#" target="_blank" title="새창열림">http://www.kopis.or.kr</a></li>
+                  </ul>
+                  <p class="concert-loca__info-update">
+                    본 정보는 주최 측의 사정에 따라 변경될 수 있습니다.​<br>
+                    최종 업데이트 2022. 12. 05
+                  </p>
+                </div>
+                <a href="https://www.kopis.or.kr/por/cs/modinfo/csModInfoAdd.do?menuId=MNU_00038" target="_blank"
+                  class="concert-loca__report">정보 오류 수정 요청</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--// concert-loca -->
+
+      </div>
+      <!--// END -->
+    </div>
+    <!--// Container -->
+
+    <!-- Footer -->
+    <footer class="footer" id="footer"></footer>
+    <!--// Footer -->
+
+  </div>
+</body>
+
+</html>
