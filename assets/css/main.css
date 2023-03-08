@@ -1,0 +1,36 @@
+.main-kv { overflow: hidden; position: relative; height: 1080px; }
+
+.main-kv__slider { height: 100%; }
+
+.main-kv__list { height: 100%; }
+
+.main-kv__item { position: relative; height: 100%; background-size: cover; background-position: 50% 50%; }
+
+.main-kv__title { font-weight: 300; font-size: 120px; color: #fff; line-height: .76; flex: 1; }
+
+.main-kv__description { margin-top: 36px; color: #ECA323; font-family: "Faktum", "Pretendard", Arial, Dotum, serif; font-size: 18px; }
+
+.main-kv__inbox { position: absolute; top: 50%; left: 50%; right: 0; transform: translate(-50%, -50%); display: flex; width: 100%; max-width: 1920px; padding: 0 0 0 376px; background-color: seagreen; }
+
+.main-kv__thumb { position: absolute; top: 50%; left: 0; overflow: hidden; display: block; width: 0; height: 550px; transform: translateY(-50%); transition: all 1s; }
+
+.main-kv__thumb img { width: 0; height: 100%; }
+
+.main-kv__thumb.active { width: 300px; }
+
+.main-kv__thumb.active img { width: 300px; }
+
+.main-kv__textbox { display: flex; flex-direction: column; min-height: 350px; }
+
+.main-kv__pagination.swiper-pagination-bullets { position: absolute; bottom: 56px; left: 0; right: 0; z-index: 5; text-align: center; line-height: 1; }
+
+.main-kv__pagination.swiper-pagination-bullets .swiper-pagination-bullet { width: 10px; height: 10px; background: var(--color-dark); border: 1px solid var(--color-light); opacity: 1; margin: 0 8px; }
+
+.main-kv__pagination.swiper-pagination-bullets .swiper-pagination-bullet-active { background: var(--color-light); border: 1px solid var(--color-dark); }
+
+@media all and (max-width: 1280px) { .main-kv { height: 720px; } }
+
+@media all and (max-width: 768px) { .main-kv { height: 640px; }
+  .main-kv__thumb { display: none; } }
+
+/*# sourceMappingURL=../../false/main.css.map */

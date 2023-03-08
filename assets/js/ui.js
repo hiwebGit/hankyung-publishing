@@ -485,6 +485,7 @@
       observer: true,
       observeParents: true,
       initialSlide: 0,
+      lazy: true,
       on: {
         init: function () {},
       },
@@ -557,8 +558,15 @@
         }
 
         if (typeof $(swEl).data('ui') === 'undefined') {
-          swInstance = new Swiper(swEl, swEl.options);
-          $(swEl).data('ui', swInstance);
+          if (typeof swEl.options.thumbs === 'undefined') {
+            swInstance = new Swiper(swEl, swEl.options);
+            $(swEl).data('ui', swInstance);
+          } else {
+            const mappingSw = $(swEl).closest('.kv-swiper-dual').find('.kv-swiper__thumbs')[0].swiper;
+            swEl.options.thumbs.swiper = mappingSw;
+            swInstance = new Swiper(swEl, swEl.options);
+            $(swEl).data('ui', swInstance);
+          }
 
           if (swInstance.params.autoplay.enabled === true) {
             setTimeout(function () {
@@ -713,6 +721,103 @@
     }
   }
 
+  // 정리 필요
+  UI.lyPopup = {
+    openBtn: '[data-lypop-open]',
+    openClass: 'is-open',
+    closeBtn: '[data-lypop-btn=close]',
+    init: function () {
+      this.toggle();
+      this.close();
+    },
+    toggle: function () {
+      var _this = this;
+      $(_this.openBtn).on('click', function () {
+        var $this = $(this),
+          popName = $this.data('lypop-open'),
+          names = new Array();
+
+        names = popName.split(',');
+
+        $.each(names, function (idx, item) {
+          var $lyPop = $('[data-lypop=' + item + ']'),
+            textOpen = $this.data('st-open'),
+            textClose = $this.data('st-close'),
+            $textBox = $this.find('.st-text');
+
+          if ($lyPop.hasClass(_this.openClass)) {
+            $lyPop.removeClass(_this.openClass);
+            $textBox.text(textOpen);
+          } else {
+            $lyPop.addClass(_this.openClass);
+            $textBox.text(textClose);
+          }
+        });
+
+
+
+      });
+    },
+    close: function () {
+      var _this = this;
+      $(_this.closeBtn).on('click', function () {
+        _this.destroy($(this).closest('[data-lypop]'));
+      });
+    },
+    destroy: function (layer) {
+      var _this = this;
+      layer.each(function () {
+        layer.removeClass(_this.openClass);
+        var openText = layer.data('st-open');
+        if (openText.length) {
+          $(this).find('st-text').text(openText);
+        }
+      })
+    },
+    resize: function () {
+      var _this = this;
+      _this.destroy($('[data-lypop].' + _this.openClass));
+    }
+  }
+
+  UI.searchBox = {
+    outer: '.sort-section',
+    el: '.search-box',
+    showClass: 'is-show',
+    statusCheck: function (elm) {
+      var _this = this;
+      var statusHide = undefined;
+
+      statusHide = ((elm.find('.o-input').width() == 0) && !(elm.closest(_this.el).hasClass(_this.showClass))) ? true : false;
+      return statusHide;
+    },
+    init: function () {
+      var _this = this;
+      var searchBtn = this.el;
+      $(searchBtn).on('click', function () {
+        var $this = $(this);
+        if (_this.statusCheck($this)) {
+          $this.closest(_this.el).addClass(_this.showClass);
+        }
+      });
+    },
+    destroy: function (elm) {
+      var _this = this;
+      elm.removeClass(_this.showClass);
+    },
+    resize: function () {
+      var _this = this;
+      _this.destroy($(_this.outer).find(_this.el));
+      if (winWChk != 'mo' && window.innerWidth >= 1280) {
+        _this.destroy($(_this.outer).find(_this.el));
+      }
+
+      if (winWChk == 'mo' && window.innerWidth <= 768) {
+        _this.destroy($(_this.outer).find(_this.el));
+      }
+    }
+  }
+
   UI.init = function () {
     const winW = window.innerWidth;
     if (winWChk != 'mo' && winW <= 768) {
@@ -740,6 +845,8 @@
     UI.themeSw.init()
     UI.reviewSwiper.init();
     UI.sortList.init();
+    UI.lyPopup.init();
+    UI.searchBox.init();
   }
 
   UI.resize = function () {
@@ -752,14 +859,19 @@
       if (winWChk != 'mo' && winW <= 768) { //모바일 버전으로 전환할 때 1번만 실행할 코드 추가
         winWChk = 'mo';
         UI.curationSw.resize();
+        UI.lyPopup.resize();
+        UI.searchBox.resize();
       }
 
       if (winWChk != 'pc' && winW >= 769) { //PC 버전으로 전환할 때 1번만 실행할 코드 추가
         winWChk = 'pc';
         UI.curationSw.resize();
+        UI.lyPopup.resize();
+        UI.searchBox.resize();
       }
       UI.newsSw.resize();
       UI.themeSw.resize();
+
 
       clearTimeout(st);
       st = null;
@@ -781,33 +893,48 @@ $(function () {
   $(window).on('scroll', function () {
     UI.scroll();
 
-    // 상품 상세 스크롤 스크립트(s)
-    // e.preventDefault();
-    // e.stopPropagation();
-    var device = $(window).innerWidth();
-    var thisScroll = $(this).scrollTop();
-    var _this = $(".offer__box-r");
-    var numh = $(".offer-info").outerHeight();
-    var start = $(".offer-review.side").length;
-    var num1 = Number(numh / 2);
-    if (device > 768 && start) {
-      if (thisScroll > 0) {
-        _this.css({
-          'transform': 'translateY(-' + num1 + 'px)'
-        });
-        $(".kv-offer").css({
-          'margin-bottom': -num1
-        });
+    // 상품 상세 임의 스크롤 스크립트(s)
+    var deScroll = function () {
+      //e.preventDefault();
+      //e.stopPropagation();
+      var device = $(window).innerWidth();
+      var thisScroll = $(this).scrollTop();
+      var _this = $(".offer__box-r");
+      var extra = $(".offer-info").outerHeight() / 2;
+      var start = $(".offer-review.side").length;
+      var heightR = $(".offer-info").outerHeight() + $(".offer-review.side").outerHeight();
+      var heightL = $(".offer__box-l").height();
+      //var contentP = $(".content").css("paddingTop");
+      var gap = parseInt(heightR - heightL);
+      var num1 = heightL > heightR ? 0 : parseInt(extra);
+      var num2
+      if (num1 == 0) {
+        num2 = 0;
+      } else if (extra < gap) {
+        num2 = extra;
       } else {
-        _this.css({
-          'transform': 'translateY(' + 0 + 'px)'
-        });
-        $(".kv-offer").css({
-          'margin-bottom': 0
-        });
+        num2 = gap;
       }
+      if (device > 768 && start) {
+        if (thisScroll > 0) {
+          _this.css({
+            'transform': 'translateY(-' + num1 + 'px)'
+          });
+          $(".kv-offer").css({
+            'margin-bottom': -num2
+          });
+        } else {
+          _this.css({
+            'transform': 'translateY(' + 0 + 'px)'
+          });
+          $(".kv-offer").css({
+            'margin-bottom': 0
+          });
+        }
+      }
+      // 상품 상세 임의 스크롤 스크립트(e)
     }
-    // 상품 상세 스크롤 스크립트(e)
+    deScroll();
 
   })
 
