@@ -234,30 +234,29 @@
               <div class="sort-section">
                 <div class="sort-section__block">
                   <p class="result-text">검색결과 총 204개</p>
-                  <!-- sort list : mobile -->
-                  <select class="o-select sort-list-mobile">
-                    <option value="" selected>최신순</option>
-                    <option value="">조회순</option>
-                    <option value="">좋아요순</option>
-                    <option value="">댓글순</option>
-                  </select>
-                  <!--// sort list : mobile -->
 
                   <div class="sort-section__side">
-                    <!-- sort list : pc -->
-                    <ul class="sort-list">
-                      <li class="is-on"><button type="button">최신순</button></li>
-                      <li><button type="button">조회순</button></li>
-                      <li><button type="button">좋아요순</button></li>
-                      <li><button type="button">댓글순</button></li>
-                    </ul>
-                    <!--// sort list : pc -->
-                    <button type="button" class="filter-button" data-lypop-open="filter" data-st-open="열기"
-                      data-st-close="닫기">상세옵션 <span class="st-text">열기</span></button>
-                    <span class="search-box hide-mo">
-                      <input type="text" class="o-input" placeholder="작품명, 리뷰명, 작성자명 등  태그를 입력해 주세요.">
-                      <button type="button" class="o-btn o-btn-search" aria-label="검색"></button>
-                    </span>
+                    <!-- sort list -->
+                    <div class="view-sort">
+                      <button type="button" class="view-sort__cur">최신순</button>
+                      <ul class="view-sort__list">
+                        <li class="sort-on"><button type="button" class="view-sort__btn">최신순</button></li>
+                        <li><button type="button" class="view-sort__btn">조회순</button></li>
+                        <li><button type="button" class="view-sort__btn">좋아요순</button></li>
+                        <li><button type="button" class="view-sort__btn">댓글순</button></li>
+                      </ul>
+                    </div>
+                    <!--// sort list -->
+
+                    <div class="rbox-block">
+                      <button type="button" class="filter-button" data-lypop-open="filter" data-st-open="열기"
+                        data-st-close="닫기">상세옵션 <span class="st-text">열기</span></button>
+
+                      <span class="search-box hide-mo">
+                        <input type="text" class="o-input" placeholder="작품명, 리뷰명, 작성자명 등  태그를 입력해 주세요.">
+                        <button type="button" class="o-btn o-btn-search" aria-label="검색"></button>
+                      </span>
+                    </div>
                   </div>
                 </div>
 
