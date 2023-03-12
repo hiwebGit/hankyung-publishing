@@ -17,8 +17,11 @@
   <!--// font -->
 </head>
 
+<!-- dark mode 'dark-mode' 추가 -->
+
+<!-- dark mode 일 경우 body 'dark-mode' 추가 -->
+
 <body>
-  <!-- dark mode 'wrap--dark' 추가 -->
   <div id="wrap" class="wrap">
 
     <!-- Header -->
@@ -80,12 +83,8 @@
                   <div class="offer-info__box">
                     <ul class="offer-info__host">
                       <li class="offer-info__item">
-                        <span class="offer-info__sub">주최</span>
-                        <span>CJ ENM</span>
-                      </li>
-                      <li class="offer-info__item">
-                        <span class="offer-info__sub">주관</span>
-                        <span>CJ아지트</span>
+                        <span class="offer-info__sub">제작사</span>
+                        <span>(사)공연집단 강철무지개</span>
                       </li>
                     </ul>
                   </div>
@@ -101,8 +100,8 @@
           <section class="offer-review side">
             <div class="offer-review__group">
               <div class="offer-review__header">
-                <!-- tab  -->
-                <div class="tab">
+                <!-- tab  : button 활성화 'is-active' -->
+                <div class="tab type-all">
                   <ul class="tab__list ml__8" data-tab="tab-list">
                     <li class="tab__item"><a href="#" class="tab__btn is-active" data-tab-btn="tab01">전문가 리뷰</a></li>
                     <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab02">회원 리뷰</a></li>
@@ -164,15 +163,15 @@
           <!-- 모바일 이동 버튼 -->
           <div class="offer-anchor-wrap">
             <ul class="offer-anchor__list">
-              <li class="anchor__item"><a href="#" class="anchor__btn is-active">소개</a></li>
-              <li class="anchor__item"><a href="#" class="anchor__btn">전문가 리뷰</a></li>
-              <li class="anchor__item"><a href="#" class="anchor__btn">회원 리뷰</a></li>
-              <li class="anchor__item"><a href="#" class="anchor__btn">한줄평</a></li>
+              <li class="anchor__item"><a href="#section_introduct" class="anchor__btn is-active">소개</a></li>
+              <li class="anchor__item"><a href="#section_review" class="anchor__btn">전문가 리뷰</a></li>
+              <li class="anchor__item"><a href="#section_review" class="anchor__btn">회원 리뷰</a></li>
+              <li class="anchor__item"><a href="#section_comment" class="anchor__btn">한줄평</a></li>
             </ul>
           </div>
           <!-- //모바일 이동 버튼 -->
           <!-- s: 개요-->
-          <section class="offer-summ">
+          <section class="offer-summ" id="section_introduct">
             <div class="offer-summ__top">
               <h3 class="offer-summ__tit">개요</h3>
             </div>
@@ -267,17 +266,17 @@
               <p style="font-size: 16px;">
                 “넌 무대 위의 먼지 한 점에 불과해” “그래도, 전 제 꿈을 포기하지 않을 거예요”<br>
                 한편, 최고의 스타였지만 이제는 내리막에 들어선 여배우 도로시가 프리티 레이디에 주인공으로 캐스팅이 되는데, 이는 부자 애인인 애브너가 그녀를 출연시키는 대가로 공연에 자신의 돈
-                  10만 달러를 투자하겠다는 조건을 내걸었기 때문이다. 꿈이 좌절된 페기는 극장 밖에서 공연의 3명의 코러스 걸들을 우연히 만나 자신의 끼를 선보이게 된다. 페기에게 관심이 생긴 빌리는
-                  잠들어있는 페기를 마쉬에게 추천하고 페기는 추가 인원을 찾던 줄리안 마쉬는 그녀의 재능을 보고 코러스 걸로 발탁한다.
-                  <br><br>
-                  “신출내기로 무대에 나가지만, 돌아올 때는 스타가 되어있어야 해!“<br>
-                  그러나, 공연 오픈 이틀 전, 페기는 실수로 여주인공 도로시를 넘어뜨렸다는 이유로 해고를 당한다. 연출가 줄리안 마쉬는 페기와 도로시의 연인 펫의 관계를 오해하고 도로시의 사고를
-                  페기가 꾸민 짓이라 생각한 것. 하지만, 실의에 빠진 코러스 단원들은 모두 한 목소리로 페기를 여자주인공으로 교체하자는 의견을 내놓고 결국 다리를 다친 도로시의 역할을 소화할 수 있는
-                  사람은 페기밖에 없다는 사실을 깨달은 줄리안 마쉬는 도로시의 배역을 그녀에게 맡기게 된다.
-                  <br><br>
-                  남은 시간은 단 36시간.<br>
-                  25페이지 분량의 대사, 노래 6곡, 10종류의 댄스를 소화해야 하는 페기 소여!<br>
-                  그녀는 과연 브로드웨이의 새로운 스타로 태어날 수 있을까?
+                10만 달러를 투자하겠다는 조건을 내걸었기 때문이다. 꿈이 좌절된 페기는 극장 밖에서 공연의 3명의 코러스 걸들을 우연히 만나 자신의 끼를 선보이게 된다. 페기에게 관심이 생긴 빌리는
+                잠들어있는 페기를 마쉬에게 추천하고 페기는 추가 인원을 찾던 줄리안 마쉬는 그녀의 재능을 보고 코러스 걸로 발탁한다.
+                <br><br>
+                “신출내기로 무대에 나가지만, 돌아올 때는 스타가 되어있어야 해!“<br>
+                그러나, 공연 오픈 이틀 전, 페기는 실수로 여주인공 도로시를 넘어뜨렸다는 이유로 해고를 당한다. 연출가 줄리안 마쉬는 페기와 도로시의 연인 펫의 관계를 오해하고 도로시의 사고를
+                페기가 꾸민 짓이라 생각한 것. 하지만, 실의에 빠진 코러스 단원들은 모두 한 목소리로 페기를 여자주인공으로 교체하자는 의견을 내놓고 결국 다리를 다친 도로시의 역할을 소화할 수 있는
+                사람은 페기밖에 없다는 사실을 깨달은 줄리안 마쉬는 도로시의 배역을 그녀에게 맡기게 된다.
+                <br><br>
+                남은 시간은 단 36시간.<br>
+                25페이지 분량의 대사, 노래 6곡, 10종류의 댄스를 소화해야 하는 페기 소여!<br>
+                그녀는 과연 브로드웨이의 새로운 스타로 태어날 수 있을까?
               </p>
             </div>
             <!-- e: 통이미지 -->
@@ -323,7 +322,7 @@
           <!--// ad-banner -->
 
           <!-- 전문가리뷰/회원리뷰 -->
-          <div class="offer-review__full">
+          <div class="offer-review__full" id="section_review">
             <!-- 리뷰가 없는 경우 -->
             <!-- <div class="offer-review-none-mo show-mo">
               <p class="offer-review-none-mo__txt">해당 공연에 대한 회원 리뷰가<br>아직 없습니다!</p>
@@ -335,7 +334,7 @@
             <div class="offer-review__header">
               <div class="tab">
                 <ul class="tab__list ml__8" data-tab="tab-list">
-                  <!-- tab  -->
+                  <!-- tab  : button 활성화 'is-active' -->
                   <li class="tab__item"><a href="#" class="tab__btn is-active" data-tab-btn="tab01">전문가 리뷰<span
                         class="num">(<em>20</em>)
                       </span></a> </li>
@@ -678,10 +677,11 @@
           <!--// concert-rating -->
 
           <!-- 한줄평 쓰기 -->
-          <div class="concert-review">
+          <div class="concert-review" id="section_comment">
             <div class="concert-review__head">
               <p class="rating-total">총 345개</p>
-              <button type="button" class="btn-rect size-sm bg-primary">한줄평 쓰기<i class="ico ico-arrow"></i></button>
+              <button type="button" class="btn-rect size-sm bg-primary" data-pop-open="popupComment">한줄평 쓰기<i
+                  class="ico ico-arrow"></i></button>
             </div>
 
             <div class="swiper review-thum">
@@ -706,7 +706,7 @@
                 </li>
                 <li class="swiper-slide">
                   <img src="../assets/images/@temp/@c11_review_thum01.png" alt="">
-                  <a href="#" class="all-review">전체보기</a>
+                  <button type="button" class="all-review" data-pop-open="popupGallery">전체보기</button>
                 </li>
               </ul>
             </div>
@@ -1023,6 +1023,11 @@
     <footer class="footer" id="footer"></footer>
     <!--// Footer -->
 
+    <!-- (확인용)댓글 관련 팝업 : 각 파일에서 코드 확인 필요-->
+    <div class="pop1">후기 작성 : PW_I_ON_CP_01_00.html</div>
+    <div class="pop2">후기 이미지 모아보기 : PW_I_ON_CP_02_00.html</div>
+    <!--// (확인용)댓글 관련 팝업 -->
+
   </div>
 
   <!-- Script -->
@@ -1031,6 +1036,13 @@
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
   <!--// Script -->
+  <script>
+    $(document).ready(function () {
+      //팝업 확인용 load
+      $(".pop1").load("PW_I_ON_CP_01_00.html .pop-wrap");
+      $(".pop2").load("PW_I_ON_CP_02_00.html .pop-wrap");
+    });
+  </script>
 
 </body>
 

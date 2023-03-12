@@ -17,8 +17,11 @@
   <!--// font -->
 </head>
 
+<!-- dark mode 'dark-mode' 추가 -->
+
+<!-- dark mode 일 경우 body 'dark-mode' 추가 -->
+
 <body>
-  <!-- dark mode 'wrap--dark' 추가 -->
   <div id="wrap" class="wrap">
 
     <!-- Header -->
@@ -71,25 +74,16 @@
           <!-- tabs -->
           <div class="tab-block">
             <div class="tab">
-              <!-- tab : pc button 활성화 'is-active'-->
+              <button type="button" class="tab__cur">문학</button>
               <ul class="tab__list" data-tab="tab-list">
-                <!-- tab  -->
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab01">문학</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn is-active" data-tab-btn="tab02">고전</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab03">경제</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab04">인문</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab05">교양</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab06">예술</a></li>
+                <!-- tab  : button 활성화 'is-active' -->
+                <li class="tab__item"><a href="#" class="tab__btn is-active">문학</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">고전</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">경제</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">인문</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">교양</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">예술</a></li>
               </ul>
-              <!-- tab : mobile -->
-              <select class="o-select tab-select" data-tab="tab-list">
-                <option data-tab-btn="tab01">문학</option>
-                <option data-tab-btn="tab02" selected>고전</option>
-                <option data-tab-btn="tab03">경제</option>
-                <option data-tab-btn="tab04">인문</option>
-                <option data-tab-btn="tab05">교양</option>
-                <option data-tab-btn="tab06">예술</option>
-              </select>
             </div>
           </div>
           <!--// tabs -->

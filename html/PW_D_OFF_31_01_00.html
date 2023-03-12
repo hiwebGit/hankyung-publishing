@@ -16,8 +16,11 @@
   <link rel="preload" href="../assets/fonts/Faktum-Medium.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
+<!-- dark mode 'dark-mode' 추가 -->
+
+<!-- dark mode 일 경우 body 'dark-mode' 추가 -->
+
 <body>
-  <!-- dark mode 'wrap--dark' 추가 -->
   <div id="wrap" class="wrap">
 
     <!-- Header -->
@@ -150,7 +153,8 @@
           <div class="concert-review">
             <div class="concert-review__head">
               <p class="rating-total">총 345개</p>
-              <button type="button" class="btn-rect size-sm bg-primary">한줄평 쓰기<i class="ico ico-arrow"></i></button>
+              <button type="button" class="btn-rect size-sm bg-primary" data-pop-open="popupComment">한줄평 쓰기<i
+                  class="ico ico-arrow"></i></button>
             </div>
 
             <div class="swiper review-thum">
@@ -175,7 +179,7 @@
                 </li>
                 <li class="swiper-slide">
                   <img src="../assets/images/@temp/@c11_review_thum01.png" alt="">
-                  <a href="#" class="all-review">전체보기</a>
+                  <button type="button" class="all-review" data-pop-open="popupGallery">전체보기</button>
                 </li>
               </ul>
             </div>
@@ -210,7 +214,8 @@
                         <div class="one-line-sub__box l">
                           <span class="text-date">2022.11.24</span>
                           <div class="access-nums">
-                            <button type="button" class="btn-fav btn-fav--num" aria-label="Like"><span class="num">120k</span></button>
+                            <button type="button" class="btn-fav btn-fav--num" aria-label="Like"><span
+                                class="num">120k</span></button>
                           </div>
                         </div>
                         <div class="one-line-sub__box r">
@@ -252,7 +257,8 @@
                         <div class="one-line-sub__box l">
                           <span class="text-date">2022.11.24</span>
                           <div class="access-nums">
-                            <button type="button" class="btn-fav btn-fav--num" aria-label="Like"><span class="num">120k</span></button>
+                            <button type="button" class="btn-fav btn-fav--num" aria-label="Like"><span
+                                class="num">120k</span></button>
                           </div>
                         </div>
                         <div class="one-line-sub__box r">
@@ -374,7 +380,26 @@
     <footer class="footer" id="footer"></footer>
     <!--// Footer -->
 
+    <!-- (확인용)댓글 관련 팝업 : 각 파일에서 코드 확인 필요-->
+    <div class="pop1">후기 작성 : PW_I_ON_CP_01_00.html</div>
+    <div class="pop2">후기 이미지 모아보기 : PW_I_ON_CP_02_00.html</div>
+    <!--// (확인용)댓글 관련 팝업 -->
+
   </div>
+
+  <!-- Script -->
+  <script src="../assets/js/libs/jquery.min.js"></script>
+  <script src="../assets/js/libs/swiper.min.js"></script>
+  <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
+  <script src="../assets/js/ui.js"></script>
+  <!--// Script -->
+  <script>
+    $(document).ready(function () {
+      //팝업 확인용 load
+      $(".pop1").load("PW_I_ON_CP_01_00.html .pop-wrap");
+      $(".pop2").load("PW_I_ON_CP_02_00.html .pop-wrap");
+    });
+  </script>
 </body>
 
 </html>

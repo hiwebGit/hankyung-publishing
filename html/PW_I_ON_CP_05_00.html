@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-  <title>ARTE TALK TALK(상세) | 한경 ARTE</title>
+  <title>(팝업) 공유하기 | 한경 ARTE</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
@@ -14,10 +14,7 @@
   <link rel="preload" href="../assets/fonts/Pretendard-SemiBold.subset.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/PPEditorialNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/Faktum-Medium.woff2" as="font" type="font/woff2" crossorigin>
-  <!--// font -->
 </head>
-
-<!-- dark mode 'dark-mode' 추가 -->
 
 <!-- dark mode 일 경우 body 'dark-mode' 추가 -->
 
@@ -33,21 +30,9 @@
 
       <!-- START -->
       <div class="content">
-        <section class="error-message-wrap">
-          <div class="error-message__area">
-            <div class="error-message__header">
-              <h2 class="error-message__main">접근이 거부되었습니다.</h2>
-              <p class="error-message__sub">(403 Forbidden)</p>
-            </div>
-            <div class="error-message__cont">
-              <p class="error-message__info">요청하신 페이지의 접근이 거부되었습니다.</p>
-              <p class="error-message__info">입력하신 페이지의 주소가 정확한지 다시 한번 확인해주시기 바랍니다.</p>
-            </div>
-            <div class="error-message__footer">
-              <button type="button" class="btn-rect bg-primary">확인</button>
-            </div>
-          </div>
-        </section>
+
+        <button type="button" class="btn" data-pop-open="popupShare">공유하기</button>
+
       </div>
       <!--// END -->
     </div>
@@ -57,17 +42,57 @@
     <footer class="footer" id="footer"></footer>
     <!--// Footer -->
 
+    <!-- 공유하기 팝업 -->
+    <div class="pop-wrap pop-share" data-pop="popupShare">
+      <div class="pop all-top">
+        <div class="pop__head al-center">
+          <h2 class="pop__head-title">공유하기</h2>
+        </div>
+        <div class="pop__body">
+          <ul class="share-sns">
+            <li>
+              <button type="button" class="share-sns__item ico-kakao">
+                <span class="share-sns__name">카카오톡</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="share-sns__item ico-facebook">
+                <span class="share-sns__name">페이스북</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="share-sns__item ico-naver">
+                <span class="share-sns__name">네이버</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="share-sns__item ico-copy">
+                <span class="share-sns__name">URL 복사</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="pop__close is-top" data-label="닫기" data-pop-btn="close"></button>
+      </div>
+    </div>
+    <!--// 공유하기 팝업 -->
+
   </div>
 
   <!-- Script -->
   <script src="../assets/js/libs/jquery.min.js"></script>
   <script src="../assets/js/libs/swiper.min.js"></script>
+  <!-- <script src="../assets/js/libs/jquery-ui.min.js"></script> -->
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
   <!--// Script -->
 
-  <script></script>
-
+  <script>
+    $(function () {
+      //popup test
+      $('[data-pop-open=popupShare]').trigger('click');
+    })
+  </script>
 </body>
 
 </html>

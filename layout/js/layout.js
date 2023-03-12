@@ -22,6 +22,11 @@ $(document).ready(function () {
   }
 
   if ($(".reply-wrap").length) {
-    $(".reply-wrap").load("../html/common_reply.html .content > div");
+    $(".reply-wrap").load("../html/common_reply.html .content > div", function () {
+      if ($('[data-pop-open=popupReplyPolicy]').length) {
+        $("<div class='pop-reply'>/div>").appendTo(".wrap");
+        $('.pop-reply').load("../html/PW_I_ON_CP_10_00.html .pop-wrap");
+      }
+    });
   }
 })

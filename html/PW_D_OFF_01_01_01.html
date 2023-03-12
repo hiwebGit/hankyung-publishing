@@ -17,8 +17,11 @@
   <!--// font -->
 </head>
 
+<!-- dark mode 'dark-mode' 추가 -->
+
+<!-- dark mode 일 경우 body 'dark-mode' 추가 -->
+
 <body>
-  <!-- dark mode 'wrap--dark' 추가 -->
   <div id="wrap" class="wrap">
 
     <!-- Header -->
@@ -80,12 +83,8 @@
                   <div class="offer-info__box">
                     <ul class="offer-info__host">
                       <li class="offer-info__item">
-                        <span class="offer-info__sub">주최</span>
-                        <span>CJ ENM</span>
-                      </li>
-                      <li class="offer-info__item">
-                        <span class="offer-info__sub">주관</span>
-                        <span>CJ아지트</span>
+                        <span class="offer-info__sub">제작사</span>
+                        <span>(사)공연집단 강철무지개</span>
                       </li>
                     </ul>
                   </div>
@@ -101,7 +100,7 @@
           <section class="offer-review side">
             <div class="offer-review__group">
               <div class="offer-review__header">
-                <!-- tab  -->
+                <!-- tab  : button 활성화 'is-active' -->
                 <div class="tab">
                   <ul class="tab__list ml__8" data-tab="tab-list">
                     <li class="tab__item"><a href="#" class="tab__btn is-active" data-tab-btn="tab01">전문가 리뷰</a></li>
@@ -335,7 +334,7 @@
             <div class="offer-review__header">
               <div class="tab">
                 <ul class="tab__list ml__8" data-tab="tab-list">
-                  <!-- tab  -->
+                  <!-- tab  : button 활성화 'is-active' -->
                   <li class="tab__item"><a href="#" class="tab__btn is-active" data-tab-btn="tab01">전문가 리뷰<span
                         class="num">(<em>20</em>)
                       </span></a> </li>
@@ -682,7 +681,8 @@
           <div class="concert-review" id="section_comment">
             <div class="concert-review__head">
               <p class="rating-total">총 345개</p>
-              <button type="button" class="btn-rect size-sm bg-primary">한줄평 쓰기<i class="ico ico-arrow"></i></button>
+              <button type="button" class="btn-rect size-sm bg-primary" data-pop-open="popupComment">한줄평 쓰기<i
+                  class="ico ico-arrow"></i></button>
             </div>
 
             <div class="swiper review-thum">
@@ -707,7 +707,7 @@
                 </li>
                 <li class="swiper-slide">
                   <img src="../assets/images/@temp/@c11_review_thum01.png" alt="">
-                  <a href="#" class="all-review">전체보기</a>
+                  <button type="button" class="all-review" data-pop-open="popupGallery">전체보기</button>
                 </li>
               </ul>
             </div>
@@ -1019,6 +1019,10 @@
     <footer class="footer" id="footer"></footer>
     <!--// Footer -->
 
+    <!-- (확인용)댓글 관련 팝업 : 각 파일에서 코드 확인 필요-->
+    <div class="pop1">후기 작성 : PW_I_ON_CP_01_00.html</div>
+    <div class="pop2">후기 이미지 모아보기 : PW_I_ON_CP_02_00.html</div>
+    <!--// (확인용)댓글 관련 팝업 -->
   </div>
 
   <!-- Script -->
@@ -1027,6 +1031,13 @@
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
   <!--// Script -->
+  <script>
+    $(document).ready(function () {
+      //팝업 확인용 load
+      $(".pop1").load("PW_I_ON_CP_01_00.html .pop-wrap");
+      $(".pop2").load("PW_I_ON_CP_02_00.html .pop-wrap");
+    });
+  </script>
 </body>
 
 </html>

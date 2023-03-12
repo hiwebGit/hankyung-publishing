@@ -17,8 +17,11 @@
   <!--// font -->
 </head>
 
+<!-- dark mode 'dark-mode' 추가 -->
+
+<!-- dark mode 일 경우 body 'dark-mode' 추가 -->
+
 <body>
-  <!-- dark mode 'wrap--dark' 추가 -->
   <div id="wrap" class="wrap">
 
     <!-- Header -->
@@ -265,7 +268,7 @@
                     <!--// sort list -->
 
                     <div class="rbox-block">
-                      <button type="button" class="filter-button" data-lypop-open="filter" data-st-open="열기"
+                      <button type="button" class="filter-button" data-pop-open="filter" data-st-open="열기"
                         data-st-close="닫기">상세옵션 <span class="st-text">열기</span></button>
 
                       <span class="search-box hide-mo">
@@ -277,12 +280,12 @@
                 </div>
 
                 <!-- filter Layer : 활성화시 'is-open'-->
-                <div class="m-pop filter-option-section" data-lypop="filter">
+                <div class="m-pop filter-option-section" data-pop="filter">
                   <div class="m-pop__outer">
                     <div class="m-pop__inner">
                       <div class="m-pop__head hide-pc">
                         <span class="m-pop__title">상세 옵션</span>
-                        <button type="button" class="m-pop__close" data-label="닫기" data-lypop-btn="close"></button>
+                        <button type="button" class="m-pop__close" data-label="닫기" data-pop-btn="close"></button>
                       </div>
                       <div class="m-pop__body">
                         <span class="search-box hide-pc">
@@ -298,65 +301,53 @@
                             </div>
                           </div>
                           <div class="filter-options__cont">
-                            <!-- 공연 장르 -->
+                            <!-- 리뷰 구분 -->
                             <div class="filter-options__items">
-                              <p class="filter-options__tit">공연 장르</p>
+                              <p class="filter-options__tit">리뷰 구분</p>
                               <div class="filter-options__items-cont">
                                 <ul class="filter-options__items-list">
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status"
-                                        checked /><span class="o-rdo__label">전체</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-type"
+                                        checked /><span class="o-rdo__label">전문가 리뷰</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">오페라</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">클래식</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">재즈</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">국악</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">음반&middot;LP</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">가곡</span></label></li>
+                                        name="chk-type" /><span class="o-rdo__label">회원 리뷰</span></label></li>
                                 </ul>
                               </div>
                             </div>
-                            <!--//공연 장르 -->
-                            <!-- 공연 지역 -->
+                            <!--//리뷰 구분 -->
+                            <!-- 장르 -->
                             <div class="filter-options__items">
-                              <p class="filter-options__tit">공연 지역</p>
+                              <p class="filter-options__tit">장르</p>
                               <div class="filter-options__items-cont">
                                 <ul class="filter-options__items-list">
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-local"
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-genre"
                                         checked /><span class="o-rdo__label">전체</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">서울</span></label></li>
+                                        name="chk-genre" /><span class="o-rdo__label">클래식</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">강원도</span></label></li>
+                                        name="chk-genre" /><span class="o-rdo__label">국악</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">경기도</span></label></li>
+                                        name="chk-genre" /><span class="o-rdo__label">가곡</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">경상도</span></label></li>
+                                        name="chk-genre" /><span class="o-rdo__label">오페라</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">전라도</span></label></li>
+                                        name="chk-genre" /><span class="o-rdo__label">재즈</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">충청도</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">제주도</span></label></li>
+                                        name="chk-genre" /><span class="o-rdo__label">음반·LP</span></label></li>
                                 </ul>
                               </div>
                             </div>
-                            <!--// 공연 지역 -->
+                            <!--// 장르 -->
                             <!--상태 -->
                             <div class="filter-options__items">
                               <p class="filter-options__tit">상태</p>
                               <div class="filter-options__items-cont">
                                 <ul class="filter-options__items-list">
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">전체</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status"
-                                        checked /><span class="o-rdo__label">전체</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">예정</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">진행중</span></label></li>
+                                        checked /><span class="o-rdo__label">예정</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status"
+                                        checked /><span class="o-rdo__label">진행중</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
                                         name="chk-status" /><span class="o-rdo__label">종료</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
@@ -370,16 +361,16 @@
                               <p class="filter-options__tit">평점</p>
                               <div class="filter-options__items-cont">
                                 <ul class="filter-options__items-list">
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status"
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-grade"
                                         checked /><span class="o-rdo__label">전체</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">기대이하</span></label></li>
+                                        name="chk-grade" /><span class="o-rdo__label">기대이하</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">강력추천</span></label></li>
+                                        name="chk-grade" /><span class="o-rdo__label">강력추천</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">기대 이상</span></label></li>
+                                        name="chk-grade" /><span class="o-rdo__label">기대 이상</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">그럭저럭</span></label></li>
+                                        name="chk-grade" /><span class="o-rdo__label">그럭저럭</span></label></li>
                                 </ul>
                               </div>
                             </div>
@@ -393,7 +384,7 @@
                 <!-- // filter Layer -->
 
                 <!-- selected options -->
-                <div class="search-tags" data-lypop="search-tags">
+                <div class="search-tags">
                   <p class="search-tags__result">‘브로드웨이’에 대한 검색 결과 총5개</p>
                   <span class="select-tag">
                     <span>연극</span>

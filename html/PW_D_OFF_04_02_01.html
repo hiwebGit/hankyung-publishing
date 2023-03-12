@@ -17,8 +17,11 @@
   <!--// font -->
 </head>
 
+<!-- dark mode 'dark-mode' 추가 -->
+
+<!-- dark mode 일 경우 body 'dark-mode' 추가 -->
+
 <body>
-  <!-- dark mode 'wrap--dark' 추가 -->
   <div id="wrap" class="wrap">
 
     <!-- Header -->
@@ -42,29 +45,29 @@
       <!-- START -->
       <div class="content">
         <div class="talk-container">
-          <div class="talk-lnb">
-            <!-- tabs -->
-            <div class="tab-block tab-block--v">
-              <div class="tab align-left">
-                <!-- tab : pc button 활성화 'is-active'-->
-                <ul class="tab__list" data-tab="tab-list">
-                  <!-- tab :pc -->
-                  <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab01">연극</a></li>
-                  <li class="tab__item"><a href="#" class="tab__btn is-active" data-tab-btn="tab02">뮤지컬</a></li>
-                  <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab03">클래식</a></li>
-                  <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab04">무용</a></li>
-                  <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab05">발레</a></li>
-                  <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab06">국악</a></li>
-                  <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab07">복합</a></li>
-                  <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab08">전시</a></li>
-                  <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab09">책</a></li>
-                </ul>
-                <!--// tab : pc -->
 
+          <div class="talk-lnb">
+            <!-- tabs : pc (data-tab-mobile 매칭 필요)-->
+            <div class="tab-block tab-block--v show-pc">
+              <div class="tab align-left" data-tab-pc="talkTab">
+                <button type="button" class="tab__cur">뮤지컬</button>
+                <!-- tab  : button 활성화 'is-active' -->
+                <ul class="tab__list" data-tab="tab-list">
+                  <li class="tab__item"><a href="#" class="tab__btn is-active">연극</a></li>
+                  <li class="tab__item"><a href="#" class="tab__btn">뮤지컬</a></li>
+                  <li class="tab__item"><a href="#" class="tab__btn">클래식</a></li>
+                  <li class="tab__item"><a href="#" class="tab__btn">무용</a></li>
+                  <li class="tab__item"><a href="#" class="tab__btn">발레</a></li>
+                  <li class="tab__item"><a href="#" class="tab__btn">국악</a></li>
+                  <li class="tab__item"><a href="#" class="tab__btn">복합</a></li>
+                  <li class="tab__item"><a href="#" class="tab__btn">전시</a></li>
+                  <li class="tab__item"><a href="#" class="tab__btn">책</a></li>
+                </ul>
               </div>
             </div>
-            <!--// tabs -->
+            <!--// tabs : pc-->
           </div>
+
           <article class="talk-content">
             <!-- sort section -->
             <div class="sort-section">
@@ -83,6 +86,26 @@
                     </ul>
                   </div>
                   <!--// sort list -->
+
+                  <!-- tabs : mobile (data-tab-pc 매칭 필요)-->
+                  <div class="tab-block show-mo">
+                    <div class="tab" data-tab-mobile="talkTab">
+                      <button type="button" class="tab__cur">뮤지컬</button>
+                      <!-- tab  : button 활성화 'is-active' -->
+                      <ul class="tab__list" data-tab="tab-list">
+                        <li class="tab__item"><a href="#" class="tab__btn is-active">연극</a></li>
+                        <li class="tab__item"><a href="#" class="tab__btn">뮤지컬</a></li>
+                        <li class="tab__item"><a href="#" class="tab__btn">클래식</a></li>
+                        <li class="tab__item"><a href="#" class="tab__btn">무용</a></li>
+                        <li class="tab__item"><a href="#" class="tab__btn">발레</a></li>
+                        <li class="tab__item"><a href="#" class="tab__btn">국악</a></li>
+                        <li class="tab__item"><a href="#" class="tab__btn">복합</a></li>
+                        <li class="tab__item"><a href="#" class="tab__btn">전시</a></li>
+                        <li class="tab__item"><a href="#" class="tab__btn">책</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!--// tabs : mobile -->
 
                   <div class="rbox-block">
                     <span class="search-box">

@@ -19,6 +19,8 @@
   <!--// font -->
 </head>
 
+<!-- dark mode 일 경우 body 'dark-mode' 추가 -->
+
 <body>
   <div id="wrap" class="wrap">
 
@@ -39,49 +41,43 @@
 
       <!-- START -->
       <div class="content-board">
-        <!-- tab : pc -->
-        <div class="tab-block">
-          <div class="tab tab--auto">
-            <!-- button 활성화 'is-active'-->
-            <ul class="tab__list" data-tab="tab-list">
-              <li class="tab__item"><a href="#" class="tab__btn is-active" data-tab-btn="tab01">전체</a></li>
-              <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab02">음악·무용 분야</a></li>
-              <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab03">뮤지컬·연극 분야</a></li>
-              <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab04">책·영화 분야</a></li>
-              <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab05">예술인DB</a></li>
-              <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab06">Community</a></li>
-              <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab07">마이페이지</a></li>
-              <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab08">가입 및 탈퇴</a></li>
-            </ul>
-          </div>
-        </div>
-        <!--// tab : pc -->
 
-        <!-- sort section -->
-        <div class="sort-section">
-          <div class="sort-section__block">
-            <div class="sort-section__side">
-              <!-- tab : mobile -->
-              <select class="o-select tab-select" data-tab="tab-list">
-                <option data-tab-btn="tab01" selected>전체</option>
-                <option data-tab-btn="tab02">음악·무용 분야</option>
-                <option data-tab-btn="tab03">뮤지컬·연극 분야</option>
-                <option data-tab-btn="tab04">책·영화 분야</option>
-                <option data-tab-btn="tab05">예술인DB</option>
-                <option data-tab-btn="tab06">Community</option>
-                <option data-tab-btn="tab07">마이페이지</option>
-                <option data-tab-btn="tab08">가입 및 탈퇴</option>
-              </select>
-              <!--// tab : mobile -->
-              <span class="search-box">
-                <input type="text" class="o-input" placeholder="검색어를 입력해주세요">
-                <button type="button" class="o-btn o-btn-search" aria-label="검색"></button>
-              </span>
+        <div class="faq-head">
+          <!-- tabs -->
+          <div class="tab-block">
+            <div class="tab tab--auto">
+              <button type="button" class="tab__cur">전체</button>
+              <!-- tab  : button 활성화 'is-active' -->
+              <ul class="tab__list" data-tab="tab-list">
+                <li class="tab__item"><a href="#" class="tab__btn is-active">전체</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">음악·무용 분야</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">뮤지컬·연극 분야</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">책·영화 분야</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">예술인DB</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">Community</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">마이페이지</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">가입 및 탈퇴</a></li>
+              </ul>
             </div>
           </div>
-        </div>
-        <!--// sort section -->
+          <!--// tabs -->
 
+          <!-- sort section -->
+          <div class="sort-section">
+            <div class="sort-section__block">
+              <div class="sort-section__side">
+
+                <div class="rbox-block">
+                  <span class="search-box">
+                    <input type="text" class="o-input" placeholder="검색어를 입력해주세요">
+                    <button type="button" class="o-btn o-btn-search" aria-label="검색"></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--// sort section -->
+        </div>
         <!-- faq -->
         <div class="faq">
           <ul class="faq__list">

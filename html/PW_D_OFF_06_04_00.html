@@ -17,8 +17,11 @@
   <!--// font -->
 </head>
 
+<!-- dark mode 'dark-mode' 추가 -->
+
+<!-- dark mode 일 경우 body 'dark-mode' 추가 -->
+
 <body>
-  <!-- dark mode 'wrap--dark' 추가 -->
   <div id="wrap" class="wrap">
 
     <!-- Header -->
@@ -71,27 +74,17 @@
           <!-- tabs -->
           <div class="tab-block">
             <div class="tab">
-              <!-- tab : pc button 활성화 'is-active'-->
+              <button type="button" class="tab__cur">전체</button>
+              <!-- tab  : button 활성화 'is-active' -->
               <ul class="tab__list" data-tab="tab-list">
-                <!-- tab  -->
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab01">전체</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab02">클래식</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn is-active" data-tab-btn="tab03">가곡</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab04">재즈</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab05">국악</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab06">대중 음악</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab07">음반</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn is-active">전체</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">클래식</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">가곡</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">재즈</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">국악</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">대중 음악</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">음반</a></li>
               </ul>
-              <!-- tab : mobile -->
-              <select class="o-select tab-select" data-tab="tab-list">
-                <option data-tab-btn="tab01" selected>전체</option>
-                <option data-tab-btn="tab02">클래식</option>
-                <option data-tab-btn="tab03">가곡</option>
-                <option data-tab-btn="tab04">재즈</option>
-                <option data-tab-btn="tab05">국악</option>
-                <option data-tab-btn="tab06">대중 음악</option>
-                <option data-tab-btn="tab07">음반</option>
-              </select>
             </div>
           </div>
           <!--// tabs -->

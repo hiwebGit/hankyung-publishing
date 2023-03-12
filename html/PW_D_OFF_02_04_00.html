@@ -17,8 +17,11 @@
   <!--// font -->
 </head>
 
+<!-- dark mode 'dark-mode' 추가 -->
+
+<!-- dark mode 일 경우 body 'dark-mode' 추가 -->
+
 <body>
-  <!-- dark mode 'wrap--dark' 추가 -->
   <div id="wrap" class="wrap">
 
     <!-- Header -->
@@ -71,27 +74,18 @@
 
         <section class="ex-section" data-tab="tab-wrap">
           <!-- tabs -->
-          <div class="tab-block">
+          <div class="tab-block pc-show">
             <div class="tab">
-              <!-- tab : pc button 활성화 'is-active'-->
+              <button type="button" class="tab__cur">회화</button>
               <ul class="tab__list" data-tab="tab-list">
-                <!-- tab  -->
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab01">회화</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn is-active" data-tab-btn="tab02">조각</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab03">설치미술</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab04">사진작가</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab05">일러스트</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab06">미술투자</a></li>
+                <!-- tab  : button 활성화 'is-active' -->
+                <li class="tab__item"><a href="#" class="tab__btn is-active">회화</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">조각</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">설치미술</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">사진작가</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">일러스트</a></li>
+                <li class="tab__item"><a href="#" class="tab__btn">미술투자</a></li>
               </ul>
-              <!-- tab : mobile -->
-              <select class="o-select tab-select" data-tab="tab-list">
-                <option data-tab-btn="tab01">뮤지컬</option>
-                <option data-tab-btn="tab02" selected>오페라</option>
-                <option data-tab-btn="tab03">연극</option>
-                <option data-tab-btn="tab04">무용</option>
-                <option data-tab-btn="tab05">발레</option>
-                <option data-tab-btn="tab06">영화</option>
-              </select>
             </div>
           </div>
           <!--// tabs -->
