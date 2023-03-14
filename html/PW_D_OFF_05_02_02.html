@@ -17,11 +17,11 @@
   <!--// font -->
 </head>
 
-<!-- dark mode 'dark-mode' 추가 -->
+
 
 <!-- dark mode 일 경우 body 'dark-mode' 추가 -->
 
-<body>
+<body class="dark-mode">
   <div id="wrap" class="wrap">
 
     <!-- Header -->
@@ -175,7 +175,6 @@
                 <div class="art-vt__titbox">
                   <h2 class="art-vt__title">ARTE TV 최신 업로드 영상</h2>
                 </div>
-                <!-- Type2 -->
                 <div class="art-vt-slide__wrap art-vt-slide art-vt-grid">
                   <div class="art-vt-slide__content swiper">
                     <ul class="art-vt-slide__box swiper-wrapper">
@@ -186,6 +185,7 @@
                             <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
                             <div href="#" class="thumb-img">
                               <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg" alt=""></span>
+                              <span class="tag-gen">연극</span>
                             </div>
                             <div class="art-vt-block__inbox">
                               <div class="art-vt-block__titbox">
@@ -193,6 +193,7 @@
                                   부활</p>
                               </div>
                               <div class="art-info-sub">
+                                <span class="text-min">999min</span>
                                 <span class="text-date">2022.10.20</span>
                                 <div class="access-nums">
                                   <span class="acc-num acc-num--view"><em>25</em></span>
@@ -212,6 +213,7 @@
                             <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
                             <div href="#" class="thumb-img">
                               <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg" alt=""></span>
+                              <span class="tag-gen">연극</span>
                             </div>
                             <div class="art-vt-block__inbox">
                               <div class="art-vt-block__titbox">
@@ -219,6 +221,7 @@
                                   부활</p>
                               </div>
                               <div class="art-info-sub">
+                                <span class="text-min">999min</span>
                                 <span class="text-date">2022.10.20</span>
                                 <div class="access-nums">
                                   <span class="acc-num acc-num--view"><em>25</em></span>
@@ -238,6 +241,7 @@
                             <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
                             <div href="#" class="thumb-img">
                               <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg" alt=""></span>
+                              <span class="tag-gen">연극</span>
                             </div>
                             <div class="art-vt-block__inbox">
                               <div class="art-vt-block__titbox">
@@ -245,6 +249,7 @@
                                   부활</p>
                               </div>
                               <div class="art-info-sub">
+                                <span class="text-min">999min</span>
                                 <span class="text-date">2022.10.20</span>
                                 <div class="access-nums">
                                   <span class="acc-num acc-num--view"><em>25</em></span>
@@ -261,10 +266,9 @@
                   </div>
                   <div class="art-vt-slide__pagination"></div>
                 </div>
-                <!-- //Type2 -->
               </div>
             </div>
-            <!-- e: 연관리뷰-->
+            <!-- e: ARTE TV 최신 업로드 영상-->
           </div>
         </section>
       </div>
@@ -284,59 +288,6 @@
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
   <!--// Script -->
-
-  <script>
-    // window.addEventListener('resize', function() {
-    //   if (window.innerWidth <= 768)  {
-    //     // var elem = document.getElementsByClassName('view-slide__box');
-    //     document.getElementsByClassName('swiper-wrapper').element.classList.replace('view-grid')
-    //     // } else {
-    //     //   // elem.addC('swiper-wrapper').removeClass('view-grid');
-    //     };
-    // }, true);
-
-    $(window).resize(function () {
-      // console.log('ddd');
-      // if ($(window).width() >= 768) {
-      //   // if (!$('.view-grid').length) {
-      //   //   $('.view-slide__box').removeClass('swiper-wrapper').children().addClass('view-grid');
-      //   // }
-      //   console.log('ddd');
-
-      // } else {
-      //   console.log('ccc');
-      //   // if ($('.view-grid').length) {
-      //   //   $('.view-slide__box').addClass('swiper-wrapper').children().removeClass('view-grid');
-      //   // }
-      // };
-      // return false;
-    })
-  </script>
-  <!-- <script>
-    const swiper = new Swiper('.view-slide__content', {
-      slider: null,
-      sliderEl: '.view-slide__content',
-      config: {
-        slidePerView: '1',
-        pagination: {
-          el: '.art-vt-slide__pagination',
-        },
-        loop: true,
-        // autoplay: {
-        // delay: 5000,
-        // },
-      },
-      init: function () {
-        if ($(this.sliderEl).find('.swiper-slide').length > 0) {
-          if (!$(this.sliderEl).hasClass('swiper-container-initialized')) {
-            this.slider = new Swiper(this.sliderEl, this.config);
-          } else {
-            this.slider.update();
-          }
-        }
-      },
-    })
-  </script> -->
 </body>
 
 </html>

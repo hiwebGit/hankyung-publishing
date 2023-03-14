@@ -17,7 +17,7 @@
   <!--// font -->
 </head>
 
-<!-- dark mode 'dark-mode' 추가 -->
+
 
 <!-- dark mode 일 경우 body 'dark-mode' 추가 -->
 
@@ -717,6 +717,45 @@
               <ul class="concert-review-list">
                 <li class="concert-review__item">
                   <div class="one-line">
+                    <div class="concert-review__thumbnail">
+                      <ul>
+                        <li>
+                          <div class="thumb-img">
+                            <span class="img-holder">
+                              <img src="../assets/images/@temp/@temp_thumb10.png" alt="">
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="thumb-img">
+                            <span class="img-holder">
+                              <img src="../assets/images/@temp/@temp_thumb11.png" alt="">
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="thumb-img">
+                            <span class="img-holder">
+                              <img src="../assets/images/@temp/@temp_thumb12.png" alt="">
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="thumb-img">
+                            <span class="img-holder">
+                              <img src="../assets/images/@temp/@temp_thumb13.png" alt="">
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="thumb-img">
+                            <span class="img-holder">
+                              <img src="../assets/images/@temp/@temp_thumb14.png" alt="">
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                     <div>
                       <!-- 아코디언 버튼 클릭시 is-active 추가 -->
                       <span class="one-line__detail is-active">
@@ -739,14 +778,14 @@
                         </span>
                       </div>
                       <div class="one-line-sub">
-                        <div class="one-line-sub__box l">
+                        <div class="one-line-sub__box">
                           <span class="text-date">2022.11.24</span>
                           <div class="access-nums">
-                            <button type="button" class="btn-fav btn-fav--num" aria-label="Like"><span
-                                class="num">120k</span></button>
+                            <span class="acc-num acc-num--like"><em>120k</em></span>
+                            <button type="button" class="btn-fav" aria-label="Like"></button>
                           </div>
                         </div>
-                        <div class="one-line-sub__box r">
+                        <div class="one-line-sub__box">
                           <!-- 클릭시 active 클래스가 붙는다. -->
                           <button type="button" class="btn no-line ss h-add-btn"><span class="arrow-txt">한줄평
                               닫기</span>
@@ -758,6 +797,24 @@
                 </li>
                 <li class="concert-review__item">
                   <div class="one-line">
+                    <div class="concert-review__thumbnail">
+                      <ul>
+                        <li>
+                          <div class="thumb-img">
+                            <span class="img-holder">
+                              <img src="../assets/images/@temp/@temp_thumb10.png" alt="">
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="thumb-img">
+                            <span class="img-holder">
+                              <img src="../assets/images/@temp/@temp_thumb11.png" alt="">
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                     <div>
                       <!-- 아코디언 버튼 클릭시 is-active 추가 -->
                       <span class="one-line__detail">
@@ -783,14 +840,14 @@
                         </span>
                       </div>
                       <div class="one-line-sub">
-                        <div class="one-line-sub__box l">
+                        <div class="one-line-sub__box">
                           <span class="text-date">2022.11.24</span>
                           <div class="access-nums">
-                            <button type="button" class="btn-fav btn-fav--num" aria-label="Like"><span
-                                class="num">120k</span></button>
+                            <span class="acc-num acc-num--like"><em>120k</em></span>
+                            <button type="button" class="btn-fav" aria-label="Like"></button>
                           </div>
                         </div>
-                        <div class="one-line-sub__box r">
+                        <div class="one-line-sub__box">
                           <!-- 클릭시 active 클래스가 붙는다. -->
                           <button type="button" class="btn no-line ss h-add-btn is-active"><span class="arrow-txt">한줄평
                               열기</span>
@@ -800,7 +857,6 @@
                     </div>
                   </div>
                 </li>
-
               </ul>
               <!-- Paging -->
               <div class="paging">
@@ -882,10 +938,13 @@
               </ul>
               <div class="concert-loca__info-bottom">
                 <div class="concert-loca__info-bottom-left">
-                  <ul class="concert-loca__kopis">
-                    <li>KOPIS (공연예술통합전산망)</li>
-                    <li>http://www.kopis.or.kr</li>
-                  </ul>
+                  <div class="concert-loca__box">
+                    <div class="concert-loca__image"><img src="../assets/images/kopis_logo.png" alt=""></div>
+                    <ul class="concert-loca__host">
+                      <li>KOPIS (공연예술통합전산망)</li>
+                      <li><a href="http://www.kopis.or.kr">http://www.kopis.or.kr</a></li>
+                    </ul>
+                  </div>
                   <p class="concert-loca__info-update">
                     본 정보는 주최 측의 사정에 따라 변경될 수 있습니다.​<br>
                     최종 업데이트 2022. 12. 05

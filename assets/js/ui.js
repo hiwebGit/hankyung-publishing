@@ -491,6 +491,7 @@
     }
   }
 
+
   UI.reviewSticky = {
     varSet: {
       replyWrap: '.reply-wrap',
@@ -573,6 +574,36 @@
           $group.removeClass(_this.varSet.activeClassName);
         }
       });
+    }
+  }
+
+  UI.replyView = {
+    varSet: {
+      replyShowBtn: '.reply-item__util .btn',
+      activeClassName: 'is-active',
+    },
+    init: function () {
+      var _this = this;
+      _this.clickEv();
+    },
+    clickEv: function () {
+      var _this = this;
+
+      $(document).on('click', _this.varSet.replyShowBtn, function () {
+        var $group = $(this).closest('.reply-item');
+
+        if (winWChk === 'pc') {
+          $group.find('.input__color-gray').addClass(_this.varSet.activeClassName);
+
+        }
+      });
+
+      if (winWChk === 'mo') $('.reply-item').find('.input__color-gray').removeClass(_this.varSet.activeClassName)
+    },
+    resize: function () {
+      var _this = this;
+
+      _this.init();
     }
   }
 
@@ -894,7 +925,9 @@
           popName = $this.data('pop-open'),
           names = new Array();
 
-        names = popName.split(',');
+        if (popName != undefined) {
+          names = popName.split(',');
+        }
 
         $.each(names, function (idx, item) {
           var $lyPop = $('[data-pop=' + item + ']'),
@@ -942,15 +975,6 @@
     }
   }
 
-  UI.searchBox = {
-    sEl: '.sort-section .o-btn-search',
-    init: function () {
-      this.hoverEv()
-    },
-    hoverEv: function () {
-
-    },
-  }
 
   UI.deleteItem = {
     init: function (el, outer) {
@@ -1140,12 +1164,11 @@
             },
             loop: true,
             loopedSlides: 50,
-            resizeReInit: true,
           });
 
-          _this.varSet.slider.on('slideChange', function () {
-            _this.varSet.sliderThumbnail.slideTo(_this.varSet.slider.realIndex);
-          })
+          // _this.varSet.slider.on('slideChange', function () {
+          //   _this.varSet.sliderThumbnail.slideTo(_this.varSet.slider.realIndex);
+          // })
         } else {
           _this.varSet.slider.update();
         }
@@ -1158,23 +1181,20 @@
           _this.varSet.slidesPerView = 'auto';
         } else {
           _this.varSet.direction = 'vertical';
-          _this.varSet.slidesPerView = 3;
+          _this.varSet.slidesPerView = 'auto';
         }
         _this.varSet.sliderThumbnail = new Swiper(_this.varSet.sliderThumbnailEl, {
           slidesPerView: _this.varSet.slidesPerView,
           direction: _this.varSet.direction,
           simulateTouch: true,
           mousewheel: true,
-          // loop: true,
-          loopedSlides: 50,
-          resizeReInit: true,
         });
 
-        $('.image-thumbnail .thumb-img').each(function (idx, el) {
-          $(el).on('click', function () {
-            _this.varSet.slider.slideTo(idx);
-          })
-        })
+        // $('.image-thumbnail .thumb-img').each(function (idx, el) {
+        //   $(el).on('click', function () {
+        //     _this.varSet.slider.slideTo(idx);
+        //   })
+        // })
       }
     },
     init: function () {
@@ -1264,7 +1284,6 @@
     UI.sortList.init();
     UI.tabList.init();
     UI.lyPopup.init();
-    UI.searchBox.init();
     UI.deleteItem.init('[data-role=delete-btn]', '[data-role=delete-wrap]');
     UI.deleteItem.init('.btn-del', '.select-tag');
     UI.deleteItem.init('.btn-del', '.photo-add__select');
@@ -1273,6 +1292,7 @@
     UI.kvScroll.init();
     UI.anchorScroll.init();
     UI.myFavVod.init();
+    UI.replyView.init();
   }
 
   UI.resize = function () {
@@ -1285,23 +1305,24 @@
       if (window.winWChk != 'mo' && winW <= 768) { //모바일 버전으로 전환할 때 1번만 실행할 코드 추가
         window.winWChk = 'mo';
         UI.lyPopup.resize();
-        // UI.searchBox.resize();
         UI.kvScroll.resize();
         UI.popupImageSw.resize();
         if (typeof UI.curationSw !== 'undefined') {
           UI.curationSw.resize();
         }
+        UI.replyView.resize();
       }
 
       if (window.winWChk != 'pc' && winW >= 769) { //PC 버전으로 전환할 때 1번만 실행할 코드 추가
         window.winWChk = 'pc';
         UI.lyPopup.resize();
-        // UI.searchBox.resize();
         UI.sortList.resize();
         UI.popupImageSw.resize();
         if (typeof UI.curationSw !== 'undefined') {
           UI.curationSw.resize();
         }
+
+        UI.replyView.resize();
       }
       UI.newsSw.resize();
       UI.themeSw.resize();
@@ -1328,7 +1349,7 @@ $(function () {
     UI.scroll();
   })
 
-  //임시 
+  //임시 정리 전
   $(".faq__btn").on("click", function () {
     $(this).closest('.faq__item').toggleClass("is-on");
   })
@@ -1336,4 +1357,8 @@ $(function () {
   $(".order-btn").on("click", function () {
     $(this).toggleClass("is-reverse");
   })
+
+  $(".ytube-kv__desc__btn").on("click", function () {
+    $(this).closest(".ytube-kv__sub__wrap").toggleClass("active");
+  });
 });

@@ -7,6 +7,7 @@
   <title>마이페이지 - 나의 정보 | 한경 ARTE</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/vw.css">
 
   <!-- font -->
   <link rel="preload" href="../assets/fonts/Pretendard-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
@@ -115,7 +116,7 @@
                 </div>
               </div>
               <div class="inform__block">
-                <label for="" class="inform__tit">관심지역<span class="ico-required" aria-label="필수"></span></label>
+                <label for="" class="inform__tit">관심지역</label>
                 <ul class="inform__place">
                   <li>
                     <select class="o-select">
@@ -139,6 +140,7 @@
                   </li>
                 </ul>
               </div>
+
             </fieldset>
             <ul class="form-sub-text">
               <li>&#8251; 아르떼에서는 추후 공연·전시·책에 대한 개인 맞춤형 서비스를 제공할 예정입니다.</li>
@@ -152,175 +154,121 @@
             <h2 class="my-sect__title line-btm">관심분야</h2>
             <div class="my-interest__cont">
               <div class="my-group">
-                <h3 class="my-group__title">공연<span class="sub-text">(최대 3개 선택)</span></h3>
-                <ul class="chksel len-12">
+                <h3 class="my-group__title">음악<span class="sub-text">(최대 3개 선택)</span></h3>
+                <ul class="chksel len-6">
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk01">
-                    <label class="chksel__label" for="chk01">클래식</label>
+                    <input class="chksel__input" type="checkbox" id="chk0101">
+                    <label class="chksel__label" for="chk0101">클래식</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk02">
-                    <label class="chksel__label" for="chk02">연극</label>
+                    <input class="chksel__input" type="checkbox" id="chk0102">
+                    <label class="chksel__label" for="chk0102">재즈</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk03">
-                    <label class="chksel__label" for="chk03">뮤지컬</label>
+                    <input class="chksel__input" type="checkbox" id="chk0103">
+                    <label class="chksel__label" for="chk0103">국악</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk04">
-                    <label class="chksel__label" for="chk04">발레</label>
+                    <input class="chksel__input" type="checkbox" id="chk0104">
+                    <label class="chksel__label" for="chk0104">가곡</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk05">
-                    <label class="chksel__label" for="chk05">오페라</label>
+                    <input class="chksel__input" type="checkbox" id="chk0105">
+                    <label class="chksel__label" for="chk0105">음악</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk06">
-                    <label class="chksel__label" for="chk06">재즈</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk07">
-                    <label class="chksel__label" for="chk07">크로스오버</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk08">
-                    <label class="chksel__label" for="chk08">전통</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk09">
-                    <label class="chksel__label" for="chk09">현대무용</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk10">
-                    <label class="chksel__label" for="chk10">한국무용</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk11">
-                    <label class="chksel__label" for="chk11">탈춤</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk12">
-                    <label class="chksel__label" for="chk12">성악</label>
+                    <input class="chksel__input" type="checkbox" id="chk0106">
+                    <label class="chksel__label" for="chk0106">대중음악</label>
                   </li>
                 </ul>
               </div>
               <div class="my-group">
-                <h3 class="my-group__title">전시<span class="sub-text">(최대 4개 선택)</span></h3>
-                <ul class="chksel len-19">
+                <h3 class="my-group__title">공연<span class="sub-text">(최대 3개 선택)</span></h3>
+                <ul class="chksel len-7">
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk13">
-                    <label class="chksel__label" for="chk13">고미술</label>
+                    <input class="chksel__input" type="checkbox" id="chk0201">
+                    <label class="chksel__label" for="chk0201">뮤지컬</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk14">
-                    <label class="chksel__label" for="chk14">근대미술</label>
+                    <input class="chksel__input" type="checkbox" id="chk0202">
+                    <label class="chksel__label" for="chk0202">오페라</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk15">
-                    <label class="chksel__label" for="chk15">현대회화</label>
+                    <input class="chksel__input" type="checkbox" id="chk0203">
+                    <label class="chksel__label" for="chk0203">연극</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk16">
-                    <label class="chksel__label" for="chk16">사진</label>
+                    <input class="chksel__input" type="checkbox" id="chk0204">
+                    <label class="chksel__label" for="chk0204">무용</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk17">
-                    <label class="chksel__label" for="chk17">미디어아트</label></li>
+                    <input class="chksel__input" type="checkbox" id="chk0205">
+                    <label class="chksel__label" for="chk0205">발레</label></li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk18">
-                    <label class="chksel__label" for="chk18">NFT</label>
+                    <input class="chksel__input" type="checkbox" id="chk0206">
+                    <label class="chksel__label" for="chk0206">영화</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk19">
-                    <label class="chksel__label" for="chk19">조형</label>
+                    <input class="chksel__input" type="checkbox" id="chk0207">
+                    <label class="chksel__label" for="chk0207">OTT</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="my-group">
+                <h3 class="my-group__title">전시<span class="sub-text">(최대 3개 선택)</span></h3>
+                <ul class="chksel len-8">
+                  <li class="chksel__item">
+                    <input class="chksel__input" type="checkbox" id="chk0301">
+                    <label class="chksel__label" for="chk0301">회화</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk20">
-                    <label class="chksel__label" for="chk20">디자인</label>
+                    <input class="chksel__input" type="checkbox" id="chk0302">
+                    <label class="chksel__label" for="chk0302">조각</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk21">
-                    <label class="chksel__label" for="chk21">설치미술</label>
+                    <input class="chksel__input" type="checkbox" id="chk0303">
+                    <label class="chksel__label" for="chk0303">설치미술</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk22">
-                    <label class="chksel__label" for="chk22">공예</label>
+                    <input class="chksel__input" type="checkbox" id="chk0304">
+                    <label class="chksel__label" for="chk0304">사진</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk23">
-                    <label class="chksel__label" for="chk23">서예</label>
+                    <input class="chksel__input" type="checkbox" id="chk0305">
+                    <label class="chksel__label" for="chk0305">일러스트</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk24">
-                    <label class="chksel__label" for="chk24">판화</label>
+                    <input class="chksel__input" type="checkbox" id="chk0306">
+                    <label class="chksel__label" for="chk0306">건축</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk25">
-                    <label class="chksel__label" for="chk25">조각</label>
+                    <input class="chksel__input" type="checkbox" id="chk0307">
+                    <label class="chksel__label" for="chk0307">디자인</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk26">
-                    <label class="chksel__label" for="chk26">건축</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk27">
-                    <label class="chksel__label" for="chk27">미술트렌드</label></li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk28">
-                    <label class="chksel__label" for="chk28">업계동향</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk29">
-                    <label class="chksel__label" for="chk29">경매</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk30">
-                    <label class="chksel__label" for="chk30">시장분석</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk31">
-                    <label class="chksel__label" for="chk31">미술대행</label>
+                    <input class="chksel__input" type="checkbox" id="chk0308">
+                    <label class="chksel__label" for="chk0308">미술투자</label>
                   </li>
                 </ul>
               </div>
               <div class="my-group">
                 <h3 class="my-group__title">도서<span class="sub-text">(최대 3개 선택)</span></h3>
-                <ul class="chksel len-9">
+                <ul class="chksel len-4">
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk32">
-                    <label class="chksel__label" for="chk32">시</label>
+                    <input class="chksel__input" type="checkbox" id="chk0401">
+                    <label class="chksel__label" for="chk0401">문학</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk33">
-                    <label class="chksel__label" for="chk33">소설</label>
+                    <input class="chksel__input" type="checkbox" id="chk0402">
+                    <label class="chksel__label" for="chk0402">경제경영</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk34">
-                    <label class="chksel__label" for="chk34">에세이</label>
+                    <input class="chksel__input" type="checkbox" id="chk0403">
+                    <label class="chksel__label" for="chk0403">인문교양</label>
                   </li>
                   <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk35">
-                    <label class="chksel__label" for="chk35">인문</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk36">
-                    <label class="chksel__label" for="chk36">교양</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk37">
-                    <label class="chksel__label" for="chk37">경제</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk38">
-                    <label class="chksel__label" for="chk38">경영</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk39">
-                    <label class="chksel__label" for="chk39">학술</label>
-                  </li>
-                  <li class="chksel__item">
-                    <input class="chksel__input" type="checkbox" id="chk40">
-                    <label class="chksel__label" for="chk40">자기개발</label>
+                    <input class="chksel__input" type="checkbox" id="chk0404">
+                    <label class="chksel__label" for="chk0404">예술</label>
                   </li>
                 </ul>
               </div>
