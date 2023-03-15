@@ -42,9 +42,13 @@
     <!--// Footer -->
 
     <!-- 한줄평 작성 팝업 -->
-    <div class="pop-wrap pop-comment" data-pop="popupComment">
-      <div class="pop bg-light">
+    <section class="pop-wrap pop-comment" data-pop="popupComment">
+      <div class="pop bg-light mo-full">
         <div class="pop__inner pop-comment__inner">
+          <div class="pop__head hide-pc">
+            <h2 class="pop__head-title">한줄평 쓰기</h2>
+            <button type="button" class="pop__close" data-label="닫기" data-pop-btn="close"></button>
+          </div>
           <div class="pop__body">
             <div class="pdt">
               <div class="pdt__card">
@@ -141,13 +145,14 @@
               </div>
             </div>
             <div class="review-sumit">
-              <button type="button" class="btn c-gray" data-pop-btn="close">취소</button>
+              <!-- <button type="button" class="btn c-gray" data-pop-btn="close">취소</button> -->
               <button type="button" class="btn">등록</button>
             </div>
           </div>
+          <button type="button" class="pop__close is-top" data-label="닫기" data-pop-btn="close"></button>
         </div>
       </div>
-    </div>
+    </section>
     <!--// 한줄평 작성 팝업 -->
 
   </div>
