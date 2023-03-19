@@ -347,11 +347,14 @@
     var btnLike = '.btn-fav',
       toggleLike = 'is-fav';
 
-    $(document).on('click', btnLike, function () {
-      if ($(this).hasClass(toggleLike)) {
-        $(this).removeClass(toggleLike);
-      } else {
-        $(this).addClass(toggleLike);
+    $(document).on('click', btnLike, function (ev) {
+      if (ev.target.tagName == 'BUTTON' || ev.target.tagName == 'A') {
+
+        if ($(ev.target).hasClass(toggleLike)) {
+          $(ev.target).removeClass(toggleLike);
+        } else {
+          $(ev.target).addClass(toggleLike);
+        }
       }
       // $(btnLike).hasClass(toggleLike) ? $(this).removeClass(toggleLike) : $(this).addClass(toggleLike);
     });
@@ -614,7 +617,7 @@
 
       _this.init();
     }
-  } 
+  }
 
   UI.newsSw = {
     slider: null,
@@ -708,6 +711,40 @@
       }
       this.init();
     }
+  }
+
+  UI.checkboxAll = function (all, items, reverse) {
+    var $all = $(all),
+      $items = $(items).not(all),
+      itemLen = $items.length;
+
+    reverse = reverse || false;
+
+    //all checkbox
+    $all.on('change.checkboxAll', function () {
+      var state = $(this).prop('checked');
+
+      $items.each(function () {
+        if (reverse) {
+          $(this).prop('checked', !state);
+        } else {
+          $(this).prop('checked', state).trigger('change');
+        }
+      });
+    });
+
+    //items checkbox
+    $items.on('change.checkboxAll', function () {
+      var state = (itemLen == $items.filter(':checked').length);
+
+      if (reverse) {
+        if ($items.filter(':checked').length >= 1) {
+          $all.prop('checked', false);
+        }
+      } else {
+        $all.prop('checked', state);
+      }
+    });
   }
 
   //임시
@@ -1126,6 +1163,17 @@
     }
   }
 
+  UI.drawStar = function () {
+    // starVal = target.value;
+    $('.star-range__value').on('change', function () {
+      console.log(this.value);
+      $(this).closest('.star-range').find('.star-range__over').css({
+        width: this.value * 10 + '%'
+      });
+    })
+
+  }
+
   UI.swAutoplayAdd = function (sw, wrap = null) {
     const pagination = sw.pagination.$el;
     let wrapper;
@@ -1210,6 +1258,7 @@
     UI.myFavVod.init();
     UI.thisMonth.init();
     UI.filterItem.init();
+    UI.drawStar();
   }
 
   UI.resize = function () {
@@ -1285,4 +1334,14 @@ $(function () {
   $(".ytube-kv__desc__btn").on("click", function () {
     $(this).closest(".ytube-kv__sub__wrap").toggleClass("active");
   });
+
+
+  // all Check
+  var allChks = '[data-check=allCheck]';
+  if ($(allChks).length) {
+    $(allChks).each(function () {
+      var chkGroup = '[name=' + $(this).attr('name') + ']';
+      UI.checkboxAll(this, chkGroup);
+    })
+  }
 });

@@ -31,8 +31,7 @@
       <!-- START -->
       <div class="my-container">
         <!-- snb -->
-        <!-- 마이페이지 - 1:1문의 mobile만 표시X -->
-        <div class="my-snb-section qna-snb">
+        <div class="my-snb-section">
           <div class="my-namebox">
             <span class="my-namebox__name">간만에카페인간만에카</span>
           </div>
@@ -61,78 +60,74 @@
                 </ul>
               </li>
               <li class="my-lnb__item">
-                <a href="#" class="my-lnb__1dep is-active">나의 정보</a>
+                <a href="#" class="my-lnb__1dep">나의 정보</a>
               </li>
               <li class="my-lnb__item">
-                <a href="#" class="my-lnb__1dep">1:1 문의</a>
+                <a href="#" class="my-lnb__1dep is-active">1:1 문의</a>
               </li>
             </ul>
           </div>
         </div>
         <!--// snb -->
 
-        <!-- 1:1 문의 (작성) -->
-        <div class="my-qna">
-          <div class="my-qna__contents">
-            <div class="my-qna__head mo">
-              <h2 class="my-qna--input__title">나의 문의</h2>
-            </div>
+        <div class="my-content">
+          <div class="my-content__inner">
 
-            <form action="" name="" metod="">
-              <fieldset class="inform">
-                <legend>문의 정보</legend>
+            <!-- 1:1 문의 (작성) -->
+            <section class="my-qna">
+              <div class="inform">
                 <div class="inform__block">
-                  <label for="" class="inform__tit">문의 분야<span class="ico-required" aria-label="필수"></span></label>
+                  <div class="inform__tit">문의 분야<span class="ico-required" aria-label="필수"></span></div>
                   <div class="inform__cont">
-                    <div class="my-qna--input__select">
-                      <select>
-                        <option>분야를 선택해 주세요.</option>
-                      </select>
-                    </div>
+                    <select class="o-select in-text">
+                      <option>분야를 선택해 주세요.</option>
+                    </select>
                   </div>
                 </div>
                 <div class="inform__block">
-                  <label for="" class="inform__tit">문의 제목<span class="ico-required" aria-label="필수"></span></label>
+                  <div class="inform__tit">문의 제목<span class="ico-required" aria-label="필수"></span></div>
                   <div class="inform__cont">
                     <input id="" type="text" class="in-text" placeholder="제목을 입력해 주세요.">
                     <p class="form-sub-text">(0/50)</p>
                   </div>
                 </div>
                 <div class="inform__block">
-                  <label for="" class="inform__tit">이메일<span class="ico-required" aria-label="필수"></span></label>
+                  <div class="inform__tit">이메일<span class="ico-required" aria-label="필수"></span></div>
                   <div class="inform__cont">
-                    <div class="my-qna--input__email">
-                      <input id="" type="email" placeholder="이메일을 입력해 주세요.">
+                    <div class="form-holder is-check">
+                      <input id="" type="email" class="in-text" placeholder="이메일을 입력해 주세요.">
                     </div>
-                    <div class="my-qna--input__check-box">
-                      <input type="checkbox" id="my-qna--input__email" checked>
-                      <label for="my-qna--input__email"><i class="ico"></i>메일로 답변받기</label>
+                    <div class="form-block">
+                      <span class="o-chk">
+                        <input type="checkbox" name="mych" id="email-chk" class="o-chk__input" checked>
+                        <label for="email-chk" class="o-chk__label c-dark"><em>메일로 답변받기</em></label>
+                      </span>
                     </div>
                   </div>
                 </div>
                 <div class="inform__block">
-                  <label for="" class="inform__tit">문의 내용<span class="ico-required" aria-label="필수"></span></label>
+                  <div class="inform__tit">문의 내용<span class="ico-required" aria-label="필수"></span></div>
                   <div class="inform__cont">
                     <textarea name="" id="" class="text-area in-text" placeholder="내용을 입력해 주세요."></textarea>
                     <p class="form-sub-text">(0/1000)</p>
                   </div>
                 </div>
                 <div class="inform__block">
-                  <label for="" class="inform__tit">파일 첨부
+                  <div class="inform__tit">파일 첨부
                     <p class="form-sub-text">(2/5)</p>
-                  </label>
+                  </div>
                   <div class="inform__cont">
-                    <div>
+                    <div class="inform__attach">
                       <label class="btn-file">
                         <input type="file" class="btn-file__input"> <em>파일선택</em>
                       </label>
                       <div class="review-photo__box">
                         <span class="photo-add__select">
-                          <span>attach_filename_20221225-1.jpg</span>
+                          <button type="button" class="file-name">attach_filename_20221225-1.jpg</button>
                           <button type="button" class="btn-del" aria-label="delete"></button>
                         </span>
                         <span class="photo-add__select">
-                          <span>attach_filename_20221225-2.jpg</span>
+                          <button type="button" class="file-name">attach_filename_20221225-1.jpg</button>
                           <button type="button" class="btn-del" aria-label="delete"></button>
                         </span>
                       </div>
@@ -141,17 +136,20 @@
                     </div>
                   </div>
                 </div>
-              </fieldset>
-              <div class="my-qna--input__submit">
-                <button type="button" class="btn c-gray">취소</button>
-                <button type="button" class="btn">확인</button>
               </div>
-            </form>
+
+              <div class="my-board-foot">
+                <div class="my-board-foot__side">
+                  <button type="button" class="btn c-gray">취소</button>
+                  <button type="button" class="btn">확인</button>
+                </div>
+              </div>
+            </section>
+            <!--// 1:1 문의 (작성) -->
+
           </div>
         </div>
       </div>
-      <!--// 1:1 문의 (목록) -->
-
       <!--// END -->
     </div>
     <!--// Container -->

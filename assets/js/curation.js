@@ -7,6 +7,11 @@
       observeParents: true,
       initialSlide: 0,
       lazy: true,
+      breakpoints: {
+        768: {
+          initialSlide: 0,
+        }
+      },
       on: {
         init: function () {},
       },
@@ -17,11 +22,18 @@
         setConfig = $(swEl).attr('data-swiper') ? JSON.parse(swEl.dataset.swiper) : {};
         swEl.options = Object.assign({}, that.defaultConfig, setConfig);
 
+        if (typeof $(swEl).attr('data-swiper-reinit') !== 'undefined') {
+          const initIndex = Number($(swEl).attr('data-swiper-reinit'));
+          swEl.options.initialSlide = initIndex;
+          swEl.options.breakpoints[768].initialSlide = initIndex;
+          $(swEl).removeAttr('data-swiper-reinit');
+        }
+
         if (typeof swEl.options.pagination !== 'undefined') {
           swEl.options.pagination.el = $(swEl).closest('.page-kv').find('.swiper-pagination')[0];
           if (swEl.options.pagination.type === 'fraction') {
             swEl.options.pagination.formatFractionCurrent = function (number) {
-              if ($(swEl).attr('data-curation-type') === 'curation-b-01-02' && window.winWChk === 'mo') {
+              if ($(swEl).attr('data-curation-page') === 'custom' && window.winWChk === 'mo') {
                 const nowPage = number - 1 !== 0 ? number - 1 : $(swEl).find('.swiper-slide:not(.swiper-slide-duplicate)').length;
                 return ('0' + nowPage).slice(-2);
               } else {
@@ -46,7 +58,7 @@
         }
 
         if (swEl.options.loop === true) {
-          swEl.options.loopedSlides = $(swEl).find('.swiper-slide').length
+          swEl.options.loopedSlides = $(swEl).find('.swiper-slide').length;
         }
 
         if ($(swEl).hasClass('kv-swiper__gallery') && window.winWChk === 'pc') {
@@ -57,14 +69,6 @@
           swEl.options.autoplay = {
             delay: 3000,
             disableOnInteraction: false,
-          }
-        }
-
-        if ($(swEl).attr('data-curation-type') === 'curation-b-01-02') {
-          if (window.winWChk === 'mo') {
-            swEl.options.slidesPerView = 1
-          } else {
-            swEl.options.slidesPerView = 'auto'
           }
         }
 
@@ -99,17 +103,32 @@
           }
         }
 
+        if ($(swEl).attr('data-curation-nav') === 'preview') {
+          const prevNav = $(swEl).find('.swiper-prev').find('.swiper--btn__bg');
+          const nextNav = $(swEl).find('.swiper-next').find('.swiper--btn__bg');
+
+          swEl.options.on.init = function () {
+            const prevImg = this.$el.find('.swiper-slide-prev').find('.kv-swiper__img img').attr('src');
+            const nextImg = this.$el.find('.swiper-slide-next').find('.kv-swiper__img img').attr('src');
+
+            prevNav.css('background-image', `url(${prevImg})`);
+            nextNav.css('background-image', `url(${nextImg})`);
+          }
+          swEl.options.on.slideChangeTransitionStart = function () {
+            const prevImg = this.$el.find('.swiper-slide-prev').find('.kv-swiper__img img').attr('src');
+            const nextImg = this.$el.find('.swiper-slide-next').find('.kv-swiper__img img').attr('src');
+
+            prevNav.css('background-image', `url(${prevImg})`);
+            nextNav.css('background-image', `url(${nextImg})`);
+          }
+        }
+
         if (typeof $(swEl).data('ui') === 'undefined') {
           if (typeof swEl.options.thumbs === 'undefined') {
             swInstance = new Swiper(swEl, swEl.options);
             $(swEl).data('ui', swInstance);
           } else {
-            let mappingSw;
-            if ($(swEl).closest('.kv-swiper-dual').length > 0) {
-              mappingSw = $(swEl).closest('.kv-swiper-dual').find('.kv-swiper__thumbs')[0].swiper;
-            } else if ($(swEl).closest('.multiple').length > 0) {
-              mappingSw = $(swEl).closest('.multiple').find('.kv-swiper-thumbnail')[0].swiper;
-            }
+            const mappingSw = $(swEl).closest('[data-role="swiper-container"]').find('[data-slider="curation"]')[0].swiper;
             swInstance = new Swiper(swEl, swEl.options);
             $(swEl).data('ui', swInstance);
 
@@ -173,15 +192,18 @@
         const that = this;
         $(this.sliderEl).each(function (idx, swEl) {
           if (typeof $(swEl).data('ui') !== 'undefined') { //case: swiper initialized
-            if ($(swEl).attr('data-curation-type') === 'curation-b-01-02') {
-              if ($(swEl).data('ui').$el.attr('data-curation-type') === 'curation-b-01-02') {
-                that.defaultConfig.initialSlide = window.winWChk === 'mo' ? $(swEl).data('ui').realIndex + 1 : $(swEl).data('ui').realIndex - 1;
-                $(swEl).data('ui').destroy();
-                $(swEl).removeData('ui');
-                setTimeout(function () {
-                  that.setSwiper();
-                }, 300)
+            if ($(swEl).attr('data-curation-page') === 'custom') {
+              const currentIndex = $(swEl).data('ui').realIndex;
+              if (window.winWChk === 'mo') {
+                $(swEl).attr('data-swiper-reinit', currentIndex + 1)
+              } else {
+                $(swEl).attr('data-swiper-reinit', currentIndex - 1)
               }
+              $(swEl).data('ui').destroy();
+              $(swEl).removeData('ui');
+              setTimeout(function () {
+                that.setSwiper();
+              }, 300)
             }
             if ($(swEl).hasClass('kv-swiper__gallery')) {
               if (window.winWChk === 'mo') {

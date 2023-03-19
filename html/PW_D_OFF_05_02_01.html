@@ -91,7 +91,7 @@
                         data-st-close="닫기">상세옵션 <span class="st-text">열기</span></button>
 
                       <span class="search-box hide-mo">
-                        <input type="text" class="o-input" placeholder="영상 분류, 영상명 등  태그를 입력해 주세요.">
+                        <input type="text" class="o-input" placeholder="영상분류, 영상명 등 태그를 입력해 주세요.">
                         <button type="button" class="o-btn o-btn-search" aria-label="검색"></button>
                       </span>
                     </div>
@@ -108,7 +108,7 @@
                       </div>
                       <div class="m-pop__body">
                         <span class="search-box hide-pc">
-                          <input type="text" class="o-input" placeholder="공연명, 출연진 등 태그를 입력해 주세요.">
+                          <input type="text" class="o-input" placeholder="영상분류, 영상명 등 태그를 입력해 주세요.">
                           <button type="button" class="o-btn o-btn-search" aria-label="검색"></button>
                         </span>
                         <div class="filter-options">
@@ -167,33 +167,6 @@
                               </div>
                             </div>
                             <!--//프로그램 -->
-                            <!-- VOD 목록 -->
-                            <div class="filter-options__items">
-                              <p class="filter-options__tit">VOD 목록</p>
-                              <div class="filter-options__items-cont">
-                                <ul class="filter-options__items-list">
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-local"
-                                        checked /><span class="o-rdo__label">전체</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">오페라</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">발레&amp;무용</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">전통 공연</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">VOD 카테고리</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">클래식 콘서트</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">오페라</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">발레&amp;무용</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-local" /><span class="o-rdo__label">VOD 카테고리</span></label></li>
-                                </ul>
-                              </div>
-                            </div>
-                            <!--// VOD 목록 -->
                           </div>
                         </div>
                       </div>
@@ -874,6 +847,14 @@
                 <div class="vod-list-content">
                   <div class="vod-list-wrap swiper">
                     <div class="vod-list swiper-wrapper">
+                      <div class="vod-list__item swiper-slide">
+                        <!-- no data -->
+                        <div class="vod-nodata">
+                          <p class="vod-nodata__text">좋은 영상에</p>
+                          <p class="vod-nodata__text"><span class="btn-fav fav--gy"></span> 좋아요를 해주세요!</p>
+                        </div>
+                        <!--// no data -->
+                      </div>
                       <div class="vod-list__item swiper-slide">
                         <!-- vod item -->
                         <div class="vod-art">
