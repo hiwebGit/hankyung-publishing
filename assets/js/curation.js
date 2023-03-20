@@ -121,6 +121,18 @@
             prevNav.css('background-image', `url(${prevImg})`);
             nextNav.css('background-image', `url(${nextImg})`);
           }
+
+          // PW_D_OFF_32_00_00__KV.html -> 모바일일 때, 키비주얼 스와이퍼 내비게이션 버튼 배경이미지 없애기
+          if (matchMedia("screen and (max-width: 768px)").matches) {
+            swEl.options.on.init = function () {
+              prevNav.css('background-image', 'none');
+              nextNav.css('background-image', 'none');
+            }
+            swEl.options.on.slideChangeTransitionStart = function () {
+              prevNav.css('background-image', 'none');
+              nextNav.css('background-image', 'none');
+            }
+          }
         }
 
         if (typeof $(swEl).data('ui') === 'undefined') {

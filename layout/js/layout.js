@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  var headerFile = "layout_header.html";
+  var headerFile = "layout_header.html ";
   // var navFile = "layout_menu.html";
 
   if ($("#header").text().length) {
@@ -15,7 +15,7 @@ $(document).ready(function () {
     $("#menu-section").load("../guide/layout_menu.html");
   }
 
-  $("#header").load("../layout/" + headerFile);
+  $("#header").load("../layout/" + headerFile + ' #header');
   // $("#navigation").load("../layout/" + navFile);
   if ($("#footer").length) {
     $("#footer").load("../layout/layout_footer.html");

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-  <title>통합 검색 결과 - 공연·전시·책 | 한경 ARTE</title>
+  <title>통합 검색 - 공연·전시·책 | 한경 ARTE</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
@@ -14,6 +14,7 @@
   <link rel="preload" href="../assets/fonts/Pretendard-SemiBold.subset.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/PPEditorialNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/Faktum-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <!--// font -->
 </head>
 
 
@@ -29,399 +30,393 @@
 
     <!-- Container -->
     <div class="container" id="container">
+
       <!-- START -->
       <div class="content">
-
-        <!-- concert-detail -->
-        <div class="detail-center">
-          <!-- concert-rating -->
-          <ul class="rating-wrap">
-            <li>
-              <div class="rating-box">
-                <span class="rating-title">총 평점</span>
-                <div class="star-box mo">
-                  <!-- [D] 0.5단위일 경우 p5 클래스 추가 / 1단위일 경우 p10 클래스 추가 -->
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p5"></i></span>
-                </div>
-                <div class="rating-score">
-                  <span class="rating-score__current">8.0</span>
-                  <span class="rating-score__total">/10</span>
-                </div>
+        <h2 class="head-title">ARTE SEARCH</h2>
+        <div class="search-section">
+          <div class="search-section__container">
+            <div class="search-util">
+              <div class="search-category">
+                <ul>
+                  <li><a href="#">전체</a></li>
+                  <li class="is-active"><a href="#">음악·공연·전시·책</a></li>
+                  <li><a href="#">리뷰</a></li>
+                  <li><a href="#">뉴스</a></li>
+                  <li><a href="#">아티스트</a></li>
+                  <li><a href="#">영상</a></li>
+                  <li><a href="#">ARTE Talk</a></li>
+                </ul>
               </div>
-              <div class="rating-box">
-                <div class="star-box pc">
-                  <!-- [D] 0.5단위일 경우 p5 클래스 추가 / 1단위일 경우 p10 클래스 추가 -->
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p5"></i></span>
-                </div>
-                <span class="rating-text">총 68명</span>
+              <div class="search-box">
+                <input type="text" class="o-input" placeholder="검색어를 입력해주세요">
+                <button type="button" class="o-btn o-btn-search" aria-label="검색"></button>
               </div>
-            </li>
-            <li class="member">
-              <div class="rating-box">
-                <span class="rating-title">전문가<span class="pc"> 평점</span></span>
-                <div class="star-box pc">
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p00"></i></span>
-                </div>
-                <div class="rating-score pc">
-                  <span class="rating-score__current">8.0</span>
-                  <span class="rating-score__total">/10</span>
-                </div>
-                <span class="grade mo">
-                  <span class="star"><i class="star__point p7"></i></span>
-                  <em class="grade__num">7.0</em>
-                </span>
-                <span class="rating-text">총 68명</span>
-              </div>
-              <div class="rating-box">
-                <span class="rating-title">회원<span class="pc"> 평점</span></span>
-                <div class="star-box pc">
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p00"></i></span>
-                </div>
-                <div class="rating-score pc">
-                  <span class="rating-score__current">8.0</span>
-                  <span class="rating-score__total">/10</span>
-                </div>
-                <span class="grade mo">
-                  <span class="star"><i class="star__point p7"></i></span>
-                  <em class="grade__num">7.0</em>
-                </span>
-                <span class="rating-text">총 68명</span>
-              </div>
-            </li>
-            <li class="raito">
-              <p class="rating-title">평점 비율</p>
-              <ul class="graph">
-                <li>
-                  <div class="total-bar">
-                    <!-- 평점 비율 height 적용-->
-                    <span class="ing-bar" style="height: 50%;"></span>
-                  </div>
-                  <span class="age">10대</span>
-                </li>
-                <li>
-                  <div class="total-bar">
-                    <span class="ing-bar" style="height: 20%;"></span>
-                  </div>
-                  <span class="age">20대</span>
-                </li>
-                <li>
-                  <div class="total-bar">
-                    <span class="ing-bar" style="height: 30%;"></span>
-                  </div>
-                  <span class="age">30대</span>
-                </li>
-                <li>
-                  <div class="total-bar">
-                    <span class="ing-bar" style="height: 80%;"></span>
-                  </div>
-                  <span class="age">40대</span>
-                </li>
-                <li>
-                  <div class="total-bar">
-                    <span class="ing-bar" style="height: 100%;"></span>
-                  </div>
-                  <span class="age">50대</span>
-                </li>
-                <li>
-                  <div class="total-bar">
-                    <span class="ing-bar" style="height: 10%;"></span>
-                  </div>
-                  <span class="age">60대 이상</span>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <!--// concert-rating -->
-
-          <!-- 한줄평 쓰기 -->
-          <div class="concert-review">
-            <div class="concert-review__head">
-              <p class="rating-total">총 345개</p>
-              <button type="button" class="btn-rect size-sm bg-primary" data-pop-open="popupComment">한줄평 쓰기<i
-                  class="ico ico-arrow"></i></button>
             </div>
 
-            <div class="swiper review-thum">
-              <ul class="review-thum__wrap swiper-wrapper">
-                <li class="swiper-slide">
-                  <img src="../assets/images/@temp/@c11_review_thum01.png" alt="">
-                </li>
-                <li class="swiper-slide">
-                  <img src="../assets/images/@temp/@c11_review_thum01.png" alt="">
-                </li>
-                <li class="swiper-slide">
-                  <img src="../assets/images/@temp/@c11_review_thum01.png" alt="">
-                </li>
-                <li class="swiper-slide">
-                  <img src="../assets/images/@temp/@c11_review_thum01.png" alt="">
-                </li>
-                <li class="swiper-slide">
-                  <!-- [D] 작성된 리뷰가 없을 경우 -->
-                  <div class="review-thum_msg">
-                    <span class="review-thum_text">작성된 사진 리뷰가<br>없습니다.</span>
-                  </div>
-                </li>
-                <li class="swiper-slide">
-                  <img src="../assets/images/@temp/@c11_review_thum01.png" alt="">
-                  <button type="button" class="all-review" data-pop-open="popupGallery">전체보기</button>
-                </li>
-              </ul>
-            </div>
+            <div class="search-result__content">
+              <!-- <p class="result-text">검색결과 총 204개</p> -->
 
-            <!--List -->
-            <div class="concert-review-wrap">
-              <ul class="concert-review-list">
-                <li class="concert-review__item">
-                  <div class="one-line">
-                    <div class="concert-review__thumbnail">
-                      <ul>
-                        <li>
-                          <div class="thumb-img">
-                            <span class="img-holder">
-                              <img src="../assets/images/@temp/@temp_thumb10.png" alt="">
-                            </span>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="thumb-img">
-                            <span class="img-holder">
-                              <img src="../assets/images/@temp/@temp_thumb11.png" alt="">
-                            </span>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="thumb-img">
-                            <span class="img-holder">
-                              <img src="../assets/images/@temp/@temp_thumb12.png" alt="">
-                            </span>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="thumb-img">
-                            <span class="img-holder">
-                              <img src="../assets/images/@temp/@temp_thumb13.png" alt="">
-                            </span>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="thumb-img">
-                            <span class="img-holder">
-                              <img src="../assets/images/@temp/@temp_thumb14.png" alt="">
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <!-- 아코디언 버튼 클릭시 is-active 추가 -->
-                      <span class="one-line__detail is-active">
-                        대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
-                        드라큘라 역할의 테이님도 정말 멋지셨습니다.
-                        역시 믿고 듣는 보이스 입니다 !!
-                        그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
-                        모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
-                        대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
-                        드라큘라 역할의 테이님도 정말 멋지셨습니다.
-                      </span>
-                    </div>
-                    <div class="one-line__info">
-                      <div class="one-line-by">
-                        <span class="byname">내 귀에 캔디</span>
-                        <span class="tag tag--line">회원</span>
-                        <span class="grade">
-                          <span class="star"><i class="star__point p9"></i></span>
-                          <em class="grade__num">4.0</em>
-                        </span>
-                      </div>
-                      <div class="one-line-sub">
-                        <div class="one-line-sub__box">
-                          <span class="text-date">2022.11.24</span>
-                          <div class="access-nums">
-                            <span class="acc-num acc-num--like"><em>120k</em></span>
-                            <button type="button" class="btn-fav" aria-label="Like"></button>
-                          </div>
-                        </div>
-                        <div class="one-line-sub__box">
-                          <!-- 클릭시 active 클래스가 붙는다. -->
-                          <button type="button" class="btn no-line ss h-add-btn"><span class="arrow-txt">한줄평
-                              닫기</span>
-                            <i class="ico ico-above"></i></button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="concert-review__item">
-                  <div class="one-line">
-                    <div class="concert-review__thumbnail">
-                      <ul>
-                        <li>
-                          <div class="thumb-img">
-                            <span class="img-holder">
-                              <img src="../assets/images/@temp/@temp_thumb10.png" alt="">
-                            </span>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="thumb-img">
-                            <span class="img-holder">
-                              <img src="../assets/images/@temp/@temp_thumb11.png" alt="">
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <!-- 아코디언 버튼 클릭시 is-active 추가 -->
-                      <span class="one-line__detail">
-                        대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
-                        드라큘라 역할의 테이님도 정말 멋지셨습니다.
-                        역시 믿고 듣는 보이스 입니다 !!
-                        그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
-                        모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
-                        대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
-                        드라큘라 역할의 테이님도 정말 멋지셨습니다.
-                        역시 믿고 듣는 보이스 입니다 !!
-                        그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
-                        모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
-                      </span>
-                    </div>
-                    <div class="one-line__info">
-                      <div class="one-line-by">
-                        <span class="byname">내 귀에 캔디</span>
-                        <span class="tag tag--line">회원</span>
-                        <span class="grade">
-                          <span class="star"><i class="star__point p9"></i></span>
-                          <em class="grade__num">4.0</em>
-                        </span>
-                      </div>
-                      <div class="one-line-sub">
-                        <div class="one-line-sub__box">
-                          <span class="text-date">2022.11.24</span>
-                          <div class="access-nums">
-                            <span class="acc-num acc-num--like"><em>120k</em></span>
-                            <button type="button" class="btn-fav" aria-label="Like"></button>
-                          </div>
-                        </div>
-                        <div class="one-line-sub__box">
-                          <!-- 클릭시 active 클래스가 붙는다. -->
-                          <button type="button" class="btn no-line ss h-add-btn is-active"><span class="arrow-txt">한줄평
-                              열기</span>
-                            <i class="ico ico-above"></i></button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <!-- Paging -->
-              <div class="paging">
-                <!-- PC -->
-                <a href="#" class="paging__btn paging__btn--first">처음</a>
-                <a href="#" class="paging__btn paging__btn--prev">이전</a>
-                <div class="paging__num-wrap show-pc">
-                  <a href="#" class="paging__num paging__num--active">1</a>
-                  <a href="#" class="paging__num">2</a>
-                  <a href="#" class="paging__num">3</a>
-                  <a href="#" class="paging__num">4</a>
-                  <a href="#" class="paging__num">5</a>
-                  <a href="#" class="paging__num">6</a>
-                  <a href="#" class="paging__num">7</a>
-                  <a href="#" class="paging__num">8</a>
-                  <a href="#" class="paging__num">9</a>
-                  <a href="#" class="paging__num">10</a>
+              <!-- 음악·공연·전시·책 -->
+              <div class="search-result__list only-items">
+                <div class="search-result__top">
+                  <h2 class="search-result__title">음악·공연·전시·책<span class="num">(8)</span></h2>
+                  <select class="o-select show-pc" name="" id="">
+                    <option value="">최신순</option>
+                  </select>
                 </div>
-                <a href="#" class="paging__btn paging__btn--next">다음</a>
-                <a href="#" class="paging__btn paging__btn--last">마지막</a>
+                <div class="search-result__box">
+                  <div class="palette">
+                    <div class="palette__inbox">
+                      <div class="palette__item">
+                        <div class="palette-box">
+                          <div class="palette-box__img">
+                            <a href="#" class="thumb-img">
+                              <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg" alt=""></span>
+                            </a>
+                          </div>
+                          <div class="palette-box__info palette--col">
+                            <div class="palette-box__info-col">
+                              <div class="palette-box__info-col__tit">
+                                <p class="palette-box__title">
+                                  <a href="#">유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉</a>
+                                </p>
+                                <div class="art-info-by">
+                                  <span class="tag-gen-s">뮤지컬</span>
+                                  <span class="tag">진행중</span>
+                                  <span class="grade">
+                                    <span class="star"><i class="star__point p7"></i></span>
+                                    <em class="grade__num">7.0</em>
+                                  </span>
+                                  <button type="button" class="btn-fav" aria-label="Like"></button>
+                                </div>
+                              </div>
+                              <ul class="art-info">
+                                <li class="ico-event">2022. 03. 16 ~2022. 11. 27</li>
+                                <li class="ico-location">잠실종합운동장 내 빅탑</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="palette__item">
+                        <div class="palette-box">
+                          <div class="palette-box__img">
+                            <a href="#" class="thumb-img">
+                              <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg" alt=""></span>
+                            </a>
+                          </div>
+                          <div class="palette-box__info palette--col">
+                            <div class="palette-box__info-col">
+                              <div class="palette-box__info-col__tit">
+                                <p class="palette-box__title">
+                                  <a href="#">유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉</a>
+                                </p>
+                                <div class="art-info-by">
+                                  <span class="tag-gen-s">뮤지컬</span>
+                                  <span class="tag">진행중</span>
+                                  <span class="grade">
+                                    <span class="star"><i class="star__point p7"></i></span>
+                                    <em class="grade__num">7.0</em>
+                                  </span>
+                                  <button type="button" class="btn-fav" aria-label="Like"></button>
+                                </div>
+                              </div>
+                              <ul class="art-info">
+                                <li class="ico-event">2022. 03. 16 ~2022. 11. 27</li>
+                                <li class="ico-location">잠실종합운동장 내 빅탑</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="palette__item picked">
+                        <div class="palette-box">
+                          <div class="palette-box__img">
+                            <a href="#" class="thumb-img">
+                              <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg" alt=""></span>
+                            </a>
+                          </div>
+                          <div class="palette-box__info palette--col">
+                            <div class="palette-box-pick__top">
+                              <strong class="show-pc">ARTE’s Pick <span>(이번 주 놓쳐선 안될 공연 TOP 5)</span></strong>
+                              <strong class="show-mo">ARTE’s Pick <span>TOP 5</span></strong>
+                            </div>
+                            <div class="palette-box__info-col">
+                              <div class="palette-box__info-col__tit">
+                                <p class="palette-box__title">
+                                  <a href="#">유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉</a>
+                                </p>
+                                <div class="art-info-by">
+                                  <span class="tag-gen-s">뮤지컬</span>
+                                  <span class="tag">진행중</span>
+                                  <span class="grade">
+                                    <span class="star"><i class="star__point p7"></i></span>
+                                    <em class="grade__num">7.0</em>
+                                  </span>
+                                  <button type="button" class="btn-fav" aria-label="Like"></button>
+                                </div>
+                              </div>
+                              <ul class="art-info">
+                                <li class="ico-event">2022. 03. 16 ~2022. 11. 27</li>
+                                <li class="ico-location">잠실종합운동장 내 빅탑</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="palette__item">
+                        <div class="palette-box">
+                          <div class="palette-box__img">
+                            <a href="#" class="thumb-img">
+                              <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg" alt=""></span>
+                            </a>
+                          </div>
+                          <div class="palette-box__info palette--col">
+                            <div class="palette-box__info-col">
+                              <div class="palette-box__info-col__tit">
+                                <p class="palette-box__title">
+                                  <a href="#">유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉</a>
+                                </p>
+                                <div class="art-info-by">
+                                  <span class="tag-gen-s">뮤지컬</span>
+                                  <span class="tag">진행중</span>
+                                  <span class="grade">
+                                    <span class="star"><i class="star__point p7"></i></span>
+                                    <em class="grade__num">7.0</em>
+                                  </span>
+                                  <button type="button" class="btn-fav" aria-label="Like"></button>
+                                </div>
+                              </div>
+                              <ul class="art-info">
+                                <li class="ico-event">2022. 03. 16 ~2022. 11. 27</li>
+                                <li class="ico-location">잠실종합운동장 내 빅탑</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="palette__item">
+                        <div class="palette-box">
+                          <div class="palette-box__img">
+                            <a href="#" class="thumb-img">
+                              <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg" alt=""></span>
+                            </a>
+                          </div>
+                          <div class="palette-box__info palette--col">
+                            <div class="palette-box__info-col">
+                              <div class="palette-box__info-col__tit">
+                                <p class="palette-box__title">
+                                  <a href="#">유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉</a>
+                                </p>
+                                <div class="art-info-by">
+                                  <span class="tag-gen-s">뮤지컬</span>
+                                  <span class="tag">진행중</span>
+                                  <span class="grade">
+                                    <span class="star"><i class="star__point p7"></i></span>
+                                    <em class="grade__num">7.0</em>
+                                  </span>
+                                  <button type="button" class="btn-fav" aria-label="Like"></button>
+                                </div>
+                              </div>
+                              <ul class="art-info">
+                                <li class="ico-event">2022. 03. 16 ~2022. 11. 27</li>
+                                <li class="ico-location">잠실종합운동장 내 빅탑</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="palette__item">
+                        <div class="palette-box">
+                          <div class="palette-box__img">
+                            <a href="#" class="thumb-img">
+                              <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg" alt=""></span>
+                            </a>
+                          </div>
+                          <div class="palette-box__info palette--col">
+                            <div class="palette-box__info-col">
+                              <div class="palette-box__info-col__tit">
+                                <p class="palette-box__title">
+                                  <a href="#">유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉</a>
+                                </p>
+                                <div class="art-info-by">
+                                  <span class="tag-gen-s">뮤지컬</span>
+                                  <span class="tag">진행중</span>
+                                  <span class="grade">
+                                    <span class="star"><i class="star__point p7"></i></span>
+                                    <em class="grade__num">7.0</em>
+                                  </span>
+                                  <button type="button" class="btn-fav" aria-label="Like"></button>
+                                </div>
+                              </div>
+                              <ul class="art-info">
+                                <li class="ico-event">2022. 03. 16 ~2022. 11. 27</li>
+                                <li class="ico-location">잠실종합운동장 내 빅탑</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="palette__item picked">
+                        <div class="palette-box">
+                          <div class="palette-box__img">
+                            <a href="#" class="thumb-img">
+                              <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg" alt=""></span>
+                            </a>
+                          </div>
+                          <div class="palette-box__info palette--col">
+                            <div class="palette-box-pick__top">
+                              <strong class="show-pc">ARTE’s Pick <span>(이번 주 놓쳐선 안될 공연 TOP 5)</span></strong>
+                              <strong class="show-mo">ARTE’s Pick <span>TOP 5</span></strong>
+                            </div>
+                            <div class="palette-box__info-col">
+                              <div class="palette-box__info-col__tit">
+                                <p class="palette-box__title">
+                                  <a href="#">유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉</a>
+                                </p>
+                                <div class="art-info-by">
+                                  <span class="tag-gen-s">뮤지컬</span>
+                                  <span class="tag">진행중</span>
+                                  <span class="grade">
+                                    <span class="star"><i class="star__point p7"></i></span>
+                                    <em class="grade__num">7.0</em>
+                                  </span>
+                                  <button type="button" class="btn-fav" aria-label="Like"></button>
+                                </div>
+                              </div>
+                              <ul class="art-info">
+                                <li class="ico-event">2022. 03. 16 ~2022. 11. 27</li>
+                                <li class="ico-location">잠실종합운동장 내 빅탑</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="palette__item">
+                        <div class="palette-box">
+                          <div class="palette-box__img">
+                            <a href="#" class="thumb-img">
+                              <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg" alt=""></span>
+                            </a>
+                          </div>
+                          <div class="palette-box__info palette--col">
+                            <div class="palette-box__info-col">
+                              <div class="palette-box__info-col__tit">
+                                <p class="palette-box__title">
+                                  <a href="#">유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉유니버설발레단 〈호두까기인형〉</a>
+                                </p>
+                                <div class="art-info-by">
+                                  <span class="tag-gen-s">뮤지컬</span>
+                                  <span class="tag">진행중</span>
+                                  <span class="grade">
+                                    <span class="star"><i class="star__point p7"></i></span>
+                                    <em class="grade__num">7.0</em>
+                                  </span>
+                                  <button type="button" class="btn-fav" aria-label="Like"></button>
+                                </div>
+                              </div>
+                              <ul class="art-info">
+                                <li class="ico-event">2022. 03. 16 ~2022. 11. 27</li>
+                                <li class="ico-location">잠실종합운동장 내 빅탑</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-                <!-- Mobile -->
-                <div class="paging__num-wrap show-mo">
-                  <a href="#" class="paging__more">더보기</a>
+                <!-- Paging -->
+                <div class="paging">
+                  <!-- PC -->
+                  <a href="#" class="paging__btn paging__btn--first">처음</a>
+                  <a href="#" class="paging__btn paging__btn--prev">이전</a>
+                  <div class="paging__num-wrap paging-pc">
+                    <a href="#" class="paging__num paging__num--active">1</a>
+                    <a href="#" class="paging__num">2</a>
+                    <a href="#" class="paging__num">3</a>
+                    <a href="#" class="paging__num">4</a>
+                    <a href="#" class="paging__num">5</a>
+                    <a href="#" class="paging__num">6</a>
+                    <a href="#" class="paging__num">7</a>
+                    <a href="#" class="paging__num">8</a>
+                    <a href="#" class="paging__num">9</a>
+                    <a href="#" class="paging__num">10</a>
+                  </div>
+                  <a href="#" class="paging__btn paging__btn--next">다음</a>
+                  <a href="#" class="paging__btn paging__btn--last">마지막</a>
+
+                  <!-- Mobile -->
+                  <div class="paging__num-wrap paging-mo">
+                    <a href="#" class="paging__more">더보기</a>
+                  </div>
                 </div>
+                <!-- Paging -->
+
+                <!-- <div class="search-result__bottom">
+                  <a href="#" class="show-more__btn">더보기</a>
+                </div> -->
               </div>
-              <!-- Paging -->
-            </div>
-            <!--//List -->
 
-            <div class="editor-paging">
-              <a href="#" class="paging__list">
-                <span class="paging__list__text">LIST</span>
-              </a>
             </div>
           </div>
-          <!--// 한줄평 쓰기 -->
+          <div class="search-section__side">
+            <!-- S: [D] 공연정보 컨텐츠 있을 경우 -->
+            <div class="search-banner__item">
+              <div class="pdt">
+                <div class="pdt__card">
+                  <a href="#" class="thumb-img">
+                    <span class="img-holder">
+                      <img src="../assets/images/@temp/@temp_thumb02.jpg" alt="">
+                    </span>
+                    <span class="tag-gen">연극</span>
+                  </a>
+
+                  <div class="pdt__inbox">
+                    <a href="#" class="pdt__title ellpsis-none">히사이시 조 영화음악 콘서트 2023_서울 히사이시 조 영화음악 콘서트 2023_서울 말줄임</a>
+                    <ul class="art-info">
+                      <li class="ico-event">2022. 03. 16 ~2022. 11. 27</li>
+                      <li class="ico-location">잠실종합운동장 내 빅탑</li>
+                    </ul>
+                  </div>
+                  <div class="pdt__btn">
+                    <a href="#" class="btn bg-dark">예매하기</a>
+                    <a href="#" class="btn">웹사이트</a>
+                  </div>
+                  <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                </div>
+              </div>
+            </div>
+            <!-- E: [D] 공연정보 컨텐츠 있을 경우 -->
+
+            <!-- S: [D] 공연정보 컨텐츠 없을 경우 -->
+            <!-- <div class="ad-banner-wrap">
+              <div class="ad-banner swiper">
+                <div class="ad-banner__list swiper-wrapper">
+                  <a href="#" class="ad-banner__item swiper-slide">
+                    <img src="../assets/images/@temp/@banner01_vertical_pc.png" alt="ad banner"
+                      class="ad-banner__img" />
+                  </a>
+                  <a href="#" class="ad-banner__item swiper-slide">
+                    <img src="../assets/images/@temp/@banner01_vertical_pc.png" alt="ad banner"
+                      class="ad-banner__img" />
+                  </a>
+                </div>
+              </div>
+              <div class="ad-banner__pagination"></div>
+            </div> -->
+            <!-- E: [D] 공연정보 컨텐츠 없을 경우 -->
+          </div>
         </div>
 
-        <!-- concert-loca -->
-        <div iv class="concert-loca">
-          <strong class="concert-loca__title mo">예술의 전당 CJ 토월극장</strong>
-          <div class="concert-loca__map">
-            <img src="../assets/images/@temp/@c11_map_01.png" alt="">
-          </div>
-          <div class="concert-loca__info">
-            <div class="concert-loca__info-inner">
-              <strong class="concert-loca__info-title">예술의 전당 CJ 토월극장</strong>
-              <ul class="concert-loca__info-title-list">
-                <li>
-                  <span>주소</span>
-                  <p>서울틀별시 서초구 남부순환로 2406 (서초동)​</p>
-                </li>
-                <li>
-                  <span>홈페이지</span>
-                  <p>www.sac.or.kr​</p>
-                </li>
-                <li>
-                  <span>시설특성</span>
-                  <p>국립</p>
-                </li>
-                <li>
-                  <span>공연장수</span>
-                  <p>2</p>
-                </li>
-                <li>
-                  <span>객석수</span>
-                  <p>1000</p>
-                </li>
-                <li>
-                  <span>개관연도</span>
-                  <p>2002</p>
-                </li>
-              </ul>
-              <div class="concert-loca__info-bottom">
-                <div class="concert-loca__info-bottom-left">
-                  <ul class="concert-loca__kopis">
-                    <li>KOPIS (공연예술통합전산망)</li>
-                    <li><a href="#" target="_blank" title="새창열림">http://www.kopis.or.kr</a></li>
-                  </ul>
-                  <p class="concert-loca__info-update">
-                    본 정보는 주최 측의 사정에 따라 변경될 수 있습니다.​<br>
-                    최종 업데이트 2022. 12. 05
-                  </p>
-                </div>
-                <a href="https://www.kopis.or.kr/por/cs/modinfo/csModInfoAdd.do?menuId=MNU_00038" target="_blank"
-                  class="concert-loca__report">정보 오류 수정 요청</a>
-              </div>
-            </div>
-          </div>
-
+        <!-- Poll -->
+        <div class="poll">
+          컨텐츠 추가예정<br />
+          아르떼 폴
         </div>
-        <!--// concert-loca -->
+        <!--// Poll -->
 
       </div>
       <!--// END -->
@@ -432,11 +427,6 @@
     <footer class="footer" id="footer"></footer>
     <!--// Footer -->
 
-    <!-- (확인용)댓글 관련 팝업 : 각 파일에서 코드 확인 필요-->
-    <div class="pop1">후기 작성 : PW_I_ON_CP_01_00.html</div>
-    <div class="pop2">후기 이미지 모아보기 : PW_I_ON_CP_02_00.html</div>
-    <!--// (확인용)댓글 관련 팝업 -->
-
   </div>
 
   <!-- Script -->
@@ -445,13 +435,6 @@
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
   <!--// Script -->
-  <script>
-    $(document).ready(function () {
-      //팝업 확인용 load
-      $(".pop1").load("PW_I_ON_CP_01_00.html .pop-wrap");
-      $(".pop2").load("PW_I_ON_CP_02_00.html .pop-wrap");
-    });
-  </script>
 </body>
 
 </html>
