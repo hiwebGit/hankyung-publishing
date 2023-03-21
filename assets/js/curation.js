@@ -165,7 +165,7 @@
           const controls = sw.pagination.$el.closest('.page-kv').find('.swiper-controls');
           if (controls.find('.btn-autoplay').length === 0) {
             controls.append(
-              '<button type="button" class="swiper--play btn-autoplay"><span>시작</span></button><button type="button" class="swiper--pause btn-autoplay"><span>멈춤</span></span></button>'
+              '<button type="button" class="swiper--play btn-autoplay"><span>시작</span></button><button type="button" class="swiper--pause btn-autoplay"><span>멈춤</span></button>'
             );
           }
           if (sw.autoplay.running) {
