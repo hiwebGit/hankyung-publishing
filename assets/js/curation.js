@@ -236,6 +236,14 @@
                 $(sw.slides[sw.activeIndex - 2]).css('opacity', 1);
               }
             }
+
+            if ($(swEl).attr('data-curation-style') === 'active-bigger') {
+              const sw = $(swEl).data('ui');
+              if (window.winWChk === 'pc') {
+                $(sw.slides).css('width', '')
+                sw.update();
+              }
+            }
           }
         });
       }

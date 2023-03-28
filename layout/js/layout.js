@@ -4,18 +4,14 @@ $(document).ready(function () {
   // var navFile = "layout_menu.html";
 
   if ($("#header").text().length) {
-    headerFile = $("#header").text();
+    headerFile = $("#header .file-name").text();
   }
-
-  // if( $("").text().length) {
-  //   navFile = $("#navigation").text();
-  // }
 
   if ($("#menu-section").length) {
     $("#menu-section").load("../guide/layout_menu.html");
   }
 
-  $("#header").load("../layout/" + headerFile + ' #header');
+  $("#header").load("../layout/" + headerFile + " .header__inner");
   // $("#navigation").load("../layout/" + navFile);
   if ($("#footer").length) {
     $("#footer").load("../layout/layout_footer.html");

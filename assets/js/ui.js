@@ -36,39 +36,89 @@
   }
 
   UI.gnb = {
-    varSet: {
-      el: '.header',
-      scrollChkName: 'header--scroll',
-      scrollEndName: 'header--active',
+    el: '.header',
+    box: '.header__box',
+    IsScrolling: 'header--ing',
+    IsScrolled: 'header--scroll',
+    IsScrollend: 'header--active',
+    IsMenuOpened: 'header--opened',
+    init: function () {
+      this.scrollCheckSet(window);
+      this.scroll();
+      this.scrollEnd(50, window);
+      this.gnbHover();
+      this.menuHover();
     },
     scroll: function () {
       var _this = this;
       $(window).on('scroll', function () {
-        $(_this.varSet.el).removeClass(_this.varSet.scrollEndName);
+        $(_this.el).addClass(_this.IsScrolling);
         _this.scrollCheckSet(window);
+        console.log(1)
       });
-    },
-    init: function () {
-      var _this = this;
-      _this.scrollCheckSet(window);
-      _this.scroll();
-      //_this.scrollEnd(50);
     },
     scrollCheckSet: function (obj) {
       var _this = this;
       var scrollT = $(obj).scrollTop();
       if (scrollT > 0) {
-        $(_this.varSet.el).addClass(_this.varSet.scrollChkName);
+        $(_this.el).addClass(_this.IsScrolled);
+        console.log(2)
       } else {
-        $(_this.varSet.el).removeClass(_this.varSet.scrollChkName);
+        $(_this.el).removeClass(_this.IsScrolled);
+        console.log(3)
       }
     },
-    scrollEnd: function (time) {
+    scrollEnd: function (time, obj) {
       var _this = this;
-      $(window).scrollStopped(function (ev) {
+      $(obj).scrollStopped(function (ev) {
         setTimeout(() => {
-          $(_this.varSet.el).addClass(_this.varSet.scrollEndName);
+          $(_this.el).removeClass(_this.IsScrolling);
+          console.log(4)
+
+          if ($(obj).scrollTop() > 0) {
+            $(_this.el).addClass(_this.IsScrollend).addClass(_this.IsScrolled);
+            console.log(5)
+          } else {
+            $(_this.el).addClass(_this.IsScrollend).removeClass(_this.IsScrolled);
+            console.log(6)
+          }
         }, time);
+      });
+    },
+    gnbHover: function () {
+      var _this = this;
+      $(_this.el).on('mouseenter', '[data-gnb]', function () {
+        var $gnbMenuBox = $('[data-header-box=gnb]'),
+          menuActive = 'is-menu-active',
+          rType = 'type-right';
+
+        $(_this.box).show();
+        $(_this.el).addClass(_this.IsMenuOpened);
+        $gnbMenuBox.addClass(menuActive).siblings().removeClass(menuActive);
+        $('[data-lnb=' + $(this).data('gnb') + ']').show().siblings().hide();
+
+        if ($(this).data('dir') == 'right') {
+          $gnbMenuBox.addClass(rType);
+        } else {
+          $gnbMenuBox.removeClass(rType);
+        }
+      });
+    },
+    menuHover: function () {
+      var _this = this;
+      $(_this.el).on('mouseenter', '[data-menu]', function () {
+        var $menuBox = $('[data-header-box=' + $(this).data('menu') + ']'),
+          menuActive = 'is-menu-active';
+
+        $(_this.box).show();
+        $(_this.el).addClass(_this.IsMenuOpened);
+
+        $menuBox.addClass(menuActive).siblings().removeClass(menuActive);
+      });
+    },
+    headerOut: function () {
+      $(_this.el).on('mouseleave', '[data-menu]', function () {
+        console.log('aaa')
       });
     }
   }
@@ -395,7 +445,7 @@
       var _this = this;
       $(ev.target).closest(_this.varSet.tabBtnArea).find(_this.varSet.tabBtn).removeClass(_this.varSet.activeClassName);
       $(ev.target).addClass(_this.varSet.activeClassName);
-    }
+    },
   }
 
   UI.sortList = {
@@ -661,7 +711,7 @@
     slider: null,
     sliderEl: '.theme-column',
     config: {
-      autoplay: true,
+      // autoplay: true,
       observer: true,
       observeParents: true,
       slidesPerView: "auto",

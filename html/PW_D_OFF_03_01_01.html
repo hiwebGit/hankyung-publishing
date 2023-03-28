@@ -395,11 +395,17 @@
                       <div class="reviewbox__info">
                         <div class="reviewbox-by">
                           <span class="byname">내 귀에 캔디</span>
+                          <!-- s : 전문가리뷰 -->
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p8"></i></span>
-                            <em class="grade__num">8.0</em>
+                            <!-- 뱃지가 두개일 경우 p2, 세개일 경우 p3 클래스 추가 -->
+                            <!-- s : 모바일에서만 평점/별점 노출 -->
+                            <span class="star mo"><i class="star__point p8"></i></span>
+                            <em class="grade__num mo">8.0</em>
+                            <!-- e : 모바일에서만 평점/별점 노출 -->
+                            <span class="badge-star"></span>
                           </span>
+                          <!-- e : 전문가리뷰 -->
                         </div>
                         <div class="reviewbox-sub">
                           <span class="text-date">2022.11.24</span>
@@ -431,11 +437,17 @@
                       <div class="reviewbox__info">
                         <div class="reviewbox-by">
                           <span class="byname">내 귀에 캔디</span>
+                          <!-- s : 전문가리뷰 -->
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p8"></i></span>
-                            <em class="grade__num">8.0</em>
+                            <!-- 뱃지가 두개일 경우 p2, 세개일 경우 p3 클래스 추가 -->
+                            <!-- s : 모바일에서만 평점/별점 노출 -->
+                            <span class="star mo"><i class="star__point p8"></i></span>
+                            <em class="grade__num mo">8.0</em>
+                            <!-- e : 모바일에서만 평점/별점 노출 -->
+                            <span class="badge-star p2"></span>
                           </span>
+                          <!-- e : 전문가리뷰 -->
                         </div>
                         <div class="reviewbox-sub">
                           <span class="text-date">2022.11.24</span>
@@ -467,11 +479,17 @@
                       <div class="reviewbox__info">
                         <div class="reviewbox-by">
                           <span class="byname">내 귀에 캔디</span>
+                          <!-- s : 전문가리뷰 -->
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p8"></i></span>
-                            <em class="grade__num">8.0</em>
+                            <!-- 뱃지가 두개일 경우 p2, 세개일 경우 p3 클래스 추가 -->
+                            <!-- s : 모바일에서만 평점/별점 노출 -->
+                            <span class="star mo"><i class="star__point p8"></i></span>
+                            <em class="grade__num mo">8.0</em>
+                            <!-- e : 모바일에서만 평점/별점 노출 -->
+                            <span class="badge-star p3"></span>
                           </span>
+                          <!-- e : 전문가리뷰 -->
                         </div>
                         <div class="reviewbox-sub">
                           <span class="text-date">2022.11.24</span>
@@ -502,12 +520,15 @@
                       </a>
                       <div class="reviewbox__info">
                         <div class="reviewbox-by">
+                          <!-- s : 회원리뷰 -->
                           <span class="byname">내 귀에 캔디</span>
-                          <span class="tag">전문가</span>
+                          <!-- 회원리뷰인 경우 tag--reverse -->
+                          <span class="tag--reverse">회원</span>
                           <span class="grade">
                             <span class="star"><i class="star__point p8"></i></span>
                             <em class="grade__num">8.0</em>
                           </span>
+                          <!-- e : 회원리뷰 -->
                         </div>
                         <div class="reviewbox-sub">
                           <span class="text-date">2022.11.24</span>
@@ -538,12 +559,15 @@
                       </a>
                       <div class="reviewbox__info">
                         <div class="reviewbox-by">
+                          <!-- s : 회원리뷰 -->
                           <span class="byname">내 귀에 캔디</span>
-                          <span class="tag">전문가</span>
+                          <!-- 회원리뷰인 경우 tag--reverse -->
+                          <span class="tag--reverse">회원</span>
                           <span class="grade">
                             <span class="star"><i class="star__point p8"></i></span>
                             <em class="grade__num">8.0</em>
                           </span>
+                          <!-- e : 회원리뷰 -->
                         </div>
                         <div class="reviewbox-sub">
                           <span class="text-date">2022.11.24</span>
@@ -592,22 +616,24 @@
           <ul class="rating-wrap">
             <li>
               <div class="rating-box">
-                <span class="rating-title">총 평점</span>
-                <div class="star-box mo">
-                  <!-- [D] 0.5단위일 경우 p5 클래스 추가 / 1단위일 경우 p10 클래스 추가 -->
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p5"></i></span>
+                <span class="rating-title">전문가 평점</span>
+                <div class="badge-box">
+                  <!-- 별점이 2개면 p2, 별점이 3개면 p3 추가  -->
+                  <span class="badge-star"></span>
                 </div>
+                <span class="rating-text">읽을 만한 책</span>
+              </div>
+            </li>
+            <li>
+              <div class="rating-box">
+                <span class="rating-title">회원 평점</span>
                 <div class="rating-score">
                   <span class="rating-score__current">8.0</span>
                   <span class="rating-score__total">/10</span>
                 </div>
               </div>
               <div class="rating-box">
-                <div class="star-box pc">
+                <div class="star-box">
                   <!-- [D] 0.5단위일 경우 p5 클래스 추가 / 1단위일 경우 p10 클래스 추가 -->
                   <span class="star"><i class="star__point p10"></i></span>
                   <span class="star"><i class="star__point p10"></i></span>
@@ -618,43 +644,151 @@
                 <span class="rating-text">총 68명</span>
               </div>
             </li>
-            <li class="member">
+            <li class="raito">
+              <p class="rating-title">평점 비율</p>
+              <ul class="graph">
+                <li>
+                  <div class="total-bar">
+                    <!-- 평점 비율 height 적용-->
+                    <span class="ing-bar" style="height: 50%;"></span>
+                  </div>
+                  <span class="age">10대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 20%;"></span>
+                  </div>
+                  <span class="age">20대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 30%;"></span>
+                  </div>
+                  <span class="age">30대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 80%;"></span>
+                  </div>
+                  <span class="age">40대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 100%;"></span>
+                  </div>
+                  <span class="age">50대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 10%;"></span>
+                  </div>
+                  <span class="age">60대 이상</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="rating-wrap">
+            <li>
               <div class="rating-box">
-                <span class="rating-title">전문가<span class="pc"> 평점</span></span>
-                <div class="star-box pc">
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p00"></i></span>
+                <span class="rating-title">전문가 평점</span>
+                <div class="badge-box">
+                  <!-- 별점이 2개면 p2, 별점이 3개면 p3 추가  -->
+                  <span class="badge-star p2"></span>
                 </div>
-                <div class="rating-score pc">
+                <span class="rating-text">혼자 보기 아까운 책</span>
+              </div>
+            </li>
+            <li>
+              <div class="rating-box">
+                <span class="rating-title">회원 평점</span>
+                <div class="rating-score">
                   <span class="rating-score__current">8.0</span>
                   <span class="rating-score__total">/10</span>
                 </div>
-                <span class="grade mo">
-                  <span class="star"><i class="star__point p7"></i></span>
-                  <em class="grade__num">7.0</em>
-                </span>
-                <span class="rating-text">총 68명</span>
               </div>
               <div class="rating-box">
-                <span class="rating-title">회원<span class="pc"> 평점</span></span>
-                <div class="star-box pc">
+                <div class="star-box">
+                  <!-- [D] 0.5단위일 경우 p5 클래스 추가 / 1단위일 경우 p10 클래스 추가 -->
                   <span class="star"><i class="star__point p10"></i></span>
                   <span class="star"><i class="star__point p10"></i></span>
                   <span class="star"><i class="star__point p10"></i></span>
                   <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p00"></i></span>
+                  <span class="star"><i class="star__point p5"></i></span>
                 </div>
-                <div class="rating-score pc">
+                <span class="rating-text">총 68명</span>
+              </div>
+            </li>
+            <li class="raito">
+              <p class="rating-title">평점 비율</p>
+              <ul class="graph">
+                <li>
+                  <div class="total-bar">
+                    <!-- 평점 비율 height 적용-->
+                    <span class="ing-bar" style="height: 50%;"></span>
+                  </div>
+                  <span class="age">10대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 20%;"></span>
+                  </div>
+                  <span class="age">20대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 30%;"></span>
+                  </div>
+                  <span class="age">30대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 80%;"></span>
+                  </div>
+                  <span class="age">40대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 100%;"></span>
+                  </div>
+                  <span class="age">50대</span>
+                </li>
+                <li>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 10%;"></span>
+                  </div>
+                  <span class="age">60대 이상</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="rating-wrap">
+            <li>
+              <div class="rating-box">
+                <span class="rating-title">전문가 평점</span>
+                <div class="badge-box">
+                  <!-- 별점이 2개면 p2, 별점이 3개면 p3 추가  -->
+                  <span class="badge-star p3"></span>
+                </div>
+                <span class="rating-text">소장할 가치가 있는 책</span>
+              </div>
+            </li>
+            <li>
+              <div class="rating-box">
+                <span class="rating-title">회원 평점</span>
+                <div class="rating-score">
                   <span class="rating-score__current">8.0</span>
                   <span class="rating-score__total">/10</span>
                 </div>
-                <span class="grade mo">
-                  <span class="star"><i class="star__point p7"></i></span>
-                  <em class="grade__num">7.0</em>
-                </span>
+              </div>
+              <div class="rating-box">
+                <div class="star-box">
+                  <!-- [D] 0.5단위일 경우 p5 클래스 추가 / 1단위일 경우 p10 클래스 추가 -->
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p10"></i></span>
+                  <span class="star"><i class="star__point p5"></i></span>
+                </div>
                 <span class="rating-text">총 68명</span>
               </div>
             </li>
