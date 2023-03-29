@@ -30,15 +30,105 @@
 
     <!-- Container -->
     <div class="container" id="container">
-      <!-- Full KV : 작업중-->
-      <div class="page-kv">
+      <!-- Full KV -->
+      <div class="page-kv kv-info-music-wrapper">
         <div class="kv-title">
           <h2 class="kv-title__title">HOT &amp; TRENDY</h2>
           <p class="kv-title__desc">실시간으로 집계된 금주 인기 음악 공연 TOP 12​</p>
         </div>
-        <div class="temp" style="text-align: center;">KV</div>
+        <div class="kv-info-music">
+          <strong class="point-title">Arte's Music</strong>
+          <!-- swiper 실행 필수 속성 data-slider="curation", data-swiper(속성 값 객체 depth의 마지막 속성 값은 반드시 콤마 삭제)-->
+          <div class="swiper kv-swiper" data-slider="curation" data-curation-style="active-bigger" data-swiper='{
+            "slidesPerView": "auto",
+            "centeredSlides": true,
+            "autoplay":true,
+            "loop":true,
+            "pagination": {
+              "type": "fraction"
+            },
+            "breakpoints": {
+              "768": {
+                "spaceBetween": 16
+              }
+            },
+            "speed": 0,
+            "navigation": true
+          }'>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide-inner">
+                  <div class="kv-swiper__img">
+                    <span class="tag-gen">연극</span>
+                    <a href="#none">
+                      <img src="../assets/images/@temp/@temp_kv06.png" alt="">
+                    </a>
+                    <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                  </div>
+                  <div class="kv-swiper__text">
+                    <a href="#none">
+                      <p class="kv-swiper__number">1</p>
+                      <h3 class="kv-swiper__title">하동균 <br>'그녀를 사랑해줘요'</h3>
+                      <ul class="art-info">
+                        <li class="ico-event">2022.10.25~2023.3.1</li>
+                        <li class="ico-location">잠실종합운동장 내 빅탑</li>
+                      </ul>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-inner">
+                  <div class="kv-swiper__img">
+                    <span class="tag-gen">연극</span>
+                    <a href="#none">
+                      <img src="../assets/images/@temp/@temp_kv05.jpg" alt="">
+                    </a>
+                    <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                  </div>
+                  <div class="kv-swiper__text">
+                    <a href="#none">
+                      <p class="kv-swiper__number">2</p>
+                      <h3 class="kv-swiper__title">박효신 <br>LIVE LOVERS</h3>
+                      <ul class="art-info">
+                        <li class="ico-event">2022.10.25~2023.3.1</li>
+                        <li class="ico-location">잠실종합운동장 내 빅탑</li>
+                      </ul>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-inner">
+                  <div class="kv-swiper__img">
+                    <span class="tag-gen">연극</span>
+                    <a href="#none">
+                      <img src="../assets/images/@temp/@temp_kv04.jpg" alt="">
+                    </a>
+                    <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                  </div>
+                  <div class="kv-swiper__text">
+                    <a href="#none">
+                      <p class="kv-swiper__number">3</p>
+                      <h3 class="kv-swiper__title">SMTOWN <br>LIVE 2023 SMCU PALACE KWANGYA</h3>
+                      <ul class="art-info">
+                        <li class="ico-event">2022.10.25~2023.3.1</li>
+                        <li class="ico-location">잠실종합운동장 내 빅탑</li>
+                      </ul>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-controls c-gray">
+            <div class="swiper-pagination"></div>
+            <button type="button" class="swiper--btn swiper-prev">이전</button>
+            <button type="button" class="swiper--btn swiper-next">다음</button>
+          </div>
+        </div>
       </div>
-      <!--// Full KV : 작업중 -->
+      <!--// Full KV -->
 
       <!-- START -->
       <div class="content">
@@ -969,7 +1059,7 @@
   <script src="../assets/js/libs/swiper.min.js"></script>
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
-  <script src="../assets/js/curation.js"></script>
+  <script src="../assets/js/curation.js"></script> <!-- curation slider -->
   <!--// Script -->
 </body>
 

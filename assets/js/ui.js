@@ -1277,6 +1277,22 @@
     }
   }
 
+  // search-box 모바일에서 클릭시, 형제 요소 무너뜨리지 않고 풀사이즈로로 늘어나는 기능 작업중
+  UI.searchBoxOpen = function () {
+    let searchBox = document.querySelector('.rbox-block .search-box')
+    console.log(searchBox)
+
+    function searchBoxClick() {
+      if (searchBox.classList.contains('.open')) {
+        searchBox.classList.remove('open')
+      } else {
+        searchBox.classList.add('open')
+      }
+    }
+
+    searchBox.addEventListener('click', searchBoxClick)
+  }
+
   UI.init = function () {
     UI.headerPP();
     UI.headerBanner.init();
@@ -1309,6 +1325,7 @@
     UI.thisMonth.init();
     UI.filterItem.init();
     UI.drawStar();
+    UI.searchBoxOpen();
   }
 
   UI.resize = function () {
