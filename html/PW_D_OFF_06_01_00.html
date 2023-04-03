@@ -34,7 +34,7 @@
       <div class="page-kv kv-rev-music-wrapper">
         <div class="kv-title">
           <h2 class="kv-title__title">REVIEW</h2>
-          <p class="kv-title__desc">실시간으로 집계된 인기 음악 리뷰 TOP 5</p>
+          <p class="kv-title__desc">arte 추천 음악 리뷰</p>
         </div>
         <div class="kv-rev-music">
           <div class="kv-rev-music__swipeimg swiper kv1Swiper">
@@ -205,7 +205,7 @@
       <!--// Full KV -->
 
       <!-- START -->
-      <div class="content music-rv">
+      <div class="content">
 
         <!-- ad-banner -->
         <div class="ad-banner-wrap">
@@ -213,20 +213,24 @@
             <div class="ad-banner__list swiper-wrapper">
               <a href="#" class="ad-banner__item swiper-slide">
                 <!-- Img PC -->
-                <img src="../assets/images/@temp/@banner01_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
+                <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <!-- Img PC 2 -->
+                <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
                 <!-- Img Tablet -->
-                <img src="../assets/images/@temp/@banner01_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet" />
+                <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <!-- Img Tablet 2 -->
+                <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
                 <!-- Img Mobile -->
-                <img src="../assets/images/@temp/@banner01_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
               <a href="#" class="ad-banner__item swiper-slide">
-                <img src="../assets/images/@temp/@banner02_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
-                <img src="../assets/images/@temp/@banner02_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet">
-                <img src="../assets/images/@temp/@banner02_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
+                <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
             </div>
           </div>
@@ -465,22 +469,49 @@
                             </div>
                           </div>
                           <div class="filter-options__cont">
-                            <!-- 리뷰 구분 -->
+                            <!-- 전문가 리뷰 -->
                             <div class="filter-options__items">
-                              <p class="filter-options__tit">리뷰 구분</p>
+                              <p class="filter-options__tit">전문가 리뷰</p>
                               <div class="filter-options__items-cont">
                                 <ul class="filter-options__items-list">
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-type"
-                                        checked /><span class="o-rdo__label">전문가 리뷰</span></label></li>
+                                        checked /><span class="o-rdo__label">전체</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-type" /><span class="o-rdo__label">회원 리뷰</span></label></li>
+                                        name="chk-type" /><span class="o-rdo__label">볼만한 공연</span></label></li>
+                                        <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                          name="chk-type" /><span class="o-rdo__label">혼자 보기 아까운 공연</span></label></li>
+                                          <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                            name="chk-type" /><span class="o-rdo__label">물개박수 절로 나오는 공연</span></label></li>
                                 </ul>
                               </div>
                             </div>
-                            <!--//리뷰 구분 -->
+                            <!--//전문가 리뷰 -->
+                            <!--회원 리뷰 -->
+                            <div class="filter-options__items">
+                              <p class="filter-options__tit">회원 리뷰</p>
+                              <div class="filter-options__items-cont">
+                                <ul class="filter-options__items-list m-col2">
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status"
+                                        checked />
+                                      <span class="o-rdo__label">전체</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">강력추천</span></label></li>
+                                  <li class="w-full"><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">생각보다 좋아요</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">괜찮아요</span></label>
+                                  </li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">그냥 그렇네요</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">시간 아까워요</span></label></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!--//회원 리뷰 -->
                             <!-- 장르 -->
                             <div class="filter-options__items">
-                              <p class="filter-options__tit">장르</p>
+                              <p class="filter-options__tit">장르</p> 
                               <div class="filter-options__items-cont">
                                 <ul class="filter-options__items-list">
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-genre"
@@ -520,28 +551,6 @@
                               </div>
                             </div>
                             <!--//상태 -->
-                            <!--평점 -->
-                            <div class="filter-options__items">
-                              <p class="filter-options__tit">평점</p>
-                              <div class="filter-options__items-cont">
-                                <ul class="filter-options__items-list list02">
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status"
-                                        checked /><span class="o-rdo__label">전체</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">그냥 그렇네요</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">강력추천</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">시간 아까워요</span></label></li>
-                                  <li class="w-full"><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">생각보다 좋아요</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">괜찮아요</span></label>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <!--//평점 -->
                           </div>
                         </div>
                       </div>
@@ -613,8 +622,9 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- <span class="star"><i class="star__point p7"></i></span>
+                            <em class="grade__num">7.0</em> -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -794,8 +804,7 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <span class="badge-star p2"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -929,8 +938,7 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <span class="badge-star"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -1418,6 +1426,21 @@
         delay: 3000,
         disableOnInteraction: true,
       },
+      //s: 230328 추가 
+      on: {
+        init: function () {
+          $('.kv1Swiper').find('.swiper-slide').addClass('changed');
+        },
+        slide: hangeTransitionStart = function () {
+          $('.kv1Swiper').find('.swiper-slide').addClass('changing');
+          $('.kv1Swiper').find('.swiper-slide').removeClass('changed');
+        },
+        slide: hangeTransitionEnd = function () {
+          $('.kv1Swiper').find('.swiper-slide').removeClass('changing');
+          $('.kv1Swiper').find('.swiper-slide').addClass('changed');
+        }
+      },
+      //e: 230328 추가
       //on: {
       //    slideChangeTransitionEnd: function(){
       //     if(this.activeIndex%totaln == 0){
@@ -1429,7 +1452,7 @@
       //},
       breakpoints: {
         768: {
-          slidesPerView: 1,
+          // slidesPerView: 1, 230328 삭제
           spaceBetween: 0,
         },
       },
