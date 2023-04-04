@@ -70,15 +70,9 @@
                         <span class="star"><i class="star__point p10"></i></span>
                         <span class="star"><i class="star__point p1"></i></span>
                         <em class="grade__num">8.0</em>
+                        <span class="join__num">(참여 50명)</span>
                       </span>
                     </a>
-                    <div class="art-info-sub">
-                      <div class="access-nums">
-                        <span class="acc-num acc-num--view"><em>25</em></span>
-                        <span class="acc-num acc-num--like"><em>120k</em></span>
-                        <span class="acc-num acc-num--comment"><em>25</em></span>
-                      </div>
-                    </div>
                   </div>
                   <div class="offer-info__box">
                     <ul class="offer-info__host">
@@ -88,11 +82,19 @@
                       </li>
                     </ul>
                   </div>
+                  <div class="art-info-sub">
+                    <div class="access-nums">
+                      <span class="acc-num acc-num--view"><em>25</em></span>
+                      <span class="acc-num acc-num--like"><em>120k</em></span>
+                      <span class="acc-num acc-num--comment"><em>25</em></span>
+                    </div>
+                    <button type="button" class="btn-fav" aria-label="Like"></button>
+                    <button type="button" class="btn-share" aria-label="Share"></button>
+                  </div>
                 </div>
               </div>
               <div class="booking__wrap">
                 <button type="button" class="btn book-btn">예매하기<i class="ico-booking"></i></button>
-                <button type="button" class="btn-share show-pc" aria-label="Share"></button>
               </div>
             </div>
           </div>
@@ -128,13 +130,9 @@
                     <div class="view__tags">
                       <span class="byname">내 귀에 캔디</span>
                       <span class="tag">전문가</span>
-                      <span class="grade">
-                        <span class="star"><i class="star__point p8"></i></span>
-                        <em class="grade__num">8.0</em>
-                      </span>
-                    </div>
-                    <div class="art-info-sub">
-                      <span class="text-date">2022.10.20</span>
+                      <div class="grade-list">
+                        <!-- 별점이 2개면 p2, 별점이 3개면 p3 추가  -->
+                        <span class="badge-star p3"></span>
                     </div>
                   </div>
                 </div>
@@ -300,20 +298,24 @@
               <div class="ad-banner__list swiper-wrapper">
                 <a href="#" class="ad-banner__item swiper-slide">
                   <!-- Img PC -->
-                  <img src="../assets/images/@temp/@banner01_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
+                  <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                  <!-- Img PC 2 -->
+                  <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
                   <!-- Img Tablet -->
-                  <img src="../assets/images/@temp/@banner01_tablet.png" alt="ad banner"
-                    class="ad-banner__img img--tablet" />
+                  <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                  <!-- Img Tablet 2 -->
+                  <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
                   <!-- Img Mobile -->
-                  <img src="../assets/images/@temp/@banner01_mobile_@2x.png" alt="ad banner"
-                    class="ad-banner__img img--mobile" />
+                  <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
+                    class="ad-banner__img img--mo" />
                 </a>
                 <a href="#" class="ad-banner__item swiper-slide">
-                  <img src="../assets/images/@temp/@banner02_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
-                  <img src="../assets/images/@temp/@banner02_tablet.png" alt="ad banner"
-                    class="ad-banner__img img--tablet">
-                  <img src="../assets/images/@temp/@banner02_mobile_@2x.png" alt="ad banner"
-                    class="ad-banner__img img--mobile" />
+                  <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                  <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
+                  <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                  <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                  <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
+                    class="ad-banner__img img--mo" />
                 </a>
               </div>
             </div>
@@ -891,7 +893,6 @@
                         <div class="setting__layer" data-role="visible_cont">
                           <ul>
                             <li><a href="#">신고하기</a></li>
-                            <li><a href="#">차단하기</a></li>
                           </ul>
                           <button type="button" class="btn-close" data-role="hide_btn" aria-label="레이어 닫기"></button>
                         </div>
@@ -961,7 +962,6 @@
                         <div class="setting__layer" data-role="visible_cont">
                           <ul>
                             <li><a href="#">신고하기</a></li>
-                            <li><a href="#">차단하기</a></li>
                           </ul>
                           <button type="button" class="btn-close" data-role="hide_btn" aria-label="레이어 닫기"></button>
                         </div>

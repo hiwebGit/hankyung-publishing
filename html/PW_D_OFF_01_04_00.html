@@ -31,15 +31,113 @@
     <!-- Container -->
     <div class="container" id="container">
 
-      <!-- Full KV : 작업중-->
-      <div class="page-kv">
+      <!-- Full KV -->
+      <div class="page-kv kv-news-stage-wrapper">
         <div class="kv-title">
           <h2 class="kv-title__title">STAGE&middot;CINE NEWS</h2>
           <p class="kv-title__desc">공연&middot;영화계 핫이슈, 트렌드 및 생생한 소식들</p>
         </div>
-        <div class="temp" style="text-align: center;">KV</div>
+        <!-- swiper 실행 필수 속성 data-slider="curation", data-swiper(속성 값 객체 depth의 마지막 속성 값은 반드시 콤마 삭제)-->
+        <div class="swiper kv-swiper kv-news-stage" data-slider="curation" data-swiper='{
+          "slidesPerView": 1,
+          "spaceBetween": 0,
+          "pagination": {
+          "type": "fraction"
+          },
+          "breakpoints": {
+            "768": {
+              "spaceBetween": 16
+            }
+          },
+          "navigation": true,
+          "loop":true,
+          "autoplay": true
+        }'>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="kv-swiper__img">
+                <a href="#none">
+                  <img src="../assets/images/@temp/@kv_swiper_thumb.png" alt="kv swiper thumbnail">
+                </a>
+                <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+              </div>
+              <div class="kv-swiper__text">
+                <a href="#none">
+                  <h3 class="kv-swiper__title">YUNCHAN LIM <i>concert 1</i></h3>
+                  <p class="kv-swiper__title--sub">사라장 &amp; 비르투오지</p>
+                  <!-- <p class="kv-swiper__description">빈 클라이번 콩쿠르에서 역대 최연소로 우승하며 세계를 놀라게한 차세대 피아니스트 연주자와 음악, 그리고 관객이 공통된
+                    하나의 통찰을 완성해가는 인사이트 시리즈에서 임윤찬이 전하는 음악, 빈 클라이번 콩쿠르에서 역대 최연소로 우승하며 세계를 놀라게한 차세대 피아니스트 연주자와 음악, 그리고 관객이
+                    공통된 하나의 통찰을 완성해가는 인사이트 시리즈에서 임윤찬이 전하는 음악,</p> -->
+                </a>
+                <!-- <div class="art-info-sub">
+                  <span class="text-date">2022.11.24</span>
+                  <div class="access-nums">
+                    <span class="acc-num acc-num--view"><em>25</em></span>
+                    <span class="acc-num acc-num--like"><em>120k</em></span>
+                    <span class="acc-num acc-num--comment"><em>25</em></span>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="kv-swiper__img">
+                <a href="#none">
+                  <img src="../assets/images/@temp/@kv_swiper_thumb.png" alt="kv swiper thumbnail">
+                </a>
+                <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+              </div>
+              <div class="kv-swiper__text">
+                <a href="#none">
+                  <h3 class="kv-swiper__title">YUNCHAN LIM <i>concert 2</i></h3>
+                  <p class="kv-swiper__title--sub">사라장 &amp; 비르투오지</p>
+                  <!-- <p class="kv-swiper__description">빈 클라이번 콩쿠르에서 역대 최연소로 우승하며 세계를 놀라게한 차세대 피아니스트 연주자와 음악, 그리고 관객이 공통된
+                    하나의 통찰을 완성해가는 인사이트 시리즈에서 임윤찬이 전하는 음악, 빈 클라이번 콩쿠르에서 역대 최연소로 우승하며 세계를 놀라게한 차세대 피아니스트 연주자와 음악, 그리고 관객이
+                    공통된 하나의 통찰을 완성해가는 인사이트 시리즈에서 임윤찬이 전하는 음악,</p> -->
+                </a>
+                <!-- <div class="art-info-sub">
+                  <span class="text-date">2022.11.24</span>
+                  <div class="access-nums">
+                    <span class="acc-num acc-num--view"><em>25</em></span>
+                    <span class="acc-num acc-num--like"><em>120k</em></span>
+                    <span class="acc-num acc-num--comment"><em>25</em></span>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="kv-swiper__img">
+                <a href="#none">
+                  <img src="../assets/images/@temp/@kv_swiper_thumb.png" alt="kv swiper thumbnail">
+                </a>
+                <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+              </div>
+              <div class="kv-swiper__text">
+                <a href="#none">
+                  <h3 class="kv-swiper__title">YUNCHAN LIM <i>concert 3</i></h3>
+                  <p class="kv-swiper__title--sub">사라장 &amp; 비르투오지</p>
+                  <!-- <p class="kv-swiper__description">빈 클라이번 콩쿠르에서 역대 최연소로 우승하며 세계를 놀라게한 차세대 피아니스트 연주자와 음악, 그리고 관객이 공통된
+                    하나의 통찰을 완성해가는 인사이트 시리즈에서 임윤찬이 전하는 음악, 빈 클라이번 콩쿠르에서 역대 최연소로 우승하며 세계를 놀라게한 차세대 피아니스트 연주자와 음악, 그리고 관객이
+                    공통된 하나의 통찰을 완성해가는 인사이트 시리즈에서 임윤찬이 전하는 음악,</p> -->
+                </a>
+                <!-- <div class="art-info-sub">
+                  <span class="text-date">2022.11.24</span>
+                  <div class="access-nums">
+                    <span class="acc-num acc-num--view"><em>25</em></span>
+                    <span class="acc-num acc-num--like"><em>120k</em></span>
+                    <span class="acc-num acc-num--comment"><em>25</em></span>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="swiper-controls">
+            <div class="swiper-pagination"></div>
+            <button type="button" class="swiper--btn swiper-prev">이전</button>
+            <button type="button" class="swiper--btn swiper-next">다음</button>
+          </div>
+        </div>
       </div>
-      <!--// Full KV : 작업중 -->
+      <!--// Full KV --->
 
       <!-- START -->
       <div class="content">
@@ -50,20 +148,24 @@
             <div class="ad-banner__list swiper-wrapper">
               <a href="#" class="ad-banner__item swiper-slide">
                 <!-- Img PC -->
-                <img src="../assets/images/@temp/@banner01_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
+                <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <!-- Img PC 2 -->
+                <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
                 <!-- Img Tablet -->
-                <img src="../assets/images/@temp/@banner01_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet" />
+                <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <!-- Img Tablet 2 -->
+                <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
                 <!-- Img Mobile -->
-                <img src="../assets/images/@temp/@banner01_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
               <a href="#" class="ad-banner__item swiper-slide">
-                <img src="../assets/images/@temp/@banner02_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
-                <img src="../assets/images/@temp/@banner02_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet">
-                <img src="../assets/images/@temp/@banner02_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
+                <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
             </div>
           </div>
@@ -667,6 +769,7 @@
   <script src="../assets/js/libs/swiper.min.js"></script>
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
+  <script src="../assets/js/curation.js"></script> <!-- curation slider -->
   <!--// Script -->
 
 </body>

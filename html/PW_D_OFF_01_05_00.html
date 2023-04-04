@@ -30,15 +30,143 @@
 
     <!-- Container -->
     <div class="container" id="container">
-      <!-- Full KV : 작업중-->
-      <div class="page-kv">
+      <!-- Full KV -->
+      <div class="page-kv kv-theme-stage-wrapper">
         <div class="kv-title">
-          <h2 class="kv-title__title">테마가 있는 글</h2>
-          <p class="kv-title__desc">문화예술 기자들의 색다른 시선, 아르떼 칼럼​</p>
+          <h2 class="kv-title__title c-white">테마가 있는 글</h2>
+          <p class="kv-title__desc c-white">문화예술 기자들의 색다른 시선, 아르떼 칼럼​</p>
         </div>
-        <div class="temp" style="text-align: center;">KV</div>
+        <!-- swiper 실행 필수 속성 data-slider="curation", data-swiper(속성 값 객체 depth의 마지막 속성 값은 반드시 콤마 삭제)-->
+        <div class="kv-theme reverse kv-theme-stage" dir="rtl">
+          <div class="inner" data-slider="curation" data-curation-style="active-bigger" data-swiper='{
+              "slidesPerView": "auto",
+              "touchRatio": 0.2,
+              "autoplay": true,
+              "pagination": {
+                "type": "fraction"
+              },
+              "breakpoints": {
+                "768": {
+                  "slidesPerView": 1,
+                  "speed": 1000
+                }
+              },
+              "navigation": true,
+              "speed": 800,
+              "loop": true
+            }'>
+            <ul class="swiper-wrapper slide-list">
+              <li class="swiper-slide kv-theme-item">
+                <div class="kv-theme-item__inner">
+                  <div class="item__img">
+                    <a href="#">
+                      <img src="../assets/images/@temp/@temp_kv01.jpg" alt="">
+                    </a>
+                    <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                    <div class="kv-theme-item__title--sub">
+                      <div class="kv-theme-item__title--sub-thumb">
+                        <img src="../assets/images/@temp/@b21_listen_01.png" alt=""></div>
+                      <span>별볼일있는ott</span>
+                    </div>
+                  </div>
+                  <div class="kv-theme-item__text">
+                    <a href="#none">
+                      <h3 class="kv-theme-item__title">1 다비치, 신곡 '나의 오랜 연인에게'</h3>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide kv-theme-item">
+                <div class="kv-theme-item__inner">
+                  <div class="item__img">
+                    <a href="#">
+                      <img src="../assets/images/@temp/@temp_kv03.jpg" alt="">
+                    </a>
+                    <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                    <div class="kv-theme-item__title--sub">
+                      <div class="kv-theme-item__title--sub-thumb">
+                        <img src="../assets/images/@temp/@b21_listen_01.png" alt=""></div>
+                      <span>[김희경]7과3의 예술 </span>
+                    </div>
+                  </div>
+                  <div class="kv-theme-item__text">
+                    <a href="#none">
+                      <h3 class="kv-theme-item__title">2 바이올린 여제, 사라 장이 2022년 12월 내한공연을 갖는다.</h3>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide kv-theme-item">
+                <div class="kv-theme-item__inner">
+                  <div class="item__img">
+                    <a href="#">
+                      <img src="../assets/images/@temp/@temp_kv01.jpg" alt="">
+                    </a>
+                    <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                    <div class="kv-theme-item__title--sub">
+                      <div class="kv-theme-item__title--sub-thumb">
+                        <img src="../assets/images/@temp/@b21_listen_01.png" alt=""></div>
+                      <span>별볼일있는ott</span>
+                    </div>
+                  </div>
+                  <div class="kv-theme-item__text">
+                    <a href="#none">
+                      <h3 class="kv-theme-item__title">3 말이 말이 아닌 기이한 세상</h3>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide kv-theme-item">
+                <div class="kv-theme-item__inner">
+                  <div class="item__img">
+                    <a href="#">
+                      <img src="../assets/images/@temp/@temp_kv04.jpg" alt="">
+                    </a>
+                    <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                    <div class="kv-theme-item__title--sub">
+                      <div class="kv-theme-item__title--sub-thumb">
+                        <img src="../assets/images/@temp/@b21_listen_01.png" alt=""></div>
+                      <span>[김희경]7과3의 예술 </span>
+                    </div>
+                  </div>
+                  <div class="kv-theme-item__text">
+                    <a href="#none">
+                      <h3 class="kv-theme-item__title">4 ”악마의 소리”...블랙핑크 신곡에 깔...</h3>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide kv-theme-item">
+                <div class="kv-theme-item__inner">
+                  <div class="item__img">
+                    <a href="#">
+                      <img src="../assets/images/@temp/@temp_kv05.jpg" alt="">
+                    </a>
+                    <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                    <div class="kv-theme-item__title--sub">
+                      <div class="kv-theme-item__title--sub-thumb">
+                        <img src="../assets/images/@temp/@b21_listen_01.png" alt=""></div>
+                      <span>별볼일있는ott</span>
+                    </div>
+                  </div>
+                  <div class="kv-theme-item__text">
+                    <a href="#none">
+                      <h3 class="kv-theme-item__title">5 자기애와 불안 사이,
+                        서로가 있었다··· 달리와 로르카</h3>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-controls c-white kv-theme-navi">
+            <div class="swiper-pagination"></div>
+            <button type="button" class="swiper--btn swiper-prev">이전</button>
+            <button type="button" class="swiper--btn swiper-next">다음</button>
+          </div>
+        </div>
       </div>
-      <!--// Full KV : 작업중 -->
+      <!--// Full KV -->
 
       <!-- START -->
       <div class="content">
@@ -49,20 +177,24 @@
             <div class="ad-banner__list swiper-wrapper">
               <a href="#" class="ad-banner__item swiper-slide">
                 <!-- Img PC -->
-                <img src="../assets/images/@temp/@banner01_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
+                <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <!-- Img PC 2 -->
+                <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
                 <!-- Img Tablet -->
-                <img src="../assets/images/@temp/@banner01_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet" />
+                <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <!-- Img Tablet 2 -->
+                <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
                 <!-- Img Mobile -->
-                <img src="../assets/images/@temp/@banner01_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
               <a href="#" class="ad-banner__item swiper-slide">
-                <img src="../assets/images/@temp/@banner02_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
-                <img src="../assets/images/@temp/@banner02_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet">
-                <img src="../assets/images/@temp/@banner02_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
+                <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
             </div>
           </div>
@@ -81,11 +213,11 @@
               </div>
               <div class="m-pop__body">
                 <div class="column-section__head hide-mo">
-                  <p class="column-section__title">STAGE·CINE, 즐기다</p>
+                  <p class="column-section__title">STAGE CINE 즐기다</p>
                   <div class="column-section__links">
-                    <a href="#" class="btn size-xsm">MUSIC, 듣다</a>
-                    <a href="#" class="btn size-xsm">ART, 보다</a>
-                    <a href="#" class="btn size-xsm">BOOK, 읽다</a>
+                    <a href="#" class="btn size-xsm">MUSIC 듣다</a>
+                    <a href="#" class="btn size-xsm">ART 보다</a>
+                    <a href="#" class="btn size-xsm">BOOK 읽다</a>
                   </div>
                 </div>
                 <ul class="column-list">
@@ -1061,7 +1193,7 @@
                         <div class="theme-lg__body">
                           <div class="theme-lg__art">
                             <div class="theme-lg__img-box">
-                              <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                              <!-- <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button> -->
                               <a href="#" class="thumb-img">
                                 <span class="img-holder">
                                   <img src="../assets/images/@temp/@themp_thumb27.png" alt="">
@@ -1211,6 +1343,7 @@
   <script src="../assets/js/libs/swiper.min.js"></script>
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
+  <script src="../assets/js/curation.js"></script> <!-- curation slider -->
   <!--// Script -->
 </body>
 

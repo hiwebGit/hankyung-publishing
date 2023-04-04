@@ -69,34 +69,36 @@
                         <span class="star"><i class="star__point p10"></i></span>
                         <span class="star"><i class="star__point p10"></i></span>
                         <span class="star"><i class="star__point p1"></i></span>
-                        <em class="grade__num">8.0(참여<em>50</em>명)</em>
+                        <em class="grade__num">8.0</em>
+                        <span class="join__num">(참여 50명)</span>
                       </span>
                     </a>
-                    <div class="art-info-sub">
-                      <div class="access-nums">
-                        <span class="acc-num acc-num--view"><em>25</em></span>
-                        <span class="acc-num acc-num--like"><em>120k</em></span>
-                        <span class="acc-num acc-num--comment"><em>25</em></span>
-                      </div>
-                    </div>
                   </div>
                   <div class="offer-info__box">
                     <ul class="offer-info__host">
-                      <li class="offer-info__item">
+                      <li class="offer-info__item book-info">
                         <span class="offer-info__sub">저자</span>
                         <span>이정은</span>
                       </li>
-                      <li class="offer-info__item">
+                      <li class="offer-info__item book-info">
                         <span class="offer-info__sub">출판</span>
                         <span>냐남</span>
                       </li>
                     </ul>
                   </div>
+                  <div class="art-info-sub">
+                    <div class="access-nums">
+                      <span class="acc-num acc-num--view"><em>25</em></span>
+                      <span class="acc-num acc-num--like"><em>120k</em></span>
+                      <span class="acc-num acc-num--comment"><em>25</em></span>
+                    </div>
+                    <button type="button" class="btn-fav" aria-label="Like"></button>
+                    <button type="button" class="btn-share" aria-label="Share"></button>
+                  </div>
                 </div>
               </div>
               <div class="booking__wrap">
-                <button type="button" class="btn book-btn">예매하기<i class="ico-booking"></i></button>
-                <button type="button" class="btn-share show-pc" aria-label="Share"></button>
+                <button type="button" class="btn book-btn">구매하기<i class="ico-booking"></i></button>
               </div>
             </div>
           </div>
@@ -129,13 +131,10 @@
                     <div class="view__tags">
                       <span class="byname">서정원</span>
                       <span class="tag">전문가</span>
-                      <span class="grade">
-                        <span class="star"><i class="star__point p8"></i></span>
-                        <em class="grade__num">8.0</em>
-                      </span>
-                    </div>
-                    <div class="art-info-sub">
-                      <span class="text-date">2022.10.20</span>
+                      <div class="grade-list">
+                        <!-- 별점이 2개면 p2, 별점이 3개면 p3 추가  -->
+                        <span class="badge-star p3"></span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -327,20 +326,24 @@
               <div class="ad-banner__list swiper-wrapper">
                 <a href="#" class="ad-banner__item swiper-slide">
                   <!-- Img PC -->
-                  <img src="../assets/images/@temp/@banner01_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
+                  <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                  <!-- Img PC 2 -->
+                  <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
                   <!-- Img Tablet -->
-                  <img src="../assets/images/@temp/@banner01_tablet.png" alt="ad banner"
-                    class="ad-banner__img img--tablet" />
+                  <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                  <!-- Img Tablet 2 -->
+                  <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
                   <!-- Img Mobile -->
-                  <img src="../assets/images/@temp/@banner01_mobile_@2x.png" alt="ad banner"
-                    class="ad-banner__img img--mobile" />
+                  <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
+                    class="ad-banner__img img--mo" />
                 </a>
                 <a href="#" class="ad-banner__item swiper-slide">
-                  <img src="../assets/images/@temp/@banner02_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
-                  <img src="../assets/images/@temp/@banner02_tablet.png" alt="ad banner"
-                    class="ad-banner__img img--tablet">
-                  <img src="../assets/images/@temp/@banner02_mobile_@2x.png" alt="ad banner"
-                    class="ad-banner__img img--mobile" />
+                  <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                  <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
+                  <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                  <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                  <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
+                    class="ad-banner__img img--mo" />
                 </a>
               </div>
             </div>
@@ -645,44 +648,43 @@
               </div>
             </li>
             <li class="raito">
-              <p class="rating-title">평점 비율</p>
+              <p class="rating-title">회원 평점 분포</p>
               <ul class="graph">
                 <li>
+                  <span class="ing-txt">10%</span>
                   <div class="total-bar">
                     <!-- 평점 비율 height 적용-->
-                    <span class="ing-bar" style="height: 50%;"></span>
+                    <span class="ing-bar" style="height: 10%;"></span>
                   </div>
-                  <span class="age">10대</span>
+                  <span class="age">9~10점</span>
                 </li>
                 <li>
+                  <span class="ing-txt">2%</span>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 2%;"></span>
+                  </div>
+                  <span class="age">7~8점</span>
+                </li>
+                <li>
+                  <span class="ing-txt">20%</span>
                   <div class="total-bar">
                     <span class="ing-bar" style="height: 20%;"></span>
                   </div>
-                  <span class="age">20대</span>
+                  <span class="age">5~6점</span>
                 </li>
                 <li>
+                  <span class="ing-txt">40%</span>
                   <div class="total-bar">
-                    <span class="ing-bar" style="height: 30%;"></span>
+                    <span class="ing-bar" style="height: 40%;"></span>
                   </div>
-                  <span class="age">30대</span>
+                  <span class="age">3~4점</span>
                 </li>
                 <li>
+                  <span class="ing-txt">20%</span>
                   <div class="total-bar">
-                    <span class="ing-bar" style="height: 80%;"></span>
+                    <span class="ing-bar" style="height: 20%;"></span>
                   </div>
-                  <span class="age">40대</span>
-                </li>
-                <li>
-                  <div class="total-bar">
-                    <span class="ing-bar" style="height: 100%;"></span>
-                  </div>
-                  <span class="age">50대</span>
-                </li>
-                <li>
-                  <div class="total-bar">
-                    <span class="ing-bar" style="height: 10%;"></span>
-                  </div>
-                  <span class="age">60대 이상</span>
+                  <span class="age">1~2점</span>
                 </li>
               </ul>
             </li>
@@ -719,44 +721,43 @@
               </div>
             </li>
             <li class="raito">
-              <p class="rating-title">평점 비율</p>
+              <p class="rating-title">회원 평점 분포</p>
               <ul class="graph">
                 <li>
+                  <span class="ing-txt">10%</span>
                   <div class="total-bar">
                     <!-- 평점 비율 height 적용-->
-                    <span class="ing-bar" style="height: 50%;"></span>
+                    <span class="ing-bar" style="height: 10%;"></span>
                   </div>
-                  <span class="age">10대</span>
+                  <span class="age">9~10점</span>
                 </li>
                 <li>
+                  <span class="ing-txt">2%</span>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 2%;"></span>
+                  </div>
+                  <span class="age">7~8점</span>
+                </li>
+                <li>
+                  <span class="ing-txt">20%</span>
                   <div class="total-bar">
                     <span class="ing-bar" style="height: 20%;"></span>
                   </div>
-                  <span class="age">20대</span>
+                  <span class="age">5~6점</span>
                 </li>
                 <li>
+                  <span class="ing-txt">40%</span>
                   <div class="total-bar">
-                    <span class="ing-bar" style="height: 30%;"></span>
+                    <span class="ing-bar" style="height: 40%;"></span>
                   </div>
-                  <span class="age">30대</span>
+                  <span class="age">3~4점</span>
                 </li>
                 <li>
+                  <span class="ing-txt">20%</span>
                   <div class="total-bar">
-                    <span class="ing-bar" style="height: 80%;"></span>
+                    <span class="ing-bar" style="height: 20%;"></span>
                   </div>
-                  <span class="age">40대</span>
-                </li>
-                <li>
-                  <div class="total-bar">
-                    <span class="ing-bar" style="height: 100%;"></span>
-                  </div>
-                  <span class="age">50대</span>
-                </li>
-                <li>
-                  <div class="total-bar">
-                    <span class="ing-bar" style="height: 10%;"></span>
-                  </div>
-                  <span class="age">60대 이상</span>
+                  <span class="age">1~2점</span>
                 </li>
               </ul>
             </li>
@@ -793,44 +794,43 @@
               </div>
             </li>
             <li class="raito">
-              <p class="rating-title">평점 비율</p>
+              <p class="rating-title">회원 평점 분포</p>
               <ul class="graph">
                 <li>
+                  <span class="ing-txt">10%</span>
                   <div class="total-bar">
                     <!-- 평점 비율 height 적용-->
-                    <span class="ing-bar" style="height: 50%;"></span>
+                    <span class="ing-bar" style="height: 10%;"></span>
                   </div>
-                  <span class="age">10대</span>
+                  <span class="age">9~10점</span>
                 </li>
                 <li>
+                  <span class="ing-txt">2%</span>
+                  <div class="total-bar">
+                    <span class="ing-bar" style="height: 2%;"></span>
+                  </div>
+                  <span class="age">7~8점</span>
+                </li>
+                <li>
+                  <span class="ing-txt">20%</span>
                   <div class="total-bar">
                     <span class="ing-bar" style="height: 20%;"></span>
                   </div>
-                  <span class="age">20대</span>
+                  <span class="age">5~6점</span>
                 </li>
                 <li>
+                  <span class="ing-txt">40%</span>
                   <div class="total-bar">
-                    <span class="ing-bar" style="height: 30%;"></span>
+                    <span class="ing-bar" style="height: 40%;"></span>
                   </div>
-                  <span class="age">30대</span>
+                  <span class="age">3~4점</span>
                 </li>
                 <li>
+                  <span class="ing-txt">20%</span>
                   <div class="total-bar">
-                    <span class="ing-bar" style="height: 80%;"></span>
+                    <span class="ing-bar" style="height: 20%;"></span>
                   </div>
-                  <span class="age">40대</span>
-                </li>
-                <li>
-                  <div class="total-bar">
-                    <span class="ing-bar" style="height: 100%;"></span>
-                  </div>
-                  <span class="age">50대</span>
-                </li>
-                <li>
-                  <div class="total-bar">
-                    <span class="ing-bar" style="height: 10%;"></span>
-                  </div>
-                  <span class="age">60대 이상</span>
+                  <span class="age">1~2점</span>
                 </li>
               </ul>
             </li>
@@ -915,6 +915,16 @@
                           </div>
                         </li>
                       </ul>
+                      <div class="setting" data-role="visible_wrap">
+                        <button type="button" class="setting__btn" aria-label="레이어 더보기"
+                          data-role="visible_btn"></button>
+                        <div class="setting__layer" data-role="visible_cont">
+                          <ul>
+                            <li><a href="#">신고하기</a></li>
+                          </ul>
+                          <button type="button" class="btn-close" data-role="hide_btn" aria-label="레이어 닫기"></button>
+                        </div>
+                      </div>
                     </div>
                     <div>
                       <!-- 아코디언 버튼 클릭시 is-active 추가 -->
@@ -974,6 +984,16 @@
                           </div>
                         </li>
                       </ul>
+                      <div class="setting" data-role="visible_wrap">
+                        <button type="button" class="setting__btn" aria-label="레이어 더보기"
+                          data-role="visible_btn"></button>
+                        <div class="setting__layer" data-role="visible_cont">
+                          <ul>
+                            <li><a href="#">신고하기</a></li>
+                          </ul>
+                          <button type="button" class="btn-close" data-role="hide_btn" aria-label="레이어 닫기"></button>
+                        </div>
+                      </div>
                     </div>
                     <div>
                       <!-- 아코디언 버튼 클릭시 is-active 추가 -->

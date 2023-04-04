@@ -30,15 +30,149 @@
 
     <!-- Container -->
     <div class="container" id="container">
-      <!-- Full KV : 작업중-->
-      <div class="page-kv">
+      <!-- Full KV -->
+      <div class="page-kv kv-info-stage-wrpper">
         <div class="kv-title">
           <h2 class="kv-title__title">HOT &amp; TRENDY</h2>
-          <p class="kv-title__desc">실시간으로 집계된 금주 인기 공연 TOP 12​</p>
+          <p class="kv-title__desc">arte 추천 공연·영화​</p>
         </div>
-        <div class="temp" style="text-align: center;">KV</div>
+        <div class="kv-info-stage" data-role="swiper-container">
+          <div class="kv-info-stage__big" data-slider="curation" data-swiper='{
+              "effect": "fade",
+              "fadeEffect": {
+                "crossFade": true
+              },
+              "slidesPerView": 1,
+              "touchRatio": 0.2,
+              "autoplay": true,
+              "pagination": {
+                "type": "fraction"
+              },
+              "navigation": true,
+              "speed": 1000,
+              "threshold":3,
+              "loop": true
+            }'>
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="img-box">
+                  <a href="#">
+                    <img class="img" src="../assets/images/@temp/@view_img01.jpg" alt="">
+                  </a>
+                  <button type="button" class="btn-fav" aria-label="Like"></button>
+                  <span class="tag-gen">연극</span>
+                </div>
+                <div class="text-box">
+                  <span class="num">1</span>
+                  <a href="#">
+                    <strong class="title">1. 뮤지컬<br>‘브로드웨이 42번가’</strong>
+                    <ul class="detail">
+                      <li>2022.10.25~2023.3.1</li>
+                      <li>잠실운동장 내 빅탑</li>
+                    </ul>
+                  </a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="img-box">
+                  <a href="#">
+                    <img class="img" src="../assets/images/@temp/@view_img02.jpg" alt="">
+                  </a>
+                  <button type="button" class="btn-fav" aria-label="Like"></button>
+                  <span class="tag-gen">연극</span>
+                </div>
+                <div class="text-box">
+                  <span class="num">2</span>
+                  <a href="#">
+                    <strong class="title">2. 뮤지컬<br>‘브로드웨이 42번가’</strong>
+                    <ul class="detail">
+                      <li>2022.10.25~2023.3.1</li>
+                      <li>잠실운동장 내 빅탑</li>
+                    </ul>
+                  </a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="img-box">
+                  <a href="#">
+                    <img class="img" src="../assets/images/@temp/@view_img03.jpg" alt="">
+                  </a>
+                  <button type="button" class="btn-fav" aria-label="Like"></button>
+                  <span class="tag-gen">연극</span>
+                </div>
+                <div class="text-box">
+                  <span class="num">3</span>
+                  <a href="#">
+                    <strong class="title">3. 뮤지컬<br>‘브로드웨이 42번가’</strong>
+                    <ul class="detail">
+                      <li>2022.10.25~2023.3.1</li>
+                      <li>잠실운동장 내 빅탑</li>
+                    </ul>
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-controls">
+              <div class="swiper-pagination"></div>
+              <button type="button" class="swiper--btn swiper-prev">이전</button>
+              <button type="button" class="swiper--btn swiper-next">다음</button>
+            </div>
+          </div>
+          <div class="kv-info-stage__small" data-slider="curation" data-swiper='{
+              "direction": "vertical",
+              "slidesPerView": 1,
+              "touchRatio": 0.2,
+              "spaceBetween": 16,
+              "loop": true,
+              "thumbs": {
+                "swiper": null
+              }
+            }'>
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="img-box">
+                  <a href="#">
+                    <img class="img" src="../assets/images/@temp/@view_img02.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-box">
+                  <a href="#">
+                    <strong class="title">1. ND Street</strong>
+                    <p class="desc">뮤지컬 브로드웨이 42번가</p>
+                  </a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="img-box">
+                  <a href="#">
+                    <img class="img" src="../assets/images/@temp/@view_img02.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-box">
+                  <a href="#">
+                    <strong class="title">2. ND Street</strong>
+                    <p class="desc">뮤지컬 브로드웨이 42번가</p>
+                  </a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="img-box">
+                  <a href="#">
+                    <img class="img" src="../assets/images/@temp/@view_img02.jpg" alt="">
+                  </a>
+                </div>
+                <div class="text-box">
+                  <a href="#">
+                    <strong class="title">3. ND Street</strong>
+                    <p class="desc">뮤지컬 브로드웨이 42번가</p>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <!--// Full KV : 작업중 -->
+      <!--// Full KV -->
 
       <!-- START -->
       <div class="content">
@@ -49,20 +183,24 @@
             <div class="ad-banner__list swiper-wrapper">
               <a href="#" class="ad-banner__item swiper-slide">
                 <!-- Img PC -->
-                <img src="../assets/images/@temp/@banner01_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
+                <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <!-- Img PC 2 -->
+                <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
                 <!-- Img Tablet -->
-                <img src="../assets/images/@temp/@banner01_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet" />
+                <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <!-- Img Tablet 2 -->
+                <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
                 <!-- Img Mobile -->
-                <img src="../assets/images/@temp/@banner01_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
               <a href="#" class="ad-banner__item swiper-slide">
-                <img src="../assets/images/@temp/@banner02_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
-                <img src="../assets/images/@temp/@banner02_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet">
-                <img src="../assets/images/@temp/@banner02_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
+                <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
             </div>
           </div>
@@ -211,7 +349,7 @@
                             <div class="filter-options__items">
                               <p class="filter-options__tit">평점</p>
                               <div class="filter-options__items-cont">
-                                <ul class="filter-options__items-list">
+                                <ul class="filter-options__items-list m-col2">
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status"
                                         checked /><span class="o-rdo__label">전체</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
@@ -969,6 +1107,7 @@
   <script src="../assets/js/libs/swiper.min.js"></script>
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
+  <script src="../assets/js/curation.js"></script> <!-- curation slider -->
   <!--// Script -->
 </body>
 

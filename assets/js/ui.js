@@ -22,17 +22,41 @@
   };
 
   //header ppbox show/hide
-  UI.headerPP = function () {
-    let ppBox = '.pp-box',
-      activeName = 'pp-box--active';
+  UI.allMenu = {
+    openBtn: '.menu-button',
+    closeBtn: '.all-menu-close ',
+    allSect: '.all-section',
+    allSectActive: 'is-active',
+    init: function () {
+      var _this = this;
+      $('#header').on('click', _this.openBtn, function () {
+        _this.headerReset();
+        if ($(_this.allSect).hasClass(_this.allSectActive)) {
+          $(_this.allSect).removeClass(_this.allSectActive);
+          $('#header').removeClass('header--opened');
+        } else {
+          $(_this.allSect).addClass(_this.allSectActive);
+          $('#header').addClass('header--opened');
+        }
+      }).on('mouseenter', _this.openBtn, function () {
+        _this.headerReset();
+      });
 
-    $('.header-pp-button').on('click', function () {
-      $(ppBox).addClass(activeName);
-    });
-
-    $('.pp-box__close').on('click', function () {
-      $(ppBox).removeClass(activeName);
-    });
+      _this.allMenuHide();
+    },
+    headerReset: function () {
+      if (!$(this.allSect).hasClass(this.allSectActive)) {
+        $('.header__box').hide();
+        $('#header').removeClass('header--opened');
+      }
+    },
+    allMenuHide: function () {
+      var _this = this;
+      $('#header').on('click', _this.closeBtn, function () {
+        $('#header').removeClass('header--opened');
+        $('.all-section').removeClass(_this.allSectActive);
+      });
+    }
   }
 
   UI.gnb = {
@@ -54,7 +78,6 @@
       $(window).on('scroll', function () {
         $(_this.el).addClass(_this.IsScrolling);
         _this.scrollCheckSet(window);
-        console.log(1)
       });
     },
     scrollCheckSet: function (obj) {
@@ -62,10 +85,8 @@
       var scrollT = $(obj).scrollTop();
       if (scrollT > 0) {
         $(_this.el).addClass(_this.IsScrolled);
-        console.log(2)
       } else {
         $(_this.el).removeClass(_this.IsScrolled);
-        console.log(3)
       }
     },
     scrollEnd: function (time, obj) {
@@ -73,14 +94,11 @@
       $(obj).scrollStopped(function (ev) {
         setTimeout(() => {
           $(_this.el).removeClass(_this.IsScrolling);
-          console.log(4)
 
           if ($(obj).scrollTop() > 0) {
             $(_this.el).addClass(_this.IsScrollend).addClass(_this.IsScrolled);
-            console.log(5)
           } else {
             $(_this.el).addClass(_this.IsScrollend).removeClass(_this.IsScrolled);
-            console.log(6)
           }
         }, time);
       });
@@ -117,10 +135,66 @@
       });
     },
     headerOut: function () {
-      $(_this.el).on('mouseleave', '[data-menu]', function () {
-        console.log('aaa')
-      });
+      $(_this.el).on('mouseleave', '[data-menu]', function () {});
     }
+  }
+
+  UI.gnbSelect = {
+    gnbEl: '.gnb-menu',
+    gnbCur: '.gnb-menu__button',
+    gnbList: '.gnb-menu__list',
+    gnbListItem: '.gnb-menu__list li',
+    openName: 'is-gnb-active',
+    selectName: 'is-active',
+    init: function () {
+      this.openEv();
+    },
+    openChk: function (wrapper) {
+      var chk = undefined;
+      chk = wrapper.hasClass(this.openName) ? true : false;
+
+      return chk;
+    },
+    openEv: function () {
+      var _this = this;
+
+      $('#header').on('click', _this.gnbCur, function (ev) {
+        var $gnbBox = $(ev.target).closest(_this.gnbEl);
+
+        if (_this.openChk($gnbBox)) {
+          $gnbBox.removeClass(_this.openName);
+          console.log(1);
+        } else {
+          $gnbBox.addClass(_this.openName);
+          console.log(2);
+        }
+        
+      });
+
+      _this.selectEv();
+    },
+    selectEv: function () {
+      var _this = this;
+
+      $('#header').on('click', _this.gnbListItem + ' a', function (ev) {
+        var $gnbBox = $(ev.target).closest(_this.gnbEl);
+        // var curText = $(ev.target).text();
+        var $selItem = $(ev.target).closest('li');
+        var curImgName = $(ev.target).data('gnb');
+
+        $gnbBox.removeClass(_this.openName).find(_this.gnbCur).removeAttr('data-gnb-img').attr('data-gnb-img', curImgName);
+        console.log(curImgName);
+        $gnbBox.find(_this.gnbListItem).removeClass(_this.selectName);
+        $selItem.addClass(_this.selectName);
+
+        if ($(ev.target).attr('href') == "#") {
+          ev.preventDefault();
+        }
+      });
+    },
+    resize: function () {
+      $(this.gnbEl).removeClass(this.openName);
+    },
   }
 
   UI.headerBanner = {
@@ -187,6 +261,9 @@
       pagination: {
         el: '.ad-banner__pagination',
         clickable: true,
+      },
+      navigation: {
+        nextEl: '.ad-swiper-button-next'
       },
       loop: true,
       autoplay: {
@@ -927,10 +1004,13 @@
           if ($lyPop.hasClass(_this.openClass)) {
             $lyPop.removeClass(_this.openClass);
             $textBox.text(textOpen);
+            $this.removeClass(_this.openClass);
+            console.log($this)
           } else {
             _this.open('[data-pop=' + item + ']')
             //$lyPop.addClass(_this.openClass);
             $textBox.text(textClose);
+            $this.addClass(_this.openClass);
           }
         });
       });
@@ -962,6 +1042,8 @@
       var _this = this;
       layer.each(function () {
         layer.removeClass(_this.openClass);
+        $('[data-pop-open=' + $(this).data('pop') + ']').removeClass(_this.openClass);
+
         var openText = layer.data('st-open');
         if (openText) {
           $(this).find('st-text').text(openText);
@@ -1279,26 +1361,28 @@
 
   // search-box 모바일에서 클릭시, 형제 요소 무너뜨리지 않고 풀사이즈로로 늘어나는 기능 작업중
   UI.searchBoxOpen = function () {
-    let searchBox = document.querySelector('.rbox-block .search-box')
-    console.log(searchBox)
+    // error 로 주석처리함
+    // let searchBox = document.querySelector('.rbox-block .search-box')
+    // console.log(searchBox)
 
-    function searchBoxClick() {
-      if (searchBox.classList.contains('.open')) {
-        searchBox.classList.remove('open')
-      } else {
-        searchBox.classList.add('open')
-      }
-    }
+    // function searchBoxClick() {
+    //   if (searchBox.classList.contains('.open')) {
+    //     searchBox.classList.remove('open')
+    //   } else {
+    //     searchBox.classList.add('open')
+    //   }
+    // }
 
-    searchBox.addEventListener('click', searchBoxClick)
+    // searchBox.addEventListener('click', searchBoxClick)
   }
 
   UI.init = function () {
-    UI.headerPP();
+    UI.allMenu.init();
     UI.headerBanner.init();
     //UI.mainKeyvisual.init();
     UI.pfListKeyvisual.init();
     UI.gnb.init();
+    UI.gnbSelect.init()
     UI.adBanner.init();
     UI.artItem.init();
     UI.tab.init();
@@ -1400,6 +1484,10 @@ $(function () {
 
   $(".ytube-kv__desc__btn").on("click", function () {
     $(this).closest(".ytube-kv__sub__wrap").toggleClass("active");
+  });
+
+  $(document).on('click', '[data-accordion=btn]', function () {
+    $(this).closest("[data-accordion=group]").toggleClass("is-on");
   });
 
 
