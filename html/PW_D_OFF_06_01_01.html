@@ -125,40 +125,35 @@
             </div>
 
             <!-- ad-banner -->
-            <div class="ad-banner-wrap">
-              <div class="ad-banner swiper">
-                <div class="ad-banner__list swiper-wrapper">
-                  <a href="#" class="ad-banner__item swiper-slide">
-                    <div class="ad-banner__item__inner Habsburg_01">
-                      <div class="ad-banner__img__holder">
-                        <img src="../assets/images/@temp/@banner01_pc.png" alt="ad banner" class="ad-banner__img" />
-                      </div>
-                      <div class="ad-banner__info">
-                        <div class="ad-banner-title">the Habsburg empire</div>
-                        <div class="ad-banner-subtitle">합스부르크 600년전</div>
-                        <div class="ad-banner-date">2022.10.25-2023.03.01</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#" class="ad-banner__item swiper-slide">
-                    <div class="ad-banner__item__inner Habsburg_02">
-                      <div class="ad-banner__img__holder">
-                        <img src="../assets/images/@temp/@banner02_pc.png" alt="ad banner" class="ad-banner__img" />
-                      </div>
-                      <div class="ad-banner__info">
-                        <div class="ad-banner-title">the Habsburg empire</div>
-                        <div class="ad-banner-subtitle">합스부르크 600년전</div>
-                        <div class="ad-banner-date">2022.10.25-2023.03.01</div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+          <div class="ad-banner-wrap">
+            <div class="ad-banner swiper">
+              <div class="ad-banner__list swiper-wrapper">
+                <a href="#" class="ad-banner__item swiper-slide">
+                  <!-- Img PC -->
+                  <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                  <!-- Img PC 2 -->
+                  <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
+                  <!-- Img Tablet -->
+                  <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                  <!-- Img Tablet 2 -->
+                  <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                  <!-- Img Mobile -->
+                  <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
+                    class="ad-banner__img img--mo" />
+                </a>
+                <a href="#" class="ad-banner__item swiper-slide">
+                  <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                  <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
+                  <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                  <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                  <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
+                    class="ad-banner__img img--mo" />
+                </a>
               </div>
-              <div class="ad-banner__pagination"></div>
-              <button type="button" class="ad-swiper-button-next" tabindex="0" role="button"
-                aria-label="Next slide">다음</button>
             </div>
-            <!--// ad-banner -->
+            <div class="ad-banner__pagination"></div>
+          </div>
+          <!--// ad-banner -->
 
             <!-- s: 댓글영역 -->
             <div class="reply-wrap">
@@ -210,10 +205,10 @@
                             <div class="art-vt-block__tags">
                               <span class="id">내 귀에 캔디</span>
                               <span class="tag">전문가</span>
-                              <span class="grade">
-                                <span class="star"><i class="star__point p8"></i></span>
-                                <em class="grade__num">8.0</em>
-                              </span>
+                              <div class="grade-list">
+                                <!-- 별점이 2개면 p2, 별점이 3개면 p3 추가  -->
+                                <span class="badge-star p2"></span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -240,10 +235,10 @@
                             <div class="art-vt-block__tags">
                               <span class="id">내 귀에 캔디</span>
                               <span class="tag">전문가</span>
-                              <span class="grade">
-                                <span class="star"><i class="star__point p8"></i></span>
-                                <em class="grade__num">8.0</em>
-                              </span>
+                              <div class="grade-list">
+                                <!-- 별점이 2개면 p2, 별점이 3개면 p3 추가  -->
+                                <span class="badge-star p2"></span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -270,7 +265,7 @@
                           <div class="art-vt-block__inbox">
                             <div class="art-vt-block__tags">
                               <span class="id">내 귀에 캔디</span>
-                              <span class="tag">전문가</span>
+                              <span class="tag tag--line">회원</span>
                               <span class="grade">
                                 <span class="star"><i class="star__point p8"></i></span>
                                 <em class="grade__num">8.0</em>
