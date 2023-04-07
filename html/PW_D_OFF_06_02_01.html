@@ -133,21 +133,21 @@
                       <div class="grade-list">
                         <!-- 별점이 2개면 p2, 별점이 3개면 p3 추가  -->
                         <span class="badge-star p3"></span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <!-- 리뷰가 없을 경우 -->
-                <!-- <div class="offer-review__box">
+                  <!-- 리뷰가 없을 경우 -->
+                  <!-- <div class="offer-review__box">
                   <div class="offer-review-none">
                     <p class="offer-review-none__txt">해당 공연에 대한 회원 리뷰가 아직 없습니다!</p>
                     <div class="offer-review-none__btnbox">
-                      <button type="button" class="btn-rect size-sm">리뷰 쓰기<i class="ico ico-arrow"></i></button>
+                      <button type="button" class="btn-rect size-sm">리뷰 쓰기</button>
                     </div>
                   </div>
                 </div> -->
-                <!-- //리뷰가 없을 경우 -->
+                  <!-- //리뷰가 없을 경우 -->
+                </div>
               </div>
-            </div>
           </section>
           <!-- //사이드 리뷰 섹션 -->
         </div>
@@ -162,8 +162,8 @@
           <div class="offer-anchor-wrap">
             <ul class="offer-anchor__list">
               <li class="anchor__item"><a href="#section_introduct" class="anchor__btn is-active">소개</a></li>
-              <li class="anchor__item"><a href="#section_review" class="anchor__btn">전문가 리뷰</a></li>
-              <li class="anchor__item"><a href="#section_review" class="anchor__btn">회원 리뷰</a></li>
+              <li class="anchor__item"><a href="#section_review01" class="anchor__btn">전문가 리뷰</a></li>
+              <li class="anchor__item"><a href="#section_review02" class="anchor__btn">회원 리뷰</a></li>
               <li class="anchor__item"><a href="#section_comment" class="anchor__btn">한줄평</a></li>
             </ul>
           </div>
@@ -324,12 +324,12 @@
           <!--// ad-banner -->
 
           <!-- 전문가리뷰/회원리뷰 -->
-          <div class="offer-review__full" id="section_review">
+          <div class="offer-review__full" id="section_review01">
             <!-- 리뷰가 없는 경우 -->
             <!-- <div class="offer-review-none-mo show-mo">
               <p class="offer-review-none-mo__txt">해당 공연에 대한 회원 리뷰가<br>아직 없습니다!</p>
               <div class="offer-review-none-mo__btnbox">
-                <button type="button" class="btn-rect bg-primary">리뷰 쓰기<i class="ico ico-arrow"></i></button>
+                <button type="button" class="btn-rect bg-primary">리뷰 쓰기</button>
               </div>
             </div> -->
             <!-- //리뷰가 없는 경우 -->
@@ -345,8 +345,10 @@
                       </span></a></li>
                 </ul>
               </div>
-              <p class="total show-mo">총 345개</p>
-              <button type="button" class="btn-rect size-sm bg-primary">리뷰 쓰기<i class="ico ico-arrow"></i></button>
+              <div class="offer-summ__top show-mo">
+                <h3 class="offer-summ__tit">전문가 리뷰</h3>
+              </div>
+              <button type="button" class="btn-rect size-sm bg-primary show-pc">리뷰 쓰기</button>
             </div>
             <div class="offer-review__cont">
               <div class="offer-review-cont__wrap">
@@ -374,10 +376,6 @@
                           <span class="tag">전문가</span>
                           <span class="grade">
                             <!-- 뱃지가 두개일 경우 p2, 세개일 경우 p3 클래스 추가 -->
-                            <!-- s : 모바일에서만 평점/별점 노출 -->
-                            <span class="star mo"><i class="star__point p8"></i></span>
-                            <em class="grade__num mo">8.0</em>
-                            <!-- e : 모바일에서만 평점/별점 노출 -->
                             <span class="badge-star"></span>
                           </span>
                           <!-- e : 전문가리뷰 -->
@@ -416,10 +414,6 @@
                           <span class="tag">전문가</span>
                           <span class="grade">
                             <!-- 뱃지가 두개일 경우 p2, 세개일 경우 p3 클래스 추가 -->
-                            <!-- s : 모바일에서만 평점/별점 노출 -->
-                            <span class="star mo"><i class="star__point p8"></i></span>
-                            <em class="grade__num mo">8.0</em>
-                            <!-- e : 모바일에서만 평점/별점 노출 -->
                             <span class="badge-star p2"></span>
                           </span>
                           <!-- e : 전문가리뷰 -->
@@ -458,10 +452,6 @@
                           <span class="tag">전문가</span>
                           <span class="grade">
                             <!-- 뱃지가 두개일 경우 p2, 세개일 경우 p3 클래스 추가 -->
-                            <!-- s : 모바일에서만 평점/별점 노출 -->
-                            <span class="star mo"><i class="star__point p8"></i></span>
-                            <em class="grade__num mo">8.0</em>
-                            <!-- e : 모바일에서만 평점/별점 노출 -->
                             <span class="badge-star p3"></span>
                           </span>
                           <!-- e : 전문가리뷰 -->
@@ -477,7 +467,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="offer-review__item">
+                  <li class="offer-review__item show-pc">
                     <div class="reviewbox">
                       <div class="reviewbox__summary">
                         <p class="reviewbox__title">
@@ -516,7 +506,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="offer-review__item">
+                  <li class="offer-review__item show-pc">
                     <div class="reviewbox">
                       <div class="reviewbox__summary">
                         <p class="reviewbox__title">
@@ -555,7 +545,6 @@
                       </div>
                     </div>
                   </li>
-
                 </ul>
                 <!-- Paging -->
                 <div class="paging">
@@ -586,6 +575,145 @@
             </div>
           </div>
           <!-- //전문가리뷰/회원리뷰 -->
+
+          <!-- 회원리뷰 -->
+          <div class="offer-review__full show-mo" id="section_review02">
+            <!-- 리뷰가 없는 경우 -->
+            <!-- <div class="offer-review-none-mo show-mo">
+              <p class="offer-review-none-mo__txt">해당 공연에 대한 회원 리뷰가<br>아직 없습니다!</p>
+              <div class="offer-review-none-mo__btnbox">
+                <button type="button" class="btn-rect bg-primary">리뷰 쓰기</button>
+              </div>
+            </div> -->
+            <!-- //리뷰가 없는 경우 -->
+            <div class="offer-review__header">
+              <div class="tab">
+                <ul class="tab__list ml__8" data-tab="tab-list">
+                  <!-- tab  : button 활성화 'is-active' -->
+                  <li class="tab__item"><a href="#" class="tab__btn is-active" data-tab-btn="tab01">전문가 리뷰<span
+                        class="num">(<em>20</em>)
+                      </span></a> </li>
+                  <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab02">회원
+                      리뷰<span class="num">(<em>101</em>)
+                      </span></a></li>
+                </ul>
+              </div>
+              <div class="offer-summ__top">
+                <h3 class="offer-summ__tit">회원 리뷰</h3>
+              </div>
+              <button type="button" class="btn-rect size-sm bg-primary">리뷰 쓰기</button>
+            </div>
+            <div class="offer-review__cont">
+              <div class="offer-review-cont__wrap">
+                <ul class="offer-review-list">
+                  <li class="offer-review__item">
+                    <div class="reviewbox">
+                      <div class="reviewbox__summary">
+                        <p class="reviewbox__title">
+                          <a href="#">슬픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과
+                            매력적인 무대연출픈사랑과 매력적인 무대연출</a>
+                        </p>
+                      </div>
+                      <a href="#">
+                        <span class="reviewbox__detail">대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
+                          드라큘라 역할의 테이님도 정말 멋지셨습니다.
+                          역시 믿고 듣는 보이스 입니다 !!
+                          그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
+                          모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
+                        </span>
+                      </a>
+                      <div class="reviewbox__info">
+                        <div class="reviewbox-by">
+                          <!-- s : 회원리뷰 -->
+                          <span class="byname">내 귀에 캔디</span>
+                          <!-- 회원리뷰인 경우 tag--reverse -->
+                          <span class="tag--reverse">회원</span>
+                          <span class="grade">
+                            <span class="star"><i class="star__point p8"></i></span>
+                            <em class="grade__num">8.0</em>
+                          </span>
+                          <!-- e : 회원리뷰 -->
+                        </div>
+                        <div class="reviewbox-sub">
+                          <span class="text-date">2022.11.24</span>
+                          <div class="access-nums">
+                            <span class="acc-num acc-num--view"><em>25</em></span>
+                            <span class="acc-num acc-num--like"><em>120k</em></span>
+                            <span class="acc-num acc-num--comment"><em>25</em></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="offer-review__item">
+                    <div class="reviewbox">
+                      <div class="reviewbox__summary">
+                        <p class="reviewbox__title">
+                          <a href="#">슬픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과
+                            매력적인 무대연출픈사랑과 매력적인 무대연출</a>
+                        </p>
+                      </div>
+                      <a href="#">
+                        <span class="reviewbox__detail">대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
+                          드라큘라 역할의 테이님도 정말 멋지셨습니다.
+                          역시 믿고 듣는 보이스 입니다 !!
+                          그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
+                          모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
+                        </span>
+                      </a>
+                      <div class="reviewbox__info">
+                        <div class="reviewbox-by">
+                          <!-- s : 회원리뷰 -->
+                          <span class="byname">내 귀에 캔디</span>
+                          <!-- 회원리뷰인 경우 tag--reverse -->
+                          <span class="tag--reverse">회원</span>
+                          <span class="grade">
+                            <span class="star"><i class="star__point p8"></i></span>
+                            <em class="grade__num">8.0</em>
+                          </span>
+                          <!-- e : 회원리뷰 -->
+                        </div>
+                        <div class="reviewbox-sub">
+                          <span class="text-date">2022.11.24</span>
+                          <div class="access-nums">
+                            <span class="acc-num acc-num--view"><em>25</em></span>
+                            <span class="acc-num acc-num--like"><em>120k</em></span>
+                            <span class="acc-num acc-num--comment"><em>25</em></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- Paging -->
+                <div class="paging">
+                  <!-- PC -->
+                  <a href="#" class="paging__btn paging__btn--first">처음</a>
+                  <a href="#" class="paging__btn paging__btn--prev">이전</a>
+                  <div class="paging__num-wrap show-pc">
+                    <a href="#" class="paging__num paging__num--active">1</a>
+                    <a href="#" class="paging__num">2</a>
+                    <a href="#" class="paging__num">3</a>
+                    <a href="#" class="paging__num">4</a>
+                    <a href="#" class="paging__num">5</a>
+                    <a href="#" class="paging__num">6</a>
+                    <a href="#" class="paging__num">7</a>
+                    <a href="#" class="paging__num">8</a>
+                    <a href="#" class="paging__num">9</a>
+                    <a href="#" class="paging__num">10</a>
+                  </div>
+                  <a href="#" class="paging__btn paging__btn--next">다음</a>
+                  <a href="#" class="paging__btn paging__btn--last">마지막</a>
+                  <!-- Mobile -->
+                  <div class="paging__num-wrap show-mo">
+                    <a href="#" class="paging__more">더보기</a>
+                  </div>
+                </div>
+                <!-- Paging -->
+              </div>
+            </div>
+          </div>
+          <!-- //회원리뷰 -->
 
           <!-- concert-rating -->
           <ul class="rating-wrap">
