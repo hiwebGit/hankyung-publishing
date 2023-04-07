@@ -28,10 +28,54 @@
     <!-- Container -->
     <div class="container" id="container">
       <!-- KV -->
-      <div class="page-kv">
-        <div class="temp" style="text-align: center;"><span style="filter: invert(100%);">KV</span></div>
+      <div class="page-kv kv-friends-wrapper">
+        <div class="kv-friends">
+          <div class="kv-friends__bg">
+            <img src="../assets/images/@temp/@temp_kv_friends.png" alt="">
+          </div>
+          <div class="kv-friends__inner" data-accordion="wrapper">
+            <div class="kv-friends__box">
+              <div class="kv-friends__texts" data-accordion="group">
+                <div class="kv-friends__texts-top">
+                  <h2 class="kv-friends__title">Gongshall</h2>
+                  <p class="kv-friends__desc">약 2.4만 명의 구독자를 보유한 공셸TV의 유튜브.<br>재미있는 미술 이야기 진한 예술가의 삶을 공유합니다.</p>
+                </div>
+                <div class="kv-friends__texts-bot acco-box">
+                  <span class="tag-gen">클래식</span>
+                  <div class="texts-holder">
+                    <a href="#">
+                      <p class="kv-friends__video-title acco-btn">[단독인터뷰] 역대 최연소 우승, 임윤찬 “잘 나가는 피아니스트 되기 싫어”
+                        생상스(Saint-Saëns) - 제13곡 백조 (모음곡 「동물의 사육제」 중에서) / 13. Le cygne from
+                        "Lecarnaval des animaux" 최대 3줄 최대 3줄 최대 3줄 최대 3줄 최대 3줄 최대 3줄 최대 3줄 최대 3줄 최대 3줄 최대 3줄 최대 3줄 최대 3줄
+                        최대 3줄 최대 3줄 최대 3줄 최대 3줄 최대 3줄</p>
+                    </a>
+                    <button type="button" class="acco-icon" aria-label="열기" data-accordion="btn"></button>
+                  </div>
+                  <div class="kv-friends__video-play-data">
+                    <span class="play-time">999min</span>
+                    <div class="access-nums">
+                      <span class="acc-num acc-num--view"><em>25</em></span>
+                      <span class="acc-num acc-num--like"><em>120k</em></span>
+                      <span class="acc-num acc-num--comment"><em>25</em></span>
+                    </div>
+                    <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="kv-friends__video-cont">
+                <div class="kv-friends__video">
+                  <div class="video-wrap">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/jOeKw3-PoH8" title=""
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
       <!--// KV -->
 
       <!-- START -->
@@ -43,20 +87,24 @@
             <div class="ad-banner__list swiper-wrapper">
               <a href="#" class="ad-banner__item swiper-slide">
                 <!-- Img PC -->
-                <img src="../assets/images/@temp/@banner01_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
+                <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <!-- Img PC 2 -->
+                <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
                 <!-- Img Tablet -->
-                <img src="../assets/images/@temp/@banner01_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet" />
+                <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <!-- Img Tablet 2 -->
+                <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
                 <!-- Img Mobile -->
-                <img src="../assets/images/@temp/@banner01_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
               <a href="#" class="ad-banner__item swiper-slide">
-                <img src="../assets/images/@temp/@banner02_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
-                <img src="../assets/images/@temp/@banner02_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet">
-                <img src="../assets/images/@temp/@banner02_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
+                <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
             </div>
           </div>
@@ -121,9 +169,9 @@
                             </div>
                           </div>
                           <div class="filter-options__cont">
-                            <!-- 영상 분류 -->
+                            <!-- 프로그램 -->
                             <div class="filter-options__items">
-                              <p class="filter-options__tit">영상 분류</p>
+                              <p class="filter-options__tit">프로그램</p>
                               <div class="filter-options__items-cont">
                                 <ul class="filter-options__items-list">
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status"
@@ -152,7 +200,7 @@
                                 </ul>
                               </div>
                             </div>
-                            <!--//영상 분류 -->
+                            <!--//프로그램 -->
                           </div>
                         </div>
                       </div>

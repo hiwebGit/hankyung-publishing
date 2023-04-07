@@ -30,15 +30,122 @@
 
     <!-- Container -->
     <div class="container" id="container">
-      <!-- Full KV : 작업중-->
-      <div class="page-kv">
+      <!-- Full KV -->
+      <div class="page-kv kv-rev-exhibit-wrapper">
         <div class="kv-title">
           <h2 class="kv-title__title">REVIEW</h2>
-          <p class="kv-title__desc">실시간으로 집계된 인기 전시 리뷰 TOP 5</p>
+          <p class="kv-title__desc">arte 추천 전시 리뷰</p>
         </div>
-        <div class="temp" style="text-align: center;">KV</div>
+        <div class="kv-swiper-view02 kv-rev-exhibit">
+          <!-- swiper 실행 필수 속성 data-slider="curation", data-swiper(속성 값 객체 depth의 마지막 속성 값은 반드시 콤마 삭제)-->
+          <div class="swiper kv-swiper" data-slider="curation" data-swiper='{
+            "slidesPerView": "auto",
+            "slideToClickedSlide": true,
+            "spaceBetween": 0,
+            "breakpoints": {
+              "768": {
+                "slidesPerView": 1,
+                "spaceBetween": 16
+              }
+            },
+            "pagination": {
+              "type": "fraction"
+            },
+            "speed": 700,
+            "autoplay": false,
+            "navigation": true,
+            "loop":true,
+            "autoplay": true
+          }'>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="kv-swiper__img">
+                  <span class="tag-gen">회화</span>
+                  <a href="#none">
+                    <img src="../assets/images/@temp/@temp_900_651.png" alt="">
+                    <p class="art-title">Watson the Maestro</p>
+                  </a>
+                  <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                </div>
+                <div class="kv-swiper__text">
+                  <a href="#none">
+                    <h3 class="kv-swiper__title"><i>Recommended</i></h3>
+                    <p class="kv-swiper__title--sub">1 사진가의 사진가, 알버트 왓슨이 말하는 ‘WATSON, THE MAESTRO’</p>
+                  </a>
+                  <div class="art-info-sub">
+                    <div class="art-info-by">
+                      <span class="byname">내 귀에 캔디</span>
+                      <span class="tag">전문가</span>
+                      <span class="grade">
+                        <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                        <span class="badge-star p3"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="kv-swiper__img">
+                  <span class="tag-gen">회화</span>
+                  <a href="#none">
+                    <img src="https://via.placeholder.com/900x651.png" alt="">
+                    <p class="art-title">Watson the Maestro</p>
+                  </a>
+                  <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                </div>
+                <div class="kv-swiper__text">
+                  <a href="#none">
+                    <h3 class="kv-swiper__title"><i>Recommended</i></h3>
+                    <p class="kv-swiper__title--sub">2 사진가의 사진가, 알버트 왓슨이 말하는 ‘WATSON, THE MAESTRO’</p>
+                  </a>
+                  <div class="art-info-sub">
+                    <div class="art-info-by">
+                      <span class="byname">내 귀에 캔디</span>
+                      <span class="tag">전문가</span>
+                      <span class="grade">
+                        <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                        <span class="badge-star p3"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="kv-swiper__img">
+                  <span class="tag-gen">회화</span>
+                  <a href="#none">
+                    <img src="../assets/images/@temp/@temp_900_651.png" alt="">
+                    <p class="art-title">Watson the Maestro</p>
+                  </a>
+                  <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                </div>
+                <div class="kv-swiper__text">
+                  <a href="#none">
+                    <h3 class="kv-swiper__title"><i>Recommended</i></h3>
+                    <p class="kv-swiper__title--sub">3 사진가의 사진가, 알버트 왓슨이 말하는 ‘WATSON, THE MAESTRO’</p>
+                  </a>
+                  <div class="art-info-sub">
+                    <div class="art-info-by">
+                      <span class="byname">내 귀에 캔디</span>
+                      <span class="tag tag--line">회원</span>
+                      <span class="grade">
+                        <span class="star"><i class="star__point p7"></i></span>
+                        <em class="grade__num">7.0</em>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-controls size-lg">
+              <div class="swiper-pagination"></div>
+              <button type="button" class="swiper--btn swiper-prev">이전</button>
+              <button type="button" class="swiper--btn swiper-next">다음</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <!--// Full KV : 작업중 -->
+      <!--// Full KV -->
 
       <!-- START -->
       <div class="content">
@@ -49,20 +156,24 @@
             <div class="ad-banner__list swiper-wrapper">
               <a href="#" class="ad-banner__item swiper-slide">
                 <!-- Img PC -->
-                <img src="../assets/images/@temp/@banner01_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
+                <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <!-- Img PC 2 -->
+                <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
                 <!-- Img Tablet -->
-                <img src="../assets/images/@temp/@banner01_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet" />
+                <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <!-- Img Tablet 2 -->
+                <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
                 <!-- Img Mobile -->
-                <img src="../assets/images/@temp/@banner01_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
               <a href="#" class="ad-banner__item swiper-slide">
-                <img src="../assets/images/@temp/@banner02_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
-                <img src="../assets/images/@temp/@banner02_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet">
-                <img src="../assets/images/@temp/@banner02_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
+                <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
             </div>
           </div>
@@ -285,19 +396,46 @@
                             </div>
                           </div>
                           <div class="filter-options__cont">
-                            <!-- 리뷰 구분 -->
+                            <!-- 전문가 리뷰 -->
                             <div class="filter-options__items">
-                              <p class="filter-options__tit">리뷰 구분</p>
+                              <p class="filter-options__tit">전문가 리뷰</p>
                               <div class="filter-options__items-cont">
                                 <ul class="filter-options__items-list">
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-type"
-                                        checked /><span class="o-rdo__label">전문가 리뷰</span></label></li>
+                                        checked /><span class="o-rdo__label">전체</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-type" /><span class="o-rdo__label">회원 리뷰</span></label></li>
+                                        name="chk-type" /><span class="o-rdo__label">볼만한 공연</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-type" /><span class="o-rdo__label">혼자 보기 아까운 공연</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-type" /><span class="o-rdo__label">물개박수 절로 나오는 공연</span></label></li>
                                 </ul>
                               </div>
                             </div>
-                            <!--//리뷰 구분 -->
+                            <!--//전문가 리뷰 -->
+                            <!--회원 리뷰 -->
+                            <div class="filter-options__items">
+                              <p class="filter-options__tit">회원 리뷰</p>
+                              <div class="filter-options__items-cont">
+                                <ul class="filter-options__items-list m-col2">
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status"
+                                        checked />
+                                      <span class="o-rdo__label">전체</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">강력추천</span></label></li>
+                                  <li class="w-full"><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">생각보다 좋아요</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">괜찮아요</span></label>
+                                  </li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">그냥 그렇네요</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">시간 아까워요</span></label></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!--//회원 리뷰 -->
                             <!--상태 -->
                             <div class="filter-options__items">
                               <p class="filter-options__tit">상태</p>
@@ -317,28 +455,6 @@
                               </div>
                             </div>
                             <!--//상태 -->
-                            <!--평점 -->
-                            <div class="filter-options__items">
-                              <p class="filter-options__tit">평점</p>
-                              <div class="filter-options__items-cont">
-                                <ul class="filter-options__items-list">
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status"
-                                        checked /><span class="o-rdo__label">전체</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">그냥 그렇네요</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">강력추천</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">시간 아까워요</span></label></li>
-                                  <li class="w-full"><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">생각보다 좋아요</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">괜찮아요</span></label>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <!--//평점 -->
                           </div>
                         </div>
                       </div>
@@ -410,8 +526,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -443,13 +559,15 @@
                         </a>
                       </div>
                       <div class="artbox__info">
-                        <span class="byname">내 귀에 캔디</span>
-                        <span class="tag tag--line">회원</span>
-                        <span class="grade">
-                          <span class="star"><i class="star__point p7"></i></span>
-                          <em class="grade__num">7.0</em>
-                        </span>
-                        <button type="button" class="btn-fav" aria-label="Like"></button>
+                        <div class="art-info-by">
+                          <span class="byname">내 귀에 캔디</span>
+                          <span class="tag tag--line">회원</span>
+                          <span class="grade">
+                            <span class="star"><i class="star__point p7"></i></span>
+                            <em class="grade__num">7.0</em>
+                          </span>
+                          <button type="button" class="btn-fav" aria-label="Like"></button>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -481,8 +599,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -517,8 +635,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -553,8 +671,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -589,8 +707,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -617,8 +735,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p4"></i></span>
-                            <em class="grade__num">4.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p2"></span>
                           </span>
                         </div>
                       </div>
@@ -653,8 +771,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p1"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -689,8 +807,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -722,44 +840,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
-                          </span>
-                          <button type="button" class="btn-fav" aria-label="Like"></button>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="art-list__item">
-                    <div class="artbox">
-                      <a href="#" class="thumb-img">
-                        <span class="img-holder"><img src="../assets/images/@temp/@thumg_img03.jpg" alt=""></span>
-                      </a>
-                      <div class="artbox__summary">
-                        <div class="artbox__stit">
-                          <span class="tag-gen-s">연극</span>
-                          <a href="#" class="ex-name">아이, 여자 그리고 SEVEN</a>
-                        </div>
-                        <p class="artbox__title">
-                          <a href="#">슬픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과
-                            매력적인 무대연출픈사랑과 매력적인 무대연출</a>
-                        </p>
-                      </div>
-                      <div class="artbox__detail">
-                        <a href="#">대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
-                          드라큘라 역할의 테이님도 정말 멋지셨습니다.
-                          역시 믿고 듣는 보이스 입니다 !!
-                          그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
-                          모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
-                        </a>
-                      </div>
-                      <div class="artbox__info">
-                        <div class="art-info-by">
-                          <span class="byname">내 귀에 캔디</span>
-                          <span class="tag">전문가</span>
-                          <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -794,8 +876,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -830,8 +912,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -866,8 +948,44 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
+                          </span>
+                          <button type="button" class="btn-fav" aria-label="Like"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="art-list__item">
+                    <div class="artbox">
+                      <a href="#" class="thumb-img">
+                        <span class="img-holder"><img src="../assets/images/@temp/@thumg_img03.jpg" alt=""></span>
+                      </a>
+                      <div class="artbox__summary">
+                        <div class="artbox__stit">
+                          <span class="tag-gen-s">연극</span>
+                          <a href="#" class="ex-name">아이, 여자 그리고 SEVEN</a>
+                        </div>
+                        <p class="artbox__title">
+                          <a href="#">슬픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과
+                            매력적인 무대연출픈사랑과 매력적인 무대연출</a>
+                        </p>
+                      </div>
+                      <div class="artbox__detail">
+                        <a href="#">대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
+                          드라큘라 역할의 테이님도 정말 멋지셨습니다.
+                          역시 믿고 듣는 보이스 입니다 !!
+                          그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
+                          모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
+                        </a>
+                      </div>
+                      <div class="artbox__info">
+                        <div class="art-info-by">
+                          <span class="byname">내 귀에 캔디</span>
+                          <span class="tag">전문가</span>
+                          <span class="grade">
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -902,8 +1020,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -938,8 +1056,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -974,8 +1092,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -1010,8 +1128,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -1046,8 +1164,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -1082,8 +1200,8 @@
                           <span class="byname">내 귀에 캔디</span>
                           <span class="tag">전문가</span>
                           <span class="grade">
-                            <span class="star"><i class="star__point p7"></i></span>
-                            <em class="grade__num">7.0</em>
+                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                            <span class="badge-star p3"></span>
                           </span>
                           <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
@@ -1147,6 +1265,7 @@
   <script src="../assets/js/libs/swiper.min.js"></script>
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
+  <script src="../assets/js/curation.js"></script> <!-- curation slider -->
   <!--// Script -->
 </body>
 

@@ -1,232 +1,506 @@
-<!-- Main Header -->
-<div class="header__inner">
-  <!-- block -->
-  <div class="header__main-block">
-    <div class="header__left">
-      <h1 class="header__logo">
-        <a href="#" class="arte-logo">
-          <em class="logo-a">A</em><span>RTE</span>
-        </a>
-      </h1>
+  <div class="header__inner header-main">
+    <!-- block -->
+    <div class="header__main-block">
+      <div class="header__left">
+        <h1 class="header-logo">
+          <a href="#" class="arte-logo">
+            <em class="logo-a">A</em><span>RTE</span>
+          </a>
+        </h1>
 
-      <ul class="gnb">
-        <li><a href="#" data-gnb="music">MUSIC <span class="text">듣다</span></a></li>
-        <li><a href="#" data-gnb="stage">STAGE&middot;CINE <span class="text">즐기다</span></a></li>
-        <li><a href="#" data-gnb="art">ART <span class="text">보다</span></a></li>
-        <li><a href="#" data-gnb="book">BOOK <span class="text">읽다</span></a></li>
-      </ul>
+        <ul class="gnb">
+          <li><a href="#" data-gnb="music">MUSIC <span class="text">듣다</span></a></li>
+          <li><a href="#" data-gnb="stage">STAGE&middot;CINE <span class="text">즐기다</span></a></li>
+          <li><a href="#" data-gnb="art">ART <span class="text">보다</span></a></li>
+          <li><a href="#" data-gnb="book">BOOK <span class="text">읽다</span></a></li>
+        </ul>
+      </div>
+
+      <div class="header-utils">
+        <ul class="gnb-utils">
+          <li><a href="#" class="util-btn ico-talk" data-gnb="talk" data-dir="right">
+              <em class="text">arte TALK</em></a></li>
+          <li><a href="#" class="util-btn ico-video" data-gnb="video" data-dir="right">
+              <em class="text">arte 영상</em></a></li>
+          <li><a href="#" class="util-btn ico-finder" data-gnb="finder" data-dir="right">
+              <em class="text">art FINDER</em></a></li>
+          <li><a href="#" class="util-btn ico-search" aria-label="Search" data-menu="search"></a></li>
+          <li><a href="#" class="util-btn ico-person" aria-label="Person" data-menu="mypage"></a></li>
+        </ul>
+        <button type="button" class="all-menu-btn" aria-label="Menu" data-allmenu="open"><i></i></button>
+      </div>
     </div>
+    <!--// block -->
 
-    <div class="header__utils">
-      <ul class="gnb-utils">
-        <li><a href="#" class="gnb-utils__btn ico-talk" data-gnb="talk" data-dir="right">
-            <em class="text">arte TALK</em></a></li>
-        <li><a href="#" class="gnb-utils__btn ico-vod" data-gnb="video" data-dir="right">
-            <em class="text">arte 영상</em></a></li>
-        <li><a href="#" class="gnb-utils__btn ico-finder" data-gnb="finder" data-dir="right">
-            <em class="text">art FINDER</em></a></li>
-        <li><a href="#" class="gnb-utils__btn ico-search" aria-label="Search" data-menu="search"></a></li>
-        <li><a href="#" class="gnb-utils__btn ico-person" aria-label="Person" data-menu="mypage"></a></li>
-      </ul>
-
-      <button type="button" class="menu-button" aria-label="Menu"><i></i></button>
-    </div>
-  </div>
-  <!--// block -->
-
-  <!-- header Layer section  -->
-  <section class="header__box">
-    <div class="header-global-menu" data-header-box="gnb">
-      <!-- nav section -->
-      <div class="header__nav">
-        <div class="gnb-nav-group">
-          <div class="gnb-nav" data-lnb="music">
-            <h3 class="header-tit">MUSIC 듣다</h3>
-            <ul class="gnb-nav__list">
-              <li><a href="#" class="gnb-nav__btn">음악 리뷰</a></li>
-              <li><a href="#" class="gnb-nav__btn">음악 공연 정보</a></li>
-              <li><a href="#" class="gnb-nav__btn">MUSIC 테마 칼럼·인터뷰</a></li>
-              <li><a href="#" class="gnb-nav__btn">MUSIC NEWS</a></li>
-            </ul>
-          </div>
-          <div class="gnb-nav" data-lnb="stage">
-            <h3 class="header-tit">Stage·Cine, 즐기다</h3>
-            <ul class="gnb-nav__list">
-              <li><a href="#" class="gnb-nav__btn">공연·영화 리뷰</a></li>
-              <li><a href="#" class="gnb-nav__btn">공연 정보</a></li>
-              <li><a href="#" class="gnb-nav__btn">Stage·Cine 테마칼럼·인터뷰</a></li>
-              <li><a href="#" class="gnb-nav__btn">Stage·Cine News</a></li>
-            </ul>
-          </div>
-          <div class="gnb-nav" data-lnb="art">
-            <h3 class="header-tit">Art 보다</h3>
-            <ul class="gnb-nav__list">
-              <li><a href="#" class="gnb-nav__btn">전시 리뷰</a></li>
-              <li><a href="#" class="gnb-nav__btn">전시 정보</a></li>
-              <li><a href="#" class="gnb-nav__btn">해외 전시 하이라이트</a></li>
-              <li><a href="#" class="gnb-nav__btn">Art 테마칼럼·인터뷰</a></li>
-              <li><a href="#" class="gnb-nav__btn">Art News</a></li>
-              <li><a href="#" class="gnb-nav__btn">미술시장 분석</a></li>
-            </ul>
-          </div>
-          <div class="gnb-nav" data-lnb="book">
-            <h3 class="header-tit">Book 읽다</h3>
-            <ul class="gnb-nav__list">
-              <li><a href="#" class="gnb-nav__btn">문학·고전 리뷰</a></li>
-              <li><a href="#" class="gnb-nav__btn">탐나는 책</a></li>
-              <li><a href="#" class="gnb-nav__btn">책 정보</a></li>
-              <li><a href="#" class="gnb-nav__btn">Book 테마칼럼·인터뷰</a></li>
-              <li><a href="#" class="gnb-nav__btn">Book News</a></li>
-            </ul>
-          </div>
-          <div class="gnb-nav" data-lnb="talk">
-            <h3 class="header-tit">arte TALK</h3>
-            <div class="gnb-nav__list">
-              <li><a href="#" class="gnb-nav__btn">문화예술계 소식</a></li>
-              <li><a href="#" class="gnb-nav__btn">arte TALK TALK</a></li>
-              <li><a href="#" class="gnb-nav__btn">공지사항</a></li>
-              <li><a href="#" class="gnb-nav__btn">arte Poll</a></li>
+    <!-- header Layer section  -->
+    <section class="header__box">
+      <div class="header-global-menu" data-header-box="gnb">
+        <!-- nav section -->
+        <div class="header__nav">
+          <div class="gnb-nav-group">
+            <div class="gnb-nav" data-lnb="music">
+              <h3 class="header-tit">MUSIC 듣다</h3>
+              <ul class="gnb-nav__list">
+                <li><a href="#" class="gnb-nav__btn">음악 리뷰</a></li>
+                <li><a href="#" class="gnb-nav__btn">음악 공연 정보</a></li>
+                <li><a href="#" class="gnb-nav__btn">MUSIC 테마 칼럼·인터뷰</a></li>
+                <li><a href="#" class="gnb-nav__btn">MUSIC NEWS</a></li>
+              </ul>
+            </div>
+            <div class="gnb-nav" data-lnb="stage">
+              <h3 class="header-tit">STAGE CINE 즐기다</h3>
+              <ul class="gnb-nav__list">
+                <li><a href="#" class="gnb-nav__btn">공연·영화 리뷰</a></li>
+                <li><a href="#" class="gnb-nav__btn">공연 정보</a></li>
+                <li><a href="#" class="gnb-nav__btn">Stage·Cine 테마칼럼·인터뷰</a></li>
+                <li><a href="#" class="gnb-nav__btn">Stage·Cine News</a></li>
+              </ul>
+            </div>
+            <div class="gnb-nav" data-lnb="art">
+              <h3 class="header-tit">Art 보다</h3>
+              <ul class="gnb-nav__list">
+                <li><a href="#" class="gnb-nav__btn">전시 리뷰</a></li>
+                <li><a href="#" class="gnb-nav__btn">전시 정보</a></li>
+                <li><a href="#" class="gnb-nav__btn">해외 전시 하이라이트</a></li>
+                <li><a href="#" class="gnb-nav__btn">Art 테마칼럼·인터뷰</a></li>
+                <li><a href="#" class="gnb-nav__btn">Art News</a></li>
+                <li><a href="#" class="gnb-nav__btn">미술시장 분석</a></li>
+              </ul>
+            </div>
+            <div class="gnb-nav" data-lnb="book">
+              <h3 class="header-tit">Book 읽다</h3>
+              <ul class="gnb-nav__list">
+                <li><a href="#" class="gnb-nav__btn">문학·고전 리뷰</a></li>
+                <li><a href="#" class="gnb-nav__btn">탐나는 책</a></li>
+                <li><a href="#" class="gnb-nav__btn">책 정보</a></li>
+                <li><a href="#" class="gnb-nav__btn">Book 테마칼럼·인터뷰</a></li>
+                <li><a href="#" class="gnb-nav__btn">Book News</a></li>
+              </ul>
+            </div>
+            <div class="gnb-nav" data-lnb="talk">
+              <h3 class="header-tit">arte TALK</h3>
+              <div class="gnb-nav__list">
+                <li><a href="#" class="gnb-nav__btn">문화예술계 소식</a></li>
+                <li><a href="#" class="gnb-nav__btn">arte TALK TALK</a></li>
+                <li><a href="#" class="gnb-nav__btn">공지사항</a></li>
+                <li><a href="#" class="gnb-nav__btn">arte Poll</a></li>
+              </div>
+            </div>
+            <div class="gnb-nav" data-lnb="finder">
+              <h3 class="header-tit">art FINDER</h3>
+              <div class="gnb-nav__list">
+                <li><a href="#" class="gnb-nav__btn">arte Map</a></li>
+                <li><a href="#" class="gnb-nav__btn">arte Calendar</a></li>
+                <li><a href="#" class="gnb-nav__btn">artist DB</a></li>
+              </div>
+            </div>
+            <div class="gnb-nav" data-lnb="video">
+              <h3 class="header-tit">arte 영상</h3>
+              <div class="gnb-nav__list">
+                <li><a href="#" class="gnb-nav__btn">arte 유튜브 LIVE</a></li>
+                <li><a href="#" class="gnb-nav__btn">arte 영상</a></li>
+              </div>
             </div>
           </div>
-          <div class="gnb-nav" data-lnb="finder">
+
+          <div class="nav-links">
             <h3 class="header-tit">art FINDER</h3>
-            <div class="gnb-nav__list">
-              <li><a href="#" class="gnb-nav__btn">arte Map</a></li>
-              <li><a href="#" class="gnb-nav__btn">arte Calendar</a></li>
-              <li><a href="#" class="gnb-nav__btn">artist DB</a></li>
-            </div>
-          </div>
-          <div class="gnb-nav" data-lnb="video">
-            <h3 class="header-tit">arte 영상</h3>
-            <div class="gnb-nav__list">
-              <li><a href="#" class="gnb-nav__btn">arte 유튜브 LIVE</a></li>
-              <li><a href="#" class="gnb-nav__btn">arte 영상</a></li>
+            <div class="nav-links__list">
+              <a href="#" class="nav-links__btn">arte Map</a>
+              <a href="#" class="nav-links__btn">arte Calendar</a>
+              <a href="#" class="nav-links__btn">artist DB</a>
             </div>
           </div>
         </div>
+        <!--// nav section -->
 
-        <div class="nav-links">
-          <h3 class="header-tit">art FINDER</h3>
-          <div class="nav-links__list">
-            <a href="#" class="nav-links__btn">arte Map</a>
-            <a href="#" class="nav-links__btn">arte Calendar</a>
-            <a href="#" class="nav-links__btn">artist DB</a>
+        <!-- banner section -->
+        <div class="header__banners">
+          <!-- buddy banner -->
+          <div class="buddy-banner">
+            <h3 class="header-tit">아르떼와 친구들</h3>
+            <ul class="buddy-banner__list">
+              <li><a href="#" class="buddy-banner__item">
+                  <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_01.png" alt=""></span>
+                  <em class="buddy-banner__text">유니버설뮤직 클래식</em></a>
+              </li>
+              <li><a href="#" class="buddy-banner__item">
+                  <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_02.png" alt=""></span>
+                  <em class="buddy-banner__text">민음사TV</em></a>
+              </li>
+              <li><a href="#" class="buddy-banner__item">
+                  <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_03.png" alt=""></span>
+                  <em class="buddy-banner__text">금호아트홀</em></a>
+              </li>
+              <li><a href="#" class="buddy-banner__item">
+                  <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_04.png" alt=""></span>
+                  <em class="buddy-banner__text">첼로댁</em></a>
+              </li>
+              <li><a href="#" class="buddy-banner__item">
+                  <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_05.png" alt=""></span>
+                  <em class="buddy-banner__text">하우스콘서트</em></a>
+              </li>
+              <li><a href="#" class="buddy-banner__item">
+                  <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_06.png" alt=""></span>
+                  <em class="buddy-banner__text">예술의 이유</em></a>
+              </li>
+              <li><a href="#" class="buddy-banner__item">
+                  <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_07.png" alt=""></span>
+                  <em class="buddy-banner__text">워너클래식 코리아</em></a>
+              </li>
+              <li><a href="#" class="buddy-banner__item">
+                  <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_08.png" alt=""></span>
+                  <em class="buddy-banner__text">공셸TV</em></a>
+              </li>
+            </ul>
+            <a href="#" class="buddy-banner__more" aria-lable="more"></a>
+          </div>
+          <!--// buddy banner -->
+          <!-- slider banner -->
+          <div class="buddy-card swiper">
+            <ul class="buddy-card__list swiper-wrapper">
+              <li class="buddy-card__item swiper-slide">
+                <a href="#" class="buddy-card__box">
+                  <span class="buddy-card__img">
+                    <img src="../assets/images/@temp/@temp_gnb_banner01.jpg" alt="" />
+                  </span>
+                  <p class="buddy-card__text">아르떼 개편 및 집콕집밖 설특별전 감상이벤트 1</p>
+                </a>
+              </li>
+              <li class="buddy-card__item swiper-slide">
+                <a href="#" class="buddy-card__box">
+                  <span class="buddy-card__img">
+                    <img src="../assets/images/@temp/@temp_gnb_banner01.jpg" alt="" />
+                  </span>
+                  <p class="buddy-card__text">아르떼 개편 및 집콕집밖 설특별전 감상이벤트 2</p>
+                </a>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!--// slider banner -->
+        </div>
+        <!--// banner section -->
+      </div>
+
+      <!-- 검색 -->
+      <div class="header-global-search type-right" data-header-box="search">
+        <div class="header__nav">
+          <div class="header-search">
+            <input type="text" class="o-input" placeholder="Arte.com검색하기">
+          </div>
+          <div class="nav-links">
+            <h3 class="header-tit">Quick Links</h3>
+            <div class="nav-links__list">
+              <a href="#" class="nav-links__btn">arte Map</a>
+              <a href="#" class="nav-links__btn">arte Calendar</a>
+              <a href="#" class="nav-links__btn">artist DB</a>
+              <a href="#" class="nav-links__btn">arte Poll </a>
+            </div>
           </div>
         </div>
       </div>
-      <!--// nav section -->
+      <!--// 검색 -->
 
-      <!-- banner section -->
-      <div class="header__banners">
-        <!-- with banner -->
-        <div class="with-banner">
-          <h3 class="header-tit">아르떼와 친구들</h3>
-          <ul class="with-banner__list">
-            <li><a href="#" class="with-banner__item">
-                <span class="with-banner__img"><img src="../assets/images/@temp/@friends_01.png" alt=""></span>
-                <em class="with-banner__text">유니버설뮤직 클래식</em></a>
-            </li>
-            <li><a href="#" class="with-banner__item">
-                <span class="with-banner__img"><img src="../assets/images/@temp/@friends_02.png" alt=""></span>
-                <em class="with-banner__text">민음사TV</em></a>
-            </li>
-            <li><a href="#" class="with-banner__item">
-                <span class="with-banner__img"><img src="../assets/images/@temp/@friends_03.png" alt=""></span>
-                <em class="with-banner__text">금호아트홀</em></a>
-            </li>
-            <li><a href="#" class="with-banner__item">
-                <span class="with-banner__img"><img src="../assets/images/@temp/@friends_04.png" alt=""></span>
-                <em class="with-banner__text">첼로댁</em></a>
-            </li>
-            <li><a href="#" class="with-banner__item">
-                <span class="with-banner__img"><img src="../assets/images/@temp/@friends_05.png" alt=""></span>
-                <em class="with-banner__text">하우스콘서트</em></a>
-            </li>
-            <li><a href="#" class="with-banner__item">
-                <span class="with-banner__img"><img src="../assets/images/@temp/@friends_06.png" alt=""></span>
-                <em class="with-banner__text">예술의 이유</em></a>
-            </li>
-            <li><a href="#" class="with-banner__item">
-                <span class="with-banner__img"><img src="../assets/images/@temp/@friends_07.png" alt=""></span>
-                <em class="with-banner__text">워너클래식 코리아</em></a>
-            </li>
-            <li><a href="#" class="with-banner__item">
-                <span class="with-banner__img"><img src="../assets/images/@temp/@friends_08.png" alt=""></span>
-                <em class="with-banner__text">공셸TV</em></a>
-            </li>
-          </ul>
-          <a href="#" class="with-banner__more" aria-lable="more"></a>
+      <!-- 마이페이지 -->
+      <div class="header-global-mypage type-right" data-header-box="mypage">
+        <div class="header__nav">
+          <div class="header-info">
+            <p class="header-info__name">간만에카페인가가가가</p>
+            <p class="header-info__email">guest01@hankung.com</p>
+            <div class="header-info__btns">
+              <button type="button" class="btn size-sm c-primary">로그아웃</button>
+            </div>
+          </div>
+          <div class="nav-links">
+            <h3 class="header-tit">마이페이지</h3>
+            <div class="nav-links__list">
+              <a href="#" class="nav-links__btn">좋아한 콘텐츠</a>
+              <a href="#" class="nav-links__btn">나의 활동</a>
+              <a href="#" class="nav-links__btn">나의 정보</a>
+              <a href="#" class="nav-links__btn">1:1문의</a>
+            </div>
+          </div>
         </div>
-        <!--// with banner -->
-        <!-- slider banner -->
-        <div class="with-card swiper">
-          <ul class="with-card__list swiper-wrapper">
-            <li class="with-card__item swiper-slide">
-              <a href="#" class="with-card__box">
-                <span class="with-card__img">
-                  <img src="../assets/images/@temp/@temp_gnb_banner01.jpg" alt="" />
-                </span>
-                <p class="with-card__text">아르떼 개편 및 집콕집밖 설특별전 감상이벤트</p>
+      </div>
+      <!--// 마이페이지 -->
+    </section>
+    <!--// header Layer section -->
+
+    <!-- all menu : 활성화 'is-active'-->
+    <section class="all-section" data-accordion="wrapper" data-menu-box="allmenu">
+      <div class="all-section-wrap">
+        <div class="all-section-header">
+          <div class="all-section-header__left">
+            <h2 class="header-logo show-pc">
+              <a href="#" class="arte-logo">
+                <em class="logo-a">A</em><span>RTE</span>
               </a>
-            </li>
-            <li class="with-card__item swiper-slide">
-              <a href="#" class="with-card__box">
-                <span class="with-card__img">
-                  <img src="../assets/images/@temp/@temp_gnb_banner01.jpg" alt="" />
-                </span>
-                <p class="with-card__text">아르떼 개편 및 집콕집밖 설특별전 감상이벤트</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <!--// slider banner -->
-      </div>
-      <!--// banner section -->
-    </div>
-
-    <!-- 검색 -->
-    <div class="header-global-search type-right" data-header-box="search">
-      <div class="header__nav">
-        <div class="header-search">
-          <input type="text" class="o-input" placeholder="Arte.com검색하기">
-        </div>
-
-        <div class="nav-links">
-          <h3 class="header-tit">Quick Links</h3>
-          <div class="nav-links__list">
-            <a href="#" class="nav-links__btn">arte Map</a>
-            <a href="#" class="nav-links__btn">arte Calendar</a>
-            <a href="#" class="nav-links__btn">artist DB</a>
-            <a href="#" class="nav-links__btn">arte Poll </a>
+            </h2>
+            <!-- 로그인전에 before , 로그인 후에는 after 클래스 추가 -->
+            <div class="log-btn-wrap show-mo before">
+              <button type="button" class="login-btn before">
+                <span class="login-tit">로그인</span>
+              </button>
+              <button type="button" class="login-btn after">
+                <span class="login-tit">간만에카페인먹었어요</span>
+              </button>
+              <button type="button" class="logout-btn after">
+                <span class="logout-tit">로그아웃</span>
+              </button>
+            </div>
+          </div>
+          <div class="header-utils">
+            <!-- home -->
+            <!-- <button type="button" class="app-home" aria-label="Home" ></button> -->
+            <!-- //home -->
+            <ul class="gnb-utils">
+              <li>
+                <a href="#" class="util-btn ico-search" aria-label="Search" data-menu="search"></a>
+              </li>
+              <li class="hide-mo">
+                <a href="#" class="util-btn ico-person" aria-label="Person" data-menu="mypage"></a>
+              </li>
+            </ul>
+            <button type="button" class="all-menu-btn hide-mo" aria-label="Menu"><i></i></button>
+            <button type="button" class="all-menu-close" aria-label="닫기" data-allmenu="close"></button>
           </div>
         </div>
-      </div>
-    </div>
-    <!--// 검색 -->
+        <div class="all-section__inner">
+          <!-- search bar : 활성화 'is-active' -->
+          <div class="header-search-bar__wrap">
+            <div class="header-search-bar">
+              <input type="text" class="s-input" placeholder="검색하기" title="검색하기">
+            </div>
+          </div>
+          <!-- //search bar -->
+          <!-- slider banner : mobile -->
+          <div class="buddy-card swiper show-mo">
+            <ul class="buddy-card__list swiper-wrapper">
+              <li class="buddy-card__item swiper-slide">
+                <a href="#" class="buddy-card__box">
+                  <span class="buddy-card__img">
+                    <img src="../assets/images/@temp/@temp_gnb_banner01.jpg" alt="" />
+                  </span>
+                  <p class="buddy-card__text">아르떼 개편 및 집콕집밖 설특별전 감상이벤트 1</p>
+                </a>
+              </li>
+              <li class="buddy-card__item swiper-slide">
+                <a href="#" class="buddy-card__box">
+                  <span class="buddy-card__img">
+                    <img src="../assets/images/@temp/@temp_gnb_banner01.jpg" alt="" />
+                  </span>
+                  <p class="buddy-card__text">아르떼 개편 및 집콕집밖 설특별전 감상이벤트 2</p>
+                </a>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!--// slider banner : mobile -->
+          <!-- menu list -->
+          <div class="all-menu">
+            <ul class="all-menu-list">
+              <li class="gnb-nav is-on" data-accordion="group">
+                <span class="header-tit show-pc">Music, 듣다</span>
+                <button type="button" class="accor-btn show-mo" data-accordion="btn">
+                  <i class="gnb-ico ico-music"></i>
+                  <em>Music</em> <span>듣다</span>
+                </button>
+                <ul class="gnb-menu__depbox">
+                  <li><a href="#">음악 리뷰</a></li>
+                  <li><a href="#">음악 공연 정보</a></li>
+                  <li><a href="#">테마 칼럼&middot;인터뷰</a></li>
+                  <li><a href="#">Music News</a></li>
+                </ul>
+              </li>
+              <li class="gnb-nav" data-accordion="group">
+                <span class="header-tit show-pc">Stage·Cine, 즐기다</span>
+                <button type="button" class="accor-btn show-mo" data-accordion="btn">
+                  <i class="gnb-ico ico-stage"></i>
+                  <em>Stage&Cine</em> <span>즐기다</span></button>
+                <ul class="gnb-menu__depbox">
+                  <li><a href="#">공연&middot;영화 리뷰</a></li>
+                  <li><a href="#">공연 정보</a></li>
+                  <li><a href="#">Stage&middot;Cine 테마칼럼&middot;인터뷰</a></li>
+                  <li><a href="#">Stage&middot;Cine News</a></li>
+                </ul>
+              </li>
+              <li class="gnb-nav" data-accordion="group">
+                <span class="header-tit show-pc">Art, 보다</span>
+                <button type="button" class="accor-btn show-mo" data-accordion="btn">
+                  <i class="gnb-ico ico-art"></i>
+                  <em>Art</em> <span>보다</span></button>
+                <ul class="gnb-menu__depbox">
+                  <li><a href="#">전시 리뷰</a></li>
+                  <li><a href="#">전시 정보</a></li>
+                  <li><a href="#">해외 전시 하이라이트</a></li>
+                  <li><a href="#">Art 테마칼럼&middot;인터뷰</a></li>
+                  <li><a href="#">Art News</a></li>
+                  <li><a href="#">미술시장 분석</a></li>
+                </ul>
+              </li>
+              <li class="gnb-nav" data-accordion="group">
+                <span class="header-tit show-pc">Book, 읽다 </span>
+                <button type="button" class="accor-btn show-mo" data-accordion="btn">
+                  <i class="gnb-ico ico-book"></i>
+                  <em>Book</em> <span>읽다</span></button>
+                <ul class="gnb-menu__depbox">
+                  <li><a href="#">문학&middot;고전 리뷰</a></li>
+                  <li><a href="#">책 정보</a></li>
+                  <li><a href="#">Book 테마칼럼&middot;인터뷰</a></li>
+                  <li><a href="#">Book News</a></li>
+                </ul>
+              </li>
+              <li class="gnb-nav dep--2" data-accordion="group">
+                <span class="header-tit show-pc">arte TALK </span>
+                <button type="button" class="accor-btn show-mo" data-accordion="btn">
+                  <i class="gnb-ico ico-talk"></i>
+                  <em>arte Talk</em></button>
+                <ul class="gnb-menu__depbox">
+                  <li><a href="#">문화예술계 소식</a></li>
+                  <li><a href="#">arte TALK TALK</a></li>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">arte Poll</a></li>
+                </ul>
+              </li>
+              <li class="gnb-nav dep--2" data-accordion="group">
+                <span class="header-tit show-pc">arte 영상</span>
+                <button type="button" class="accor-btn show-mo" data-accordion="btn">
+                  <i class="gnb-ico ico-video"></i>
+                  <em>arte 영상</em></button>
+                <ul class="gnb-menu__depbox">
+                  <li><a href="#">arte 유튜브 LIVE</a></li>
+                  <li><a href="#">arte 영상</a></li>
+                </ul>
+              </li>
+              <li class="gnb-nav dep--2" data-accordion="group">
+                <span class="header-tit show-pc">Art FINDER</span>
+                <button type="button" class="accor-btn show-mo" data-accordion="btn">
+                  <i class="gnb-ico ico-finder"></i>
+                  <em>ART FINDER</em></button>
+                <ul class="gnb-menu__depbox">
+                  <li><a href="#">arte Map</a></li>
+                  <li><a href="#">arte Calendar</a></li>
+                  <li><a href="#">artist DB</a></li>
+                </ul>
+              </li>
+              <!-- all-menu-side__wrap 사이드 영역으로 li 추가 시 위에 마크업 추가 -->
+              <li class="all-menu-side__wrap">
+                <div class="all-menu-side">
+                  <!-- slider banner : pc -->
+                  <div class="buddy-card swiper show-pc">
+                    <ul class="buddy-card__list swiper-wrapper">
+                      <li class="buddy-card__item swiper-slide">
+                        <a href="#" class="buddy-card__box">
+                          <span class="buddy-card__img">
+                            <img src="../assets/images/@temp/@temp_gnb_banner01.jpg" alt="" />
+                          </span>
+                          <p class="buddy-card__text">아르떼 개편 및 집콕집밖 설특별전 감상이벤트 1</p>
+                        </a>
+                      </li>
+                      <li class="buddy-card__item swiper-slide">
+                        <a href="#" class="buddy-card__box">
+                          <span class="buddy-card__img">
+                            <img src="../assets/images/@temp/@temp_gnb_banner01.jpg" alt="" />
+                          </span>
+                          <p class="buddy-card__text">아르떼 개편 및 집콕집밖 설특별전 감상이벤트 2</p>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <!--// slider banner : pc -->
+                  <!-- buddy banner -->
+                  <div class="buddy-banner">
+                    <h3 class="header-tit">아르떼와 친구들</h3>
+                    <ul class="buddy-banner__list">
+                      <li><a href="#" class="buddy-banner__item">
+                          <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_01.png"
+                              alt=""></span>
+                          <em class="buddy-banner__text">유니버설뮤직 클래식</em></a>
+                      </li>
+                      <li><a href="#" class="buddy-banner__item">
+                          <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_02.png"
+                              alt=""></span>
+                          <em class="buddy-banner__text">민음사TV</em></a>
+                      </li>
+                      <li><a href="#" class="buddy-banner__item">
+                          <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_03.png"
+                              alt=""></span>
+                          <em class="buddy-banner__text">금호아트홀</em></a>
+                      </li>
+                      <li><a href="#" class="buddy-banner__item">
+                          <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_04.png"
+                              alt=""></span>
+                          <em class="buddy-banner__text">첼로댁</em></a>
+                      </li>
+                      <li><a href="#" class="buddy-banner__item">
+                          <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_05.png"
+                              alt=""></span>
+                          <em class="buddy-banner__text">하우스콘서트</em></a>
+                      </li>
+                      <li><a href="#" class="buddy-banner__item">
+                          <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_06.png"
+                              alt=""></span>
+                          <em class="buddy-banner__text">예술의 이유</em></a>
+                      </li>
+                      <li><a href="#" class="buddy-banner__item">
+                          <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_07.png"
+                              alt=""></span>
+                          <em class="buddy-banner__text">워너클래식 코리아</em></a>
+                      </li>
+                      <li><a href="#" class="buddy-banner__item">
+                          <span class="buddy-banner__img"><img src="../assets/images/@temp/@friends_08.png"
+                              alt=""></span>
+                          <em class="buddy-banner__text">공셸TV</em></a>
+                      </li>
+                    </ul>
+                    <a href="#" class="buddy-banner__more" aria-lable="more"></a>
+                  </div>
+                  <!-- //buddy banner -->
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- //menu list -->
+          <!-- sns -->
+          <div class="all-sns_wrap show-mo">
+            <hr class="devider" aria-hidden="true">
+            <ul class="all-sns-list">
+              <li class="all-sns-list__item">
+                <a href="#" class="all-sns-list__link facebook-item">
+                  <span class="name">페이스북</span>
+                </a>
+              </li>
+              <li class="all-sns-list__item">
+                <a href="#" class="all-sns-list__link insta-item">
+                  <span class="name">인스타그램</span>
+                </a>
+              </li>
+              <li class="all-sns-list__item">
+                <a href="#" class="all-sns-list__link twitter-item">
+                  <span class="name">트위터</span>
+                </a>
+              </li>
+              <li class="all-sns-list__item">
+                <a href="#" class="all-sns-list__link youtube-item">
+                  <span class="name">유튜브</span>
+                </a>
+              </li>
+            </ul>
 
-    <!-- 마이페이지 -->
-    <div class="header-global-mypage type-right" data-header-box="mypage">
-      <div class="header__nav">
-        <div class="header-info">
-          <p class="header-info__name">간만에카페인가가가가</p>
-          <p class="header-info__email">guest01@hankung.com</p>
-          <div class="header-info__btns">
-            <button type="button" class="btn size-sm c-primary">로그아웃</button>
           </div>
-        </div>
-        <div class="nav-links">
-          <h3 class="header-tit">마이페이지</h3>
-          <div class="nav-links__list">
-            <a href="#" class="nav-links__btn">좋아한 콘텐츠</a>
-            <a href="#" class="nav-links__btn">나의 활동</a>
-            <a href="#" class="nav-links__btn">나의 정보</a>
-            <a href="#" class="nav-links__btn">1:1문의</a>
+          <!-- //sns -->
+          <!-- all-section-bottom -->
+          <div class="all-section-bottom show-mo">
+            <div class="all-section-bottom__inner">
+              <button type="button" class="inquiry-btn">1:1문의</button>
+              <button type="button" class="inquiry-btn">FAQ</button>
+            </div>
           </div>
+          <!-- //all-section-bottom -->
         </div>
       </div>
-    </div>
-    <!--// 마이페이지 -->
-  </section>
-  <!--// header Layer section -->
-</div>
-<!--// Main Header -->
+    </section>
+    <!--// all menu -->
+  </div>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-  <title>Default LAYOUT | 한경 ARTE</title>
+  <title>3 Depth | 한경 ARTE</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
@@ -18,21 +18,37 @@
 
 <!-- dark mode 일 경우 body 'dark-mode' 추가 -->
 
-<body>
+<body class="dark-mode">
   <div id="wrap" class="wrap">
 
-    <!-- Header -->
+    <!-- Header : header-3depth -->
     <header class="header" id="header">
-      <div class="header__inner inner-depth has-depth">
+      <div class="header__inner inner-depth header-3depth">
         <!-- block -->
         <div class="header__block">
           <div class="header__left">
 
             <a href="#" class="btn-back" aria-label="이전으로"></a>
+            <!-- current title -->
+            <div class="header__curr">조승우, 13년만에 개막하는 '오페라의 유령' 주인공 맡는다.</div>
 
             <!-- 버튼 활성화 'is-gnb-active', 메뉴 활성화 'is-active' 추가 -->
             <div class="gnb-menu">
-              <strong class="gnb-menu__current" data-gnb-sel-cur="arte"><em>arte</em></strong>
+              <button type="button" class="gnb-menu__current" data-gnb-sel-cur="arte"><em>arte</em></button>
+              <ul class="gnb-menu__list">
+                <li class="arte is-active"><a href="#" data-gnb-sel="arte"><em class="display-tit">arte</em> <span
+                      class="display-item">home</span></a></li>
+                <li class="music"><a href="#" data-gnb-sel="music"><em>MUSIC</em> <span class="text">듣다</span></a></li>
+                <li class="stage-cine"><a href="#" data-gnb-sel="stage-cine"><em>STAGE&CINE</em> <span
+                      class="text">즐기다</span></a></li>
+                <li class="art"><a href="#" data-gnb-sel="art"><em>ART</em> <span class="text">보다</span></a></li>
+                <li class="book"><a href="#" data-gnb-sel="book"><em>BOOK</em> <span class="text">읽다</span></a></li>
+                <li class="arte-talk"><a href="#" data-gnb-sel="arte-talk"><em>arteTALK</em></a></li>
+                <li class="arte-video"><a href="#" data-gnb-sel="arte-video"><em>arte</em> <span
+                      class="text">영상</span></a>
+                </li>
+                <li class="art-finder"><a href="#" data-gnb-sel="art-finder"><em>Art Finder</em></a></li>
+              </ul>
             </div>
           </div>
 
@@ -565,6 +581,7 @@
           </div>
         </section>
         <!--// all menu -->
+
       </div>
     </header>
     <!--// Header -->
@@ -572,7 +589,7 @@
     <!-- Container -->
     <div class="container" id="container">
       <!-- START -->
-      <div class="content" style="min-height:2000px;">
+      <div class="content" style="min-height:2000px;   background-color: green;">
         <!-- 임시 높이 삭제 필요-->
 
         Content - Layout 확인용

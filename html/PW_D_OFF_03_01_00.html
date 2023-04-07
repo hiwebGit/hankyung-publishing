@@ -30,15 +30,95 @@
 
     <!-- Container -->
     <div class="container" id="container">
-      <!-- Full KV : 작업중-->
-      <div class="page-kv">
+      <!-- Full KV -->
+      <div class="page-kv kv-info-book-wrpper">
         <div class="kv-title">
           <h2 class="kv-title__title">HOT &amp; TRENDY</h2>
-          <p class="kv-title__desc">실시간으로 집계된 금주 인기 책 TOP 12</p>
+          <p class="kv-title__desc">arte 추천 책</p>
         </div>
-        <div class="temp" style="text-align: center;">KV</div>
+        <div class="kv-info-book">
+          <div class="kv-info-book__inner" data-slider="curation" data-swiper='{
+                  "slidesPerView": "auto",
+                  "slideToClickedSlide": true,
+                  "pagination": {
+                    "type": "fraction"
+                  },
+                  "breakpoints": {
+                    "1280": {
+                      "slidesPerView": 2,
+                      "spaceBetween" : 128
+                    },
+                    "768": {
+                      "slidesPerView": 1,
+                      "spaceBetween" : 16
+                    }
+                  },
+                  "touchRatio": 0.2,
+                  "autoplay": true,
+                  "loop":true,
+                  "speed": 1000,
+                  "navigation": true
+                }'>
+            <strong class="point-text">arte’s Books</strong>
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <em class="num">1</em>
+                <button type="button" class="btn-fav" aria-label="Like"></button>
+                <div class="img-box">
+                  <a href="#">
+                    <img class="img" src="../assets/images/@temp/@temp_book_04.png" alt="">
+                  </a>
+                </div>
+                <div class="text-box">
+                  <p class="title"><a href="#">총상 입은 밤하늘</a></p>
+                  <div class="desc">
+                    <span class="writer">고명재 저</span>
+                    <span class="publ">문학동네</span>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <em class="num">2</em>
+                <button type="button" class="btn-fav" aria-label="Like"></button>
+                <div class="img-box">
+                  <a href="#">
+                    <img class="img" src="../assets/images/@temp/@temp_book_05.png" alt="">
+                  </a>
+                </div>
+                <div class="text-box">
+                  <p class="title"><a href="#">제목 길면 1줄 제목 길면 1줄 제목 길면 1줄 제목 길면 1줄</a></p>
+                  <div class="desc">
+                    <span class="writer">고명재 저</span>
+                    <span class="publ">문학동네</span>
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <em class="num">3</em>
+                <button type="button" class="btn-fav" aria-label="Like"></button>
+                <div class="img-box">
+                  <a href="#">
+                    <img class="img" src="../assets/images/@temp/@temp_book_06.png" alt="">
+                  </a>
+                </div>
+                <div class="text-box">
+                  <p class="title"><a href="#">완벽한 생애</a></p>
+                  <div class="desc">
+                    <span class="writer">조혜진 저 </span>
+                    <span class="publ">창비</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-controls">
+              <div class="swiper-pagination"></div>
+              <button type="button" class="swiper--btn swiper-prev">이전</button>
+              <button type="button" class="swiper--btn swiper-next">다음</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <!--// Full KV : 작업중 -->
+      <!--// Full KV -->
 
       <!-- START -->
       <div class="content">
@@ -49,20 +129,24 @@
             <div class="ad-banner__list swiper-wrapper">
               <a href="#" class="ad-banner__item swiper-slide">
                 <!-- Img PC -->
-                <img src="../assets/images/@temp/@banner01_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
+                <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <!-- Img PC 2 -->
+                <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
                 <!-- Img Tablet -->
-                <img src="../assets/images/@temp/@banner01_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet" />
+                <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <!-- Img Tablet 2 -->
+                <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
                 <!-- Img Mobile -->
-                <img src="../assets/images/@temp/@banner01_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
               <a href="#" class="ad-banner__item swiper-slide">
-                <img src="../assets/images/@temp/@banner02_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
-                <img src="../assets/images/@temp/@banner02_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet">
-                <img src="../assets/images/@temp/@banner02_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
+                <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
             </div>
           </div>
@@ -211,7 +295,7 @@
                             <div class="filter-options__items">
                               <p class="filter-options__tit">평점</p>
                               <div class="filter-options__items-cont">
-                                <ul class="filter-options__items-list">
+                                <ul class="filter-options__items-list m-col2">
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status"
                                         checked /><span class="o-rdo__label">전체</span></label></li>
                                   <li><label class="o-rdo"><input type="checkbox" class="o-input"
@@ -280,7 +364,7 @@
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
                           <span class="img-holder">
-                            <img src="../assets/images/@temp/@temp_thumb01.jpg" alt="">
+                            <img src="../assets/images/@temp/@temp_book_03.png" alt="">
                           </span>
                           <span class="tag-gen tag-gen--gy">문학</span>
                         </a>
@@ -311,7 +395,7 @@
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
                           <span class="img-holder">
-                            <img src="../assets/images/@temp/@temp_thumb02.jpg" alt="">
+                            <img src="../assets/images/@temp/@temp_book_04.png" alt="">
                           </span>
                           <span class="tag-gen tag-gen--gy">문학</span>
                         </a>
@@ -345,7 +429,7 @@
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
                           <span class="img-holder">
-                            <img src="../assets/images/@temp/@temp_thumb03.jpg" alt="">
+                            <img src="../assets/images/@temp/@temp_book_02.png" alt="">
                           </span>
                           <span class="tag-gen tag-gen--gy">문학</span>
                         </a>
@@ -375,7 +459,7 @@
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
                           <span class="img-holder">
-                            <img src="../assets/images/@temp/@temp_thumb04.jpg" alt="">
+                            <img src="../assets/images/@temp/@temp_book_01.png" alt="">
                           </span>
                           <span class="tag-gen tag-gen--gy">문학</span>
                         </a>
@@ -435,7 +519,7 @@
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
                           <span class="img-holder">
-                            <img src="../assets/images/@temp/@temp_thumb01.jpg" alt="">
+                            <img src="../assets/images/@temp/@temp_book_03.png" alt="">
                           </span>
                           <span class="tag-gen tag-gen--gy">문학</span>
                         </a>
@@ -465,7 +549,7 @@
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
                           <span class="img-holder">
-                            <img src="../assets/images/@temp/@temp_thumb02.jpg" alt="">
+                            <img src="../assets/images/@temp/@temp_book_04.png" alt="">
                           </span>
                           <span class="tag-gen tag-gen--gy">문학</span>
                         </a>
@@ -495,7 +579,7 @@
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
                           <span class="img-holder">
-                            <img src="../assets/images/@temp/@temp_thumb03.jpg" alt="">
+                            <img src="../assets/images/@temp/@temp_book_02.png" alt="">
                           </span>
                           <span class="tag-gen tag-gen--gy">문학</span>
                         </a>
@@ -530,7 +614,7 @@
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
                           <span class="img-holder">
-                            <img src="../assets/images/@temp/@temp_thumb04.jpg" alt="">
+                            <img src="../assets/images/@temp/@temp_book_01.png" alt="">
                           </span>
                           <span class="tag-gen tag-gen--gy">문학</span>
                         </a>
@@ -621,7 +705,7 @@
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
                           <span class="img-holder">
-                            <img src="../assets/images/@temp/@temp_thumb01.jpg" alt="">
+                            <img src="../assets/images/@temp/@temp_book_03.png" alt="">
                           </span>
                           <span class="tag-gen tag-gen--gy">문학</span>
                         </a>
@@ -652,7 +736,7 @@
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
                           <span class="img-holder">
-                            <img src="../assets/images/@temp/@temp_thumb02.jpg" alt="">
+                            <img src="../assets/images/@temp/@temp_book_04.png" alt="">
                           </span>
                           <span class="tag-gen tag-gen--gy">문학</span>
                         </a>
@@ -683,7 +767,7 @@
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
                           <span class="img-holder">
-                            <img src="../assets/images/@temp/@temp_thumb04.jpg" alt="">
+                            <img src="../assets/images/@temp/@temp_book_01.png" alt="">
                           </span>
                           <span class="tag-gen tag-gen--gy">문학</span>
                         </a>
@@ -745,7 +829,7 @@
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
                           <span class="img-holder">
-                            <img src="../assets/images/@temp/@temp_thumb01.jpg" alt="">
+                            <img src="../assets/images/@temp/@temp_book_03.png" alt="">
                           </span>
                           <span class="tag-gen tag-gen--gy">문학</span>
                         </a>
@@ -775,7 +859,7 @@
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
                           <span class="img-holder">
-                            <img src="../assets/images/@temp/@temp_thumb02.jpg" alt="">
+                            <img src="../assets/images/@temp/@temp_book_04.png" alt="">
                           </span>
                           <span class="tag-gen tag-gen--gy">문학</span>
                         </a>
@@ -805,7 +889,7 @@
                       <div class="pdt__card">
                         <a href="#" class="thumb-img">
                           <span class="img-holder">
-                            <img src="../assets/images/@temp/@temp_thumb04.jpg" alt="">
+                            <img src="../assets/images/@temp/@temp_book_01.png" alt="">
                           </span>
                           <span class="tag-gen tag-gen--gy">문학</span>
                         </a>
@@ -950,6 +1034,7 @@
   <script src="../assets/js/libs/swiper.min.js"></script>
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
+  <script src="../assets/js/curation.js"></script> <!-- curation slider -->
   <!--// Script -->
 </body>
 

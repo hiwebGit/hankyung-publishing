@@ -138,6 +138,7 @@
         if (typeof $(swEl).data('ui') === 'undefined') {
           if (typeof swEl.options.thumbs === 'undefined') {
             swInstance = new Swiper(swEl, swEl.options);
+            //console.log(swEl.options);
             $(swEl).data('ui', swInstance);
           } else {
             const mappingSw = $(swEl).closest('[data-role="swiper-container"]').find('[data-slider="curation"]')[0].swiper;

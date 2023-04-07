@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-  <title>Default LAYOUT | 한경 ARTE</title>
+  <title>1 Depth | 한경 ARTE</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
 
   <!-- font -->
   <link rel="preload" href="../assets/fonts/Pretendard-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
@@ -14,77 +15,54 @@
   <link rel="preload" href="../assets/fonts/Pretendard-SemiBold.subset.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/PPEditorialNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/Faktum-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <!--// font -->
 </head>
+
+
 
 <!-- dark mode 일 경우 body 'dark-mode' 추가 -->
 
-<body>
+<body class="dark-mode">
   <div id="wrap" class="wrap">
 
-    <!-- Header -->
+    <div id="accessibility">
+      <a href="#container">본문 바로가기</a>
+      <!-- <a href="#contents">본문 바로가기</a> -->
+      <!-- <a href="#gnbNav">주요메뉴 바로가기</a> -->
+    </div>
+
+    <!-- Header : header-1depth -->
     <header class="header" id="header">
-      <div class="header__inner inner-depth has-depth">
+      <div class="header__inner header-1depth">
         <!-- block -->
-        <div class="header__block">
+        <div class="header__main-block">
           <div class="header__left">
+            <h1 class="header-logo">
+              <a href="#" class="arte-logo">
+                <em class="logo-a">A</em><span>RTE</span>
+              </a>
+            </h1>
 
             <a href="#" class="btn-back" aria-label="이전으로"></a>
+            <!-- current title -->
+            <div class="header__curr">조승우, 13년만에 개막하는 '오페라의 유령' 주인공 맡는다.</div>
 
-            <!-- 버튼 활성화 'is-gnb-active', 메뉴 활성화 'is-active' 추가 -->
-            <div class="gnb-menu">
-              <strong class="gnb-menu__current" data-gnb-sel-cur="arte"><em>arte</em></strong>
-            </div>
-          </div>
-
-          <!-- 메뉴 활성화 'is-lnb-active' 버튼 활성화 'is-active' 추가 -->
-          <div class="lnb-menu">
-            <button type="button" class="lnb-menu__current">음악 리뷰</button>
-            <ul class="lnb-menu__list">
-              <li class="is-active"><a href="#">음악 리뷰</a></li>
-              <li><a href="#">음악 공연 정보</a></li>
-              <li><a href="#">MUSIC 테마 칼럼·인터뷰</a></li>
-              <li><a href="#">MUSIC NEWS</a></li>
+            <ul class="gnb">
+              <li><a href="#" data-gnb="music">MUSIC <span class="text">듣다</span></a></li>
+              <li><a href="#" data-gnb="stage">STAGE&middot;CINE <span class="text">즐기다</span></a></li>
+              <li><a href="#" data-gnb="art">ART <span class="text">보다</span></a></li>
+              <li><a href="#" data-gnb="book">BOOK <span class="text">읽다</span></a></li>
             </ul>
-            <!-- <ul class="lnb-menu__list">
-              <li><a href="#">공연·영화 리뷰</a></li>
-              <li><a href="#">공연 정보</a></li>
-              <li><a href="#">Stage·Cine 테마칼럼·인터뷰</a></li>
-              <li><a href="#">Stage·Cine News</a></li>
-            </ul>
-            <ul class="lnb-menu__list">
-              <li><a href="#">전시 리뷰</a></li>
-              <li><a href="#">전시 정보</a></li>
-              <li><a href="#">해외 전시 하이라이트</a></li>
-              <li><a href="#">Art 테마칼럼·인터뷰</a></li>
-              <li><a href="#">Art News</a></li>
-              <li><a href="#">미술시장 분석</a></li>
-            </ul>
-            <ul class="lnb-menu__list">
-              <li><a href="#">문학·고전 리뷰</a></li>
-              <li><a href="#">탐나는 책</a></li>
-              <li><a href="#">책 정보</a></li>
-              <li><a href="#">Book 테마칼럼·인터뷰</a></li>
-              <li><a href="#">Book News</a></li>
-            </ul>
-            <ul class="lnb-menu__list">
-              <li><a href="#">문화예술계 소식</a></li>
-              <li><a href="#">arte TALK TALK</a></li>
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">arte Poll</a></li>
-            </ul>
-            <ul class="lnb-menu__list">
-              <li><a href="#">arte Map</a></li>
-              <li><a href="#">arte Calendar</a></li>
-              <li><a href="#">artist DB</a></li>
-            </ul>
-            <div class="lnb-menu__list">
-              <li><a href="#">arte 유튜브 LIVE</a></li>
-              <li><a href="#">arte 영상</a></li>
-            </div> -->
           </div>
 
           <div class="header-utils">
             <ul class="gnb-utils">
+              <li><a href="#" class="util-btn ico-talk" data-gnb="talk" data-dir="right">
+                  <em class="text">arte TALK</em></a></li>
+              <li><a href="#" class="util-btn ico-video" data-gnb="video" data-dir="right">
+                  <em class="text">arte 영상</em></a></li>
+              <li><a href="#" class="util-btn ico-finder" data-gnb="finder" data-dir="right">
+                  <em class="text">art FINDER</em></a></li>
               <li><a href="#" class="util-btn ico-search" aria-label="Search" data-menu="search"></a></li>
               <li><a href="#" class="util-btn ico-person" aria-label="Person" data-menu="mypage"></a></li>
             </ul>
@@ -571,14 +549,12 @@
 
     <!-- Container -->
     <div class="container" id="container">
-      <!-- START -->
-      <div class="content" style="min-height:2000px;">
+      <div class="content" style="min-height:2000px; background-color: green;">
         <!-- 임시 높이 삭제 필요-->
 
         Content - Layout 확인용
 
       </div>
-      <!--// END -->
     </div>
     <!--// Container -->
 
@@ -641,10 +617,10 @@
   <!-- Script -->
   <script src="../assets/js/libs/jquery.min.js"></script>
   <script src="../assets/js/libs/swiper.min.js"></script>
-  <!-- <script src="../assets/js/libs/jquery-ui.min.js"></script> -->
-  <!-- <script src="../layout/js/layout.js"></script> layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
+  <!-- <script src="../layout/js/layout.js"></script> layout 용도로 퍼블 HTML 에만 사용 -->
   <!--// Script -->
+
 </body>
 
 </html>

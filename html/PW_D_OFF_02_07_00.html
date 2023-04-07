@@ -30,15 +30,106 @@
 
     <!-- Container -->
     <div class="container" id="container">
-      <!-- Full KV : 작업중-->
-      <div class="page-kv">
+      <!-- Full KV -->
+      <div class="page-kv kv-overseas-wrapper">
         <div class="kv-title">
           <h2 class="kv-title__title">해외전시 하이라이트</h2>
           <p class="kv-title__desc">해외 전시계 핫이슈, 트렌드 및 생생한 소식들</p>
         </div>
-        <div class="temp" style="text-align: center;">KV</div>
+        <div class="kv-overseas" data-role="swiper-container">
+          <div class="kv-overseas__text" data-slider="curation" data-swiper='{
+              "effect": "fade",
+              "fadeEffect": {
+                "crossFade": true
+              },
+              "slideToClickedSlide": true,
+              "slidesPerView": "auto",
+              "touchRatio": 0.2,
+              "loop": true
+            }'>
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="text-box">
+                  <a href="#">
+                    <strong class="title">1 exhibition highlight exhibition highlight</strong>
+                    <p class="sub-tit">사라장 &amp;비르투지오 사라장 &amp;비르투지오 사라장 &amp;비르투지오 사라장 &amp;비르투지오 사라장 &amp;비르투지오</p>
+                  </a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="text-box">
+                  <a href="#">
+                    <strong class="title">2 exhibition highlight exhibition highlight</strong>
+                    <p class="sub-tit">사라장 &amp;비르투지오 사라장 &amp;비르투지오 사라장 &amp;비르투지오 사라장 &amp;비르투지오 사라장 &amp;비르투지오</p>
+                  </a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="text-box">
+                  <a href="#">
+                    <strong class="title">3 exhibition highlight exhibition highlight</strong>
+                    <p class="sub-tit">사라장 &amp;비르투지오 사라장 &amp;비르투지오 사라장 &amp;비르투지오 사라장 &amp;비르투지오 사라장 &amp;비르투지오</p>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="kv-overseas__img-cover">
+            <div class="kv-overseas__img" data-slider="curation" data-swiper='{
+              "touchRatio": 0.2,
+              "navigation": true,
+              "autoplay": true,
+              "pagination": {
+                "type": "fraction"
+              },
+              "breakpoints": {
+                "768": {
+                  "spaceBetween": 8,
+                  "autoHeight": true
+                }
+              },
+              "loop": true,
+              "thumbs": {
+                "swiper": null
+              }
+            }'>
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="thumb-holder">
+                    <a href="#">
+                      <img class="img" src="../assets/images/@temp/@view_img01.jpg" alt="">
+                    </a>
+                    <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="thumb-holder">
+                    <a href="#">
+                      <img class="img" src="../assets/images/@temp/@view_img02.jpg" alt="">
+                    </a>
+                    <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="thumb-holder">
+                    <a href="#">
+                      <img class="img" src="../assets/images/@temp/@view_img03.jpg" alt="">
+                    </a>
+                    <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="swiper-controls size-lg">
+            <div class="swiper-pagination"></div>
+            <button type="button" class="swiper--btn swiper-prev">이전</button>
+            <button type="button" class="swiper--btn swiper-next">다음</button>
+          </div>
+        </div>
       </div>
-      <!--// Full KV : 작업중 -->
+      <!--// Full KV -->
 
       <!-- START -->
       <div class="content">
@@ -49,20 +140,24 @@
             <div class="ad-banner__list swiper-wrapper">
               <a href="#" class="ad-banner__item swiper-slide">
                 <!-- Img PC -->
-                <img src="../assets/images/@temp/@banner01_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
+                <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <!-- Img PC 2 -->
+                <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
                 <!-- Img Tablet -->
-                <img src="../assets/images/@temp/@banner01_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet" />
+                <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <!-- Img Tablet 2 -->
+                <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
                 <!-- Img Mobile -->
-                <img src="../assets/images/@temp/@banner01_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
               <a href="#" class="ad-banner__item swiper-slide">
-                <img src="../assets/images/@temp/@banner02_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
-                <img src="../assets/images/@temp/@banner02_tablet.png" alt="ad banner"
-                  class="ad-banner__img img--tablet">
-                <img src="../assets/images/@temp/@banner02_mobile_@2x.png" alt="ad banner"
-                  class="ad-banner__img img--mobile" />
+                <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
+                <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
+                  class="ad-banner__img img--mo" />
               </a>
             </div>
           </div>
@@ -93,9 +188,9 @@
                 <div class="ex-snb__filter">
                   <ul class="form-group form-group--col2">
                     <li><label class="chkbox-rnd"><input type="radio" class="o-input" name="chk-cate" checked />
-                        <span class="label-text">인기</span></label></li>
+                        <span class="label-text">HOT</span></label></li>
                     <li><label class="chkbox-rnd"><input type="radio" class="o-input" name="chk-cate" />
-                        <span class="label-text">추천</span></label></li>
+                        <span class="label-text">NEW</span></label></li>
                   </ul>
                 </div>
                 <div class="ex-snb__body">
@@ -546,6 +641,7 @@
   <script src="../assets/js/libs/swiper.min.js"></script>
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
+  <script src="../assets/js/curation.js"></script> <!-- curation slider -->
   <!--// Script -->
 </body>
 
