@@ -33,8 +33,8 @@
 
   // all menu show/hide
   UI.allMenu = {
-    openBtn: '.all-menu-btn',
-    closeBtn: '.all-menu-close ',
+    openBtn: '[data-allmenu=open]',
+    closeBtn: '[data-allmenu=close]',
     allSect: '.all-section',
     allSectActive: 'is-active',
     allMenuSw: null,
