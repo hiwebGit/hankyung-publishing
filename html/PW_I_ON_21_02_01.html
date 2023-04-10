@@ -35,14 +35,15 @@
           <div class="my-namebox">
             <span class="my-namebox__name">간만에카페인간만에카</span>
           </div>
-
+          <!-- 모바일 활성화 시 is-active 클래스 추가 -->
           <div class="my-lnb">
             <ul class="my-lnb__list">
-              <li class="my-lnb__item">
-                <a href="#" class="my-lnb__1dep">좋아한 콘텐츠</a>
+              <li class="my-lnb__item" data-accordion="group">
+                <!-- my-lnb__depbox 있을경우 ex__item 클래스 추가 -->
+                <a href="#" class="my-lnb__1dep ex__item" data-accordion="btn">좋아한 콘텐츠</a>
                 <ul class="my-lnb__depbox">
-                  <li><a href="#" class="is-active">음악·공연·전시·책</a></li>
-                  <li class="is-active"><a href="#">리뷰</a></li>
+                  <li><a href="#">음악·공연·전시·책</a></li>
+                  <li><a href="#" class="is-active">리뷰</a></li>
                   <li><a href="#">뉴스</a></li>
                   <li><a href="#">아티스트</a></li>
                   <li><a href="#">영상</a></li>
@@ -51,22 +52,24 @@
                   <li><a href="#">댓글·답글</a></li>
                 </ul>
               </li>
-              <li class="my-lnb__item">
-                <a href="#" class="my-lnb__1dep">나의 활동</a>
+              <li class="my-lnb__item" data-accordion="group">
+                <a href="#" class="my-lnb__1dep ex__item" data-accordion="btn">나의 활동</a>
                 <ul class="my-lnb__depbox">
                   <li><a href="#">작성 글</a></li>
                   <li><a href="#">작성 댓글·답글</a></li>
-                  <li><a href="#">작성중인 리뷰</a></li>
+                  <li><a href="#">임시저장 글</a></li>
                 </ul>
               </li>
-              <li class="my-lnb__item">
-                <a href="#" class="my-lnb__1dep">나의 정보</a>
+              <li class="my-lnb__item" data-accordion="group">
+                <a href="#" class="my-lnb__1dep" data-accordion="btn">나의 정보</a>
               </li>
               <li class="my-lnb__item">
                 <a href="#" class="my-lnb__1dep">1:1 문의</a>
               </li>
             </ul>
           </div>
+
+
         </div>
         <!--// snb -->
         <div class="my-content">
@@ -182,30 +185,30 @@
                 </div>
               </div>
               <!--// item : arte's pick -->
-              <!-- item -->
+              <!-- item : book -->
               <div class="pdt-grid__item">
                 <!-- book type 'pdt--sm'추가 -->
                 <div class="pdt pdt--sm">
                   <div class="pdt__card">
                     <a href="#" class="thumb-img">
                       <span class="img-holder">
-                        <img src="../assets/images/@temp/@temp_thumb04.jpg" alt="">
+                        <img src="../assets/images/@temp/@temp_book_02.png" alt="">
                       </span>
-                      <span class="tag-gen tag-gen--gy">문학</span>
+                      <span class="tag-gen tag-gen--gy">책</span>
                     </a>
 
                     <div class="pdt__inbox">
                       <a href="#" class="pdt__title">히사이시 조 영화음악 콘서트 2023_서울 히사이시 조 영화음악 콘서트 2023_서울 말줄임</a>
                       <ul class="art-info">
-                        <li>2022. 03. 16 ~2022. 11. 27</li>
-                        <li>잠실종합운동장 내 빅탑</li>
+                        <li>이치조 미사키</li>
+                        <li>모모</li>
                       </ul>
                       <button type="button" class="btn-fav btn-fav--wt is-fav" aria-label="Like"></button>
                     </div>
                   </div>
                 </div>
               </div>
-              <!--// item -->
+              <!--// item : book -->
               <!-- item -->
               <div class="pdt-grid__item">
                 <div class="pdt">
@@ -229,29 +232,36 @@
                 </div>
               </div>
               <!--// item -->
-              <!-- item -->
+              <!-- item : book -->
               <div class="pdt-grid__item">
-                <div class="pdt">
+                <div class="pdt pdt--sm">
                   <div class="pdt__card">
                     <a href="#" class="thumb-img">
                       <span class="img-holder">
-                        <img src="../assets/images/@temp/@temp_thumb01.jpg" alt="">
+                        <img src="../assets/images/@temp/@temp_book_04.png" alt="">
                       </span>
-                      <span class="tag-gen">연극</span>
+                      <span class="tag-gen tag-gen--gy">책</span>
                     </a>
 
                     <div class="pdt__inbox">
-                      <a href="#" class="pdt__title">히사이시 조 영화음악 콘서트 2023_서울 히사이시 조 영화음악 콘서트 2023_서울 말줄임</a>
+                      <a href="#" class="pdt__title">오늘 밤, 세계에서 이 사랑이 사라진다 해도</a>
                       <ul class="art-info">
-                        <li>2022. 03. 16 ~2022. 11. 27</li>
-                        <li>잠실종합운동장 내 빅탑</li>
+                        <li>김연수</li>
+                        <li>문학동네</li>
                       </ul>
-                      <button type="button" class="btn-fav btn-fav--wt is-fav" aria-label="Like"></button>
+                      <div class="pdt__status">
+                        <span class="tag-gen-s w-auto">책</span>
+                        <span class="grade">
+                          <span class="star"><i class="star__point p8"></i></span>
+                          <em class="grade__num">8.0</em>
+                        </span>
+                        <button type="button" class="btn-fav btn-fav--gy" aria-label="Like"></button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!--// item -->
+              <!--// item : book -->
               <!-- item -->
               <div class="pdt-grid__item">
                 <div class="pdt">
@@ -373,16 +383,16 @@
                 </div>
               </div>
               <!--// item -->
-              <!-- item -->
+              <!-- item : book -->
               <div class="pdt-grid__item">
                 <!-- book type 'pdt--sm'추가 -->
                 <div class="pdt pdt--sm">
                   <div class="pdt__card">
                     <a href="#" class="thumb-img">
                       <span class="img-holder">
-                        <img src="../assets/images/@temp/@temp_thumb01.jpg" alt="">
+                        <img src="../assets/images/@temp/@temp_book_01.png" alt="">
                       </span>
-                      <span class="tag-gen tag-gen--gy">문학</span>
+                      <span class="tag-gen tag-gen--gy">책</span>
                     </a>
 
                     <div class="pdt__inbox">
@@ -397,7 +407,7 @@
                   </div>
                 </div>
               </div>
-              <!--// item -->
+              <!--// item : book -->
               <!-- item -->
               <div class="pdt-grid__item">
                 <div class="pdt">

@@ -21,23 +21,26 @@
     });
   };
 
+  UI.userAgentCheck = function () {
+    var deviceCheck;
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      deviceCheck = true
+    } else {
+      deviceCheck = false;
+    }
+    return deviceCheck;
+  }
+
   // all menu show/hide
   UI.allMenu = {
-    openBtn: '[data-allmenu=open]',
-    closeBtn: '[data-allmenu=close]',
+    openBtn: '.all-menu-btn',
+    closeBtn: '.all-menu-close ',
     allSect: '.all-section',
     allSectActive: 'is-active',
     allMenuSw: null,
     init: function () {
       var _this = this;
-
       var eventName = (window.winWChk == 'mo') ? 'click' : 'mouseenter';
-
-      // if (window.winWChk == 'mo') {
-      //   eventName = 'click'
-      // } else {
-      //   eventName = 'mouseenter'
-      // }
 
       $('#header').off('click.allmenuEv').off('mouseenter.allmenuEv').on(eventName + '.allmenuEv', _this.openBtn, function () {
         _this.headerReset();
@@ -82,7 +85,7 @@
           _this.allMenuSw = new Swiper('.all-section-wrap .buddy-card.show-pc', {
             slidePerView: '1',
             autoplay: {
-              delay: 3000,
+              delay: 5000,
             },
             pagination: {
               el: ".swiper-pagination",
@@ -97,7 +100,7 @@
           _this.allMenuSw = new Swiper('.all-section-wrap .buddy-card.show-mo', {
             slidePerView: '1',
             autoplay: {
-              delay: 3000,
+              delay: 5000,
             },
           });
         }
@@ -231,7 +234,7 @@
         this.headerSw = new Swiper('.header__box .buddy-card', {
           slidePerView: '1',
           autoplay: {
-            delay: 3000,
+            delay: 5000,
           },
           pagination: {
             el: ".buddy-card .swiper-pagination",
@@ -773,6 +776,53 @@
     },
   }
 
+  UI.dropdownList = {
+    el: '.dropdown',
+    curBtn: '.dropdown__cur',
+    list: '.dropdown__list',
+    btn: '.dropdown__btn',
+    openName: 'is-open',
+    selectName: 'is-on',
+    init: function () {
+      this.openEv();
+    },
+    openChk: function (wrapper) {
+      var chk = undefined;
+      chk = wrapper.hasClass(this.openName) ? true : false;
+
+      return chk;
+    },
+    openEv: function () {
+      var _this = this;
+
+      $(document).on('click.dropdown', _this.curBtn, function (ev) {
+        var $dropdown = $(ev.target).closest(_this.el);
+
+        if (_this.openChk($dropdown)) {
+          $dropdown.removeClass(_this.openName);
+        } else {
+          $dropdown.addClass(_this.openName);
+        }
+      });
+
+      _this.selectEv();
+    },
+    selectEv: function () {
+      var _this = this;
+
+      $(document).on('click.dropdownBtn', _this.btn, function (ev) {
+        var $dropdown = $(ev.target).closest(_this.el);
+        var curText = $(ev.target).text();
+        $dropdown.removeClass(_this.openName).find(_this.curBtn).text(curText);
+        $dropdown.find('li').removeClass(_this.selectName)
+        $(ev.target).closest('li').addClass(_this.selectName);
+      });
+    },
+    resize: function () {
+      $(this.el).removeClass(this.openName);
+    },
+  }
+
   UI.tabList = {
     tabEl: '.tab',
     tabBtn: '.tab__btn',
@@ -832,6 +882,56 @@
     resize: function () {
       $(this.tabEl).removeClass(this.openName);
     },
+  }
+
+  UI.menuTabSlide = {
+    tSwiper: null,
+    tSwiperEl: '.tab-swiper .swiper',
+    config: {
+      slidesPerView: "auto",
+      observer: true,
+      observeParents: true,
+      slideVisibleClass: 'is-visible',
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+      slideToClickedSlide: true,
+    },
+    init: function () {
+      if (!$(this.tSwiperEl).hasClass('swiper-container-initialized')) {
+        this.tSwiper = new Swiper(this.tSwiperEl, this.config);
+
+        //console.log($(this.tSwiperEl).find('.is-active').closest('li').index());
+
+        if ($(this.tSwiperEl).find('.is-active').closest('li').index() > 0) {
+          var idx = $(this.tSwiperEl).find('.is-active').closest('li').index();
+
+          $(this.tSwiperEl).find('.is-active').closest('li').trigger('click');
+
+          setTimeout(function () {
+            UI.menuTabSlide.tSwiper.update();
+            UI.menuTabSlide.tSwiper.slideTo(idx, 400)
+          }, 500)
+        }
+      } else {
+        this.update();
+      }
+    },
+    update: function () {
+      if ($(this.tSwiperEl).is(':visible')) {
+        if ($(this.tSwiperEl).hasClass('swiper-container-initialized')) {
+          this.tSwiper.update();
+        }
+      }
+    },
+    resize: function () {
+      if ($(this.sliderEl).hasClass(this.initClass) && window.winWChk === 'pc') {
+        this.slider.destroy();
+        this.init();
+      }
+      if (!$(this.sliderEl).hasClass(this.initClass) && window.winWChk === 'mo') {
+        this.slider.destroy();
+      }
+    }
   }
 
   UI.reviewSticky = {
@@ -1075,7 +1175,6 @@
     });
   }
 
-  //임시
   UI.myFavVod = {
     slider: null,
     sliderEl: '.vod-list-wrap',
@@ -1588,6 +1687,7 @@
     UI.adBanner.init();
     UI.artItem.init();
     UI.tab.init();
+    UI.menuTabSlide.init();
     UI.toggleSection.init();
     UI.toggleLike();
     UI.reviewSticky.init();
@@ -1612,6 +1712,7 @@
     UI.filterItem.init();
     UI.drawStar();
     UI.searchBoxOpen();
+    UI.dropdownList.init();
   }
 
   UI.resize = function () {
@@ -1669,6 +1770,7 @@
 })(window, document, jQuery);
 
 $(function () {
+
   UI.init();
   $(window).on('resize', function () {
     UI.resize();
@@ -1677,6 +1779,12 @@ $(function () {
   $(window).on('scroll', function () {
     UI.scroll();
   })
+
+  if (UI.userAgentCheck()) {
+    $('html').addClass('user-agent-mobile');
+  } else {
+    $('html').addClass('user-agent-pc');
+  }
 
   //임시 정리 전
   $(".faq__btn").on("click", function () {

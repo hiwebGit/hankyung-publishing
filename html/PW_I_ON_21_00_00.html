@@ -7,7 +7,6 @@
   <title>마이페이지 - 나의 정보 | 한경 ARTE</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-  <link rel="stylesheet" type="text/css" href="../assets/css/vw.css">
 
   <!-- font -->
   <link rel="preload" href="../assets/fonts/Pretendard-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
@@ -36,14 +35,15 @@
           <div class="my-namebox">
             <span class="my-namebox__name">간만에카페인간만에카</span>
           </div>
-
+          <!-- 모바일 활성화 시 is-active 클래스 추가 -->
           <div class="my-lnb">
             <ul class="my-lnb__list">
-              <li class="my-lnb__item">
-                <a href="#" class="my-lnb__1dep">좋아한 콘텐츠</a>
+              <li class="my-lnb__item" data-accordion="group">
+                <!-- my-lnb__depbox 있을경우 ex__item 클래스 추가 -->
+                <a href="#" class="my-lnb__1dep ex__item" data-accordion="btn">좋아한 콘텐츠</a>
                 <ul class="my-lnb__depbox">
                   <li><a href="#">음악·공연·전시·책</a></li>
-                  <li><a href="#">리뷰</a></li>
+                  <li><a href="#" class="is-active">리뷰</a></li>
                   <li><a href="#">뉴스</a></li>
                   <li><a href="#">아티스트</a></li>
                   <li><a href="#">영상</a></li>
@@ -52,16 +52,16 @@
                   <li><a href="#">댓글·답글</a></li>
                 </ul>
               </li>
-              <li class="my-lnb__item">
-                <a href="#" class="my-lnb__1dep">나의 활동</a>
+              <li class="my-lnb__item" data-accordion="group">
+                <a href="#" class="my-lnb__1dep ex__item" data-accordion="btn">나의 활동</a>
                 <ul class="my-lnb__depbox">
                   <li><a href="#">작성 글</a></li>
                   <li><a href="#">작성 댓글·답글</a></li>
-                  <li><a href="#">작성중인 리뷰</a></li>
+                  <li><a href="#">임시저장 글</a></li>
                 </ul>
               </li>
-              <li class="my-lnb__item">
-                <a href="#" class="my-lnb__1dep is-active">나의 정보</a>
+              <li class="my-lnb__item" data-accordion="group">
+                <a href="#" class="my-lnb__1dep" data-accordion="btn">나의 정보</a>
               </li>
               <li class="my-lnb__item">
                 <a href="#" class="my-lnb__1dep">1:1 문의</a>
@@ -111,9 +111,26 @@
               </div>
               <div class="inform__block">
                 <label for="" class="inform__tit">생년월일</label>
-                <div class="inform__cont">
+                <!-- <div class="inform__cont">
                   <input id="" type="text" class="in-text" placeholder="입력예시) 2000-01-01">
-                </div>
+                </div> -->
+                <ul class="inform__birth">
+                  <li>
+                    <select class="o-select" name="" id="">
+                      <option value="">1991년</option>
+                    </select>
+                  </li>
+                  <li>
+                    <select class="o-select" name="" id="">
+                      <option value="">05월</option>
+                    </select>
+                  </li>
+                  <li>
+                    <select class="o-select" name="" id="">
+                      <option value="">02일</option>
+                    </select>
+                  </li>
+                </ul>
               </div>
               <div class="inform__block">
                 <label for="" class="inform__tit">관심지역</label>

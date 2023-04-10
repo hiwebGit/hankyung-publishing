@@ -35,14 +35,15 @@
           <div class="my-namebox">
             <span class="my-namebox__name">간만에카페인간만에카</span>
           </div>
-
+          <!-- 모바일 활성화 시 is-active 클래스 추가 -->
           <div class="my-lnb">
             <ul class="my-lnb__list">
-              <li class="my-lnb__item">
-                <a href="#" class="my-lnb__1dep">좋아한 콘텐츠</a>
+              <li class="my-lnb__item" data-accordion="group">
+                <!-- my-lnb__depbox 있을경우 ex__item 클래스 추가 -->
+                <a href="#" class="my-lnb__1dep ex__item" data-accordion="btn">좋아한 콘텐츠</a>
                 <ul class="my-lnb__depbox">
                   <li><a href="#">음악·공연·전시·책</a></li>
-                  <li><a href="#">리뷰</a></li>
+                  <li><a href="#" class="is-active">리뷰</a></li>
                   <li><a href="#">뉴스</a></li>
                   <li><a href="#">아티스트</a></li>
                   <li><a href="#">영상</a></li>
@@ -51,22 +52,23 @@
                   <li><a href="#">댓글·답글</a></li>
                 </ul>
               </li>
-              <li class="my-lnb__item">
-                <a href="#" class="my-lnb__1dep">나의 활동</a>
+              <li class="my-lnb__item" data-accordion="group">
+                <a href="#" class="my-lnb__1dep ex__item" data-accordion="btn">나의 활동</a>
                 <ul class="my-lnb__depbox">
                   <li><a href="#">작성 글</a></li>
-                  <li><a href="#" class="is-active">작성 댓글·답글</a></li>
-                  <li><a href="#">작성중인 리뷰</a></li>
+                  <li><a href="#">작성 댓글·답글</a></li>
+                  <li><a href="#">임시저장 글</a></li>
                 </ul>
               </li>
-              <li class="my-lnb__item">
-                <a href="#" class="my-lnb__1dep">나의 정보</a>
+              <li class="my-lnb__item" data-accordion="group">
+                <a href="#" class="my-lnb__1dep" data-accordion="btn">나의 정보</a>
               </li>
               <li class="my-lnb__item">
                 <a href="#" class="my-lnb__1dep">1:1 문의</a>
               </li>
             </ul>
           </div>
+
         </div>
         <!--// snb -->
         <div class="my-content">
@@ -215,12 +217,13 @@
                     </span>
                   </div>
                   <div class="my-table-style-col__items">
-                    <div class="art-list__item">
+                    <!-- 삭제 Case : 'is-deleted'  추가 -->
+                    <div class="art-list__item is-deleted">
                       <div class="artbox">
                         <div class="artbox__summary h-auto">
                           <p class="artbox__title ellpsis-none">
-                            <a href="#">무엇이 높은 성벽으로부터 사람들에게 자유를 부여했을까?무엇이 높은 성벽으로부터 사람들에게 자유를 부여했을까?무엇이 높은 성벽으로부터 사람들에게
-                              자유를 부여했을까?</a>
+                            <span>무엇이 높은 성벽으로부터 사람들에게 자유를 부여했을까?무엇이 높은 성벽으로부터 사람들에게 자유를 부여했을까?무엇이 높은 성벽으로부터 사람들에게
+                              자유를 부여했을까?</span>
                           </p>
                         </div>
                         <div class="artbox__info">
@@ -228,11 +231,13 @@
                             <span class="text-date">2022.11.24</span>
                           </div>
                         </div>
-                        <div class="artbox__detail c-gray one-block">
-                          <a href="#">대한민국의 희망이자 미래인 고3뿐만 아니라 모든 우리 수험생 여러분들 진심으로 응원합니다.</a>
+                        <div class="artbox__detail one-block no-opacity">
+                          <div class="artbox__deleted">삭제된 게시물입니다.</div>
                         </div>
                       </div>
+
                     </div>
+                    <!--// 삭제 Case -->
                   </div>
                 </div>
                 <div class="my-table-style-col">

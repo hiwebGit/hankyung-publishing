@@ -35,11 +35,12 @@
           <div class="my-namebox">
             <span class="my-namebox__name">간만에카페인간만에카</span>
           </div>
-
+          <!-- 모바일 활성화 시 is-active 클래스 추가 -->
           <div class="my-lnb">
             <ul class="my-lnb__list">
-              <li class="my-lnb__item">
-                <a href="#" class="my-lnb__1dep">좋아한 콘텐츠</a>
+              <li class="my-lnb__item" data-accordion="group">
+                <!-- my-lnb__depbox 있을경우 ex__item 클래스 추가 -->
+                <a href="#" class="my-lnb__1dep ex__item" data-accordion="btn">좋아한 콘텐츠</a>
                 <ul class="my-lnb__depbox">
                   <li><a href="#">음악·공연·전시·책</a></li>
                   <li><a href="#" class="is-active">리뷰</a></li>
@@ -51,22 +52,23 @@
                   <li><a href="#">댓글·답글</a></li>
                 </ul>
               </li>
-              <li class="my-lnb__item">
-                <a href="#" class="my-lnb__1dep">나의 활동</a>
+              <li class="my-lnb__item" data-accordion="group">
+                <a href="#" class="my-lnb__1dep ex__item" data-accordion="btn">나의 활동</a>
                 <ul class="my-lnb__depbox">
                   <li><a href="#">작성 글</a></li>
                   <li><a href="#">작성 댓글·답글</a></li>
-                  <li><a href="#">작성중인 리뷰</a></li>
+                  <li><a href="#">임시저장 글</a></li>
                 </ul>
               </li>
-              <li class="my-lnb__item">
-                <a href="#" class="my-lnb__1dep">나의 정보</a>
+              <li class="my-lnb__item" data-accordion="group">
+                <a href="#" class="my-lnb__1dep" data-accordion="btn">나의 정보</a>
               </li>
               <li class="my-lnb__item">
                 <a href="#" class="my-lnb__1dep">1:1 문의</a>
               </li>
             </ul>
           </div>
+
         </div>
         <!--// snb -->
         <div class="my-content">
@@ -137,8 +139,7 @@
                       <span class="byname">내 귀에 캔디</span>
                       <span class="tag">전문가</span>
                       <span class="grade">
-                        <span class="star"><i class="star__point p9"></i></span>
-                        <em class="grade__num">9.0</em>
+                        <span class="badge-star p3"></span>
                       </span>
                     </div>
                     <div class="art-info-sub">
@@ -182,8 +183,8 @@
                       <span class="byname">내 귀에 캔디</span>
                       <span class="tag">전문가</span>
                       <span class="grade">
-                        <span class="star"><i class="star__point p9"></i></span>
-                        <em class="grade__num">9.0</em>
+                        <span class="badge-star p3"></span>
+                      </span>
                       </span>
                     </div>
                     <div class="art-info-sub">
@@ -224,7 +225,7 @@
                   <div class="artbox__info v-type">
                     <div class="art-info-by">
                       <span class="byname">내 귀에 캔디</span>
-                      <span class="tag">전문가</span>
+                      <span class="tag tag--line">회원</span>
                       <span class="grade">
                         <span class="star"><i class="star__point p9"></i></span>
                         <em class="grade__num">9.0</em>
@@ -270,8 +271,7 @@
                       <span class="byname">내 귀에 캔디</span>
                       <span class="tag">전문가</span>
                       <span class="grade">
-                        <span class="star"><i class="star__point p9"></i></span>
-                        <em class="grade__num">9.0</em>
+                        <span class="badge-star p3"></span>
                       </span>
                     </div>
                     <div class="art-info-sub">
@@ -312,7 +312,7 @@
                   <div class="artbox__info v-type">
                     <div class="art-info-by">
                       <span class="byname">내 귀에 캔디</span>
-                      <span class="tag">전문가</span>
+                      <span class="tag tag--line">회원</span>
                       <span class="grade">
                         <span class="star"><i class="star__point p9"></i></span>
                         <em class="grade__num">9.0</em>
@@ -356,7 +356,7 @@
                   <div class="artbox__info v-type">
                     <div class="art-info-by">
                       <span class="byname">내 귀에 캔디</span>
-                      <span class="tag">전문가</span>
+                      <span class="tag tag--line">회원</span>
                       <span class="grade">
                         <span class="star"><i class="star__point p9"></i></span>
                         <em class="grade__num">9.0</em>
@@ -402,8 +402,7 @@
                       <span class="byname">내 귀에 캔디</span>
                       <span class="tag">전문가</span>
                       <span class="grade">
-                        <span class="star"><i class="star__point p9"></i></span>
-                        <em class="grade__num">9.0</em>
+                        <span class="badge-star p3"></span>
                       </span>
                     </div>
                     <div class="art-info-sub">
@@ -444,7 +443,7 @@
                   <div class="artbox__info v-type">
                     <div class="art-info-by">
                       <span class="byname">내 귀에 캔디</span>
-                      <span class="tag">전문가</span>
+                      <span class="tag tag--line">회원</span>
                       <span class="grade">
                         <span class="star"><i class="star__point p9"></i></span>
                         <em class="grade__num">9.0</em>
@@ -487,8 +486,7 @@
                       <span class="byname">내 귀에 캔디</span>
                       <span class="tag">전문가</span>
                       <span class="grade">
-                        <span class="star"><i class="star__point p9"></i></span>
-                        <em class="grade__num">9.0</em>
+                        <span class="badge-star p3"></span>
                       </span>
                     </div>
                     <div class="art-info-sub">
@@ -531,8 +529,7 @@
                       <span class="byname">내 귀에 캔디</span>
                       <span class="tag">전문가</span>
                       <span class="grade">
-                        <span class="star"><i class="star__point p9"></i></span>
-                        <em class="grade__num">9.0</em>
+                        <span class="badge-star p3"></span>
                       </span>
                     </div>
                     <div class="art-info-sub">
@@ -573,7 +570,7 @@
                   <div class="artbox__info v-type">
                     <div class="art-info-by">
                       <span class="byname">내 귀에 캔디</span>
-                      <span class="tag">전문가</span>
+                      <span class="tag tag--line">회원</span>
                       <span class="grade">
                         <span class="star"><i class="star__point p9"></i></span>
                         <em class="grade__num">9.0</em>
@@ -619,6 +616,92 @@
                       <span class="byname">내 귀에 캔디</span>
                       <span class="tag">전문가</span>
                       <span class="grade">
+                        <span class="badge-star p3"></span>
+                      </span>
+                    </div>
+                    <div class="art-info-sub">
+                      <span class="text-date">2022.11.24</span>
+                      <div class="access-nums">
+                        <span class="acc-num acc-num--view"><em>25</em></span>
+                        <span class="acc-num acc-num--like"><em>120k</em></span>
+                        <span class="acc-num acc-num--comment"><em>25</em></span>
+                      </div>
+                      <button type="button" class="btn-fav is-fav" aria-label="Like"></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="art-list__item">
+                <div class="artbox">
+                  <a href="#" class="thumb-img">
+                    <span class="img-holder"><img src="../assets/images/@temp/@thumg_img03.jpg" alt=""></span>
+                  </a>
+                  <div class="artbox__summary">
+                    <div class="artbox__stit">
+                      <span class="tag-gen-s">연극</span>
+                      <a href="#" class="ex-name">아이, 여자 그리고 SEVEN</a>
+                    </div>
+                    <p class="artbox__title">
+                      <a href="#">슬픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과
+                        매력적인 무대연출픈사랑과 매력적인 무대연출</a>
+                    </p>
+                  </div>
+                  <div class="artbox__detail">
+                    <a href="#">대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
+                      드라큘라 역할의 테이님도 정말 멋지셨습니다.
+                      역시 믿고 듣는 보이스 입니다 !!
+                      그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
+                      모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
+                    </a>
+                  </div>
+                  <div class="artbox__info v-type">
+                    <div class="art-info-by">
+                      <span class="byname">내 귀에 캔디</span>
+                      <span class="tag">전문가</span>
+                      <span class="grade">
+                        <span class="badge-star p3"></span>
+                      </span>
+                    </div>
+                    <div class="art-info-sub">
+                      <span class="text-date">2022.11.24</span>
+                      <div class="access-nums">
+                        <span class="acc-num acc-num--view"><em>25</em></span>
+                        <span class="acc-num acc-num--like"><em>120k</em></span>
+                        <span class="acc-num acc-num--comment"><em>25</em></span>
+                      </div>
+                      <button type="button" class="btn-fav is-fav" aria-label="Like"></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="art-list__item">
+                <div class="artbox">
+                  <!-- <a href="#" class="thumb-img">
+                      <span class="img-holder"><img src="../assets/images/@temp/@thumg_img03.jpg" alt=""></span>
+                    </a> -->
+                  <div class="artbox__summary">
+                    <div class="artbox__stit">
+                      <span class="tag-gen-s">연극</span>
+                      <a href="#" class="ex-name">아이, 여자 그리고 SEVEN</a>
+                    </div>
+                    <p class="artbox__title">
+                      <a href="#">슬픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과
+                        매력적인 무대연출픈사랑과 매력적인 무대연출</a>
+                    </p>
+                  </div>
+                  <div class="artbox__detail">
+                    <a href="#">대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
+                      드라큘라 역할의 테이님도 정말 멋지셨습니다.
+                      역시 믿고 듣는 보이스 입니다 !!
+                      그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
+                      모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
+                    </a>
+                  </div>
+                  <div class="artbox__info v-type">
+                    <div class="art-info-by">
+                      <span class="byname">내 귀에 캔디</span>
+                      <span class="tag tag--line">회원</span>
+                      <span class="grade">
                         <span class="star"><i class="star__point p9"></i></span>
                         <em class="grade__num">9.0</em>
                       </span>
@@ -662,6 +745,92 @@
                     <div class="art-info-by">
                       <span class="byname">내 귀에 캔디</span>
                       <span class="tag">전문가</span>
+                      <span class="grade">
+                        <span class="badge-star p3"></span>
+                      </span>
+                    </div>
+                    <div class="art-info-sub">
+                      <span class="text-date">2022.11.24</span>
+                      <div class="access-nums">
+                        <span class="acc-num acc-num--view"><em>25</em></span>
+                        <span class="acc-num acc-num--like"><em>120k</em></span>
+                        <span class="acc-num acc-num--comment"><em>25</em></span>
+                      </div>
+                      <button type="button" class="btn-fav is-fav" aria-label="Like"></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="art-list__item">
+                <div class="artbox">
+                  <a href="#" class="thumb-img">
+                    <span class="img-holder"><img src="../assets/images/@temp/@thumg_img03.jpg" alt=""></span>
+                  </a>
+                  <div class="artbox__summary">
+                    <div class="artbox__stit">
+                      <span class="tag-gen-s">연극</span>
+                      <a href="#" class="ex-name">아이, 여자 그리고 SEVEN</a>
+                    </div>
+                    <p class="artbox__title">
+                      <a href="#">슬픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과
+                        매력적인 무대연출픈사랑과 매력적인 무대연출</a>
+                    </p>
+                  </div>
+                  <div class="artbox__detail">
+                    <a href="#">대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
+                      드라큘라 역할의 테이님도 정말 멋지셨습니다.
+                      역시 믿고 듣는 보이스 입니다 !!
+                      그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
+                      모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
+                    </a>
+                  </div>
+                  <div class="artbox__info v-type">
+                    <div class="art-info-by">
+                      <span class="byname">내 귀에 캔디</span>
+                      <span class="tag">전문가</span>
+                      <span class="grade">
+                        <span class="badge-star p3"></span>
+                      </span>
+                    </div>
+                    <div class="art-info-sub">
+                      <span class="text-date">2022.11.24</span>
+                      <div class="access-nums">
+                        <span class="acc-num acc-num--view"><em>25</em></span>
+                        <span class="acc-num acc-num--like"><em>120k</em></span>
+                        <span class="acc-num acc-num--comment"><em>25</em></span>
+                      </div>
+                      <button type="button" class="btn-fav is-fav" aria-label="Like"></button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="art-list__item">
+                <div class="artbox">
+                  <a href="#" class="thumb-img">
+                    <span class="img-holder"><img src="../assets/images/@temp/@thumg_img03.jpg" alt=""></span>
+                  </a>
+                  <div class="artbox__summary">
+                    <div class="artbox__stit">
+                      <span class="tag-gen-s">연극</span>
+                      <a href="#" class="ex-name">아이, 여자 그리고 SEVEN</a>
+                    </div>
+                    <p class="artbox__title">
+                      <a href="#">슬픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과
+                        매력적인 무대연출픈사랑과 매력적인 무대연출</a>
+                    </p>
+                  </div>
+                  <div class="artbox__detail">
+                    <a href="#">대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
+                      드라큘라 역할의 테이님도 정말 멋지셨습니다.
+                      역시 믿고 듣는 보이스 입니다 !!
+                      그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
+                      모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
+                    </a>
+                  </div>
+                  <div class="artbox__info v-type">
+                    <div class="art-info-by">
+                      <span class="byname">내 귀에 캔디</span>
+                      <span class="tag tag--line">회원</span>
                       <span class="grade">
                         <span class="star"><i class="star__point p9"></i></span>
                         <em class="grade__num">9.0</em>
@@ -707,8 +876,7 @@
                       <span class="byname">내 귀에 캔디</span>
                       <span class="tag">전문가</span>
                       <span class="grade">
-                        <span class="star"><i class="star__point p9"></i></span>
-                        <em class="grade__num">9.0</em>
+                        <span class="badge-star p3"></span>
                       </span>
                     </div>
                     <div class="art-info-sub">
@@ -749,7 +917,7 @@
                   <div class="artbox__info v-type">
                     <div class="art-info-by">
                       <span class="byname">내 귀에 캔디</span>
-                      <span class="tag">전문가</span>
+                      <span class="tag tag--line">회원</span>
                       <span class="grade">
                         <span class="star"><i class="star__point p9"></i></span>
                         <em class="grade__num">9.0</em>
@@ -764,172 +932,6 @@
                       </div>
                       <button type="button" class="btn-fav is-fav" aria-label="Like"></button>
                     </div>
-                  </div>
-                </div>
-              </li>
-              <li class="art-list__item">
-                <div class="artbox">
-                  <a href="#" class="thumb-img">
-                    <span class="img-holder"><img src="../assets/images/@temp/@thumg_img03.jpg" alt=""></span>
-                  </a>
-                  <div class="artbox__summary">
-                    <div class="artbox__stit">
-                      <span class="tag-gen-s">연극</span>
-                      <a href="#" class="ex-name">아이, 여자 그리고 SEVEN</a>
-                    </div>
-                    <p class="artbox__title">
-                      <a href="#">슬픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과
-                        매력적인 무대연출픈사랑과 매력적인 무대연출</a>
-                    </p>
-                  </div>
-                  <div class="artbox__detail">
-                    <a href="#">대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
-                      드라큘라 역할의 테이님도 정말 멋지셨습니다.
-                      역시 믿고 듣는 보이스 입니다 !!
-                      그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
-                      모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
-                    </a>
-                  </div>
-                  <div class="artbox__info v-type">
-                    <div class="art-info-by">
-                      <span class="byname">내 귀에 캔디</span>
-                      <span class="tag">전문가</span>
-                      <span class="grade">
-                        <span class="star"><i class="star__point p9"></i></span>
-                        <em class="grade__num">9.0</em>
-                      </span>
-                    </div>
-                    <div class="art-info-sub">
-                      <span class="text-date">2022.11.24</span>
-                      <div class="access-nums">
-                        <span class="acc-num acc-num--view"><em>25</em></span>
-                        <span class="acc-num acc-num--like"><em>120k</em></span>
-                        <span class="acc-num acc-num--comment"><em>25</em></span>
-                      </div>
-                      <button type="button" class="btn-fav is-fav" aria-label="Like"></button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="art-list__item">
-                <div class="artbox">
-                  <a href="#" class="thumb-img">
-                    <span class="img-holder"><img src="../assets/images/@temp/@thumg_img03.jpg" alt=""></span>
-                  </a>
-                  <div class="artbox__summary">
-                    <div class="artbox__stit">
-                      <span class="tag-gen-s">연극</span>
-                      <a href="#" class="ex-name">아이, 여자 그리고 SEVEN</a>
-                    </div>
-                    <p class="artbox__title">
-                      <a href="#">슬픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과
-                        매력적인 무대연출픈사랑과 매력적인 무대연출</a>
-                    </p>
-                  </div>
-                  <div class="artbox__detail">
-                    <a href="#">대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
-                      드라큘라 역할의 테이님도 정말 멋지셨습니다.
-                      역시 믿고 듣는 보이스 입니다 !!
-                      그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
-                      모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
-                    </a>
-                  </div>
-                  <div class="artbox__info v-type">
-                    <div class="art-info-by">
-                      <span class="byname">내 귀에 캔디</span>
-                      <span class="tag">전문가</span>
-                      <span class="grade">
-                        <span class="star"><i class="star__point p9"></i></span>
-                        <em class="grade__num">9.0</em>
-                      </span>
-                    </div>
-                    <div class="art-info-sub">
-                      <span class="text-date">2022.11.24</span>
-                      <div class="access-nums">
-                        <span class="acc-num acc-num--view"><em>25</em></span>
-                        <span class="acc-num acc-num--like"><em>120k</em></span>
-                        <span class="acc-num acc-num--comment"><em>25</em></span>
-                      </div>
-                      <button type="button" class="btn-fav is-fav" aria-label="Like"></button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="art-list__item">
-                <div class="artbox">
-                  <!-- <a href="#" class="thumb-img">
-                      <span class="img-holder"><img src="../assets/images/@temp/@thumg_img03.jpg" alt=""></span>
-                    </a> -->
-                  <div class="artbox__summary">
-                    <div class="artbox__stit">
-                      <span class="tag-gen-s">연극</span>
-                      <a href="#" class="ex-name">아이, 여자 그리고 SEVEN</a>
-                    </div>
-                    <p class="artbox__title">
-                      <a href="#">슬픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과
-                        매력적인 무대연출픈사랑과 매력적인 무대연출</a>
-                    </p>
-                  </div>
-                  <div class="artbox__detail">
-                    <a href="#">대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
-                      드라큘라 역할의 테이님도 정말 멋지셨습니다.
-                      역시 믿고 듣는 보이스 입니다 !!
-                      그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
-                      모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
-                    </a>
-                  </div>
-                  <div class="artbox__info v-type">
-                    <div class="art-info-by">
-                      <span class="byname">내 귀에 캔디</span>
-                      <span class="tag">전문가</span>
-                      <span class="grade">
-                        <span class="star"><i class="star__point p9"></i></span>
-                        <em class="grade__num">9.0</em>
-                      </span>
-                    </div>
-                    <div class="art-info-sub">
-                      <span class="text-date">2022.11.24</span>
-                      <div class="access-nums">
-                        <span class="acc-num acc-num--view"><em>25</em></span>
-                        <span class="acc-num acc-num--like"><em>120k</em></span>
-                        <span class="acc-num acc-num--comment"><em>25</em></span>
-                      </div>
-                      <button type="button" class="btn-fav is-fav" aria-label="Like"></button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="art-list__item">
-                <div class="artbox">
-                  <a href="#" class="thumb-img">
-                    <span class="img-holder"><img src="../assets/images/@temp/@thumg_img03.jpg" alt=""></span>
-                  </a>
-                  <div class="artbox__summary">
-                    <div class="artbox__stit">
-                      <span class="tag-gen-s">연극</span>
-                      <a href="#" class="ex-name">아이, 여자 그리고 SEVEN</a>
-                    </div>
-                    <p class="artbox__title">
-                      <a href="#">슬픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과 매력적인 무대연출픈사랑과
-                        매력적인 무대연출픈사랑과 매력적인 무대연출</a>
-                    </p>
-                  </div>
-                  <div class="artbox__detail">
-                    <a href="#">대략적인 스토리는 보고갔지만 실제로 보니까 더 감동적이었습니다.
-                      드라큘라 역할의 테이님도 정말 멋지셨습니다.
-                      역시 믿고 듣는 보이스 입니다 !!
-                      그리고 개인적으로는 슬픈 로레인 역할을 하셨던 배우님의 순간 감정변화가 정말 인상적이었어요.
-                      모든 배우 분들 한 분 한 분 다 진심을 다하시는 모습이 멋졌습니다.
-                    </a>
-                  </div>
-                  <div class="art-info-sub">
-                    <span class="text-date">2022.11.24</span>
-                    <div class="access-nums">
-                      <span class="acc-num acc-num--view"><em>25</em></span>
-                      <span class="acc-num acc-num--like"><em>120k</em></span>
-                      <span class="acc-num acc-num--comment"><em>25</em></span>
-                    </div>
-                    <button type="button" class="btn-fav is-fav" aria-label="Like"></button>
                   </div>
                 </div>
               </li>
