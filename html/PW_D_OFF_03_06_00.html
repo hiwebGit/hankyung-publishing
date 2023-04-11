@@ -431,26 +431,46 @@
                             </div>
                           </div>
                           <div class="filter-options__cont">
-                            <!-- 리뷰구분 -->
-                            <div class="filter-options__items filter-others">
-                              <p class="filter-options__tit">리뷰 구분</p>
+                            <!-- 전문가 리뷰 -->
+                            <div class="filter-options__items">
+                              <p class="filter-options__tit">전문가 리뷰</p>
                               <div class="filter-options__items-cont">
                                 <ul class="filter-options__items-list">
-                                  <li>
-                                    <label class="o-rdo">
-                                      <input type="checkbox" class="o-input" name="chk-status" checked />
-                                      <span class="o-rdo__label">전문가 리뷰</span>
-                                    </label>
-                                  </li>
-                                  <li>
-                                    <label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status" />
-                                      <span class="o-rdo__label">회원 리뷰</span>
-                                    </label>
-                                  </li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-type"
+                                        checked /><span class="o-rdo__label">전체</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-type" /><span class="o-rdo__label">볼만한 공연</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-type" /><span class="o-rdo__label">혼자 보기 아까운 공연</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-type" /><span class="o-rdo__label">물개박수 절로 나오는 공연</span></label></li>
                                 </ul>
                               </div>
                             </div>
-                            <!--//리뷰구분 -->
+                            <!--//전문가 리뷰 -->
+                            <!--회원 리뷰 -->
+                            <div class="filter-options__items">
+                              <p class="filter-options__tit">회원 리뷰</p>
+                              <div class="filter-options__items-cont">
+                                <ul class="filter-options__items-list m-col2">
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status"
+                                        checked />
+                                      <span class="o-rdo__label">전체</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">강력추천</span></label></li>
+                                  <li class="w-full"><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">생각보다 좋아요</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">괜찮아요</span></label>
+                                  </li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">그냥 그렇네요</span></label></li>
+                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
+                                        name="chk-status" /><span class="o-rdo__label">시간 아까워요</span></label></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!--//회원 리뷰 -->
                             <!-- 국내 도서 -->
                             <div class="filter-options__items">
                               <p class="filter-options__tit">국내 도서</p>
@@ -505,47 +525,6 @@
                               </div>
                             </div>
                             <!--// 해외 도서 -->
-                            <!--상태 -->
-                            <div class="filter-options__items">
-                              <p class="filter-options__tit">상태</p>
-                              <div class="filter-options__items-cont">
-                                <ul class="filter-options__items-list">
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status"
-                                        checked /><span class="o-rdo__label">전체</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">예정</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">진행중</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">종료</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">종료 임박</span></label></li>
-                                </ul>
-                              </div>
-                            </div>
-                            <!--//상태 -->
-                            <!--평점 -->
-                            <div class="filter-options__items">
-                              <p class="filter-options__tit">평점</p>
-                              <div class="filter-options__items-cont">
-                                <ul class="filter-options__items-list m-col2">
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-grade"
-                                        checked /><span class="o-rdo__label">전체</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-grade" /><span class="o-rdo__label">그냥 그렇네요</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-grade" /><span class="o-rdo__label">강력추천</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-grade" /><span class="o-rdo__label">시간 아까워요</span></label></li>
-                                  <li class="w-full"><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-grade" /><span class="o-rdo__label">생각보다 좋아요</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-grade" /><span class="o-rdo__label">괜찮아요</span></label>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <!--//평점 -->
                           </div>
                         </div>
                       </div>
@@ -807,7 +786,7 @@
                     <div class="artbox-lg">
                       <div href="#" class="thumb-img">
                         <a class="img-holder"><img src="../assets/images/@temp/@temp_news02.jpg" alt=""></a>
-                        <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                        <!-- <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button> -->
                         <span class="tag-gen">연극</span>
                       </div>
                       <div class="artbox-lg__cont">
@@ -823,9 +802,11 @@
                             <span class="byname">내 귀에 캔디</span>
                             <span class="tag">전문가</span>
                             <span class="grade">
+                              <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
                               <span class="badge-star p3"></span>
                             </span>
                           </div>
+                          <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
                       </div>
                     </div>
@@ -1354,6 +1335,14 @@
   <script src="../assets/js/ui.js"></script>
   <script src="../assets/js/curation.js"></script> <!-- curation slider -->
   <!--// Script -->
+  
+  <script>
+    layoutHeader({
+      type:2,
+      menu1:4,
+      menu2:2, 
+    });
+</script>
 </body>
 
 </html>

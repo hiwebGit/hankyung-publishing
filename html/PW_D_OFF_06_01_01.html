@@ -41,7 +41,6 @@
               <div class="card-img">
                 <div class="thumb-img">
                   <span class="img-holder"><img src="../assets/images/@temp/@temp_thumb02.jpg" alt=""></span>
-                  <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
                   <span class="tag-gen">연극</span>
                 </div>
                 <div class="card-img__titlebox">
@@ -71,6 +70,15 @@
                   </div>
                   <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
                   <button type="button" class="btn-share" aria-label="Share"></button>
+                  <div class="setting" data-role="visible_wrap">
+                    <button type="button" class="setting__btn" aria-label="레이어 더보기" data-role="visible_btn"></button>
+                    <div class="setting__layer" data-role="visible_cont">
+                      <ul>
+                        <li><a href="#">신고하기</a></li>
+                      </ul>
+                      <button type="button" class="btn-close" data-role="hide_btn" aria-label="레이어 닫기"></button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -125,35 +133,35 @@
             </div>
 
             <!-- ad-banner -->
-          <div class="ad-banner-wrap">
-            <div class="ad-banner swiper">
-              <div class="ad-banner__list swiper-wrapper">
-                <a href="#" class="ad-banner__item swiper-slide">
-                  <!-- Img PC -->
-                  <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
-                  <!-- Img PC 2 -->
-                  <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
-                  <!-- Img Tablet -->
-                  <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
-                  <!-- Img Tablet 2 -->
-                  <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
-                  <!-- Img Mobile -->
-                  <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
-                    class="ad-banner__img img--mo" />
-                </a>
-                <a href="#" class="ad-banner__item swiper-slide">
-                  <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
-                  <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
-                  <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
-                  <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
-                  <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
-                    class="ad-banner__img img--mo" />
-                </a>
+            <div class="ad-banner-wrap">
+              <div class="ad-banner swiper">
+                <div class="ad-banner__list swiper-wrapper">
+                  <a href="#" class="ad-banner__item swiper-slide">
+                    <!-- Img PC -->
+                    <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                    <!-- Img PC 2 -->
+                    <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
+                    <!-- Img Tablet -->
+                    <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                    <!-- Img Tablet 2 -->
+                    <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                    <!-- Img Mobile -->
+                    <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
+                      class="ad-banner__img img--mo" />
+                  </a>
+                  <a href="#" class="ad-banner__item swiper-slide">
+                    <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                    <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
+                    <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                    <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                    <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
+                      class="ad-banner__img img--mo" />
+                  </a>
+                </div>
               </div>
+              <div class="ad-banner__pagination"></div>
             </div>
-            <div class="ad-banner__pagination"></div>
-          </div>
-          <!--// ad-banner -->
+            <!--// ad-banner -->
 
             <!-- s: 댓글영역 -->
             <div class="reply-wrap">
@@ -300,7 +308,15 @@
   <script src="../assets/js/libs/swiper.min.js"></script>
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
-  <!--// Script -->
+  <!-- </script> -->
+
+  <script>
+    layoutHeader({
+      type:2,
+      menu1:1,
+      menu2:1, 
+    });
+  </script>
 </body>
 
 </html>

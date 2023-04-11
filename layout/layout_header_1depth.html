@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-  <title>메인 | 한경 ARTE</title>
+  <title>1 Depth | 한경 ARTE</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
@@ -25,27 +25,72 @@
 <body>
   <div id="wrap" class="wrap">
 
-    <!-- Header : header-main -->
+    <!-- Header : header-1depth -->
     <header class="header" id="header">
-      <div class="header__inner header-main">
-        <!-- block -->
+      
+      <!-- [CASE] inner : main 인 경우 'header-main' / 1depth 인 경우 'header-1depth' 추가 -->
+      <!-- [CASE] inner : 2depth 인 경우 'inner-depth inner-2depth' / 인 경우 3depth 'inner-depth inner-2depth' 추가 -->
+      <div class="header__inner inner-1depth">
+        <!-- [CASE] block : 1depth, main 인 경우 'header__main-block'/ 2depth, 3depth 인 경우 'header__block' -->
         <div class="header__main-block">
           <div class="header__left">
-            <h1 class="header-logo">
-              <a href="#" class="arte-logo">
-                <em class="logo-a">A</em><span>RTE</span>
-              </a>
-            </h1>
 
+            <!-- [CASE] Logo : 1depth, main 인 경우 노출 / 2depth, 3depth 인 경우 미노출 -->
+            <h1 class="header-logo">
+               <a href="#" class="arte-logo">
+                 <em class="logo-a">A</em><span>RTE</span>
+               </a>
+             </h1>
+
+            <!-- [CASE] main 인 경우 미노출 -->
+            <a href="#" class="btn-back" aria-label="이전으로"></a>
+
+            <!-- [CASE] current title : 1depth, 3depth 인 경우 노출 / main, 2depth 인 경우 미노출 -->
+            <div class="header__curr">조승우, 13년만에 개막하는 '오페라의 유령' 주인공 맡는다.</div>
+
+            <!-- [CASE] 1depth, main 인 경우 노출 / 2depth, 3depth 인 경우 미노출 -->
             <ul class="gnb">
               <li><a href="#" data-gnb="music">MUSIC <span class="text">듣다</span></a></li>
               <li><a href="#" data-gnb="stage">STAGE&middot;CINE <span class="text">즐기다</span></a></li>
               <li><a href="#" data-gnb="art">ART <span class="text">보다</span></a></li>
               <li><a href="#" data-gnb="book">BOOK <span class="text">읽다</span></a></li>
             </ul>
+
+            <!-- [CASE] 2depth, 3depth 인 경우 노출 / main, 1depth 인 경우 미노출 -->
+            <!-- gnb : 버튼 활성화 'is-gnb-active', 메뉴 활성화 'is-active' 추가 -->
+            <!-- <div class="gnb-menu">
+              <button type="button" class="gnb-menu__current" data-gnb-sel-cur="arte"><em>arte</em></button>
+              <ul class="gnb-menu__list">
+                <li class="arte is-active"><a href="#" data-gnb-sel="arte"><em class="display-tit">arte</em> <span
+                      class="display-item">home</span></a></li>
+                <li class="music"><a href="#" data-gnb-sel="music"><em>MUSIC</em> <span class="text">듣다</span></a></li>
+                <li class="stage-cine"><a href="#" data-gnb-sel="stage-cine"><em>STAGE&CINE</em> <span
+                      class="text">즐기다</span></a></li>
+                <li class="art"><a href="#" data-gnb-sel="art"><em>ART</em> <span class="text">보다</span></a></li>
+                <li class="book"><a href="#" data-gnb-sel="book"><em>BOOK</em> <span class="text">읽다</span></a></li>
+                <li class="arte-talk"><a href="#" data-gnb-sel="arte-talk"><em>arteTALK</em></a></li>
+                <li class="arte-video"><a href="#" data-gnb-sel="arte-video"><em>arte</em> <span
+                      class="text">영상</span></a>
+                </li>
+                <li class="art-finder"><a href="#" data-gnb-sel="art-finder"><em>Art Finder</em></a></li>
+              </ul>
+            </div> -->
           </div>
 
+          <!-- [CASE] 2depth, 3depth 인 경우 노출 / main, 1depth 인 경우 미노출 -->
+          <!-- lnb : 메뉴 활성화 'is-lnb-active' 버튼 활성화 'is-active' 추가 -->
+          <!-- <div class="lnb-menu">
+            <button type="button" class="lnb-menu__current">음악 리뷰</button>
+            <ul class="lnb-menu__list">
+              <li class="is-active"><a href="#">음악 리뷰</a></li>
+              <li><a href="#">음악 공연 정보</a></li>
+              <li><a href="#">MUSIC 테마 칼럼·인터뷰</a></li>
+              <li><a href="#">MUSIC NEWS</a></li>
+            </ul>
+          </div> -->
+
           <div class="header-utils">
+            <!-- [CASE] 1depth, main 인 경우 전체 노출 / 2depth, 3depth 인 경우 'arte TALK', 'arte 영상', 'art FINDER' 메뉴 미노출 -->
             <ul class="gnb-utils">
               <li><a href="#" class="util-btn ico-talk" data-gnb="talk" data-dir="right">
                   <em class="text">arte TALK</em></a></li>
@@ -82,8 +127,8 @@
                   <ul class="gnb-nav__list">
                     <li><a href="#" class="gnb-nav__btn">공연·영화 리뷰</a></li>
                     <li><a href="#" class="gnb-nav__btn">공연 정보</a></li>
-                    <li><a href="#" class="gnb-nav__btn">Stage·Cine 테마칼럼·인터뷰</a></li>
-                    <li><a href="#" class="gnb-nav__btn">Stage·Cine News</a></li>
+                    <li><a href="#" class="gnb-nav__btn">STAGE·CINE 테마칼럼·인터뷰</a></li>
+                    <li><a href="#" class="gnb-nav__btn">STAGE·CINE NEWS</a></li>
                   </ul>
                 </div>
                 <div class="gnb-nav" data-lnb="art">
@@ -92,9 +137,9 @@
                     <li><a href="#" class="gnb-nav__btn">전시 리뷰</a></li>
                     <li><a href="#" class="gnb-nav__btn">전시 정보</a></li>
                     <li><a href="#" class="gnb-nav__btn">해외 전시 하이라이트</a></li>
-                    <li><a href="#" class="gnb-nav__btn">Art 테마칼럼·인터뷰</a></li>
-                    <li><a href="#" class="gnb-nav__btn">Art News</a></li>
-                    <li><a href="#" class="gnb-nav__btn">미술시장 분석</a></li>
+                    <li><a href="#" class="gnb-nav__btn">ART 테마칼럼·인터뷰</a></li>
+                    <li><a href="#" class="gnb-nav__btn">ART NEWS</a></li>
+                    <!-- <li><a href="#" class="gnb-nav__btn">미술시장 분석</a></li> -->
                   </ul>
                 </div>
                 <div class="gnb-nav" data-lnb="book">
@@ -103,8 +148,8 @@
                     <li><a href="#" class="gnb-nav__btn">문학·고전 리뷰</a></li>
                     <li><a href="#" class="gnb-nav__btn">탐나는 책</a></li>
                     <li><a href="#" class="gnb-nav__btn">책 정보</a></li>
-                    <li><a href="#" class="gnb-nav__btn">Book 테마칼럼·인터뷰</a></li>
-                    <li><a href="#" class="gnb-nav__btn">Book News</a></li>
+                    <li><a href="#" class="gnb-nav__btn">BOOK 테마칼럼·인터뷰</a></li>
+                    <li><a href="#" class="gnb-nav__btn">BOOK NEWS</a></li>
                   </ul>
                 </div>
                 <div class="gnb-nav" data-lnb="talk">
@@ -113,15 +158,15 @@
                     <li><a href="#" class="gnb-nav__btn">문화예술계 소식</a></li>
                     <li><a href="#" class="gnb-nav__btn">arte TALK TALK</a></li>
                     <li><a href="#" class="gnb-nav__btn">공지사항</a></li>
-                    <li><a href="#" class="gnb-nav__btn">arte Poll</a></li>
+                    <li><a href="#" class="gnb-nav__btn">arte POLL</a></li>
                   </div>
                 </div>
                 <div class="gnb-nav" data-lnb="finder">
                   <h3 class="header-tit">art FINDER</h3>
                   <div class="gnb-nav__list">
-                    <li><a href="#" class="gnb-nav__btn">arte Map</a></li>
-                    <li><a href="#" class="gnb-nav__btn">arte Calendar</a></li>
-                    <li><a href="#" class="gnb-nav__btn">artist DB</a></li>
+                    <li><a href="#" class="gnb-nav__btn">arte MAP</a></li>
+                    <li><a href="#" class="gnb-nav__btn">arte CALENDAR</a></li>
+                    <li><a href="#" class="gnb-nav__btn">ARTIST DB</a></li>
                   </div>
                 </div>
                 <div class="gnb-nav" data-lnb="video">
@@ -136,8 +181,8 @@
               <div class="nav-links">
                 <h3 class="header-tit">art FINDER</h3>
                 <div class="nav-links__list">
-                  <a href="#" class="nav-links__btn">arte Map</a>
-                  <a href="#" class="nav-links__btn">arte Calendar</a>
+                  <a href="#" class="nav-links__btn">arte MAP</a>
+                  <a href="#" class="nav-links__btn">arte CALENDAR</a>
                   <a href="#" class="nav-links__btn">artist DB</a>
                 </div>
               </div>
@@ -222,10 +267,10 @@
               <div class="nav-links">
                 <h3 class="header-tit">Quick Links</h3>
                 <div class="nav-links__list">
-                  <a href="#" class="nav-links__btn">arte Map</a>
-                  <a href="#" class="nav-links__btn">arte Calendar</a>
+                  <a href="#" class="nav-links__btn">arte MAP</a>
+                  <a href="#" class="nav-links__btn">arte CALENDAR</a>
                   <a href="#" class="nav-links__btn">artist DB</a>
-                  <a href="#" class="nav-links__btn">arte Poll </a>
+                  <a href="#" class="nav-links__btn">arte POLL</a>
                 </div>
               </div>
             </div>
@@ -281,9 +326,6 @@
                 </div>
               </div>
               <div class="header-utils">
-                <!-- home -->
-                <!-- <button type="button" class="app-home" aria-label="Home" ></button> -->
-                <!-- //home -->
                 <ul class="gnb-utils">
                   <li>
                     <a href="#" class="util-btn ico-search" aria-label="Search" data-menu="search"></a>
@@ -321,6 +363,14 @@
                         <img src="../assets/images/@temp/@temp_gnb_banner01.jpg" alt="" />
                       </span>
                       <p class="buddy-card__text">아르떼 개편 및 집콕집밖 설특별전 감상이벤트 2</p>
+                    </a>
+                  </li>
+                  <li class="buddy-card__item swiper-slide">
+                    <a href="#" class="buddy-card__box">
+                      <span class="buddy-card__img">
+                        <img src="../assets/images/@temp/@temp_gnb_banner01.jpg" alt="" />
+                      </span>
+                      <p class="buddy-card__text">아르떼 개편 및 집콕집밖 설특별전 감상이벤트 3</p>
                     </a>
                   </li>
                 </ul>
@@ -366,7 +416,7 @@
                       <li><a href="#">해외 전시 하이라이트</a></li>
                       <li><a href="#">Art 테마칼럼&middot;인터뷰</a></li>
                       <li><a href="#">Art News</a></li>
-                      <li><a href="#">미술시장 분석</a></li>
+                      <!-- <li><a href="#">미술시장 분석</a></li> -->
                     </ul>
                   </li>
                   <li class="gnb-nav" data-accordion="group">
@@ -434,6 +484,14 @@
                                 <img src="../assets/images/@temp/@temp_gnb_banner01.jpg" alt="" />
                               </span>
                               <p class="buddy-card__text">아르떼 개편 및 집콕집밖 설특별전 감상이벤트 2</p>
+                            </a>
+                          </li>
+                          <li class="buddy-card__item swiper-slide">
+                            <a href="#" class="buddy-card__box">
+                              <span class="buddy-card__img">
+                                <img src="../assets/images/@temp/@temp_gnb_banner01.jpg" alt="" />
+                              </span>
+                              <p class="buddy-card__text">아르떼 개편 및 집콕집밖 설특별전 감상이벤트 3</p>
                             </a>
                           </li>
                         </ul>
@@ -534,6 +592,7 @@
         </section>
         <!--// all menu -->
       </div>
+
     </header>
     <!--// Header -->
 
@@ -626,8 +685,14 @@
   <script src="../assets/js/libs/jquery.min.js"></script>
   <script src="../assets/js/libs/swiper.min.js"></script>
   <script src="../assets/js/ui.js"></script>
+  <script>
+    layoutHeader({
+      type:2,
+      menu1:3,
+      menu2:3,
+    })
+  </script>
   <!-- <script src="../layout/js/layout.js"></script> layout 용도로 퍼블 HTML 에만 사용 -->
-  <script src="../assets/js/main.js"></script>
   <!--// Script -->
 
 </body>

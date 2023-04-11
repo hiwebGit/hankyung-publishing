@@ -770,7 +770,7 @@
                     <div class="artbox-lg">
                       <div href="#" class="thumb-img">
                         <a class="img-holder"><img src="../assets/images/@temp/@temp_news02.jpg" alt=""></a>
-                        <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                        <!-- <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button> -->
                         <span class="tag-gen">연극</span>
                       </div>
                       <div class="artbox-lg__cont">
@@ -782,12 +782,15 @@
                           강태을, 손준호, 이충주, 진태화, 이예은, 김수연 등 조연
                         </div>
                         <div class="artbox-lg__info">
-                          <span class="byname">내 귀에 캔디</span>
-                          <span class="tag">전문가</span>
-                          <span class="grade">
-                            <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
-                            <span class="badge-star p3"></span>
-                          </span>
+                          <div class="art-info-by">
+                            <span class="byname">내 귀에 캔디</span>
+                            <span class="tag">전문가</span>
+                            <span class="grade">
+                              <!-- 메달이 2개면 p2, 메달이 3개면 p3 추가  -->
+                              <span class="badge-star p3"></span>
+                            </span>
+                          </div>
+                          <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
                       </div>
                     </div>
@@ -1317,6 +1320,14 @@
   <script src="../assets/js/ui.js"></script>
   <script src="../assets/js/curation.js"></script> <!-- curation slider -->
   <!--// Script -->
+  
+  <script>
+    layoutHeader({
+      type:2,
+      menu1:2,
+      menu2:1, 
+    });
+  </script>
 </body>
 
 </html>

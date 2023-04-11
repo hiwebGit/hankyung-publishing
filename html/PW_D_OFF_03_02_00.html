@@ -518,25 +518,6 @@
                               </div>
                             </div>
                             <!--// 해외 도서 -->
-                            <!--상태 -->
-                            <div class="filter-options__items">
-                              <p class="filter-options__tit">상태</p>
-                              <div class="filter-options__items-cont">
-                                <ul class="filter-options__items-list">
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input" name="chk-status"
-                                        checked /><span class="o-rdo__label">전체</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">예정</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">진행중</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">종료</span></label></li>
-                                  <li><label class="o-rdo"><input type="checkbox" class="o-input"
-                                        name="chk-status" /><span class="o-rdo__label">종료 임박</span></label></li>
-                                </ul>
-                              </div>
-                            </div>
-                            <!--//상태 -->
                           </div>
                         </div>
                       </div>
@@ -790,7 +771,7 @@
                     <div class="artbox-lg">
                       <div href="#" class="thumb-img">
                         <a class="img-holder"><img src="../assets/images/@temp/@temp_news02.jpg" alt=""></a>
-                        <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
+                        <!-- <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button> -->
                         <span class="tag-gen">연극</span>
                       </div>
                       <div class="artbox-lg__cont">
@@ -810,6 +791,7 @@
                               <span class="badge-star p3"></span>
                             </span>
                           </div>
+                          <button type="button" class="btn-fav" aria-label="Like"></button>
                         </div>
                       </div>
                     </div>
@@ -1339,6 +1321,14 @@
   <script src="../assets/js/ui.js"></script>
   <script src="../assets/js/curation.js"></script> <!-- curation slider -->
   <!--// Script -->
+  
+  <script>
+    layoutHeader({
+      type:2,
+      menu1:4,
+      menu2:1, 
+    });
+</script>
 </body>
 
 </html>
