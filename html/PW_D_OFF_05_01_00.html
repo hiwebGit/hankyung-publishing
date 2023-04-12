@@ -29,13 +29,12 @@
     <div class="container" id="container">
       <!-- KV -->
       <div class="page-kv">
-        <div class="kv-title show-pc">
+        <div class="kv-title">
           <h2 class="kv-title__title">ARTE YOUTUBE LIVE</h2>
           <p class="kv-title__desc">ARTE YOUTUBE LIVE 방송을 보실 수 있습니다.</p>
         </div>
         <div class="ytube-kv__box">
-          <!-- 방송시간이 아닐경우 no-time 클래스 추가 -->
-          <div class="ytube-kv__video no-time">
+          <div class="ytube-kv__video">
             <div class="video-wrap">
               <span class="no-time__text">
                 <em class="no-time__tit">지금은 방송 시간이 아닙니다.</em>
@@ -117,6 +116,70 @@
 
       </div>
       <!--// END -->
+
+      <!-- 방송없음 case 추가 -->
+      <div class="content">
+        <div class="kv-no-video">
+          <div class="ytube-kv__box">
+            <div class="kv-title">
+              <h2 class="kv-title__title">ARTE YOUTUBE LIVE</h2>
+              <p class="kv-title__desc">ARTE YOUTUBE LIVE 방송을 보실 수 있습니다.</p>
+            </div>
+            <!-- 방송시간이 아닐경우 no-time 클래스 추가 -->
+            <div class="ytube-kv__video no-time">
+              <div class="video-wrap">
+                <span class="no-time__text">
+                  <em class="no-time__tit">지금은 방송 시간이 아닙니다.</em>
+                  <em class="no-time__txt">방송 5분 전부터 방송이 준비됩니다.</em>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <section class="ytube_wrap">
+            <div class="kv-title">
+              <h2 class="kv-title__title">ARTE 케이블 채널에서는 더 많은 영상을 볼 수 있습니다.</h2>
+              <p class="kv-title__desc">ARTE 케이블 채널에서는 더 많은 영상을 볼 수 있습니다.</p>
+            </div>
+            <div class="ytube-live">
+              <div class="ytube-live__wrap">
+                <div class="ytube-live__items">
+                  <a type="button" class="ytube-live__link" data-pop-open="popupSchedule">
+                    <span class="thumb-img">
+                      <span class="ytube-live__link-dim">
+                        <span class="ytube-live__link-inner">
+                          <em>ARTE 케이블 채널 편성표 확인하기</em>
+                          <i class="ico ico-live-calendar"></i>
+                        </span>
+                      </span>
+                      <span class="img-holder">
+                        <img src="../assets/images/@temp/@temp_thumb16.png" alt="">
+                      </span>
+                    </span>
+                  </a>
+                </div>
+                <div class="ytube-live__items">
+                  <a href="#" class="ytube-live__link">
+                    <span class="thumb-img">
+                      <span class="ytube-live__link-dim">
+                        <span class="ytube-live__link-inner">
+                          <em>ARTE 케이블 채널 번호 확인하기</em>
+                          <i class="ico ico-live-check"></i>
+                        </span>
+                      </span>
+                      <span class="img-holder">
+                        <img src="../assets/images/@temp/@temp_thumb18.png" alt="">
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!--// 방송없음 case 추가 -->
+
     </div>
     <!--// Container -->
 
@@ -281,6 +344,14 @@
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
   <!--// Script -->
+
+  <script>
+    layoutHeader({
+      type:2,
+      menu1:6,
+      menu2:1, 
+    });
+</script>
 
 </body>
 
