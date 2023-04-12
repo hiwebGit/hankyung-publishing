@@ -17,7 +17,6 @@ function layoutHeader(myGnb) {
   } else {
     headerFile = 'layout_header.html';
   }
-  
 }
 
 function setGnb() {

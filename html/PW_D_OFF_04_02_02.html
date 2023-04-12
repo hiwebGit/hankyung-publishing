@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-  <title>ARTE TALK TALK(상세) | 한경 ARTE</title>
+  <title>arte TALK TALK(상세) | 한경 ARTE</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
@@ -38,23 +38,35 @@
             <div class="editor-section">
               <div class="editor-info-section">
                 <h2 class="editor-info__title"><span class="classic-logo">Classic</span>기괴하면서도 귀여운 팝아트 세계로 오라</h2>
-                <div class="editor-info__util talk-talk">
-                  <div class="art-info-wrap">
+                <div class="editor-info__util">
+                  <div class="art-info-sub">
                     <div class="art-info-by">
                       <span class="byname">내 귀에 캔디</span>
-                      <span class="tag">전문가</span>
+                      <span class="tag tag--line">회원</span>
                     </div>
-                    <div class="art-info-sub">
-                      <span class="text-date">2022.10.20</span>
-                      <div class="access-nums">
-                        <span class="acc-num acc-num--view"><em>25</em></span>
-                        <span class="acc-num acc-num--like"><em>120k</em></span>
-                        <span class="acc-num acc-num--comment"><em>25</em></span>
+                    <!-- <div class="grade-list">
+                      <span class="badge-star p3"></span>
+                    </div> -->
+                    <span class="text-date">2022.10.20</span>
+                    <div class="access-nums">
+                      <span class="acc-num acc-num--view"><em>25</em></span>
+                      <span class="acc-num acc-num--like"><em>120k</em></span>
+                      <span class="acc-num acc-num--comment"><em>25</em></span>
+                    </div>
+                    <button type="button" class="btn-fav" aria-label="Like"></button>
+                  </div>
+                  <div class="art-info-btn">
+                    <button type="button" class="btn-share" aria-label="Share"></button>
+                    <div class="setting" data-role="visible_wrap">
+                      <button type="button" class="setting__btn" aria-label="레이어 더보기" data-role="visible_btn"></button>
+                      <div class="setting__layer" data-role="visible_cont">
+                        <ul>
+                          <li><a href="#">신고하기</a></li>
+                        </ul>
+                        <button type="button" class="btn-close" data-role="hide_btn" aria-label="레이어 닫기"></button>
                       </div>
-                      <button type="button" class="btn-fav" aria-label="Like"></button>
                     </div>
                   </div>
-                  <button type="button" class="btn-share align-end" aria-label="Share"></button>
                 </div>
               </div>
               <!-- s: 에디터등록영역 -->
@@ -87,6 +99,10 @@
                 <a href="#" class="hashtag"># 갤러리애프터눈</a>
                 <a href="#" class="hashtag"># 바로크 시대</a>
               </div>
+              <div class="btn-area pt-none">
+                <button type="button" class="btn size-sm c-gray">수정</button>
+                <button type="button" class="btn size-sm">삭제</button>
+              </div>
             </div>
 
             <!-- ad-banner -->
@@ -95,20 +111,24 @@
                 <div class="ad-banner__list swiper-wrapper">
                   <a href="#" class="ad-banner__item swiper-slide">
                     <!-- Img PC -->
-                    <img src="../assets/images/@temp/@banner01_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
+                    <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                    <!-- Img PC 2 -->
+                    <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
                     <!-- Img Tablet -->
-                    <img src="../assets/images/@temp/@banner01_tablet.png" alt="ad banner"
-                      class="ad-banner__img img--tablet" />
+                    <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                    <!-- Img Tablet 2 -->
+                    <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
                     <!-- Img Mobile -->
-                    <img src="../assets/images/@temp/@banner01_mobile_@2x.png" alt="ad banner"
-                      class="ad-banner__img img--mobile" />
+                    <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
+                      class="ad-banner__img img--mo" />
                   </a>
                   <a href="#" class="ad-banner__item swiper-slide">
-                    <img src="../assets/images/@temp/@banner02_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
-                    <img src="../assets/images/@temp/@banner02_tablet.png" alt="ad banner"
-                      class="ad-banner__img img--tablet">
-                    <img src="../assets/images/@temp/@banner02_mobile_@2x.png" alt="ad banner"
-                      class="ad-banner__img img--mobile" />
+                    <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                    <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
+                    <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                    <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                    <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
+                      class="ad-banner__img img--mo" />
                   </a>
                 </div>
               </div>
@@ -394,6 +414,14 @@
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
   <!--// Script -->
+  
+  <script>
+    layoutHeader({
+      type:2,
+      menu1:5,
+      menu2:2, 
+    });
+</script>
 </body>
 
 </html>

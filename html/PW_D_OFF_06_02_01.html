@@ -103,14 +103,14 @@
             <div class="offer-review__group">
               <div class="offer-review__header">
                 <!-- tab  : button 활성화 'is-active' -->
-                <div class="tab type-all">
+                <div class="tab bg-type">
                   <ul class="tab__list ml__8" data-tab="tab-list">
                     <li class="tab__item"><a href="#" class="tab__btn is-active" data-tab-btn="tab01">전문가 리뷰</a></li>
                     <li class="tab__item"><a href="#" class="tab__btn" data-tab-btn="tab02">회원 리뷰</a></li>
                   </ul>
                 </div>
                 <!-- 리뷰가 없을 경우 버튼 삭제 -->
-                <button type="button" class="btn no-line ss">리뷰더보기<i class="ico ico-arrow"></i></button>
+                <button type="button" class="btn no-line ss">리뷰 더보기<i class="ico ico-arrow"></i></button>
                 <!-- //리뷰가 없을 경우 버튼 삭제 -->
               </div>
               <div class="offer-review__cont">
@@ -135,9 +135,13 @@
                         <span class="badge-star p3"></span>
                       </div>
                     </div>
+                    <div class="art-info-sub">
+                      <span class="text-date">2022.10.20</span>
+                    </div>
                   </div>
-                  <!-- 리뷰가 없을 경우 -->
-                  <!-- <div class="offer-review__box">
+                </div>
+                <!-- 리뷰가 없을 경우 -->
+                <!-- <div class="offer-review__box">
                   <div class="offer-review-none">
                     <p class="offer-review-none__txt">해당 공연에 대한 회원 리뷰가 아직 없습니다!</p>
                     <div class="offer-review-none__btnbox">
@@ -145,9 +149,9 @@
                     </div>
                   </div>
                 </div> -->
-                  <!-- //리뷰가 없을 경우 -->
-                </div>
+                <!-- //리뷰가 없을 경우 -->
               </div>
+            </div>
           </section>
           <!-- //사이드 리뷰 섹션 -->
         </div>
@@ -334,7 +338,7 @@
             </div> -->
             <!-- //리뷰가 없는 경우 -->
             <div class="offer-review__header">
-              <div class="tab">
+              <div class="tab bg-type">
                 <ul class="tab__list ml__8" data-tab="tab-list">
                   <!-- tab  : button 활성화 'is-active' -->
                   <li class="tab__item"><a href="#" class="tab__btn is-active" data-tab-btn="tab01">전문가 리뷰<span
@@ -587,7 +591,7 @@
             </div> -->
             <!-- //리뷰가 없는 경우 -->
             <div class="offer-review__header">
-              <div class="tab">
+              <div class="tab bg-type">
                 <ul class="tab__list ml__8" data-tab="tab-list">
                   <!-- tab  : button 활성화 'is-active' -->
                   <li class="tab__item"><a href="#" class="tab__btn is-active" data-tab-btn="tab01">전문가 리뷰<span
@@ -941,8 +945,7 @@
           <div class="concert-review" id="section_comment">
             <div class="concert-review__head">
               <p class="rating-total">총 345개</p>
-              <button type="button" class="btn-rect size-sm bg-primary" data-pop-open="popupComment">한줄평 쓰기<i
-                  class="ico ico-arrow"></i></button>
+              <button type="button" class="btn-rect size-sm bg-primary" data-pop-open="popupComment">한줄평 쓰기</button>
             </div>
 
             <div class="swiper review-thum">
@@ -967,7 +970,7 @@
                 </li>
                 <li class="swiper-slide">
                   <img src="../assets/images/@temp/@c11_review_thum01.png" alt="">
-                  <button type="button" class="all-review" data-pop-open="popupGallery">전체보기</button>
+                  <button type="button" class="all-review" data-pop-open="popupGallery">더보기<em>+</em></button>
                 </li>
               </ul>
             </div>
@@ -1057,7 +1060,7 @@
                         </div>
                         <div class="one-line-sub__box">
                           <!-- 클릭시 active 클래스가 붙는다. -->
-                          <button type="button" class="btn no-line ss h-add-btn"><span class="arrow-txt">한줄평
+                          <button type="button" class="btn no-line h-add-btn"><span class="arrow-txt">한줄평
                               닫기</span>
                             <i class="ico ico-above"></i></button>
                         </div>
@@ -1129,7 +1132,7 @@
                         </div>
                         <div class="one-line-sub__box">
                           <!-- 클릭시 active 클래스가 붙는다. -->
-                          <button type="button" class="btn no-line ss h-add-btn is-active"><span class="arrow-txt">한줄평
+                          <button type="button" class="btn no-line h-add-btn is-active"><span class="arrow-txt">한줄평
                               열기</span>
                             <i class="ico ico-above"></i></button>
                         </div>
@@ -1376,7 +1379,13 @@
       $(".pop2").load("PW_I_ON_CP_02_00.html .pop-wrap");
     });
   </script>
-
+  <script>
+    layoutHeader({
+      type:2,
+      menu1:1,
+      menu2:2, 
+    });
+  </script>
 </body>
 
 </html>

@@ -4562,7 +4562,8 @@ body.dark-mode .acc-num--view::before { background-repeat: no-repeat; background
   .schedule-box__calendar { display: none; }
   .schedule-box__table { margin-top: 0; border: none; }
   .schedule-box__table .episode.mo { display: inline-block; margin-left: 2px; font-size: 14px; font-weight: 500; line-height: 1; color: var(--color-dark); }
-  .schedule-box__table .block-item { position: relative; height: auto; padding: 12px 24px; border-bottom: none; grid-template-columns: 40px auto; grid-template-areas: "time program" ". title"; column-gap: 16px; row-gap: 4px; }
+  .schedule-box__table .block-item { position: relative; height: auto; padding: 12px 24px; border-bottom: none; grid-template-columns: 40px auto; grid-template-areas: "time program"
+ ". title"; column-gap: 16px; row-gap: 4px; }
   .schedule-box__table .block-item::before { content: ''; display: block; width: calc(100% - 48px); height: 1px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); background-color: #DFDBD3; }
   .schedule-box__table .block-item .cell { text-align: left; }
   .schedule-box .time { grid-area: time; align-self: baseline; }
@@ -8135,7 +8136,9 @@ body.dark-mode .acc-num--view::before { background-repeat: no-repeat; background
   .my-qna .text-guide + .text-guide { margin-top: 8px; }
   .my-qna .text-area { height: 160px; }
   .my-list__title-mo { display: block; margin-bottom: 25px; font-weight: 600; font-size: 18px; line-height: 1.4; color: var(--color-dark); }
-  .my-list__link { padding: 24px 0; align-items: baseline; row-gap: 8px; grid-template-areas: "tag . . " "title title title" "date date date"; }
+  .my-list__link { padding: 24px 0; align-items: baseline; row-gap: 8px; grid-template-areas: "tag . . "
+ "title title title"
+ "date date date"; }
   .my-list__link .tag { grid-area: tag; }
   .my-list__title { display: block; overflow: auto; text-overflow: clip; white-space: normal; grid-area: title; font-size: 14px; }
   .my-list__date { grid-area: date; }

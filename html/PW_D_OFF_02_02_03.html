@@ -41,7 +41,6 @@
               <div class="card-img">
                 <div class="thumb-img">
                   <span class="img-holder"><img src="../assets/images/@temp/@temp_thumb02.jpg" alt=""></span>
-                  <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
                   <span class="tag-gen">연극</span>
                 </div>
                 <div class="card-img__titlebox">
@@ -218,10 +217,10 @@
                             <div class="art-vt-block__tags">
                               <span class="id">내 귀에 캔디</span>
                               <span class="tag">전문가</span>
-                              <span class="grade">
-                                <span class="star"><i class="star__point p8"></i></span>
-                                <em class="grade__num">8.0</em>
-                              </span>
+                              <div class="grade-list">
+                                <!-- 별점이 2개면 p2, 별점이 3개면 p3 추가  -->
+                                <span class="badge-star p1"></span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -248,10 +247,10 @@
                             <div class="art-vt-block__tags">
                               <span class="id">내 귀에 캔디</span>
                               <span class="tag">전문가</span>
-                              <span class="grade">
-                                <span class="star"><i class="star__point p8"></i></span>
-                                <em class="grade__num">8.0</em>
-                              </span>
+                              <div class="grade-list">
+                                <!-- 별점이 2개면 p2, 별점이 3개면 p3 추가  -->
+                                <span class="badge-star p3"></span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -278,7 +277,7 @@
                           <div class="art-vt-block__inbox">
                             <div class="art-vt-block__tags">
                               <span class="id">내 귀에 캔디</span>
-                              <span class="tag">전문가</span>
+                              <span class="tag tag--line">회원</span>
                               <span class="grade">
                                 <span class="star"><i class="star__point p8"></i></span>
                                 <em class="grade__num">8.0</em>
@@ -314,6 +313,14 @@
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
   <!--// Script -->
+  
+  <script>
+    layoutHeader({
+      type:2,
+      menu1:3,
+      menu2:1, 
+    });
+</script>
 </body>
 
 </html>

@@ -41,7 +41,6 @@
               <div class="card-img">
                 <div class="thumb-img">
                   <span class="img-holder"><img src="../assets/images/@temp/@temp_thumb02.jpg" alt=""></span>
-                  <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
                   <span class="tag-gen">연극</span>
                 </div>
                 <div class="card-img__titlebox">
@@ -56,13 +55,9 @@
               <div class="viewcard-kv__tags">
                 <span class="id">내 귀에 캔디</span>
                 <span class="tag">전문가</span>
-                <div class="star-box">
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p10"></i></span>
-                  <span class="star"><i class="star__point p5"></i></span>
-                  <em class="grade__num">8.0</em>
+                <div class="grade-list">
+                  <!-- 별점이 2개면 p2, 별점이 3개면 p3 추가  -->
+                  <span class="badge-star p2"></span>
                 </div>
                 <span class="grade mo">
                   <span class="star"><i class="star__point p8"></i></span>
@@ -79,6 +74,15 @@
                   </div>
                   <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
                   <button type="button" class="btn-share" aria-label="Share"></button>
+                  <div class="setting" data-role="visible_wrap">
+                    <button type="button" class="setting__btn" aria-label="레이어 더보기" data-role="visible_btn"></button>
+                    <div class="setting__layer" data-role="visible_cont">
+                      <ul>
+                        <li><a href="#">신고하기</a></li>
+                      </ul>
+                      <button type="button" class="btn-close" data-role="hide_btn" aria-label="레이어 닫기"></button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -138,20 +142,24 @@
                 <div class="ad-banner__list swiper-wrapper">
                   <a href="#" class="ad-banner__item swiper-slide">
                     <!-- Img PC -->
-                    <img src="../assets/images/@temp/@banner01_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
+                    <img src="../assets/images/@temp/@ad_banner_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                    <!-- Img PC 2 -->
+                    <img src="../assets/images/@temp/@ad_banner_md.png" alt="banner" class="ad-banner__img img--md" />
                     <!-- Img Tablet -->
-                    <img src="../assets/images/@temp/@banner01_tablet.png" alt="ad banner"
-                      class="ad-banner__img img--tablet" />
+                    <img src="../assets/images/@temp/@ad_banner_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                    <!-- Img Tablet 2 -->
+                    <img src="../assets/images/@temp/@ad_banner_xs.png" alt="banner" class="ad-banner__img img--xs" />
                     <!-- Img Mobile -->
-                    <img src="../assets/images/@temp/@banner01_mobile_@2x.png" alt="ad banner"
-                      class="ad-banner__img img--mobile" />
+                    <img src="../assets/images/@temp/@ad_banner_mobile@2x.png" alt="banner"
+                      class="ad-banner__img img--mo" />
                   </a>
                   <a href="#" class="ad-banner__item swiper-slide">
-                    <img src="../assets/images/@temp/@banner02_pc.png" alt="ad banner" class="ad-banner__img img--pc" />
-                    <img src="../assets/images/@temp/@banner02_tablet.png" alt="ad banner"
-                      class="ad-banner__img img--tablet">
-                    <img src="../assets/images/@temp/@banner02_mobile_@2x.png" alt="ad banner"
-                      class="ad-banner__img img--mobile" />
+                    <img src="../assets/images/@temp/@ad_banner02_lg.png" alt="banner" class="ad-banner__img img--lg" />
+                    <img src="../assets/images/@temp/@ad_banner02_md.png" alt="banner" class="ad-banner__img img--md" />
+                    <img src="../assets/images/@temp/@ad_banner02_sm.png" alt="banner" class="ad-banner__img img--sm" />
+                    <img src="../assets/images/@temp/@ad_banner02_xs.png" alt="banner" class="ad-banner__img img--xs" />
+                    <img src="../assets/images/@temp/@ad_banner02_mobile@2x.png" alt="banner"
+                      class="ad-banner__img img--mo" />
                   </a>
                 </div>
               </div>
@@ -192,8 +200,7 @@
                         <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
                         <div class="art-vt-block">
                           <div class="thumb-img">
-                            <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg"
-                                alt=""></span>
+                            <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg" alt=""></span>
                           </div>
                           <div class="art-vt-block__titbox">
                             <div class="art-vt-block__stit">
@@ -202,7 +209,8 @@
                             </div>
                             <a href="#" class="art-vt-block__link">
                               <p class="art-vt-block__title">디자인도 미술도 예술 디자인도 미술도 예술 디자인도 미술도 예술</p>
-                              <p class="art-vt-block__txt">바이올린 여제, 사라 장이 바이올린 여제, 사라 장이 바이올린 여제, 사라 장이 바이올린 여제, 사라 장이</p>
+                              <p class="art-vt-block__txt">바이올린 여제, 사라 장이 바이올린 여제, 사라 장이 바이올린 여제, 사라 장이 바이올린 여제, 사라 장이
+                              </p>
                             </a>
                           </div>
                           <div class="art-vt-block__inbox">
@@ -210,8 +218,7 @@
                               <span class="id">내 귀에 캔디</span>
                               <span class="tag">전문가</span>
                               <span class="grade">
-                                <span class="star"><i class="star__point p8"></i></span>
-                                <em class="grade__num">8.0</em>
+                                <span class="badge-star p3"></span>
                               </span>
                             </div>
                           </div>
@@ -223,8 +230,7 @@
                         <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
                         <div class="art-vt-block">
                           <div class="thumb-img">
-                            <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg"
-                                alt=""></span>
+                            <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg" alt=""></span>
                           </div>
                           <div class="art-vt-block__titbox">
                             <div class="art-vt-block__stit">
@@ -241,8 +247,7 @@
                               <span class="id">내 귀에 캔디</span>
                               <span class="tag">전문가</span>
                               <span class="grade">
-                                <span class="star"><i class="star__point p8"></i></span>
-                                <em class="grade__num">8.0</em>
+                                <span class="badge-star p3"></span>
                               </span>
                             </div>
                           </div>
@@ -254,8 +259,7 @@
                         <button type="button" class="btn-fav btn-fav--wt" aria-label="Like"></button>
                         <div class="art-vt-block">
                           <div class="thumb-img">
-                            <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg"
-                                alt=""></span>
+                            <span class="img-holder"><img src="../assets/images/@temp/@thumg_img01.jpg" alt=""></span>
                           </div>
                           <div class="art-vt-block__titbox">
                             <div class="art-vt-block__stit">
@@ -264,7 +268,8 @@
                             </div>
                             <a href="#" class="art-vt-block__link">
                               <p class="art-vt-block__title">디자인도 미술도 예술 디자인도 미술도 예술 디자인도 미술도 예술</p>
-                              <p class="art-vt-block__txt">바이올린 여제, 사라 장이 바이올린 여제, 사라 장이 바이올린 여제, 사라 장이 바이올린 여제, 사라 장이</p>
+                              <p class="art-vt-block__txt">바이올린 여제, 사라 장이 바이올린 여제, 사라 장이 바이올린 여제, 사라 장이 바이올린 여제, 사라 장이
+                              </p>
                             </a>
                           </div>
                           <div class="art-vt-block__inbox">
@@ -272,8 +277,7 @@
                               <span class="id">내 귀에 캔디</span>
                               <span class="tag">전문가</span>
                               <span class="grade">
-                                <span class="star"><i class="star__point p8"></i></span>
-                                <em class="grade__num">8.0</em>
+                                <span class="badge-star p3"></span>
                               </span>
                             </div>
                           </div>
@@ -306,6 +310,14 @@
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
   <!--// Script -->
+  
+   <script>
+    layoutHeader({
+      type:2,
+      menu1:4,
+      menu2:2, 
+    });
+  </script>
 
   <script>
     // window.addEventListener('resize', function() {
