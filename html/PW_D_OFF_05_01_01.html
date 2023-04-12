@@ -54,10 +54,10 @@
               <div class="schedule-box__contents-top">
                 <div class="schedule-box__date-view">
                   <button type="button" class="date-btn date-btn--prev" aria-label="prev"></button>
-                  <span class="current-date">2023.02<span class="mo">.08 (수)</span></span>
+                  <span class="current-date">2023.02<span class="pc">.14</span><span class="mo">.08 (수)</span></span>
                   <a href="#" class="date-btn date-btn--next" aria-label="next"></a>
                 </div>
-                <ul class="schedule-box__calendar">
+                <ul class="schedule-box__calendar"> 
                   <li class="schedule-box__calendar-item">
                     <button type="button" class="schedule-box__sel-btn">
                       <span class="day">SAT</span>
@@ -198,6 +198,14 @@
   <!-- <script src="../layout/js/layout.js"></script> layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
   <!--// Script -->
+
+  <script>
+    layoutHeader({
+      type:2,
+      menu1:6,
+      menu2:2, 
+    });
+  </script>
 
   <script>
     $(function () {
