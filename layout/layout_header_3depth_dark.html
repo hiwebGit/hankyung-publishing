@@ -34,7 +34,7 @@
       <!-- [CASE] inner : 2depth 인 경우 'inner-depth inner-2depth' / 인 경우 3depth 'inner-depth inner-2depth' 추가 -->
       <div class="header__inner inner-depth inner-3depth">
         <!-- [CASE] block : 1depth, main 인 경우 'header__main-block'/ 2depth, 3depth 인 경우 'header__block' -->
-        <div class="header__block">
+        <div class="header__block dep_none">
           <div class="header__left">
 
             <!-- [CASE] Logo : 1depth, main 인 경우 노출 / 2depth, 3depth 인 경우 미노출 -->
@@ -60,7 +60,7 @@
 
             <!-- [CASE] 2depth, 3depth 인 경우 노출 / main, 1depth 인 경우 미노출 -->
             <!-- gnb : 버튼 활성화 'is-gnb-active', 메뉴 활성화 'is-active' 추가 -->
-            <div class="gnb-menu">
+            <div class="gnb-menu ">
               <button type="button" class="gnb-menu__current" data-gnb-sel-cur="arte"><em>arte</em></button>
               <ul class="gnb-menu__list">
                 <li class="arte is-active"><a href="#" data-gnb-sel="arte"><em class="display-tit">arte</em> <span
@@ -70,7 +70,7 @@
                       class="text">즐기다</span></a></li>
                 <li class="art"><a href="#" data-gnb-sel="art"><em>ART</em> <span class="text">보다</span></a></li>
                 <li class="book"><a href="#" data-gnb-sel="book"><em>BOOK</em> <span class="text">읽다</span></a></li>
-                <li class="arte-talk"><a href="#" data-gnb-sel="arte-talk"><em>arteTALK</em></a></li>
+                <li class="arte-talk"><a href="#" data-gnb-sel="arte-talk"><em>arte TALK TALK</em></a></li>
                 <li class="arte-video"><a href="#" data-gnb-sel="arte-video"><em>arte</em> <span
                       class="text">영상</span></a>
                 </li>
@@ -87,7 +87,7 @@
             <ul class="lnb-menu__list">
               <li class="is-active"><a href="#">음악 리뷰</a></li>
               <li><a href="#">음악 공연 정보</a></li>
-              <li><a href="#">MUSIC 테마 칼럼·인터뷰</a></li>
+              <li><a href="#"><span class="lnb-enter">MUSIC </span>테마칼럼·인터뷰</a></li>
               <li><a href="#">MUSIC NEWS</a></li>
             </ul>
           </div>
@@ -98,7 +98,7 @@
             <ul class="lnb-menu__list">
               <li class="is-active"><a href="#">공연·영화 리뷰</a></li>
               <li><a href="#">공연·영화 공연 정보</a></li>
-              <li><a href="#">STAGE·CINE 테마칼럼·인터뷰</a></li>
+              <li><a href="#"><span class="lnb-enter">STAGE·CINE </span>테마칼럼·인터뷰</a></li>
               <li><a href="#">STAGE·CINE NEWS</a></li>
             </ul>
           </div>
@@ -109,12 +109,12 @@
             <ul class="lnb-menu__list">
               <li class="is-active"><a href="#">전시 리뷰</a></li>
               <li><a href="#">전시 공연 정보</a></li>
-              <li><a href="#">해외 전시 하이라이트</a></li>
+              <li><a href="#"><span class="lnb-enter">해외 전시 </span>하이라이트</a></li>
               <li><a href="#">ART 테마칼럼·인터뷰</a></li>
               <li><a href="#">ART NEWS</a></li>
-              <!-- <li><a href="#">미술시장 분석</a></li> -->
             </ul>
           </div>
+          <!-- <li><a href="#">미술시장 분석</a></li> -->
 
           <!-- lnb 4 -->
           <div class="lnb-menu">
@@ -123,7 +123,7 @@
               <li class="is-active"><a href="#">문학·고전 리뷰</a></li>
               <li><a href="#">탐나는 책</a></li>
               <li><a href="#">책 정보</a></li>
-              <li><a href="#">BOOK 테마칼럼·인터뷰</a></li>
+              <li><a href="#"><span class="lnb-enter">BOOK </span>테마칼럼·인터뷰</a></li>
               <li><a href="#">BOOK NEWS</a></li>
             </ul>
           </div>
@@ -134,7 +134,7 @@
             <ul class="lnb-menu__list">
               <li class="is-active"><a href="#">문화예술계 소식</a></li>
               <li><a href="#">arte TALK TALK</a></li>
-              <li><a href="#">arte POLL</a></li>
+              <li><a href="#">arte Poll</a></li>
             </ul>
           </div>
 
@@ -149,11 +149,11 @@
 
           <!-- lnb 7 -->
           <div class="lnb-menu">
-            <button type="button" class="lnb-menu__current">arte MAP</button>
+            <button type="button" class="lnb-menu__current">arte Map</button>
             <ul class="lnb-menu__list">
-              <li class="is-active"><a href="#">arte MAP</a></li>
-              <li><a href="#">arte CALENDAR</a></li>
-              <li><a href="#">ARTIST DB</a></li>
+              <li class="is-active"><a href="#">arte Map</a></li>
+              <li><a href="#">arte Calendar</a></li>
+              <li><a href="#">artist DB</a></li>
             </ul>
           </div>
 
@@ -186,7 +186,7 @@
                   <ul class="gnb-nav__list">
                     <li><a href="#" class="gnb-nav__btn">음악 리뷰</a></li>
                     <li><a href="#" class="gnb-nav__btn">음악 공연 정보</a></li>
-                    <li><a href="#" class="gnb-nav__btn">MUSIC 테마 칼럼·인터뷰</a></li>
+                    <li><a href="#" class="gnb-nav__btn">MUSIC 테마칼럼·인터뷰</a></li>
                     <li><a href="#" class="gnb-nav__btn">MUSIC NEWS</a></li>
                   </ul>
                 </div>
@@ -221,20 +221,20 @@
                   </ul>
                 </div>
                 <div class="gnb-nav" data-lnb="talk">
-                  <h3 class="header-tit">arte TALK</h3>
+                  <h3 class="header-tit">arte TALK TALK</h3>
                   <div class="gnb-nav__list">
                     <li><a href="#" class="gnb-nav__btn">문화예술계 소식</a></li>
                     <li><a href="#" class="gnb-nav__btn">arte TALK TALK</a></li>
                     <li><a href="#" class="gnb-nav__btn">공지사항</a></li>
-                    <li><a href="#" class="gnb-nav__btn">arte POLL</a></li>
+                    <li><a href="#" class="gnb-nav__btn">arte Poll</a></li>
                   </div>
                 </div>
                 <div class="gnb-nav" data-lnb="finder">
                   <h3 class="header-tit">ART FINDER</h3>
                   <div class="gnb-nav__list">
-                    <li><a href="#" class="gnb-nav__btn">arte MAP</a></li>
-                    <li><a href="#" class="gnb-nav__btn">arte CALENDAR</a></li>
-                    <li><a href="#" class="gnb-nav__btn">ARTIST DB</a></li>
+                    <li><a href="#" class="gnb-nav__btn">arte Map</a></li>
+                    <li><a href="#" class="gnb-nav__btn">arte Calendar</a></li>
+                    <li><a href="#" class="gnb-nav__btn">artist DB</a></li>
                   </div>
                 </div>
                 <div class="gnb-nav" data-lnb="video">
@@ -249,9 +249,9 @@
               <div class="nav-links">
                 <h3 class="header-tit">ART FINDER</h3>
                 <div class="nav-links__list">
-                  <a href="#" class="nav-links__btn">arte MAP</a>
+                  <a href="#" class="nav-links__btn">arte Map</a>
                   <a href="#" class="nav-links__btn">arte CALENDADR</a>
-                  <a href="#" class="nav-links__btn">ARTIST DB</a>
+                  <a href="#" class="nav-links__btn">artist DB</a>
                 </div>
               </div>
             </div>
@@ -330,15 +330,15 @@
           <div class="header-global-search type-right" data-header-box="search">
             <div class="header__nav">
               <div class="header-search">
-                <input type="text" class="o-input" placeholder="Arte.com검색하기">
+                <input type="text" class="o-input" placeholder="arte.co.kr검색하기">
               </div>
               <div class="nav-links">
                 <h3 class="header-tit">Quick Links</h3>
                 <div class="nav-links__list">
-                  <a href="#" class="nav-links__btn">arte MAP</a>
-                  <a href="#" class="nav-links__btn">arte CALENDAR</a>
-                  <a href="#" class="nav-links__btn">ARTIST DB</a>
-                  <a href="#" class="nav-links__btn">arte POLL </a>
+                  <a href="#" class="nav-links__btn">arte Map</a>
+                  <a href="#" class="nav-links__btn">arte Calendar</a>
+                  <a href="#" class="nav-links__btn">artist DB</a>
+                  <a href="#" class="nav-links__btn">arte Poll</a>
                 </div>
               </div>
             </div>
@@ -348,13 +348,20 @@
           <!-- 마이페이지 -->
           <div class="header-global-mypage type-right" data-header-box="mypage">
             <div class="header__nav">
-              <div class="header-info">
+              <!-- <div class="header-info">
                 <p class="header-info__name">간만에카페인가가가가</p>
                 <p class="header-info__email">guest01@hankung.com</p>
                 <div class="header-info__btns">
                   <button type="button" class="btn size-sm c-primary">로그아웃</button>
                 </div>
-              </div>
+              </div> -->
+              <div class="header-info">
+                <p class="header-info__name">로그인을 해주세요</p>
+                <p class="header-info__email"></p>
+                <div class="header-info__btns">
+                  <button type="button" class="btn size-sm c-primary">로그인<i class="ico ico-arrow"></i></button>
+                </div>
+            </div>
               <div class="nav-links">
                 <h3 class="header-tit">마이페이지</h3>
                 <div class="nav-links__list">
@@ -392,6 +399,17 @@
                     <span class="logout-tit">로그아웃</span>
                   </button>
                 </div>
+                <!-- <div class="log-btn-wrap show-mo after">
+                  <button type="button" class="login-btn before">
+                    <span class="login-tit">로그인</span>
+                  </button>
+                  <button type="button" class="login-btn after">
+                    <span class="login-tit">간만에카페인먹었어요</span>
+                  </button>
+                  <button type="button" class="logout-btn after">
+                    <span class="logout-tit">로그아웃</span>
+                  </button>
+                </div> -->
               </div>
               <div class="header-utils">
                 <ul class="gnb-utils">
@@ -457,8 +475,8 @@
                     <ul class="gnb-menu__depbox">
                       <li><a href="#">음악 리뷰</a></li>
                       <li><a href="#">음악 공연 정보</a></li>
-                      <li><a href="#">테마 칼럼&middot;인터뷰</a></li>
-                      <li><a href="#">MUSIC News</a></li>
+                      <li><a href="#"><span class="gnb-enter">MUSIC </span>테마칼럼&middot;인터뷰</a></li>
+                      <li><a href="#">MUSIC NEWS</a></li>
                     </ul>
                   </li>
                   <li class="gnb-nav" data-accordion="group">
@@ -469,7 +487,7 @@
                     <ul class="gnb-menu__depbox">
                       <li><a href="#">공연&middot;영화 리뷰</a></li>
                       <li><a href="#">공연 정보</a></li>
-                      <li><a href="#">STAGE&middot;CINE 테마칼럼&middot;인터뷰</a></li>
+                      <li><a href="#"><span class="gnb-enter">STAGE&middot;CINE </span>테마칼럼&middot;인터뷰</a></li>
                       <li><a href="#">STAGE&middot;CINE NEWS</a></li>
                     </ul>
                   </li>
@@ -481,7 +499,7 @@
                     <ul class="gnb-menu__depbox">
                       <li><a href="#">전시 리뷰</a></li>
                       <li><a href="#">전시 정보</a></li>
-                      <li><a href="#">해외 전시 하이라이트</a></li>
+                      <li><a href="#"><span class="gnb-enter">해외 전시 </span>하이라이트</a></li>
                       <li><a href="#">ART 테마칼럼&middot;인터뷰</a></li>
                       <li><a href="#">ART NEWS</a></li>
                       <!-- <li><a href="#">미술시장 분석</a></li> -->
@@ -495,20 +513,20 @@
                     <ul class="gnb-menu__depbox">
                       <li><a href="#">문학&middot;고전 리뷰</a></li>
                       <li><a href="#">책 정보</a></li>
-                      <li><a href="#">BOOK 테마칼럼&middot;인터뷰</a></li>
+                      <li><a href="#"><span class="gnb-enter">BOOK </span>테마칼럼&middot;인터뷰</a></li>
                       <li><a href="#">BOOK NEWS</a></li>
                     </ul>
                   </li>
                   <li class="gnb-nav dep--2" data-accordion="group">
-                    <span class="header-tit show-pc">arte TALK </span>
+                    <span class="header-tit show-pc">arte TALK TALK</span>
                     <button type="button" class="accor-btn show-mo" data-accordion="btn">
                       <i class="gnb-ico ico-talk"></i>
-                      <em>arte TALK</em></button>
+                      <em>arte TALK TALK</em></button>
                     <ul class="gnb-menu__depbox">
                       <li><a href="#">문화예술계 소식</a></li>
                       <li><a href="#">arte TALK TALK</a></li>
                       <li><a href="#">공지사항</a></li>
-                      <li><a href="#">arte POLL</a></li>
+                      <li><a href="#">arte Poll</a></li>
                     </ul>
                   </li>
                   <li class="gnb-nav dep--2" data-accordion="group">
@@ -527,9 +545,9 @@
                       <i class="gnb-ico ico-finder"></i>
                       <em>ART FINDER</em></button>
                     <ul class="gnb-menu__depbox">
-                      <li><a href="#">arte MAP</a></li>
-                      <li><a href="#">arte CALENDAR</a></li>
-                      <li><a href="#">ARTIST DB</a></li>
+                      <li><a href="#">arte Map</a></li>
+                      <li><a href="#">arte Calendar</a></li>
+                      <li><a href="#">artist DB</a></li>
                     </ul>
                   </li>
                   <!-- all-menu-side__wrap 사이드 영역으로 li 추가 시 위에 마크업 추가 -->
