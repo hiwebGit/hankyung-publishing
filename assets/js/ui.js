@@ -798,6 +798,8 @@
       $(document).on('click.dropdown', _this.curBtn, function (ev) {
         var $dropdown = $(ev.target).closest(_this.el);
 
+        $(_this.el).removeClass(_this.openName);
+
         if (_this.openChk($dropdown)) {
           $dropdown.removeClass(_this.openName);
         } else {
@@ -847,13 +849,17 @@
         var $tabBox = $(ev.target).closest(_this.tabEl);
 
         if (_this.openChk($tabBox)) {
-          $tabBox.removeClass(_this.openName);
+          _this.closeEv($tabBox);
         } else {
           $tabBox.addClass(_this.openName);
         }
       });
 
       _this.selectEv();
+    },
+    closeEv: function (box) {
+      var _this = this
+      box.removeClass(_this.openName);
     },
     selectEv: function () {
       var _this = this;
@@ -891,47 +897,58 @@
       slidesPerView: "auto",
       observer: true,
       observeParents: true,
-      slideVisibleClass: 'is-visible',
+      slideVisibleClass: 'swiper-slide-visible',
       watchSlidesProgress: true,
       watchSlidesVisibility: true,
       slideToClickedSlide: true,
     },
     init: function () {
-      if (!$(this.tSwiperEl).hasClass('swiper-container-initialized')) {
-        this.tSwiper = new Swiper(this.tSwiperEl, this.config);
+      //console.log('check', window.winWChk);
 
-        //console.log($(this.tSwiperEl).find('.is-active').closest('li').index());
+      // pc
+      if (window.winWChk === 'pc') {
+        if ($(this.tSwiperEl).find('.swiper-slide').length > 0) {
+          //console.log('length : ' + $(this.tSwiperEl).find('.swiper-slide').length);
 
-        if ($(this.tSwiperEl).find('.is-active').closest('li').index() > 0) {
-          var idx = $(this.tSwiperEl).find('.is-active').closest('li').index();
+          if (!$(this.tSwiperEl).hasClass('swiper-container-initialized')) {
 
-          $(this.tSwiperEl).find('.is-active').closest('li').trigger('click');
+            this.tSwiper = new Swiper(this.tSwiperEl, this.config);
+            var tabActiveIdx = $(this.tSwiperEl).find('.tab__btn.is-active').closest('li').index();
 
-          setTimeout(function () {
-            UI.menuTabSlide.tSwiper.update();
-            UI.menuTabSlide.tSwiper.slideTo(idx, 400)
-          }, 500)
+            if (tabActiveIdx > 0) {
+              $(this.tSwiperEl).find('.tab__btn.is-active').trigger('click touchstart');
+              UI.menuTabSlide.tSwiper.slideTo(tabActiveIdx, 0)
+
+              setTimeout(function () {
+                UI.menuTabSlide.tSwiper.slideTo(tabActiveIdx, 0)
+              }, 0)
+            }
+          } else {
+            console.log('pc no');
+            this.tSwiper.update();
+          }
         }
-      } else {
-        this.update();
-      }
-    },
-    update: function () {
-      if ($(this.tSwiperEl).is(':visible')) {
-        if ($(this.tSwiperEl).hasClass('swiper-container-initialized')) {
-          this.tSwiper.update();
+      } else { //mobile
+        if ($(this.tSwiperEl).hasClass('only-tab')) {
+          if ($(this.tSwiperEl).hasClass('swiper-container-initialized')) {
+            this.tSwiper.update();
+          } else {
+            this.tSwiper = new Swiper(this.tSwiperEl, this.config);
+          }
+        } else {
+          if ($(this.tSwiperEl).hasClass('swiper-container-initialized')) {
+            this.tSwiper.destroy();
+          }
         }
       }
     },
     resize: function () {
-      if ($(this.sliderEl).hasClass(this.initClass) && window.winWChk === 'pc') {
-        this.slider.destroy();
-        this.init();
+      if (this.tSwiper != null) {
+        this.tSwiper.destroy();
+        this.tSwiper = null;
       }
-      if (!$(this.sliderEl).hasClass(this.initClass) && window.winWChk === 'mo') {
-        this.slider.destroy();
-      }
-    }
+      this.init();
+    },
   }
 
   UI.reviewSticky = {
@@ -1275,7 +1292,7 @@
     }
   }
 
-  // 정리 필요
+  //layer popou
   UI.lyPopup = {
     openBtn: '[data-pop-open]',
     openClass: 'is-open',
@@ -1305,7 +1322,7 @@
             $lyPop.removeClass(_this.openClass);
             $textBox.text(textOpen);
             $this.removeClass(_this.openClass);
-            console.log($this)
+            //console.log($this)
           } else {
             _this.open('[data-pop=' + item + ']')
             //$lyPop.addClass(_this.openClass);
@@ -1329,7 +1346,11 @@
 
       _this.close();
 
-      UI.popupImageSw.init(); // 팝업 open 후 실행
+      // 팝업 open 후 실행
+      UI.popupImageSw.init();
+      if ($('.pop-video .swiper').length && !$('.pop-video-swiper').hasClass('swiper-container-initialized')) {
+        artistVodPopupSwiper();
+      }
     },
     close: function () {
       var _this = this;
@@ -1598,7 +1619,7 @@
   UI.drawStar = function () {
     // starVal = target.value;
     $('.star-range__value').on('change', function () {
-      console.log(this.value);
+      //console.log(this.value);
       $(this).closest('.star-range').find('.star-range__over').css({
         width: this.value * 10 + '%'
       });
@@ -1659,23 +1680,7 @@
     }
   }
 
-  // search-box 모바일에서 클릭시, 형제 요소 무너뜨리지 않고 풀사이즈로로 늘어나는 기능 작업중
-  UI.searchBoxOpen = function () {
-    // error 로 주석처리함
-    // let searchBox = document.querySelector('.rbox-block .search-box')
-    // console.log(searchBox)
-
-    // function searchBoxClick() {
-    //   if (searchBox.classList.contains('.open')) {
-    //     searchBox.classList.remove('open')
-    //   } else {
-    //     searchBox.classList.add('open')
-    //   }
-    // }
-
-    // searchBox.addEventListener('click', searchBoxClick)
-  }
-
+  //init 
   UI.init = function () {
     UI.allMenu.init();
     UI.headerBanner.init();
@@ -1711,7 +1716,6 @@
     UI.thisMonth.init();
     UI.filterItem.init();
     UI.drawStar();
-    UI.searchBoxOpen();
     UI.dropdownList.init();
   }
 
@@ -1734,13 +1738,14 @@
         UI.thisMonth.resize();
         UI.allMenu.resize();
         UI.gnb.resize();
+        UI.menuTabSlide.resize();
 
         if (typeof UI.curationSw !== 'undefined') {
           UI.curationSw.resize();
         }
       }
 
-      if (window.winWChk != 'pc' && winW >= 769) { //PC 버전으로 전환할 때 1번만 실행할 코드 추가
+      if (window.winWChk != 'pc' && winW >= 769) { //PC 踰꾩쟾�쇰줈 �꾪솚�� �� 1踰덈쭔 �ㅽ뻾�� 肄붾뱶 異붽�
         window.winWChk = 'pc';
         UI.lyPopup.resize();
         UI.sortList.resize();
@@ -1752,6 +1757,7 @@
         UI.thisMonth.resize();
         UI.allMenu.resize();
         UI.gnb.resize();
+        UI.menuTabSlide.resize();
 
         if (typeof UI.curationSw !== 'undefined') {
           UI.curationSw.resize();
@@ -1786,7 +1792,7 @@ $(function () {
     $('html').addClass('user-agent-pc');
   }
 
-  //임시 정리 전
+  //
   $(".faq__btn").on("click", function () {
     $(this).closest('.faq__item').toggleClass("is-on");
   })
@@ -1812,4 +1818,101 @@ $(function () {
     })
   }
 
+});
+
+
+$(window).on('resize', function () {
+  ww = $(window).width();
+  if ($('artist-db__content .swiper').length) {
+    initSwiper();
+  }
+
+  if ($('.artist-db__wrapper.swiper').length) {
+    artistVodSwiper();
+  }
+
+  // if ($('.artist-db__content .swiper').length) {
+  //   initSwiper();
+  // }
+});
+
+
+function initSwiper() {
+
+  if (ww < 1024 && mySwiper == undefined) {
+
+    mySwiper = new Swiper(".artist-db__content.type2 .artist-db__wrapper", {
+      slidesPerView: 1,
+      spaceBetween: 32,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+    mySwiper = new Swiper(".artist-db__content .pdt-grid-wrap", {
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  } else if (ww >= 1024 && mySwiper != undefined) {
+    mySwiper.destroy();
+    mySwiper = undefined;
+  }
+}
+
+function artistVodSwiper() {
+  var artist_vod_swiper = new Swiper(".swiper-content .artist-db__wrapper.swiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-content .swiper-next",
+      prevEl: ".swiper-content .swiper-prev",
+    },
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+    breakpoints: {
+      768: {
+        pagination: {
+          el: ".swiper-content .swiper-pagination",
+          type: 'bullets',
+        },
+        spaceBetween: 16,
+        speed: 100,
+        observer: true,
+      }
+    },
+  });
+}
+
+function artistVodPopupSwiper() {
+  var artist_vod_popup_swiper = new Swiper(".pop-video .swiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".pop-video .swiper-next",
+      prevEl: ".pop-video .swiper-prev",
+    },
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+    breakpoints: {
+      768: {
+        pagination: {
+          el: ".pop-video .swiper-pagination",
+          type: 'bullets',
+        },
+        spaceBetween: 16,
+        speed: 100,
+      }
+    },
+  });
+}
+$(document).ready(function () {
+  if ($('artist-db__content .swiper').length) {
+    initSwiper();
+  }
+
+  if ($('.artist-db__wrapper.swiper').length) {
+    artistVodSwiper();
+  }
 });
