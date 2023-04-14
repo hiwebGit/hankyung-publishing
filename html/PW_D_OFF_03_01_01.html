@@ -1434,7 +1434,7 @@
 
         <div class="view-wrap">
           <!-- s: 작가의 다른 책-->
-          <div class="offer__wrap">
+          <!-- <div class="offer__wrap">
             <div class="art-vt__container">
               <div class="offer-art-vt__titbox">
                 <h2 class="offer-summ__tit">작가의 다른 책</h2>
@@ -1443,7 +1443,6 @@
               <div class="art-vt-slide__wrap art-vt-slide art-vt-writer">
                 <div class="art-vt-slide__content swiper art-vt-grid__xs">
                   <ul class="art-vt-slide__box swiper-wrapper">
-                    <!-- item-->
                     <li class="art-vt-grid__item swiper-slide">
                       <button type="button" class="btn-fav" aria-label="Like"></button>
                       <div class="art-vt-block">
@@ -1470,8 +1469,6 @@
                         </div>
                       </div>
                     </li>
-                    <!--// item -->
-                    <!-- item-->
                     <li class="art-vt-grid__item swiper-slide">
                       <button type="button" class="btn-fav" aria-label="Like"></button>
                       <div class="art-vt-block">
@@ -1498,8 +1495,6 @@
                         </div>
                       </div>
                     </li>
-                    <!--// item -->
-                    <!-- item-->
                     <li class="art-vt-grid__item swiper-slide">
                       <button type="button" class="btn-fav" aria-label="Like"></button>
                       <div class="art-vt-block">
@@ -1526,13 +1521,12 @@
                         </div>
                       </div>
                     </li>
-                    <!--// item -->
                   </ul>
                 </div>
                 <div class="art-vt-slide__pagination"></div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- e: 작가의 다른 책-->
 
           <div class="map-wrap show-pc">
@@ -1570,7 +1564,7 @@
     <!--// Script -->
     <script>
       layoutHeader({
-          type:2,
+          type:3,
           menu1:4,
           menu2:3,
         });
@@ -1581,7 +1575,24 @@
         $(".pop1").load("PW_I_ON_CP_01_00.html .pop-wrap");
         $(".pop2").load("PW_I_ON_CP_02_00.html .pop-wrap");
 
-        
+        const textBox = document.querySelectorAll('.tit-line-box__win');
+        const moreBtn = document.querySelectorAll('.btn.no-line.h-auto-btn');
+        const arrow = document.querySelectorAll('.tit-line-box__bottom .ico-add-arrow');
+
+        for(let i = 0; i<moreBtn.length; i++){
+          moreBtn[i].addEventListener('click',function(){
+            if(!textBox[i].classList.contains('is-active')){
+              textBox[i].classList.add('is-active');
+              arrow[i].classList.add('on');
+            }
+            else{
+              textBox[i].classList.remove('is-active'); 
+              arrow[i].classList.remove('on');
+
+            }
+            
+          });
+        }
       });
     </script>
   </div>

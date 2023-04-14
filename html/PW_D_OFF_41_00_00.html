@@ -7,8 +7,6 @@
   <title>FAQ | 한경 ARTE</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-  <!-- vw 작업용-->
-  <link rel="stylesheet" type="text/css" href="../assets/css/vw.css">
 
   <!-- font -->
   <link rel="preload" href="../assets/fonts/Pretendard-Regular.subset.woff2" as="font" type="font/woff2" crossorigin>
@@ -17,6 +15,7 @@
   <link rel="preload" href="../assets/fonts/PPEditorialNew-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/Faktum-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <!--// font -->
+  
 </head>
 
 <!-- dark mode 일 경우 body 'dark-mode' 추가 -->
@@ -44,19 +43,19 @@
 
         <div class="faq-head">
           <!-- tabs -->
-          <div class="tab-block">
-            <div class="tab tab--auto">
+          <div class="tab-block tab-swiper">
+            <div class="tab tab--auto swiper">
               <button type="button" class="tab__cur">전체</button>
               <!-- tab  : button 활성화 'is-active' -->
-              <ul class="tab__list" data-tab="tab-list">
-                <li class="tab__item"><a href="#" class="tab__btn is-active">전체</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn">음악·무용 분야</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn">뮤지컬·연극 분야</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn">책·영화 분야</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn">예술인DB</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn">Community</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn">마이페이지</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn">가입 및 탈퇴</a></li>
+              <ul class="tab__list swiper-wrapper" data-tab="tab-list">
+                <li class="tab__item swiper-slide"><a href="#" class="tab__btn is-active">전체</a></li>
+                <li class="tab__item swiper-slide"><a href="#" class="tab__btn">음악·무용 분야</a></li>
+                <li class="tab__item swiper-slide"><a href="#" class="tab__btn">뮤지컬·연극 분야</a></li>
+                <li class="tab__item swiper-slide"><a href="#" class="tab__btn">책·영화 분야</a></li>
+                <li class="tab__item swiper-slide"><a href="#" class="tab__btn">예술인DB</a></li>
+                <li class="tab__item swiper-slide"><a href="#" class="tab__btn">Community</a></li>
+                <li class="tab__item swiper-slide"><a href="#" class="tab__btn">마이페이지</a></li>
+                <li class="tab__item swiper-slide"><a href="#" class="tab__btn">가입 및 탈퇴</a></li>
               </ul>
             </div>
           </div>
@@ -69,8 +68,8 @@
 
                 <div class="rbox-block">
                   <span class="search-box">
-                    <input type="text" class="o-input" placeholder="검색어를 입력해주세요">
-                    <button type="button" class="o-btn o-btn-search" aria-label="검색"></button>
+                    <!-- <input type="text" class="o-input" placeholder="검색어를 입력해주세요"> -->
+                    <!-- <button type="button" class="o-btn o-btn-search" aria-label="검색"></button> -->
                   </span>
                 </div>
               </div>
@@ -83,7 +82,8 @@
           <ul class="faq__list">
             <li class="faq__item">
               <dl class="faq__box">
-                <dt class="faq__q"><button type="button" class="faq__btn">미술 관련 예술인을 검색하려면 어떻게 하나요?</button></dt>
+                <dt class="faq__q"><button type="button" class="faq__btn">
+                    미술 관련 예술인을 검색하려면 어떻게 하나요?</button></dt>
                 <dd class="faq__a">
                   가진 심장의 그러므로 기관과 같으며, 있는가?<br>
                   가치를 사랑의 위하여 붙잡아 인생에 따뜻한 부패를 청춘이 황금시대를 그리하였는가? <br>
@@ -272,6 +272,14 @@
   <script src="../layout/js/layout.js"></script> <!-- layout 용도로 퍼블 HTML 에만 사용 -->
   <script src="../assets/js/ui.js"></script>
   <!--// Script -->
+
+   <script>
+    layoutHeader({
+      type:1,
+      menu1:7,
+      menu2:1, 
+    });
+  </script>
 
 </body>
 

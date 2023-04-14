@@ -1140,7 +1140,8 @@
                         </div>
                         <div class="calendar-table__td">
                           <a href="#">
-                            <span class="days-number is-active">1</span>
+                            <!-- 오늘 날짜의 경우 'today' 추가 -->
+                            <span class="days-number today">1</span>
                           </a>
                         </div>
                         <div class="calendar-table__td">
@@ -1150,7 +1151,8 @@
                         </div>
                         <div class="calendar-table__td">
                           <a href="#">
-                            <span class="days-number">3</span>
+                            <!-- 다른 일자 선택시 'is-active' 추가 -->
+                            <span class="days-number is-active">3</span>
                           </a>
                         </div>
                         <div class="calendar-table__td">
@@ -2188,9 +2190,17 @@
   <!--// Script -->
 
   <script>
+    layoutHeader({
+      type:2,
+      menu1:7,
+      menu2:2, 
+    });
+  </script>
+
+  <script>
     $(document).ready(function () {
 
-      //mobile 스크롤시 swiper 연결 
+      //mobile 스크롤시 swiper 연결
       var calendar_swiper = undefined;
 
       function windowScorll() {
