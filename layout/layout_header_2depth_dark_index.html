@@ -22,7 +22,7 @@
 
 <!-- dark mode 일 경우 body 'dark-mode' 추가 -->
 
-<body>
+<body class="dark-mode">
   <div id="wrap" class="wrap">
 
     <!-- Header : header-1depth -->
@@ -95,7 +95,7 @@
           </div>
 
           <!-- lnb 2 -->
-          <div class="lnb-menu">
+          <!-- <div class="lnb-menu">
             <button type="button" class="lnb-menu__current">공연·영화 리뷰</button>
             <ul class="lnb-menu__list">
               <li class="is-active"><a href="#">공연·영화 리뷰</a></li>
@@ -103,64 +103,64 @@
               <li><a href="#"><span class="lnb-enter">STAGE&middot;CINE </span> 테마칼럼&middot;인터뷰</a></li>
               <li><a href="#">STAGE·CINE NEWS</a></li>
             </ul>
-          </div>
+          </div> -->
 
           <!-- lnb 3 -->
-          <div class="lnb-menu">
-            <button type="button" class="lnb-menu__current">전시 리뷰</button>
-            <ul class="lnb-menu__list">
-              <li class="is-active"><a href="#">전시 리뷰</a></li>
-              <li><a href="#">전시 정보</a></li>
-              <li><a href="#"><span class="lnb-enter">해외 전시</span>하이라이트</a></li>
-              <li><a href="#">ART 테마칼럼·인터뷰</a></li>
-              <li><a href="#">ART NEWS</a></li>
-              <!-- <li><a href="#">미술시장 분석</a></li> -->
-            </ul>
-          </div>
+          <!-- <div class="lnb-menu"> -->
+            <!-- <button type="button" class="lnb-menu__current">전시 리뷰</button> -->
+            <!-- <ul class="lnb-menu__list"> -->
+              <!-- <li class="is-active"><a href="#">전시 리뷰</a></li> -->
+              <!-- <li><a href="#">전시 정보</a></li> -->
+              <!-- <li><a href="#"><span class="lnb-enter">해외 전시</span>하이라이트</a></li> -->
+              <!-- <li><a href="#">ART 테마칼럼·인터뷰</a></li> -->
+              <!-- <li><a href="#">ART NEWS</a></li> -->
+            <!-- </ul> -->
+          <!-- </div> -->
+          <!-- <li><a href="#">미술시장 분석</a></li> -->
 
           <!-- lnb 4 -->
-          <div class="lnb-menu">
-            <button type="button" class="lnb-menu__current">문학·고전 리뷰</button>
-            <ul class="lnb-menu__list">
-              <li class="is-active"><a href="#">문학·고전 리뷰</a></li>
-              <li><a href="#">탐나는 책</a></li>
-              <li><a href="#">책 정보</a></li>
-              <li><a href="#"><span class="lnb-enter">BOOK </span>테마칼럼&middot; 인터뷰</a></li>
-              <li><a href="#">BOOK NEWS</a></li>
-            </ul>
-          </div>
+          <!-- <div class="lnb-menu"> -->
+            <!-- <button type="button" class="lnb-menu__current">문학·고전 리뷰</button> -->
+            <!-- <ul class="lnb-menu__list"> -->
+              <!-- <li class="is-active"><a href="#">문학·고전 리뷰</a></li> -->
+              <!-- <li><a href="#">탐나는 책</a></li> -->
+              <!-- <li><a href="#">책 정보</a></li> -->
+              <!-- <li><a href="#"><span class="lnb-enter">BOOK </span>테마칼럼&middot; 인터뷰</a></li> -->
+              <!-- <li><a href="#">BOOK NEWS</a></li> -->
+            <!-- </ul> -->
+          <!-- </div> -->
 
           <!-- lnb 5 -->
-          <div class="lnb-menu">
+          <!-- <div class="lnb-menu">
             <button type="button" class="lnb-menu__current">arte TALK TALK</button>
             <ul class="lnb-menu__list">
               <li class="is-active"><a href="#">문화예술계 소식</a></li>
               <li><a href="#">arte TALK TALK</a></li>
               <li><a href="#">공지사항</a></li>
             </ul>
-          </div>
+          </div> -->
 
           <!-- lnb 6 -->
-          <div class="lnb-menu">
+          <!-- <div class="lnb-menu">
             <button type="button" class="lnb-menu__current">arte 유튜브 LIVE</button>
             <ul class="lnb-menu__list">
               <li class="is-active"><a href="#">arte 유튜브 LIVE</a></li>
               <li><a href="#">arte 영상</a></li>
             </ul>
-          </div>
+          </div> -->
 
           <!-- lnb 7 -->
-          <div class="lnb-menu">
+          <!-- <div class="lnb-menu">
             <button type="button" class="lnb-menu__current">arte MAP</button>
             <ul class="lnb-menu__list">
               <li class="is-active"><a href="#">arte MAP</a></li>
               <li><a href="#">arte Calendar</a></li>
               <li><a href="#">artist DB</a></li>
             </ul>
-          </div>
+          </div> -->
 
           <!-- lnb 8 -->
-          <div class="lnb-menu">
+          <!-- <div class="lnb-menu">
             <button type="button" class="lnb-menu__current">마이페이지</button>
             <ul class="lnb-menu__list">
               <li class="is-active"><a href="#">나의 정보</a></li>
@@ -168,7 +168,7 @@
               <li><a href="#">좋아한 콘텐츠</a></li>
               <li><a href="#">1:1문의</a></li>
             </ul>
-          </div>
+          </div> -->
 
 
           <div class="header-utils">
@@ -864,6 +864,14 @@
       menu1:3,
       menu2:3,
     })
+  </script>
+  <script>
+    // 아르떼와 친구들 더보기 버튼 동작
+    $('.buddy-banner__more').click(function (e) {
+      e.preventDefault();
+      $(this).toggleClass('is-on');
+      $(this).siblings('.buddy-banner__list').toggleClass('is-on');
+    });
   </script>
   <!-- <script src="../layout/js/layout.js"></script> layout 용도로 퍼블 HTML 에만 사용 -->
   <!--// Script -->

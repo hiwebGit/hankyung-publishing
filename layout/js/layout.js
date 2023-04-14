@@ -13,10 +13,11 @@ function layoutHeader(myGnb) {
   } else if(type == 3) {
     headerFile = 'layout_header_3depth.html';
   } else if(type == 0) {
-    headerFile = 'layout_header.html';
+    headerFile = 'layout_header_main.html';
   } else {
     headerFile = 'layout_header.html';
   }
+  
 }
 
 function setGnb() {
@@ -39,7 +40,6 @@ function setGnb() {
 
 
 $(document).ready(function () {
-
   // header - gnb setting
   $("#header").load("../layout/" + headerFile + " .header__inner");
   var timeId = setTimeout(setGnb, 1000);
@@ -70,4 +70,16 @@ $(document).ready(function () {
       }
     });
   }
+  
+  // 아르떼와 친구들 더보기 버튼 동작
+  function arteFriendsMore() {
+    $(document).on('click','.buddy-banner__more', function (e) {
+      e.preventDefault();
+      $(this).toggleClass('is-on');
+      $(this).siblings('.buddy-banner__list').toggleClass('is-on');
+    });
+  }
+  
+  arteFriendsMore();
+
 })
