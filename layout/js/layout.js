@@ -70,7 +70,12 @@ $(document).ready(function () {
       }
     });
   }
-  
+
+
+  // 아르떼와 친구들 더보기 관련 변수
+  var windowWidth = $(window).width();
+  var liHeight;
+
   // 아르떼와 친구들 더보기 버튼 동작
   function arteFriendsMore() {
     $(document).on('click','.buddy-banner__more', function (e) {
@@ -80,6 +85,24 @@ $(document).ready(function () {
     });
   }
   
-  arteFriendsMore();
-
+  // 아르떼와 친구들 더보기(모바일) 버튼 동작
+  function arteFriendsMoreMobile() {
+    arteFriendsMore();
+    
+    $(document).on('click', '.header-main .all-menu-btn', function () {
+      $('.all-menu-side .buddy-banner__list li').eq(0).each(function () {
+        liHeight = $(this).outerHeight() * 2 + "px";
+        $('.all-menu-side .buddy-banner__list').css('max-height', liHeight);
+      });
+    })
+  }
+  
+  // 아르떼와 친구들 디바이스 크기에 따른 js 분기
+  if(windowWidth < 768) {
+    //창 가로 크기가 768 미만일 경우
+    arteFriendsMoreMobile()
+  } else {
+    //창 가로 크기가 768보다 클 경우
+    arteFriendsMore();
+  }
 })
