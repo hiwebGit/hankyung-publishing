@@ -7467,7 +7467,7 @@ body.dark-mode .acc-num--view::before { background-repeat: no-repeat; background
 
 .landing-page { position: relative; }
 
-.landing-page .img-looping { width: 100%; height: 1920px; background-image: url(../../assets/images/landing_img_01.png); background-repeat: repeat-y; background-size: 100% 1920px; background-position: center; animation: looping linear 40s infinite; }
+.landing-page .img-looping { width: 100%; height: 1920px; background-image: url(../../assets/images/landing_img_desktop_01.png); background-repeat: repeat-y; background-size: 100% 1080px; background-position: center; animation: looping linear 40s infinite; }
 
 @keyframes looping { 0% { background-position-y: 0; }
   100% { background-position-y: -1920px; } }
@@ -7652,6 +7652,7 @@ body.dark-mode .acc-num--view::before { background-repeat: no-repeat; background
   .concert-review__thumbnail .thumb-img .img-holder { padding-top: 100%; }
   .concert-review__thumbnail li { width: calc((100% - 32px)/5); height: auto; border-radius: 4px; }
   .one-line { padding: 24px; }
+  .landing-page .img-looping { background-image: url(../../assets/images/landing_img_01.png); background-size: 100% 1920px; }
   .view-wrap { max-width: 100%; }
   .view-wrap__detail { padding-top: 40px; }
   .view-wrap__detail .editor-paging { display: flex; }
