@@ -131,10 +131,10 @@
             <div class="tab only-tab">
               <!-- tab  : button 활성화 'is-active' -->
               <ul class="tab__list" data-tab="tab-list">
-                <li class="tab__item"><a href="#" class="tab__btn is-active">소개</a></li>
+                <li class="tab__item"><a href="#tab-content1" class="tab__btn is-active">소개</a></li>
                 <!-- <li class="tab__item"><a href="#" class="tab__btn">작품</a></li> -->
-                <li class="tab__item"><a href="#" class="tab__btn">영상</a></li>
-                <li class="tab__item"><a href="#" class="tab__btn">댓글</a></li>
+                <li class="tab__item"><a href="#tab-content2" class="tab__btn">영상</a></li>
+                <li class="tab__item"><a href="#tab-content3" class="tab__btn">댓글</a></li>
               </ul>
             </div>
           </div>
@@ -143,7 +143,7 @@
           <div class="tab-content" data-tab="tab-content">
             <!-- top news -->
             <div class="artist-db__detail">
-              <h3 class="artist-db__title">아티스트 소개</h3>
+              <h3 id="tab-content1" class="artist-db__title">아티스트 소개</h3>
               <p class="artist-db__text">임윤찬은 2022년 제16회 반 클라이번 국제 피아노 콩쿠르에서 만 18세의 나이로 역대 최연소 우승 기록을 세웠다.<br>
                 신작 최고연주상, 청중상 등을 수상하며 세계무대에 돌풍을 일으켰다.<br>
                 그가 대회 결선에서 라흐마니노프 피아노 협주곡 3번을 연주하는 영상은 유튜브에서 해당 곡 기준 최다 조회수를 기록하기도 했다. 임윤찬의 우승을 계기로 ‘K클래식’열품이 다시금
@@ -228,7 +228,7 @@
             <!-- // 도서작가의 경우(중단 책 소개영역 추가) -->
 
             <div class="artist-db__content swiper-content">
-              <h3 class="artist-db__title">아티스트 관련 최신 영상</h3>
+              <h3 id="tab-content2" class="artist-db__title">아티스트 관련 최신 영상</h3>
               <div class="artist-db__wrapper swiper">
                 <ul class="swiper-wrapper artist-db__list">
                   <li class="swiper-slide artist-db__list__item">
@@ -274,7 +274,7 @@
             </div>
 
             <!-- s: 댓글영역 -->
-            <div class="reply-wrap">
+            <div id="tab-content3" class="reply-wrap">
               <div class="reply-commit">
                 <div class="reply-input">
                   <!-- [D] 닉네임 영역 미노출인 경우, strong.reply-input__writer 마크업 삭제 -->
@@ -907,9 +907,9 @@
   </script>
   <script>
     layoutHeader({
-      type:3,
-      menu1:7,
-      menu2:3, 
+      type: 3,
+      menu1: 7,
+      menu2: 3,
     });
   </script>
 

@@ -32,7 +32,7 @@
             <!-- current title -->
             <div class="header__curr">조승우, 13년만에 개막하는 '오페라의 유령' 주인공 맡는다.</div>
 
-            <!-- 버튼 활성화 'is-gnb-active', 메뉴 활성화 'is-active' 추가 -->
+            <!-- gnb : 버튼 활성화 'is-gnb-active', 메뉴 활성화 'is-active' 추가 -->
             <div class="gnb-menu">
               <button type="button" class="gnb-menu__current" data-gnb-sel-cur="arte"><em>arte</em></button>
               <ul class="gnb-menu__list">
@@ -52,7 +52,7 @@
             </div>
           </div>
 
-          <!-- 메뉴 활성화 'is-lnb-active' 버튼 활성화 'is-active' 추가 -->
+          <!-- lnb : 메뉴 활성화 'is-lnb-active' 버튼 활성화 'is-active' 추가 -->
           <div class="lnb-menu">
             <button type="button" class="lnb-menu__current">음악 리뷰</button>
             <ul class="lnb-menu__list">
@@ -293,8 +293,8 @@
               <div class="nav-links">
                 <h3 class="header-tit">마이페이지</h3>
                 <div class="nav-links__list">
-                  <a href="#" class="nav-links__btn">좋아한 콘텐츠</a>
-                  <a href="#" class="nav-links__btn">나의 활동</a>
+                  <!-- <a href="#" class="nav-links__btn">좋아한 콘텐츠</a> -->
+                  <!-- <a href="#" class="nav-links__btn">나의 활동</a> -->
                   <a href="#" class="nav-links__btn">나의 정보</a>
                   <a href="#" class="nav-links__btn">1:1문의</a>
                 </div>
@@ -315,7 +315,7 @@
                     <em class="logo-a">A</em><span>RTE</span>
                   </a>
                 </h2>
-                <!-- 로그인전에 before , 로그인 후에는 after 클래스 추가 -->
+                <!-- [CASE] 로그인 전 'before' , 로그인 후 'after' 추가 -->
                 <div class="log-btn-wrap show-mo before">
                   <button type="button" class="login-btn before">
                     <span class="login-tit">로그인</span>
@@ -605,33 +605,36 @@
 
         <ul class="footer__nav sp-bar-list">
           <li><a href="#">회사소개</a></li>
-          <li><a href="#">광고제휴</a></li>
-          <li class="nosp-mobile"><a href="#">이용약관</a></li>
-          <li><a href="#">개인정보취급방침</a></li>
+          <li><a href="#">제휴문의</a></li>
+          <li class="nosp-mobile"><a href="#">기사배열 방침</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li class="nosp-mobile"><a href="#">개인정보 처리방침</a></li>
           <li class="nosp-mobile"><a href="#">자주 묻는 질문(FAQ)</a></li>
-          <li>대표번호 : 02-3604-114</li>
         </ul>
 
         <div class="footer__family">
-          <select class="footer__family-select" name="" id="">
-            <option value="https://www.hankyung.com/">한경닷컴</option>
-            <option value="http://www.wowtv.co.kr/">한국경제TV</option>
-            <option value="https://magazine.hankyung.com/">한국경제매거진</option>
-            <option value="https://bp.hankyung.com/">Book</option>
-            <option value="https://tenasia.hankyung.com/">텐아시아</option>
-            <option value="https://www.kedglobal.com/">KED Global</option>
-          </select>
+          <div class="dropdown type-sq">
+            <button type="button" class="dropdown__cur"><em>한국경제 Family</em></button>
+            <ul class="dropdown__list">
+              <li><a class="dropdown__btn" target="_blank" title="새창" href="https://www.hankyung.com/">한경닷컴</a></li>
+              <li><a class="dropdown__btn" target="_blank" title="새창" href="http://www.wowtv.co.kr/">한국경제TV</a></li>
+              <li><a class="dropdown__btn" target="_blank" title="새창" href="https://magazine.hankyung.com/">한국경제매거진</a>
+              </li>
+              <li><a class="dropdown__btn" target="_blank" title="새창" href="https://bp.hankyung.com/">Book</a></li>
+              <li><a class="dropdown__btn" target="_blank" title="새창" href="https://tenasia.hankyung.com/">텐아시아</a></li>
+              <li><a class="dropdown__btn" target="_blank" title="새창" href="https://www.kedglobal.com/">KED Global</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="footer__block">
           <div class="footer__infobox">
-            <p class="footer__address">서울시 중구 청파로 463 한국경제신문사</p>
+            <p class="footer__address">서울시 중구 청파로 463 한국경제신문사 7층</p>
+            <p class="footer__service-num">인터넷 뉴스 서비스 사업자 번호&nbsp;&nbsp;&nbsp;000-00-00000</p>
             <ul class="footer__info sp-bar-list">
-              <li>사업자번호 104-81-47984</li>
-              <li>통신판매번호 중구0060</li>
-              <li>인터넷신문등록번호 서울 아01035</li>
-              <li class="nosp">등록(발행)일자 2009.11.23</li>
-              <li>발행·편집인 하영춘</li>
+              <li class="nosp">기사배열 원칙 책임자&nbsp;&nbsp;&nbsp;오상헌</li>
+              <li>청소년 보호 책임자&nbsp;&nbsp;&nbsp;오상헌</li>
             </ul>
           </div>
 
@@ -641,6 +644,21 @@
               <li><a href="#" target="_blank" class="sns-insta">instagram</a></li>
               <li><a href="#" target="_blank" class="sns-twitter">twitter</a></li>
               <li><a href="#" target="_blank" class="sns-youtube">youtube</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__qr">
+            <ul class="qr-list">
+              <li>
+                <img src="../assets/images/common/qr_googleplay.png" class="qr_normal" alt="GET IT ON Goole Play">
+                <img src="../assets/images/common/qr_googleplay_w.png" class="qr_dark" alt="GET IT ON Goole Play">
+                <a href="#" target="_blank" class="btn-googleplay">googleplay</a>
+              </li>
+              <li>
+                <img src="../assets/images/common/qr_appstore.png" class="qr_normal" alt="Download on the App Stor">
+                <img src="../assets/images/common/qr_appstore_w.png" class="qr_dark" alt="Download on the App Stor">
+                <a href="#" target="_blank" class="btn-appstore">appstore</a>
+              </li>
             </ul>
           </div>
         </div>

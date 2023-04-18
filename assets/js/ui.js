@@ -52,13 +52,21 @@
         }
       })
 
-      $(this.closeBtn).off('click.allmenuClose').on('click.allmenuClose', function () {
+      $(document).off('click', this.closeBtn).on('click', this.closeBtn, function () {
         _this.hidden();
       })
 
-      $(".all-section [data-menu = search]").off('click.allsearch').on('click.allsearch', function () {
+      $(document).off('click', ".all-section [data-menu = search]").on('click', ".all-section [data-menu = search]", function () {
         $(".header-search-bar__wrap").toggleClass(_this.allSectActive);
       });
+
+      // $(this.closeBtn).off('click.allmenuClose').on('click.allmenuClose', function () {
+      //   _this.hidden();
+      // })
+
+      // $(".all-section [data-menu = search]").off('click.allsearch').on('click.allsearch', function () {
+      //   $(".header-search-bar__wrap").toggleClass(_this.allSectActive);
+      // });
 
     },
     headerReset: function () {
@@ -1915,4 +1923,17 @@ $(document).ready(function () {
   if ($('.artist-db__wrapper.swiper').length) {
     artistVodSwiper();
   }
+});
+
+// 댓글 목록 모바일 더보기 버튼 스크립트
+function load(el, idx) {
+  var liNone = el + ".is-none";
+  $(liNone + ":lt(" + idx + ")").removeClass("is-none");
+}
+
+$(window).on('load', function () {
+  $(document).on('click','.reply-add__more', function () {
+      // 숫자에 따라 노출되는 li개수 적용
+      load('.reply-list > ul > li', '7');
+  })
 });

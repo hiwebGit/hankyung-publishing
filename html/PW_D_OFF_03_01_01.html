@@ -1369,10 +1369,10 @@
             </div>
           </div>
           <!--// 한줄평 쓰기 -->
-          <div class="poll">
+          <!-- <div class="poll">
             컨텐츠 추가예정<br />
             아르떼 폴
-          </div>
+          </div> -->
         </section>
 
         <!-- s: Full 지도-->
@@ -1564,10 +1564,10 @@
     <!--// Script -->
     <script>
       layoutHeader({
-          type:3,
-          menu1:4,
-          menu2:3,
-        });
+        type: 3,
+        menu1: 4,
+        menu2: 3,
+      });
     </script>
     <script>
       $(document).ready(function () {
@@ -1579,18 +1579,17 @@
         const moreBtn = document.querySelectorAll('.btn.no-line.h-auto-btn');
         const arrow = document.querySelectorAll('.tit-line-box__bottom .ico-add-arrow');
 
-        for(let i = 0; i<moreBtn.length; i++){
-          moreBtn[i].addEventListener('click',function(){
-            if(!textBox[i].classList.contains('is-active')){
+        for (let i = 0; i < moreBtn.length; i++) {
+          moreBtn[i].addEventListener('click', function () {
+            if (!textBox[i].classList.contains('is-active')) {
               textBox[i].classList.add('is-active');
               arrow[i].classList.add('on');
-            }
-            else{
-              textBox[i].classList.remove('is-active'); 
+            } else {
+              textBox[i].classList.remove('is-active');
               arrow[i].classList.remove('on');
 
             }
-            
+
           });
         }
       });
