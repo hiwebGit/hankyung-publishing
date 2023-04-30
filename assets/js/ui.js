@@ -60,6 +60,12 @@
         $(".header-search-bar__wrap").toggleClass(_this.allSectActive);
       });
 
+      $(document).off('click', ".all-section .gnb-menu__depbox > li > a").on('click', ".all-section .gnb-menu__depbox > li > a", function () {
+        $(".all-section ").removeClass("is-active");
+        $('#wrap').removeClass('dim');
+        $('#header').removeClass('header--opened');
+      });
+
       // $(this.closeBtn).off('click.allmenuClose').on('click.allmenuClose', function () {
       //   _this.hidden();
       // })
@@ -72,16 +78,24 @@
     headerReset: function () {
       $('.header__box').hide();
       $('#header').removeClass('header--opened');
+      $('#wrap').removeClass('dim');
     },
     hidden: function () {
       $(this.allSect).removeClass(this.allSectActive);
       $('#header').removeClass('header--opened');
+      $('#wrap').removeClass('dim');
       $(document).off('mouseover.allMouse');
     },
     open: function () {
       var _this = this;
       $(this.allSect).addClass(this.allSectActive);
       $('#header').addClass('header--opened');
+      $('#wrap').addClass('dim');
+
+      // 커튼배너 클래스 추가 
+      if ($('.cotton-banner').hasClass('is-active')) {
+        $('.all-section.is-active').addClass('bannerOn');
+      }
 
       if (UI.gnb.headerSw !== null) {
         UI.gnb.headerSw.destroy();
@@ -184,6 +198,8 @@
 
           $(_this.box).show();
           $(_this.el).addClass(_this.IsMenuOpened);
+          $('#wrap').addClass('dim');
+
           $gnbMenuBox.addClass(_this.menuActive).siblings().removeClass(_this.menuActive);
           $('[data-lnb=' + $(this).data('gnb') + ']').show().siblings().hide();
 
@@ -212,6 +228,7 @@
           UI.allMenu.hidden();
           $(_this.box).show();
           $(_this.el).addClass(_this.IsMenuOpened);
+          $('#wrap').addClass('dim');
 
           $menuBox.addClass(_this.menuActive).siblings().removeClass(_this.menuActive);
 
@@ -806,7 +823,7 @@
       $(document).on('click.dropdown', _this.curBtn, function (ev) {
         var $dropdown = $(ev.target).closest(_this.el);
 
-        $(_this.el).removeClass(_this.openName);
+        //$(_this.el).removeClass(_this.openName);
 
         if (_this.openChk($dropdown)) {
           $dropdown.removeClass(_this.openName);
@@ -1114,7 +1131,7 @@
     slider: null,
     sliderEl: '.theme-column',
     config: {
-      // autoplay: true,
+      autoplay: true,
       observer: true,
       observeParents: true,
       slidesPerView: "auto",
@@ -1817,6 +1834,9 @@ $(function () {
     $(this).closest("[data-accordion=group]").toggleClass("is-on");
   });
 
+  // 기사, 리뷰 등 에디터에 있는 유튜브 감싸는 wrap 추가(스타일)
+  $('.view-section .editor-section .view-editor iframe').wrap('<div class="youtube-wrap"></div>');
+
   // all Check
   var allChks = '[data-check=allCheck]';
   if ($(allChks).length) {
@@ -1932,8 +1952,8 @@ function load(el, idx) {
 }
 
 $(window).on('load', function () {
-  $(document).on('click','.reply-add__more', function () {
-      // 숫자에 따라 노출되는 li개수 적용
-      load('.reply-list > ul > li', '7');
+  $(document).on('click', '.reply-add__more', function () {
+    // 숫자에 따라 노출되는 li개수 적용
+    load('.reply-list > ul > li', '7');
   })
 });
